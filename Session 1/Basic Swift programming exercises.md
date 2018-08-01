@@ -6,7 +6,7 @@
 
 4. Write a Swift program to accept two integer values and return true if one is negative and one is positive. Return true only if both are negative.
 
-5. Write a Swift program to add "Is" to the front of a given string. However, if the string already begins with "Is", return the given string.
+5. Write a Swift program to add "Is" to the front of a given string. However, if the string already begins with "Is", return the given string.	
 
 6. Write a Swift program to remove a character at specified index of a given non-empty string. The value of the specified index will be in the range 0..str.length()-1 inclusive.
 
