@@ -12,11 +12,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        lessionTwentyTwo([1,2,3,7,5,7,4,2,7])
     }
     
     func lessionOne(_ numberOne:Int, _ numberTwo:Int)
     {
-        //Tính tổng hai số, nếu
         var sum:Int
         if numberOne != numberTwo {
             sum = numberOne + numberTwo
@@ -71,6 +71,14 @@ class ViewController: UIViewController {
     }
 
     func lessionSix(_ myString:String, _ i:Int) -> String{
+        if myString.count < 1 {
+            return "Pls input string more than one character"
+        }
+        
+        if i < 0 || i > myString.count {
+            return "Pls input index both in range 0..\(myString.count - 1)"
+        }
+        
         var newString:String = myString
         let index:String.Index = String.Index.init(encodedOffset: i)
         newString.remove(at: index)
@@ -192,11 +200,128 @@ class ViewController: UIViewController {
         }
     }
     
+    func lessionSixteen(_ numberOne:Int, _ numberTwo:Int) {
+        if numberOne >= 20 && numberOne <= 30 && numberTwo >= 20 && numberTwo <= 30 {
+            print("Number \(numberOne) & \(numberTwo) both 20..30")
+        }
+        else if numberOne >= 30 && numberOne <= 40 && numberTwo >= 30 && numberTwo <= 40 {
+            print("Number \(numberOne) & \(numberTwo) both 30..40")
+        }
+        else {
+            print("Number \(numberOne) & \(numberTwo) not both in range 20..30 and 30..40 ")
+        }
+    }
+    
+    func lessionSeventeen(_ numberOne:Int, _ numberTwo:Int) -> Int {
+        var max:Int
+        if numberOne > numberTwo {
+            max = numberOne
+        }
+        else {
+            max = numberTwo
+        }
+        
+        if max >= 20 && max <= 30 {
+            print("Larger number both in range 20..30")
+            return max
+        }
+        else {
+            return 0
+        }
+    }
+    
+    func lessionEighteen(_ numberOne:Int, _ numberTwo:Int) {
+        if numberOne < 0 || numberTwo < 0 {
+            print("Pls input two number non-negative")
+            return
+        }
+        
+        let numberOneLastDigit:Int = numberOne % 10
+        let numberTwoLastDigit:Int = numberTwo % 10
+        
+        if numberOneLastDigit == numberTwoLastDigit {
+            print("Last digit of two number are same")
+        }
+        else {
+            print("Last digit of two number are not same")
+        }
+    }
+    
+    func lessionNineteen(_ mString:String) {
+        if mString.count < 3 {
+            print(mString.lowercased())
+            return
+        }
+        
+        let index = mString.index(mString.endIndex, offsetBy: -3)
+        let leftString = mString[..<index]
+        let rightString = mString[index...]
+        let newString = leftString + rightString.uppercased()
+        print("New String: " + newString)
+    }
+    
+    func lessionTwenty(_ mString:String) {
+        if mString.count < 1 {
+            print("Pls input string greater than or equal to one character")
+            return
+        }
+        
+        let index = mString.index(of: "a")
+        if index == nil {
+            print("Not found character a")
+            return
+        }
+        
+        if mString[mString.index(after: index!)] == "a" {
+            print("Found string aa")
+        }
+        else {
+            print("Not found string aa")
+        }
+    }
+    
+    func lessionTwentyOne(_ mString:String) {
+        var newString:String! = ""
+        for i in stride(from: 0, to: mString.count, by: 2) {
+            newString = newString + String(mString[String.Index.init(encodedOffset: i)])
+        }
+        print("NewString: " + newString)
+    }
+    
+    func lessionTwentyTwo(_ mArray:[Int]) {
+        var count:Int = 0
+        for i in mArray {
+            if i == 7 {
+                count += 1
+            }
+        }
+        print("Count the number of 7's: \(count)")
+    }
+    
+    func lessionTwentyThree(_ mArray:[Int]) -> Bool {
+        if mArray.count < 4{
+            for i in 0...mArray.count {
+                if mArray[i] == 7 {
+                    return true
+                }
+            }
+        }
+        else {
+            for i in 0...3 {
+                if mArray[i] == 7 {
+                    return true
+                }
+            }
+        }
+        
+        return false
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-
+    
 }
 
