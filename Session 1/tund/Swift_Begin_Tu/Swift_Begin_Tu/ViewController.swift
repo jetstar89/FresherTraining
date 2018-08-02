@@ -16,39 +16,34 @@ class ViewController: UIViewController {
         
         print("View did load")
         
-        exam28([1,56,7,7,8,8,8])
-        exam27([1,56,7,7])
-        exam26("Gem Company")
-        exam25("Gem Company")
-        exam24([0,1,2,56,7,7])
-        exam22([0,1,2,56,7,7])
-        exam21("Gem Company")
-        exam20("aaaaa")
-        exam17(2,3)
-        print(exam17(2,3))
-        exam16(30, 40)
-        exam15(10,14)
-        exam14(1,2,3)
-        print(exam14(1,2,3))
-        exam13("fiadsfads")
-        exam12(25,15)
-        exam11("Isasdfhasv")
-        exam10("Nguyen Dinh Tu")
-        exam9(35)
-        exam8("Nguyen Dinh Tu")
-        exam7("sds","dsdsds")
-        print(exam7("sds","dsdsds"))
-        exam6("Nguyen Dinh Tu")
-        exam5("Nguyen Dinh Tu")
-        exam4(10,20)
-        exam3(10,20)
-        exam2(10)
-        exam1(10,20)
-        print(exam23([0,1,2,56,7,7]))
-        print(exam18(5,5))
-        exam19("nguyen dinh tu")
-        
-        
+        print("Exercise 28: \(exam28([1,56,7,7,8,8,8]))")
+        print("Exercise 27: \(exam27([1,56,7,7]))")
+        print("Exercise 26: \(exam26("Gem Company"))")
+        print("Exercise 25: \(exam25("Gem Company"))")
+        print("Exercise 24: \(exam24([0,1,2,56,7,7]))")
+        print("Exercise 23: \(exam23([0,1,2,56,7,7]))")
+        print("Exercise 22: \(exam22([0,1,2,56,7,7]))")
+        print("Exercise 21: \(exam21("Gem Company"))")
+        print("Exercise 20: \(exam20("Gem Company"))")
+        print("Exercise 19: \(exam19("Nguyen Dinh Tu"))")
+        print("Exercise 18: \(exam18(5,5))")
+        print("Exercise 17: \(exam17(2,3))")
+        print("Exercise 16: \(exam16(30,40))")
+        print("Exercise 15: \(exam15(10,14))")
+        print("Exercise 14: \(exam14(1,2,3))")
+        print("Exercise 13: \(exam13("fiadsfads"))")
+        print("Exercise 12: \(exam12(25,15))")
+        print("Exercise 11: \(exam11("Isadsfads"))")
+        print("Exercise 10: \(exam10("Nguyen Dinh Tu"))")
+        print("Exercise 9: \(exam9(35))")
+        print("Exercise 8: \(exam8("Nguyen Dinh Tu"))")
+        print("Exercise 7: \(exam7("Gem company","freshser"))")
+        print("Exercise 6: \(exam6("Nguyen Dinh Tu"))")
+        print("Exercise 5: \(exam5("Nguyen Dinh Tu"))")
+        print("Exercise 4: \(exam4(10,20))")
+        print("Exercise 3: \(exam3(10,20))")
+        print("Exercise 2: \(exam2(10))")
+        print("Exercise 1: \(exam4(10,20))")
         
         
     }
@@ -71,7 +66,7 @@ class ViewController: UIViewController {
         if (number > 51){
             str = "Gap doi so \(2 * (number - 51))";
         } else {
-            //
+            str = "Sai so"
         }
         return str
     }
@@ -187,7 +182,7 @@ class ViewController: UIViewController {
         if(strAdd == "fix"){
             result = "Day so co tu 'fix'  bat dau"
         }else{
-            //
+            result = "Day so khong co tu 'fix bat dau'"
         }
         return result
     }
@@ -209,13 +204,9 @@ class ViewController: UIViewController {
             e = a - 10
             d = b - 10
             if(e > d) {
-                 print("\(b) gan 10 hon")
                  return 1
             } else if(e < d) {
-                print("\(a) gan 10 hon")
                 return 2
-            } else {
-                print("Hai so cung khoang cah voi 10")
             }
         }
         return 0
