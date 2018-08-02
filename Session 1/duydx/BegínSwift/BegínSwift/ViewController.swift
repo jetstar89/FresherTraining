@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         let numberTwo:Int = 12;
         let numberThree:Int = 20;
         let str:String = "Duy IoT";
-        let arr:Array<Int> = [2,7,7,7,6,0,1,2];
+        let arr:Array<Int> = [2,7,7,7,6,0,7,7];
         print("Exercise 1: \(exerciseOne(numberOne, numberTwo))")
         print("Exercise 2: \(exerciseTwo(numberOne))")
         print("Exercise 3: \(exerciseThree(numberOne, numberTwo))")
@@ -121,7 +121,7 @@ class ViewController: UIViewController {
     }
     func exerciseTwentySeven(_ arr: Array<Int>) -> Int {
         var count: Int = 0
-        for index in 0..<arr.count {
+        for index in 0..<arr.count - 1 {
             if arr[index] == 7 && arr[index + 1] == 7 {
                 count = count + 1
             }
