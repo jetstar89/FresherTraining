@@ -16,7 +16,8 @@ class ViewController: UIViewController {
         let numberOne:Int = 10;
         let numberTwo:Int = 12;
         let numberThree:Int = 20;
-        let str:String = "Duy IoT";
+        let str:String = "aaaDuyba";
+        let arr:Array<Int> = [2,7,7,7,6,0,1,2];
         lessonOne(numberOne, numberTwo);
         lessonTwo(numberOne);
         print(lessonThree(numberOne, numberTwo));
@@ -33,6 +34,86 @@ class ViewController: UIViewController {
         print(lessonFourteen(numberOne, numberTwo, numberThree));
         print(lessonFifteen(numberOne, numberTwo));
         print(lessSixteen(numberOne, numberTwo));
+        print(lessonSeventeen(numberOne, numberTwo));
+        print(lessonEightteen(numberOne, numberTwo));
+        print(lessonNineteen(str));
+        print(lessonTwentytwo(arr));
+        print(lessonTwentythree(arr));
+        print(lessonTwentyfour(arr));
+        lessonTwentysix(str);
+        lessonTwentySeven(arr);
+    }
+    func lessonTwentythree(_ arr:Array<Int>) -> Bool {
+        for index in 0..<arr.count{
+            if arr[index] == 4{
+                return true;
+            }
+            if index == 4 {
+                return false;
+            }
+        }
+        return false;
+    }
+    func lessonTwentysix(_ str:String){
+        var newString:String! = "";
+        for index in stride(from: 0, to: str.count, by: 2){
+            newString = newString + String(str[String.Index.init(encodedOffset: index)]);
+        }
+        print("New string: " + newString);
+    }
+    func lessonTwentySeven(_ arr:Array<Int>) {
+        var count:Int = 0;
+        for index in 0..<arr.count{
+            if arr[index] == 7 && arr[index + 1] == 7 {
+                count = count + 1;
+            }
+        }
+        print("Số lần số 7 cạnh nhau: \(count)");
+    }
+    func lessonTwentyfour(_ arr:Array<Int>) -> Bool {
+        for index in 0..<arr.count-2{
+            if arr[index] == 0 && arr[index + 1] == 1 && arr[index + 2] == 2{
+                return true;
+            }
+        }
+        return false;
+    }
+    func lessonTwentytwo(_ arr:Array<Int>) -> Int {
+        var count = 0;
+        for index in 0..<arr.count {
+            if arr[index] == 7 {
+                count = count + 1;
+            }
+        }
+        return count;
+    }
+    func lessonNineteen(_ str: String) -> String {
+        var newString:String = str;
+        if newString.count < 3 {
+            newString = newString.lowercased();
+        } else {
+            let index = newString.index(newString.startIndex, offsetBy: newString.count - 3);
+            newString[index...];
+            var strLast:String = String(newString.suffix(from: index));
+            strLast = String(strLast.uppercased());
+            newString[...index];
+            newString = String(newString.prefix(upTo: index));
+            newString = newString + strLast;
+        }
+        return newString;
+    }
+    func lessonEightteen(_ numberOne: Int, _ numberTwo:Int) -> Bool {
+        if numberOne % 10 == numberTwo % 10{
+            return true;
+        }
+        return false;
+    }
+    func lessonSeventeen(_ numberOne:Int, _ numberTwo:Int) -> Int {
+        let max = numberOne > numberTwo ? numberOne : numberTwo;
+        if max > 20 && max < 30{
+            return max;
+        }
+        return 0;
     }
     func lessSixteen(_ numberOne:Int, _ numberTwo: Int) -> Bool {
         if (numberOne > 20 && numberOne < 30) && (numberTwo > 20 || numberTwo < 30){
