@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         let numberTwo:Int = 12;
         let numberThree:Int = 20;
         let str:String = "Duy IoT";
-        let arr:Array<Int> = [2,7,7,7,6,0,7,7];
+        let arr:Array<Int> = [2,7,7,2,6,7,7,7];
         print("Exercise 1: \(exerciseOne(numberOne, numberTwo))")
         print("Exercise 2: \(exerciseTwo(numberOne))")
         print("Exercise 3: \(exerciseThree(numberOne, numberTwo))")
@@ -94,9 +94,13 @@ class ViewController: UIViewController {
         return newString
     }
     func exerciseTwentyEgight(_ arr: Array<Int>, _ number: Int) -> Bool {
-        for index in 0..<arr.count {
-            if arr[index] == number && arr[index + 1] == number && arr[index + 2] == number {
-                return true
+        if arr.count < 3 {
+            return false
+        } else {
+            for index in 0..<arr.count - 2 {
+                if arr[index] == arr[index + 1] && arr[index + 1] == arr[index + 2] {
+                    return true
+                }
             }
         }
         return false
