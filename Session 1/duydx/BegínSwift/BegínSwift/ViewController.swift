@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         let numberTwo:Int = 12;
         let numberThree:Int = 20;
         let str:String = "Duy IoT";
-        let arr:Array<Int> = [2,7,7,2,6,7,7,7];
+        let arr:Array<Int> = [2,7,7,2,6,7,4,7];
         print("Exercise 1: \(exerciseOne(numberOne, numberTwo))")
         print("Exercise 2: \(exerciseTwo(numberOne))")
         print("Exercise 3: \(exerciseThree(numberOne, numberTwo))")
@@ -61,7 +61,7 @@ class ViewController: UIViewController {
         print("Exercise 25: \(exerciseTwentyFive(str))")
         print("Exercise 26: \(exerciseTwentySix(str))")
         print("Exercise 27: \(exerciseTwentySeven(arr))")
-        print("Exercise 28: \(exerciseTwentyEgight(arr, numberOne))")
+        print("Exercise 28: \(exerciseTwentyEgight(arr))")
     }
     func exerciseTwenty(_ str: String) -> Bool {
         for index in 0..<str.count {
@@ -93,7 +93,7 @@ class ViewController: UIViewController {
         newString.append(str[String.Index.init(encodedOffset: str.count - 1)])
         return newString
     }
-    func exerciseTwentyEgight(_ arr: Array<Int>, _ number: Int) -> Bool {
+    func exerciseTwentyEgight(_ arr: Array<Int>) -> Bool {
         if arr.count < 3 {
             return false
         } else {
