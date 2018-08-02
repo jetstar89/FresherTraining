@@ -410,22 +410,20 @@ class ViewController: UIViewController {
         }
         return count
     }
-    func exam28(_ arr: [Int]) -> Bool{
-        let input: Int = 8
-        var count: Int = 0
-        for i in 0..<arr.count {
-            if(input == arr[i]) {
-                count = count + 1
+    func exam28(_ arr: [Int]) -> Bool {
+        if  arr.count < 3 {
+            return false
+        } else {
+            for i in 0..<arr.count - 2 {
+            if(arr[i] == arr[i+1] && arr[i+1] == arr[i+2]) {
+                return true
             } else {
                 //
             }
+           
         }
-        if(count == 3) {
-            return true
-        } else {
-            return false
-        }
-        
+    }
+        return false
     }
 
     override func didReceiveMemoryWarning() {
@@ -435,4 +433,5 @@ class ViewController: UIViewController {
 
 
 }
+
 
