@@ -16,34 +16,38 @@ class ViewController: UIViewController {
         
         print("View did load")
         
-        exam28([1,56,7,7,8,8,8])
-        exam27([1,56,7,7])
-        exam26("Gem Company")
-        exam25("Gem Company")
-        exam24([0,1,2,56,7,7])
-        exam22([0,1,2,56,7,7])
-        exam21("Gem Company")
-        exam20("aaaaa")
-        exam17(2,3)
-        print(exam17(2,3))
-        exam16(30, 40)
-        exam15(10,14)
-        exam14(1,2,3)
-        print(exam14(1,2,3))
-        exam13("fiadsfads")
-        exam12(25,15)
-        exam11("Isasdfhasv")
-        exam10("Nguyen Dinh Tu")
-        exam9(35)
+//        exam28([1,56,7,7,8,8,8])
+//        exam27([1,56,7,7])
+//        exam26("Gem Company")
+//        exam25("Gem Company")
+//        exam24([0,1,2,56,7,7])
+//        exam22([0,1,2,56,7,7])
+//        exam21("Gem Company")
+//        exam20("aaaaa")
+//        exam17(2,3)
+//        print(exam17(2,3))
+//        exam16(30, 40)
+//        exam15(10,14)
+//        exam14(1,2,3)
+//        print(exam14(1,2,3))
+//        exam13("fiadsfads")
+//        exam12(25,15)
+//        exam11("Isasdfhasv")
+//        exam10("Nguyen Dinh Tu")
+//        exam9(35)
         exam8("Nguyen Dinh Tu")
-        exam7("sds","dsdsds")
-        print(exam7("sds","dsdsds"))
-        exam6("Nguyen Dinh Tu")
-        exam5("Nguyen Dinh Tu")
-        exam4(10,20)
-        exam3(10,20)
-        exam2(10)
-        exam1(10,20)
+//        exam7("sds","dsdsds")
+//        print(exam7("sds","dsdsds"))
+//        exam6("Nguyen Dinh Tu")
+//        exam5("Nguyen Dinh Tu")
+//        exam4(10,20)
+//        exam3(10,20)
+//        exam2(10)
+//        exam1(10,20)
+//
+        print( exam23([0,1,2,56,7,7]))
+        exam18(5,5)
+        exam19("nguyen dinh tu")
         
         
         
@@ -97,16 +101,15 @@ class ViewController: UIViewController {
         return strNew;
     }
     
-    func exam8(_ str:String)->  String {
+    func exam8(_ str:String){
         var strAdd = str
         if strAdd.count < 1 || strAdd.isEmpty{
-            return "Invalid Input (<1)";
+            print("Invalid Input (<1)")
         } else {
-            let sub:String = String(Array(strAdd)[strAdd.count - 1]);
-            strAdd = sub + strAdd;
-            return strAdd;
+            strAdd = "\(strAdd.last!)" + strAdd
+            strAdd.append(strAdd.last!)
         }
-        
+        print(strAdd)
     }
     func exam9(_ a:Int){
         if a<=0{
@@ -233,34 +236,41 @@ class ViewController: UIViewController {
     
     // 2 bai 18 19 em cung chua nghi ra
     
-//    func exam18(_ a:Int){
-//        if(a<0){
-//            var str = "\(a)"
-//            for i in 0..<str.count{
-//                let index = str.index(str.startIndex, offsetBy: i)
-//
-//
-//            }
-//        }
-//
-//    }
-//    func exam19(_ str:String){
-//        var strAdd:String = ""
-//        var strAdd2:String = ""
-//        if(str.count<3){
-//            str.lowercased()
-//        }
-//        else{
-//            for i in 0..<str.count{
-//                let index = str.index(str.startIndex, offsetBy: i)
-//                if(i!=str.count-2||i!=str.count-1||i!=str.count){
-//
-//                }
-//            }
-//        }
-//
-//
-//    }
+    func exam18(_ a:Int,_ b: Int){
+        if(a<0 || b<0){
+                print("\(a) hoac \(b) la so am")
+        }else{
+            var ch1:Character = "\(a)".last!
+            var ch2:Character = "\(b)".last!
+            if(ch1 == ch2){
+                print("Hai so co gia tri cuoi giong nhau")
+            }else{
+                 print("Hai so co gia tri cuoi khac nhau")
+            }
+            
+            
+        }
+    }
+
+    
+    func exam19(_ str:String){
+        var strAdd:String = ""
+        if(str.count<3){
+            str.lowercased()
+        }
+        else{
+            for i in 0..<str.count{
+                let index = str.index(str.startIndex, offsetBy: i)
+                
+                if(i==str.count  || i == str.count-1 || i == str.count-2){
+                    strAdd.append("\(str[index])".uppercased())
+                }else{
+                    strAdd.append(str[index])
+                }
+            }
+        }
+        print(strAdd)
+    }
     func exam20(_ str:String){
         var count:Int = 0
         var ch:String = ""
@@ -307,6 +317,21 @@ class ViewController: UIViewController {
         
     }
     // bai23 em khong nghi ra
+    func exam23(_ arr:[Int])-> Bool{
+        var count:Int = 0
+        for i in 0..<arr.count {
+            count = count + 1
+            if(count == 4){
+            
+                break
+            }
+            if arr[i]==7 {
+                return true
+            }
+            
+        }
+        return false
+    }
     func exam24(_ arr:[Int]){
         
         var count:Int = 0
