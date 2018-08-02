@@ -85,7 +85,7 @@ class ViewController: UIViewController {
     func exerciseTwentyFive(_ str: String) -> String {
         var newString: String = ""
         newString.append(str[String.Index.init(encodedOffset: 0)])
-        for index in 0..<str.count - 1 {
+        for index in 1..<str.count - 1 {
             if str[String.Index.init(encodedOffset: index)] != "a" {
                 newString.append(str[String.Index.init(encodedOffset: index)])
             }
