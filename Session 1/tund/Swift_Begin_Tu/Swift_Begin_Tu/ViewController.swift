@@ -312,8 +312,13 @@ class ViewController: UIViewController {
         var strAdd = ""
         for i in 0..<str.count {
             let index = str.index(str.startIndex, offsetBy: i)
-            var ch = str[index]
-            strAdd.append(ch)
+            if( i % 2 == 0){
+                var ch = str[index]
+                strAdd.append(ch)
+            } else {
+                //
+            }
+           
              
         }
         return strAdd
