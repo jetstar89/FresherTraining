@@ -387,7 +387,7 @@ class ViewController: UIViewController {
         for i in 0..<str.count{
             if(i % 2 == 0){
                   let index = str.index(str.startIndex, offsetBy: i)
-                strAdd.append(str[index])
+                 strAdd.append(str[index])
             }
         }
         return strAdd
