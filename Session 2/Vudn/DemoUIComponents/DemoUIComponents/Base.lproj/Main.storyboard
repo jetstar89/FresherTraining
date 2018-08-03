@@ -79,10 +79,10 @@
                     </view>
                     <connections>
                         <outlet property="forgotPasswordLabel" destination="MR8-DH-9PE" id="UQm-Mc-m6N"/>
+                        <outlet property="hiddenPasswordImageView" destination="wlE-ef-Dga" id="wQ3-VD-if9"/>
                         <outlet property="loginButton" destination="fnj-h4-V9e" id="Ane-gI-djm"/>
                         <outlet property="logoImageView" destination="3jS-WD-vm2" id="cH5-rj-cAf"/>
                         <outlet property="passwordTextField" destination="l34-pn-xGp" id="ThF-XO-c9h"/>
-                        <outlet property="showPasswordImageView" destination="wlE-ef-Dga" id="uPh-3F-k4J"/>
                         <outlet property="usernameTextField" destination="NTd-9S-pQS" id="Lax-32-ZRr"/>
                     </connections>
                 </viewController>
