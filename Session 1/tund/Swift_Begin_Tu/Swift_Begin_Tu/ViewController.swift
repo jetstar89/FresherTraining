@@ -16,40 +16,34 @@ class ViewController: UIViewController {
         
         print("View did load")
         
-//        exam28([1,56,7,7,8,8,8])
-//        exam27([1,56,7,7])
-//        exam26("Gem Company")
-//        exam25("Gem Company")
-//        exam24([0,1,2,56,7,7])
-//        exam22([0,1,2,56,7,7])
-//        exam21("Gem Company")
-//        exam20("aaaaa")
-//        exam17(2,3)
-//        print(exam17(2,3))
-//        exam16(30, 40)
-//        exam15(10,14)
-//        exam14(1,2,3)
-//        print(exam14(1,2,3))
-//        exam13("fiadsfads")
-//        exam12(25,15)
-//        exam11("Isasdfhasv")
-//        exam10("Nguyen Dinh Tu")
-//        exam9(35)
-        exam8("Nguyen Dinh Tu")
-//        exam7("sds","dsdsds")
-//        print(exam7("sds","dsdsds"))
-//        exam6("Nguyen Dinh Tu")
-//        exam5("Nguyen Dinh Tu")
-//        exam4(10,20)
-//        exam3(10,20)
-//        exam2(10)
-//        exam1(10,20)
-//
-        print( exam23([0,1,2,56,7,7]))
-        exam18(5,5)
-        exam19("nguyen dinh tu")
-        
-        
+        print("Exercise 28: \(exam28([1,56,7,7,8,8,8]))")
+        print("Exercise 27: \(exam27([1,56,7,7]))")
+        print("Exercise 26: \(exam26("Gem Company"))")
+        print("Exercise 25: \(exam25("Gem Company"))")
+        print("Exercise 24: \(exam24([0,1,2,56,7,7]))")
+        print("Exercise 23: \(exam23([0,1,2,56,7,7]))")
+        print("Exercise 22: \(exam22([0,1,2,56,7,7]))")
+        print("Exercise 21: \(exam21("Gem Company"))")
+        print("Exercise 20: \(exam20("Gem Company"))")
+        print("Exercise 19: \(exam19("Nguyen Dinh Tu"))")
+        print("Exercise 18: \(exam18(5,5))")
+        print("Exercise 17: \(exam17(2,3))")
+        print("Exercise 16: \(exam16(30,40))")
+        print("Exercise 15: \(exam15(10,14))")
+        print("Exercise 14: \(exam14(1,2,3))")
+        print("Exercise 13: \(exam13("fiadsfads"))")
+        print("Exercise 12: \(exam12(25,15))")
+        print("Exercise 11: \(exam11("Isadsfads"))")
+        print("Exercise 10: \(exam10("Nguyen Dinh Tu"))")
+        print("Exercise 9: \(exam9(35))")
+        print("Exercise 8: \(exam8("Nguyen Dinh Tu"))")
+        print("Exercise 7: \(exam7("Gem company","freshser"))")
+        print("Exercise 6: \(exam6("Nguyen Dinh Tu"))")
+        print("Exercise 5: \(exam5("Nguyen Dinh Tu"))")
+        print("Exercise 4: \(exam4(10,20))")
+        print("Exercise 3: \(exam3(10,20))")
+        print("Exercise 2: \(exam2(10))")
+        print("Exercise 1: \(exam4(10,20))")
         
         
     }
@@ -58,50 +52,62 @@ class ViewController: UIViewController {
     
     
     
-    func exam1(_ a: Int,_ b:Int){
+    func exam1(_ a: Int,_ b: Int) -> Int {
+        var sum: Int = 0
         if (a != b){
-            print("Tong 2 so la \(a + b)");
+            sum = a + b
         } else {
-            print("Tong 3 so \(3*a)");
+            sum = 3 * sum
         }
+        return sum
     }
-    func exam2(_ number:Int) {
+    func exam2(_ number: Int) -> String {
+        var str = ""
         if (number > 51){
-            print("Gap doi so \(2*(number-51))");
+            str = "Gap doi so \(2 * (number - 51))";
+        } else {
+            str = "Sai so"
         }
+        return str
     }
-    func exam3(_ a: Int, _ b:Int) -> Bool {
+    func exam3(_ a: Int, _ b: Int) -> Bool {
         if (a == 20 || b == 20 || (a + b) == 20){
             return true;
+        } else {
+            //
         }
         return false;
     }
-    func exam4(_ a:Int,_ b:Int) -> Bool {
-        if (a*b < 0 || (a < 0 && b < 0)){
+    func exam4(_ a: Int,_ b: Int) -> Bool {
+        if (a * b < 0 || (a < 0 && b < 0)){
             return true;
+        } else {
+            
         }
         return false;
     }
-    func exam5(_ str:String) -> String {
-        if (str.prefix(2) != "Is"){
+    func exam5(_ str: String) -> String {
+        if (str.prefix(2) != "Is") {
             return "Is" + str;
+        } else {
+            
         }
         return str;
     }
-    func exam6(_ str:String) -> String {
+    func exam6(_ str: String) -> String {
         let strNew:String = String(str.dropFirst());
         return strNew;
     }
-    func exam7(_ str:String,_ strReplace:String) -> String {
-        var strNew = str;
-        strNew = String(strNew.dropFirst());
-        strNew  = String(strNew .dropLast());
-        strNew  = strNew + strReplace;
-        strNew  = strReplace + strNew ;
-        return strNew;
+    func exam7(_ str: String,_ strReplace: String) -> String {
+        var strNew = str
+        strNew = String(strNew.dropFirst())
+        strNew  = String(strNew .dropLast())
+        strNew  = strNew + strReplace
+        strNew  = strReplace + strNew
+        return strNew
     }
     
-    func exam8(_ str:String){
+    func exam8(_ str: String) -> String{
         var strAdd = str
         if strAdd.count < 1 || strAdd.isEmpty{
             print("Invalid Input (<1)")
@@ -109,33 +115,37 @@ class ViewController: UIViewController {
             strAdd = "\(strAdd.last!)" + strAdd
             strAdd.append(strAdd.last!)
         }
-        print(strAdd)
+        return strAdd
     }
-    func exam9(_ a:Int){
+    func exam9(_ a: Int) -> String {
+        var str = ""
         if a<=0{
-            print("Dau vao sai")
+            str = "Dau vao sai"
         }else if a%3==0 && a%5==0{
-            print("\(a) la boi cua 3 va 5")
+            str = "\(a) la boi cua 3 va 5"
         }else if( a%3==0){
-            print("\(a) la boi cua 3")
+            str = "\(a) la boi cua 3"
         }else if( a%5==0){
-            print("\(a) la boi cua 5")
+            str = "\(a) la boi cua 5"
         }
+        return str
     }
-    func exam10(_ str:String)->String{
-        let ch:String = String(str.prefix(2))
-        var str1:String = "sadas"
+    func exam10(_ str: String)-> String {
+        let ch: String = String(str.prefix(2))
+        var str1: String = "sadas"
         str1 = ch + str1 + ch
         return str1
     }
     
-    func exam11(_ str:String)->Bool{
-        var strAdd:String = ""
-        if(str.count>=1){
-            for i in 0..<str.count{
+    func exam11(_ str: String) -> Bool {
+        var strAdd: String = ""
+        if(str.count>=1) {
+            for i in 0..<str.count {
                 let index = str.index(str.startIndex, offsetBy: i)
                 if(i<2){
                     strAdd.append(str[index])
+                } else {
+                    //
                 }
             }
         }else{
@@ -146,18 +156,19 @@ class ViewController: UIViewController {
         }
         return false
     }
-    func exam12(_ a:Int, _ b:Int)-> Bool{
-        if a>=20 || a<=30{
+    func exam12(_ a: Int, _ b: Int) -> Bool {
+        if (a>=20 || a<=30) {
             return true
         }
-        if b>=20 || b<=30{
+        if (b>=20 || b<=30) {
             return true
         }
         return false
     }
-    // bai nay con thieu truong hop nhung em chua quet dc het
-    func exam13(_ str:String){
-        var strAdd:String = ""
+    
+    func exam13(_ str: String) -> String {
+        var result = ""
+        var strAdd: String = ""
         if(str.count>=2){
             for i in 0..<str.count{
                 let index = str.index(str.startIndex, offsetBy: i)
@@ -166,102 +177,100 @@ class ViewController: UIViewController {
                 }
             }
         }else{
-            print("Day so qua ngan")
+            result = "Day so qua ngan"
         }
         if(strAdd == "fix"){
-            print("Day so co tu 'fix'  bat dau")
+            result = "Day so co tu 'fix'  bat dau"
+        }else{
+            result = "Day so khong co tu 'fix bat dau'"
         }
-        
+        return result
     }
-    func exam14(_ a:Int,_ b:Int, _ c:Int)->Int{
-        var max:Int
+    func exam14(_ a: Int,_ b: Int, _ c: Int) -> Int{
+        var max: Int
         max = a
-        if(max<b){
+        if(max < b) {
             max = b
-        }
-        if(max<c){
+        } else if (max < c) {
             max = c
         }
         return max
     }
     // bai nay em k search ra cach tim gia tri tuyet doi nen chi dung trong trong hop 2 so duong
-    func exam15(_ a:Int,_ b:Int)->Int{
-        var  e:Int = 0
-        var d:Int = 0
-        if(a>0&&b>0){
+    func exam15(_ a: Int,_ b: Int) -> Int {
+        var e: Int = 0
+        var d: Int = 0
+        if( a > 0 && b > 0) {
             e = a - 10
             d = b - 10
-            if(e>d){
-                print("\(b) gan 10 hon")
+            if(e > d) {
                  return 1
-            }
-            if(e<d){
-                print("\(a) gan 10 hon")
+            } else if(e < d) {
                 return 2
-            }else{
-                print("Hai so cung khoang cah voi 10")
-                
             }
         }
         return 0
     }
-    func exam16(_ a:Int, _ b:Int){
-    
-        if(a>=20||a<=30&&b>=20&&b<=30){
-            print("Hai so nam trong khoang tu 20 den 30")
+    func exam16(_ a: Int,_ b: Int) -> String {
+        if(a >= 20 || a <= 30 && b >= 20 && b <= 30) {
+            return "Hai so nam trong khoang tu 20 den 30"
+        } else if(a >= 30 || a <= 40 && b >= 30 && b <= 40) {
+            return "Hai so nam trong khoang tu 30 den 40"
+        } else {
+            //
         }
-        if(a>=30||a<=40&&b>=30&&b<=40){
-            print("Hai so nam trong khoang tu 30 den 40")
-        }
-        
+        return "Hai so khong nam trong 2 khoang tren"
     }
-    func exam17(_ a:Int, _ b:Int)->Int{
-        var c:Int
-        if(a<0||b<0){
+    func exam17(_ a: Int,_ b: Int) -> Int {
+        var c: Int
+        if(a<0 || b<0) {
             print("Invalid Input")
+        } else {
+            //
         }
-        if(a>b){
-                c=a
-            }
-                c=b
+        if(a > b) {
+            c=a
+        } else {
+            c=b
+        }
         if(c>=20){
             if(c<=30){
                 return 1;
+            } else {
+                //
             }
-            
+        } else {
+            //
         }
         return 0;
         
     }
     
-    // 2 bai 18 19 em cung chua nghi ra
+   
     
-    func exam18(_ a:Int,_ b: Int){
-        if(a<0 || b<0){
-                print("\(a) hoac \(b) la so am")
-        }else{
-            var ch1:Character = "\(a)".last!
-            var ch2:Character = "\(b)".last!
+    func exam18(_ a: Int,_ b: Int) -> String {
+        if(a < 0 || b < 0) {
+            return "\(a) hoac \(b) la so am"
+        } else {
+            var ch1: Character = "\(a)".last!
+            var ch2: Character = "\(b)".last!
             if(ch1 == ch2){
-                print("Hai so co gia tri cuoi giong nhau")
+                return "Hai so co gia tri cuoi giong nhau"
             }else{
-                 print("Hai so co gia tri cuoi khac nhau")
+               //
             }
-            
-            
         }
+         return "Hai so co gia tri cuoi khac nhau"
     }
 
     
-    func exam19(_ str:String){
+    func exam19(_ str: String) -> String {
         var strAdd:String = ""
-        if(str.count<3){
+        if(str.count < 3) {
             str.lowercased()
-        }
-        else{
-            for i in 0..<str.count{
+        } else {
+            for i in 0..<str.count {
                 let index = str.index(str.startIndex, offsetBy: i)
-                
                 if(i==str.count  || i == str.count-1 || i == str.count-2){
                     strAdd.append("\(str[index])".uppercased())
                 }else{
@@ -269,147 +278,152 @@ class ViewController: UIViewController {
                 }
             }
         }
-        print(strAdd)
+        return strAdd
     }
-    func exam20(_ str:String){
-        var count:Int = 0
-        var ch:String = ""
-        var ch1:String = ""
-        for i in 0..<str.count{
+    func exam20(_ str: String) -> Bool {
+        
+        var ch: String = ""
+        var ch1: String = ""
+        for i in 0..<str.count {
             let index = str.index(str.startIndex, offsetBy: i)
             var ch = str[index]
-            for j in i+1..<str.count{
+            for j in i+1..<str.count {
                 let index1 = str.index(str.startIndex, offsetBy: i)
                 var ch1 = str[index1]
-                if(ch == ch1){
-                    count = 1
+                if(ch == ch1) {
+                    return true
+                } else {
+                    //
                 }
                 }
             }
-        if count == 1{
-            print("Chuoi dung dinh dang 'aa' theo yeu cau")
-        }
-        
+       return false
     }
-    func exam21(_ str:String){
+    func exam21(_ str: String) -> String {
         var strAdd = ""
-        for i in 0..<str.count{
+        for i in 0..<str.count {
             let index = str.index(str.startIndex, offsetBy: i)
-            var ch = str[index]
-            
-            strAdd.append(ch)
+            if( i % 2 == 0){
+                var ch = str[index]
+                strAdd.append(ch)
+            } else {
+                //
+            }
+           
              
         }
-        print(strAdd)
+        return strAdd
     }
     
-    func exam22(_ arr:[Int]){
-       
-        var count:Int = 0
+    func exam22(_ arr: [Int]) -> String {
+        var count: Int = 0
         for i in 0..<arr.count{
             if(arr[i]==7){
                 count = count + 1
+            } else {
+                //
             }
         }
-        print("So 7 xuat hien \(count) lan")
+        return "So 7 xuat hien \(count) lan"
     }
-    func exam23(){
-        
-    }
+  
     // bai23 em khong nghi ra
-    func exam23(_ arr:[Int])-> Bool{
-        var count:Int = 0
+    func exam23(_ arr: [Int]) -> Bool{
+        var count: Int = 0
         for i in 0..<arr.count {
             count = count + 1
             if(count == 4){
-            
                 break
+            } else {
+                //
             }
             if arr[i]==7 {
                 return true
+            } else {
+                //
             }
-            
         }
         return false
     }
-    func exam24(_ arr:[Int]){
-        
-        var count:Int = 0
-        var a:Int
-        var b:Int
-        var c:Int
+    func exam24(_ arr: [Int]) -> Bool {
+        var count: Int = 0
+        var a: Int
+        var b: Int
+        var c: Int
         for i in 0..<arr.count{
             a = arr[i]
             for j in i+1..<arr.count{
                 b = arr[j]
                 for k in j+1..<arr.count{
                     c = arr[k]
-                    if(a==0&&b==1&&c==2){
-                        count = 1
+                    if(a == 0 && b==1 && c==2){
+                        return true
                     }
                 }
             }
         }
-        if(count==1){
-            print("Chuoi so 0,1,2 co xuat hien trong day")
-        }
-        
+        return false
     }
-    func exam25(_ str:String){
-        
+    func exam25(_ str: String) -> String {
         var strAdd = ""
         for i in 0..<str.count{
             let index = str.index(str.startIndex, offsetBy: i)
             var ch = str[index]
-            if(i>0||i<str.count){
-                if(ch != "a"){
+            if( i > 0 || i < str.count) {
+                if(ch != "a") {
                     strAdd.append(ch)
+                } else {
+                    //
                 }
+            } else {
+                //
             }
         }
-        print(strAdd)
+        return strAdd
     }
     
-    func exam26(_ str:String){
+    func exam26(_ str: String) -> String {
         var strAdd = ""
-        
         for i in 0..<str.count{
             if(i % 2 == 0){
                   let index = str.index(str.startIndex, offsetBy: i)
                 strAdd.append(str[index])
             }
         }
-        print(strAdd)
+        return strAdd
         
     }
-    func exam27(_ arr:[Int]){
-        
-        var count:Int = 0
-        var a:Int
-        var b:Int
+    func exam27(_ arr: [Int]) -> Int {
+        var count: Int = 0
+        var a: Int
+        var b: Int
         for i in 0..<arr.count{
             a = arr[i]
             for j in i+1..<arr.count{
                 b = arr[j]
-                if (a==b&&a==7){
+                if (a == b && a == 7){
                     count = count + 1
+                } else {
+                    //
                 }
             }
         }
-        print(count)
+        return count
     }
-    func exam28(_ arr:[Int]){
-        let input:Int = 8
-        var count:Int = 0
-        for i in 0..<arr.count{
-            if(input==arr[i]){
-                count = count + 1
+    func exam28(_ arr: [Int]) -> Bool {
+        if  arr.count < 3 {
+            return false
+        } else {
+            for i in 0..<arr.count - 2 {
+            if(arr[i] == arr[i+1] && arr[i+1] == arr[i+2]) {
+                return true
+            } else {
+                //
             }
+           
         }
-
-        if(count == 3){
-            print("So co hien thi 3 lan trong day")
-        }
+    }
+        return false
     }
 
     override func didReceiveMemoryWarning() {
@@ -419,4 +433,5 @@ class ViewController: UIViewController {
 
 
 }
+
 
