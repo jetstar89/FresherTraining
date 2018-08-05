@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController {
 
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var hiddenPasswordImageView: UIImageView!
@@ -20,7 +20,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         registerDelegate()
-        registerGesturRecognizer()
+        registerGestureRecognizer()
     }
     
     func registerDelegate() {
@@ -28,25 +28,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
         passwordTextField.delegate = self
     }
     
-    func registerGesturRecognizer() {
-        let showPasswordGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(onShowPassword(_:)))
+    func registerGestureRecognizer() {
+        let showPasswordGestureRecognizer = UITapGestureRecognizer(target: self,
+                                                                   action: #selector(onShowPassword(_:)))
         hiddenPasswordImageView.isUserInteractionEnabled = true
         hiddenPasswordImageView.addGestureRecognizer(showPasswordGestureRecognizer)
         
-        let onTapViewGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(onTapView(_:)))
+        let onTapViewGestureRecognizer = UITapGestureRecognizer(target: self,
+                                                                action: #selector(onTapView(_:)))
         view.isUserInteractionEnabled = true
         view.addGestureRecognizer(onTapViewGestureRecognizer)
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        logoImageView.image = UIImage(named: "gem2017")
-        hiddenPasswordImageView.image = UIImage(named: "icView")
-        hiddenPasswordImageView.isHidden = true
-        
-        usernameTextField.setGrayBottomBorder()
-        passwordTextField.setGrayBottomBorder()
-        
-        passwordTextField.isSecureTextEntry = true
+        super.viewDidAppear(animated)
+        usernameTextField.setIsOnFocus(false)
+        passwordTextField.setIsOnFocus(false)                
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,35 +55,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         usernameTextField.text = ""
         passwordTextField.text = ""
         view.endEditing(true)
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if  textField == usernameTextField {
-            passwordTextField.becomeFirstResponder()
-        } else {
-            passwordTextField.resignFirstResponder()
-        }
-        return true
-    }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        if textField == passwordTextField {
-            // show image hidden password
-            hiddenPasswordImageView.isHidden = false
-        } else {
-            // do nothing
-        }
-        textField.setOrangeBottomBorder()
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        if textField == passwordTextField && passwordTextField.text == "" {
-            //show hiddenPasswordImageView
-            hiddenPasswordImageView.isHidden = true
-        } else {
-            // do nothing
-        }
-        textField.setGrayBottomBorder()
     }
     
     @objc func onShowPassword(_ sender: UITapGestureRecognizer) {
@@ -104,26 +72,45 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
 }
 
-extension UITextField {
-    func setOrangeBottomBorder() {
-        self.borderStyle = .none
-        let border = CALayer()
-        let width = CGFloat(2.0)
-        
-        border.borderColor = UIColor.orange.cgColor
-        border.frame = CGRect(x: 0, y: self.frame.size.height - width, width: self.frame.size.width, height: self.frame.size.height)
-        border.borderWidth = width
-        
-        self.layer.addSublayer(border)
-        self.layer.masksToBounds = true
+extension ViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if  textField == usernameTextField {
+            passwordTextField.becomeFirstResponder()
+        } else {
+            passwordTextField.resignFirstResponder()
+        }
+        return true
     }
     
-    func setGrayBottomBorder() {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == passwordTextField {
+            // show image hidden password
+            hiddenPasswordImageView.isHidden = false
+        } else {
+            // do nothing
+        }
+        textField.setIsOnFocus(true)
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField == passwordTextField && passwordTextField.text == "" {
+            //show hiddenPasswordImageView
+            hiddenPasswordImageView.isHidden = true
+        } else {
+            // do nothing
+        }
+        textField.setIsOnFocus(false)
+    }
+}
+
+extension UITextField {
+    
+    func setIsOnFocus(_ isOnFocus: Bool) {
         self.borderStyle = .none
         let border = CALayer()
         let width = CGFloat(2.0)
         
-        border.borderColor = UIColor.gray.cgColor
+        border.borderColor = isOnFocus ? UIColor.orange.cgColor : UIColor.gray.cgColor
         border.frame = CGRect(x: 0, y: self.frame.size.height - width, width: self.frame.size.width, height: self.frame.size.height)
         border.borderWidth = width
         
