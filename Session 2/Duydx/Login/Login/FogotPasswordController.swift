@@ -70,5 +70,7 @@ extension FogotPasswordController: UITextFieldDelegate {
         emailTextField.resignFirstResponder()
         return true
     }
-}
+    
 
+
+}

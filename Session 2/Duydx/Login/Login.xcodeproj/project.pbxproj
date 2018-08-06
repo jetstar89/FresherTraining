@@ -30,10 +30,10 @@
 		84F454392117EBBB00217F3D /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84F454292117EBBB00217F3D /* Roboto-LightItalic.ttf */; };
 		84F4545E21182B9C00217F3D /* ScreenTimekeeping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4545C21182B9C00217F3D /* ScreenTimekeeping.swift */; };
 		84F4545F21182B9C00217F3D /* ScreenTimekeeping.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84F4545D21182B9C00217F3D /* ScreenTimekeeping.xib */; };
-		84F454622118396600217F3D /* FogotPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F454602118396600217F3D /* FogotPasswordController.swift */; };
-		84F454632118396600217F3D /* FogotPasswordController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84F454612118396600217F3D /* FogotPasswordController.xib */; };
-		84F4546621184B9000217F3D /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4546421184B9000217F3D /* HomeController.swift */; };
-		84F4546721184B9000217F3D /* HomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84F4546521184B9000217F3D /* HomeController.xib */; };
+		84F45470211853CC00217F3D /* FogotPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4546E211853CC00217F3D /* FogotPasswordController.swift */; };
+		84F45471211853CC00217F3D /* FogotPasswordController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84F4546F211853CC00217F3D /* FogotPasswordController.xib */; };
+		84F454742118555800217F3D /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F454722118555800217F3D /* HomeController.swift */; };
+		84F454752118555800217F3D /* HomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84F454732118555800217F3D /* HomeController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,10 +62,10 @@
 		84F454292117EBBB00217F3D /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
 		84F4545C21182B9C00217F3D /* ScreenTimekeeping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTimekeeping.swift; sourceTree = "<group>"; };
 		84F4545D21182B9C00217F3D /* ScreenTimekeeping.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScreenTimekeeping.xib; sourceTree = "<group>"; };
-		84F454602118396600217F3D /* FogotPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogotPasswordController.swift; sourceTree = "<group>"; };
-		84F454612118396600217F3D /* FogotPasswordController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FogotPasswordController.xib; sourceTree = "<group>"; };
-		84F4546421184B9000217F3D /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
-		84F4546521184B9000217F3D /* HomeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeController.xib; sourceTree = "<group>"; };
+		84F4546E211853CC00217F3D /* FogotPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogotPasswordController.swift; sourceTree = "<group>"; };
+		84F4546F211853CC00217F3D /* FogotPasswordController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FogotPasswordController.xib; sourceTree = "<group>"; };
+		84F454722118555800217F3D /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		84F454732118555800217F3D /* HomeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +84,7 @@
 			children = (
 				84ED89B321142E73005D2174 /* Login */,
 				84ED89B221142E73005D2174 /* Products */,
+				84F4546D211852F900217F3D /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +108,10 @@
 				84ED89C021142E74005D2174 /* Info.plist */,
 				84F4545C21182B9C00217F3D /* ScreenTimekeeping.swift */,
 				84F4545D21182B9C00217F3D /* ScreenTimekeeping.xib */,
+				84F4546E211853CC00217F3D /* FogotPasswordController.swift */,
+				84F4546F211853CC00217F3D /* FogotPasswordController.xib */,
+				84F454722118555800217F3D /* HomeController.swift */,
+				84F454732118555800217F3D /* HomeController.xib */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -140,6 +145,13 @@
 				84F4541E2117EBBA00217F3D /* Roboto-ThinItalic.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		84F4546D211852F900217F3D /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +213,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				84F454362117EBBB00217F3D /* Roboto-Medium.ttf in Resources */,
+				84F45471211853CC00217F3D /* FogotPasswordController.xib in Resources */,
+				84F454752118555800217F3D /* HomeController.xib in Resources */,
 				84ED89BF21142E74005D2174 /* LaunchScreen.storyboard in Resources */,
 				84F454372117EBBB00217F3D /* Roboto-CondensedItalic.ttf in Resources */,
 				84F454352117EBBB00217F3D /* Roboto-MediumItalic.ttf in Resources */,
@@ -232,9 +246,9 @@
 			files = (
 				84ED89B721142E73005D2174 /* ViewController.swift in Sources */,
 				84ED89B521142E73005D2174 /* AppDelegate.swift in Sources */,
-				84F454622118396600217F3D /* FogotPasswordController.swift in Sources */,
+				84F45470211853CC00217F3D /* FogotPasswordController.swift in Sources */,
 				84F4545E21182B9C00217F3D /* ScreenTimekeeping.swift in Sources */,
-				84F4546621184B9000217F3D /* HomeController.swift in Sources */,
+				84F454742118555800217F3D /* HomeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
