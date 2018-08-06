@@ -25,6 +25,12 @@
 		1D4252FB2117ED2D00DC95A3 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D4252E92117ED2C00DC95A3 /* Roboto-Bold.ttf */; };
 		1D4252FC2117ED2D00DC95A3 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D4252EA2117ED2D00DC95A3 /* Roboto-MediumItalic.ttf */; };
 		1D4252FD2117ED2D00DC95A3 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D4252EB2117ED2D00DC95A3 /* Roboto-Regular.ttf */; };
+		1D42532A21183B5500DC95A3 /* ForgotPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42532821183B5500DC95A3 /* ForgotPasswordController.swift */; };
+		1D42532B21183B5500DC95A3 /* ForgotPasswordController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D42532921183B5500DC95A3 /* ForgotPasswordController.xib */; };
+		1D42532E211854D100DC95A3 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42532C211854D100DC95A3 /* HomeController.swift */; };
+		1D42532F211854D100DC95A3 /* HomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D42532D211854D100DC95A3 /* HomeController.xib */; };
+		1D425332211854E600DC95A3 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D425330211854E600DC95A3 /* ProfileController.swift */; };
+		1D425333211854E600DC95A3 /* ProfileController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D425331211854E600DC95A3 /* ProfileController.xib */; };
 		844FEB3021143A130035952C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FEB2F21143A130035952C /* AppDelegate.swift */; };
 		844FEB3221143A130035952C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FEB3121143A130035952C /* ViewController.swift */; };
 		844FEB3521143A130035952C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844FEB3321143A130035952C /* Main.storyboard */; };
@@ -51,6 +57,12 @@
 		1D4252E92117ED2C00DC95A3 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		1D4252EA2117ED2D00DC95A3 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
 		1D4252EB2117ED2D00DC95A3 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		1D42532821183B5500DC95A3 /* ForgotPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordController.swift; sourceTree = "<group>"; };
+		1D42532921183B5500DC95A3 /* ForgotPasswordController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordController.xib; sourceTree = "<group>"; };
+		1D42532C211854D100DC95A3 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		1D42532D211854D100DC95A3 /* HomeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeController.xib; sourceTree = "<group>"; };
+		1D425330211854E600DC95A3 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		1D425331211854E600DC95A3 /* ProfileController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileController.xib; sourceTree = "<group>"; };
 		844FEB2C21143A130035952C /* DemoUIComponents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoUIComponents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		844FEB2F21143A130035952C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		844FEB3121143A130035952C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +142,12 @@
 				844FEB3621143A140035952C /* Assets.xcassets */,
 				844FEB3821143A140035952C /* LaunchScreen.storyboard */,
 				844FEB3B21143A140035952C /* Info.plist */,
+				1D42532821183B5500DC95A3 /* ForgotPasswordController.swift */,
+				1D42532921183B5500DC95A3 /* ForgotPasswordController.xib */,
+				1D42532C211854D100DC95A3 /* HomeController.swift */,
+				1D42532D211854D100DC95A3 /* HomeController.xib */,
+				1D425330211854E600DC95A3 /* ProfileController.swift */,
+				1D425331211854E600DC95A3 /* ProfileController.xib */,
 			);
 			path = DemoUIComponents;
 			sourceTree = "<group>";
@@ -199,6 +217,8 @@
 				1D4252F92117ED2D00DC95A3 /* Roboto-BlackItalic.ttf in Resources */,
 				1D4252F22117ED2D00DC95A3 /* Roboto-ThinItalic.ttf in Resources */,
 				1D4252F32117ED2D00DC95A3 /* Roboto-BoldItalic.ttf in Resources */,
+				1D42532F211854D100DC95A3 /* HomeController.xib in Resources */,
+				1D42532B21183B5500DC95A3 /* ForgotPasswordController.xib in Resources */,
 				844FEB3A21143A140035952C /* LaunchScreen.storyboard in Resources */,
 				844FEB3721143A140035952C /* Assets.xcassets in Resources */,
 				1D4252F82117ED2D00DC95A3 /* Roboto-Light.ttf in Resources */,
@@ -209,6 +229,7 @@
 				1D4252EE2117ED2D00DC95A3 /* Roboto-BoldCondensed.ttf in Resources */,
 				1D4252FD2117ED2D00DC95A3 /* Roboto-Regular.ttf in Resources */,
 				1D4252F02117ED2D00DC95A3 /* Roboto-BoldCondensedItalic.ttf in Resources */,
+				1D425333211854E600DC95A3 /* ProfileController.xib in Resources */,
 				1D4252FC2117ED2D00DC95A3 /* Roboto-MediumItalic.ttf in Resources */,
 				1D4252EC2117ED2D00DC95A3 /* Roboto-Black.ttf in Resources */,
 				1D4252F42117ED2D00DC95A3 /* Roboto_Specimen_Book.pdf in Resources */,
@@ -223,7 +244,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D425332211854E600DC95A3 /* ProfileController.swift in Sources */,
+				1D42532E211854D100DC95A3 /* HomeController.swift in Sources */,
 				844FEB3221143A130035952C /* ViewController.swift in Sources */,
+				1D42532A21183B5500DC95A3 /* ForgotPasswordController.swift in Sources */,
 				844FEB3021143A130035952C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

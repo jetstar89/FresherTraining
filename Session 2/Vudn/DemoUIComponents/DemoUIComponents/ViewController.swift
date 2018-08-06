@@ -34,10 +34,18 @@ class ViewController: UIViewController {
         hiddenPasswordImageView.isUserInteractionEnabled = true
         hiddenPasswordImageView.addGestureRecognizer(showPasswordGestureRecognizer)
         
+        let forgotPasswordGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(onShowForgotPasswordScreen(_:)))
+        forgotPasswordLabel.isUserInteractionEnabled = true
+        forgotPasswordLabel.addGestureRecognizer(forgotPasswordGestureRecognizer)
+        
         let onTapViewGestureRecognizer = UITapGestureRecognizer(target: self,
                                                                 action: #selector(onTapView(_:)))
         view.isUserInteractionEnabled = true
         view.addGestureRecognizer(onTapViewGestureRecognizer)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -69,6 +77,11 @@ class ViewController: UIViewController {
             hiddenPasswordImageView.frame = CGRect(x: hiddenPasswordImageView.frame.minX, y: hiddenPasswordImageView.frame.minY + 2, width: hiddenPasswordImageView.frame.width, height: 14)
             hiddenPasswordImageView.image = UIImage(named: "icView")
         }
+    }
+    
+    @objc func onShowForgotPasswordScreen(_ sender: UITapGestureRecognizer){
+        let forgotPasswordController = ForgotPasswordController(nibName: "ForgotPasswordController", bundle: nil)
+        navigationController?.pushViewController(forgotPasswordController, animated: true)
     }
     
     @objc func onTapView(_ sender: UITapGestureRecognizer) {
@@ -117,7 +130,7 @@ extension UITextField {
     func setIsOnFocus(_ isOnFocus: Bool) {
         self.borderStyle = .none
         let border = CALayer()
-        let width = CGFloat(2.0)
+        let width = CGFloat(1.0)
         
         border.borderColor = isOnFocus ? UIColor.init(red: 239/255, green: 137/255, blue: 15/255, alpha: 1.0).cgColor : UIColor.init(red: 180/255, green: 182/255, blue: 197/255, alpha: 1.0).cgColor
         
