@@ -43,8 +43,9 @@ class ViewController: UIViewController {
         let userName = nameTextField.text!
         let passWord = passWordTextField.text!
         if userName.isEqual("DuyIoT") && passWord.isEqual("123") {
-            let screenLogin = ScreenTimekeeping(nibName: "HomeController", bundle: nil)
+            let screenLogin = HomeController(nibName: "HomeController", bundle: nil)
             navigationController?.pushViewController(screenLogin, animated: true)
+            (UIApplication.shared.delegate as? AppDelegate)?.setupTabbarController()
         } else {
             let alert: UIAlertController = UIAlertController(title: "Thông báo", message: "Đăng nhập không thành công", preferredStyle: .alert);
             let btnOK = UIAlertAction(title: "Đồng ý", style: .cancel, handler: nil)
@@ -60,7 +61,6 @@ class ViewController: UIViewController {
         navigationController?.navigationBar.barTintColor = UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1.0)
             navigationController?.navigationBar.tintColor = UIColor.white
     }
-    
     func registerDelegate() {
         nameTextField.delegate = self
         passWordTextField.delegate = self

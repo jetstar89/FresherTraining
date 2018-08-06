@@ -33,7 +33,7 @@ class HomeController: UIViewController {
     }
     func initView() {
         navigationItem.title = "Home"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "left"), style: .plain, target: self, action: #selector(onBack))
+        navigationController?.navigationBar.barTintColor = UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1.0)
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
     }
     @objc func onBack() {
