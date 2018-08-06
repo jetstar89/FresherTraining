@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ForgotPasswordController: UIViewController {
+class ForgotPasswordViewController: UIViewController {
 
     
     @IBOutlet weak var iconPlaneImageView: UIImageView!
@@ -71,7 +71,7 @@ class ForgotPasswordController: UIViewController {
     */
 }
 
-extension ForgotPasswordController: UITextFieldDelegate {
+extension ForgotPasswordViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         emailTextField.resignFirstResponder()
         return true

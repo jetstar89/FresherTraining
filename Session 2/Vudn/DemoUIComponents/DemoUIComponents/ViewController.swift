@@ -58,6 +58,10 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    deinit {
+        print("ViewController deinit")
+    }
 
     @IBAction func onLogin(_ sender: UIButton) {
         // clear text in TextField
@@ -65,7 +69,9 @@ class ViewController: UIViewController {
         passwordTextField.text = ""
         hiddenPasswordImageView.isHidden = true
         view.endEditing(true)
+        (UIApplication.shared.delegate as? AppDelegate)?.setUpTabbar()
     }
+    
     
     @objc func onShowPassword(_ sender: UITapGestureRecognizer) {
         if passwordTextField.isSecureTextEntry {
@@ -80,8 +86,8 @@ class ViewController: UIViewController {
     }
     
     @objc func onShowForgotPasswordScreen(_ sender: UITapGestureRecognizer){
-        let forgotPasswordController = ForgotPasswordController(nibName: "ForgotPasswordController", bundle: nil)
-        navigationController?.pushViewController(forgotPasswordController, animated: true)
+        let forgotPasswordViewController = ForgotPasswordViewController(nibName: "ForgotPasswordViewController", bundle: nil)
+        navigationController?.pushViewController(forgotPasswordViewController, animated: true)
     }
     
     @objc func onTapView(_ sender: UITapGestureRecognizer) {
@@ -107,11 +113,6 @@ extension ViewController: UITextFieldDelegate {
             // do nothing
         }
         textField.setIsOnFocus(true)
-    }
-    
-    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        
-        return true
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
