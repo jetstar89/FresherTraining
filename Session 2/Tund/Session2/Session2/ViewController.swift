@@ -17,10 +17,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        loginButton.layer.cornerRadius = 2
         logoImageView .image = #imageLiteral(resourceName: "gem2017.png")
-        settingTextField(nameTextField)
-        settingTextField(fresherTextField)
+        
+        let colorUsername = UIColor(red: 182/255, green: 190/255, blue: 197/255, alpha: 1)
+        let colorPassword = UIColor(red: 239/255, green: 137/255, blue: 15/255, alpha: 1)
+        settingTextField(nameTextField, colorPassword)
+        settingTextField(fresherTextField, colorUsername)
         settingTextFieldPassword()
         
         fresherTextField.delegate = self
@@ -63,10 +66,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
         
     }
-    @objc func settingTextField(_ textField: UITextField) {
+    @objc func settingTextField(_ textField: UITextField,_ color: UIColor) {
         let border = CALayer()
         let width = CGFloat(2.0)
-        border.borderColor = UIColor.orange.cgColor
+        
+        border.borderColor = color.cgColor
         border.frame = CGRect(x: 0, y: textField.frame.size.height - width, width: textField.frame.size.width, height: textField.frame.size.height)
         
         border.borderWidth = width
@@ -98,7 +102,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         if(nameTextField.isSecureTextEntry) {
             button.setImage(UIImage(named: "icView.png"),for: .normal)
-            nameTextField.isSecureTextEntry = fals
+            nameTextField.isSecureTextEntry = false
             
         } else {
           

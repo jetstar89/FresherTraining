@@ -10,15 +10,16 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
-
-    
     @IBAction func login(_ sender: Any) {
+        nameTextField.text = ""
+        passWordTextField.text = ""
         let alert: UIAlertController = UIAlertController(title: "Thông báo", message: "Bạn đã đăng nhập", preferredStyle: .alert);
         let btnOK = UIAlertAction(title: "Đồng ý", style: .cancel, handler: nil)
         alert.addAction(btnOK)
         present(alert, animated: true, completion: nil)
     }
-    var enablePasswordButton: UIButton!
+    var border: CALayer!
+    var isPasswordButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var fogotLabel: UILabel!
     @IBOutlet weak var passWordTextField: UITextField!
@@ -28,31 +29,40 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.logoImageView.image = #imageLiteral(resourceName: "gem2017.png")
-        self.logoImageView.contentMode = .scaleAspectFit
-        setBorderTextField(nameTextField)
-        setBorderTextField(passWordTextField)
+//        self.logoImageView.image = #imageLiteral(resourceName: "gem2017.png")
+        initView()
+        setBorderTextField(nameTextField, UIColor.gray)
+        setBorderTextField(passWordTextField, UIColor.gray)
         onTapFogotLabel()
         inVisiableKeyBroad()
+        registerDelegate()
+        showIconPassword()
+    }
+    func initView() {
+        self.logoImageView.image = UIImage(named: "gem2017")
+        self.logoImageView.contentMode = .scaleAspectFit
+        nameTextField.textColor = UIColor(red: 120/255, green: 131/255, blue: 140/255, alpha: 1.0)
+        passWordTextField.textColor = UIColor(red: 120/255, green: 131/255, blue: 140/255, alpha: 1.0)
+    }
+    func registerDelegate() {
         nameTextField.delegate = self
         passWordTextField.delegate = self
-        showIconHidePassword();
     }
-    func showIconHidePassword() {
-        enablePasswordButton  = UIButton(type: .custom)
-        enablePasswordButton.frame = CGRect(x:0, y:0, width:30, height:30)
-        enablePasswordButton.setImage(UIImage(named: "icView.png"), for: .normal)
+    func showIconPassword() {
+        isPasswordButton  = UIButton(type: .custom)
+        isPasswordButton.frame = CGRect(x:0, y:0, width:22, height:18)
+        isPasswordButton.setImage(UIImage(named: "icView.png"), for: .normal)
         passWordTextField.rightViewMode = .always
-        passWordTextField.rightView = enablePasswordButton
-        enablePasswordButton.addTarget(self, action: #selector(self.tapEnablePassword(_:)), for: .touchUpInside)
-        enablePasswordButton.isHidden = true
+        passWordTextField.rightView = isPasswordButton
+        isPasswordButton.addTarget(self, action: #selector(self.tapButtonShowPassword(_:)), for: .touchUpInside)
+        isPasswordButton.isHidden = true
     }
-    @objc func tapEnablePassword(_ button: UIButton!) {
+    @objc func tapButtonShowPassword(_ button: UIButton!) {
         if passWordTextField.isSecureTextEntry {
-            enablePasswordButton.setImage(UIImage(named: "icViewShow.png"), for: .normal)
+            isPasswordButton.setImage(UIImage(named: "icViewShow.png"), for: .normal)
             passWordTextField.isSecureTextEntry = false
         } else {
-            enablePasswordButton.setImage(UIImage(named: "icView.png"), for: .normal)
+            isPasswordButton.setImage(UIImage(named: "icView.png"), for: .normal)
             passWordTextField.isSecureTextEntry = true
         }
     }
@@ -79,14 +89,32 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         return true
     }
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        if (textField == nameTextField) {
+            nameTextField.textColor = UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1.0)
+            setBorderTextField(nameTextField, UIColor.init(red: 239/255, green: 137/255, blue: 15/255, alpha: 1.0))
+        } else if (textField == passWordTextField) {
+            passWordTextField.textColor = UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1.0)
+            setBorderTextField(passWordTextField, UIColor.init(red: 239/255, green: 137/255, blue: 15/255, alpha: 1.0))
+        }
+        return true
+    }
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == passWordTextField {
-            enablePasswordButton.isHidden = false
+            isPasswordButton.isHidden = false
         }
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if textField == passWordTextField && passWordTextField.text == "" {
-            enablePasswordButton.isHidden = true
+        if textField == passWordTextField {
+            passWordTextField.textColor = UIColor(red: 120/255, green: 131/255, blue: 140/255, alpha: 1.0)
+            setBorderTextField(passWordTextField, UIColor.gray)
+            if passWordTextField.text == "" {
+                isPasswordButton.isHidden = true
+            }
+        }
+        if textField == nameTextField {
+            setBorderTextField(nameTextField, UIColor.gray)
+            nameTextField.textColor = UIColor(red: 120/255, green: 131/255, blue: 140/255, alpha: 1.0)
         }
     }
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
@@ -100,10 +128,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         present(alert, animated: true, completion: nil)
         
     }
-    func setBorderTextField(_ textField: UITextField) {
-        let border = CALayer()
+    func setBorderTextField(_ textField: UITextField, _ uiColor: UIColor) {
+        border = CALayer()
         let width = CGFloat(2.0)
-        let color = UIColor.brown
+        let color = uiColor
         border.borderColor = color.cgColor
         border.frame = CGRect(x: 0, y: textField.frame.size.height - width, width: textField.frame.size.width, height: textField.frame.size.height)
         
