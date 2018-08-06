@@ -10,6 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    
+    
+    @IBOutlet weak var forgotPasswordLabel: UILabel!
+    
     @IBOutlet weak var hiddenPasswordImageView: UIImageView!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var logoImageView: UIImageView!
@@ -21,7 +25,19 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         textFieldDelegate()
         allViewGestureRecognizer()
+        
+        var navigationBarAppearace = UINavigationBar.appearance()
+        navigationBarAppearace.tintColor = UIColor.white
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        
+        navigationController?.navigationBar.barTintColor = UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1)
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -40,8 +56,19 @@ class ViewController: UIViewController {
         nameTextField.delegate = self
         fresherTextField.delegate = self
     }
+    @objc func forgotPassword(_ rec: UITapGestureRecognizer){
+//        let forgotPassword = ForgotPassWordController(nibName: "ForgotPasswordController", bundle: nil)
+//        navigationController?.pushViewController(forgotPassword, animated: true)
+        let forgotPassword = ForgotPassWordController(nibName: "ForgotPassWordController", bundle: nil)
+        navigationController?.pushViewController(forgotPassword, animated: true)
+    }
     
     func allViewGestureRecognizer() {
+        
+        let forgotpassword: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(forgotPassword))
+        forgotPasswordLabel.isUserInteractionEnabled = true
+        self.forgotPasswordLabel.addGestureRecognizer(forgotpassword)
+        
         //tap Login butotn
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(login))
         loginButton.isUserInteractionEnabled = true
@@ -59,6 +86,8 @@ class ViewController: UIViewController {
     }
    
     @objc func login() {
+        
+        
         let username = fresherTextField.text ?? ""
         let password = nameTextField.text ?? ""
         if(!username.isEmpty && !password.isEmpty) {
@@ -136,6 +165,7 @@ extension UITextField {
         
         border.frame = CGRect(x: 0, y: self.frame.size.height - width, width: self.frame.size.width, height: self.frame.size.height)
         border.borderWidth = width
+        
         
         self.layer.addSublayer(border)
         self.layer.masksToBounds = true
