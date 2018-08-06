@@ -40,7 +40,7 @@
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uyt-jO-gJE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gem2017" translatesAutoresizingMaskIntoConstraints="NO" id="Uyt-jO-gJE">
                                 <rect key="frame" x="98" y="87" width="181" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -88,12 +88,17 @@
                                 <color key="textColor" red="0.47058823529411764" green="0.51372549019607838" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView hidden="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icView" translatesAutoresizingMaskIntoConstraints="NO" id="G1x-hs-mrd">
+                                <rect key="frame" x="304" y="357" width="22" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="fresherTextField" destination="6I5-Na-rgh" id="NOn-VJ-Mtc"/>
+                        <outlet property="hiddenPasswordImageView" destination="G1x-hs-mrd" id="XBe-LE-1ne"/>
                         <outlet property="loginButton" destination="Liy-vN-Fkz" id="hls-lF-6vg"/>
                         <outlet property="logoImageView" destination="Uyt-jO-gJE" id="EZL-Me-qjD"/>
                         <outlet property="nameTextField" destination="So9-Yj-PWU" id="3ur-Po-al0"/>
@@ -104,4 +109,8 @@
             <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gem2017" width="181" height="61"/>
+        <image name="icView" width="22" height="18"/>
+    </resources>
 </document>

@@ -8,113 +8,141 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController {
+    
+    @IBOutlet weak var hiddenPasswordImageView: UIImageView!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var fresherTextField: UITextField!
-    var button: UIButton!
     
+    // MARK: lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginButton.layer.cornerRadius = 2
-        logoImageView .image = #imageLiteral(resourceName: "gem2017.png")
-        
-        let colorUsername = UIColor(red: 182/255, green: 190/255, blue: 197/255, alpha: 1)
-        let colorPassword = UIColor(red: 239/255, green: 137/255, blue: 15/255, alpha: 1)
-        settingTextField(nameTextField, colorPassword)
-        settingTextField(fresherTextField, colorUsername)
-        settingTextFieldPassword()
-        
-        fresherTextField.delegate = self
-        nameTextField.delegate = self
-      
-        
-        //bam dang nhap
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didLogin))
-        loginButton.isUserInteractionEnabled = true
-        self.loginButton.addGestureRecognizer(tap)
+        textFieldDelegate()
+        allViewGestureRecognizer()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        fresherTextField.setIsOnFocus(false)
+        nameTextField.setIsOnFocus(false)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @objc func didTapView(_ recognizer: UITapGestureRecognizer) {
-        print("tapGesture ")
+    
+    // MARK: initView
+    
+    func textFieldDelegate() {
+        nameTextField.delegate = self
+        fresherTextField.delegate = self
+    }
+    
+    func allViewGestureRecognizer() {
+        //tap Login butotn
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(login))
+        loginButton.isUserInteractionEnabled = true
+        self.loginButton.addGestureRecognizer(tap)
+        
+        //tap icon show password
+        let showPasswordGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(showPassword(_:)))
+        hiddenPasswordImageView.isUserInteractionEnabled = true
+        hiddenPasswordImageView.addGestureRecognizer(showPasswordGestureRecognizer)
+        
+        //tap screen
+        let onTapViewGestureRecognizer = UITapGestureRecognizer(target: self,action: #selector(onTapView(_:)))
+        view.isUserInteractionEnabled = true
+        view.addGestureRecognizer(onTapViewGestureRecognizer)
     }
    
-    @objc func longPress(_ re: UILongPressGestureRecognizer) {
-        print("UILongPressGestureRecognizer")
-    
-    }
-    @objc func swipeGesture1(_ re: UISwipeGestureRecognizer) {
-        print("UISwipeGestureRecognizer")
-    }
-    @objc func didLogin() {
+    @objc func login() {
         let username = fresherTextField.text ?? ""
         let password = nameTextField.text ?? ""
         if(!username.isEmpty && !password.isEmpty) {
             fresherTextField.text = ""
             nameTextField.text = ""
-            
         } else {
             //
         }
         self.view.endEditing(true)
         
     }
-    @objc func settingTextField(_ textField: UITextField,_ color: UIColor) {
-        let border = CALayer()
-        let width = CGFloat(2.0)
-        
-        border.borderColor = color.cgColor
-        border.frame = CGRect(x: 0, y: textField.frame.size.height - width, width: textField.frame.size.width, height: textField.frame.size.height)
-        
-        border.borderWidth = width
-        textField.layer.addSublayer(border)
-        textField.layer.masksToBounds = true
+    
+
+    
+    @objc func showPassword(_ sender: UITapGestureRecognizer) {
+        if nameTextField.isSecureTextEntry {
+            nameTextField.isSecureTextEntry = false
+            hiddenPasswordImageView.frame = CGRect(x: hiddenPasswordImageView.frame.minX, y: hiddenPasswordImageView.frame.minY - 2, width: hiddenPasswordImageView.frame.width, height: 18)
+            hiddenPasswordImageView.image = UIImage(named: "icView")
+        } else {
+            nameTextField.isSecureTextEntry = true
+            hiddenPasswordImageView.frame = CGRect(x: hiddenPasswordImageView.frame.minX, y: hiddenPasswordImageView.frame.minY + 2, width: hiddenPasswordImageView.frame.width, height: 14)
+            hiddenPasswordImageView.image = UIImage(named: "icshowView")
+        }
     }
+    @objc func onTapView(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+}
+//MARK: UITextFieldDelegate
+extension ViewController: UITextFieldDelegate {
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if (textField == fresherTextField) {
-            print("Đang")
+        if  textField == fresherTextField {
             nameTextField.becomeFirstResponder()
-        } else if(textField == nameTextField) {
+        } else {
             nameTextField.resignFirstResponder()
         }
+        return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == nameTextField {
+            hiddenPasswordImageView.isHidden = false
+        } else {
+            //
+        }
+        textField.setIsOnFocus(true)
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         
         return true
     }
-    func settingTextFieldPassword() {
-        print("Đang chay")
-        let button = UIButton(type: .custom)
-        button.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-        button.setImage(UIImage(named: "icView.png"),for: .normal)
-        nameTextField.rightViewMode = .always
-        nameTextField.rightView = button
-        button.addTarget(self, action: #selector(eyesTouch(_:)), for: .touchUpInside)
-        
-
-    }
-    @objc func eyesTouch(_ button: UIButton!){
-        
-        if(nameTextField.isSecureTextEntry) {
-            button.setImage(UIImage(named: "icView.png"),for: .normal)
-            nameTextField.isSecureTextEntry = false
-            
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField == nameTextField && nameTextField.text == "" {
+            hiddenPasswordImageView.isHidden = true
         } else {
-          
-            button.setImage(UIImage(named: "icshowView.png"),for: .normal)
-            nameTextField.isSecureTextEntry = true
-            
+            //
         }
-        
+        textField.setIsOnFocus(false)
     }
-    
-    
-   
     
 }
+//MARK: control textfield
+extension UITextField {
+    
+    func setIsOnFocus(_ isOnFocus: Bool) {
+        self.borderStyle = .none
+        let border = CALayer()
+        let width = CGFloat(1.0)
+        
+        border.borderColor = isOnFocus ? UIColor.init(red: 239/255, green: 137/255, blue: 15/255, alpha: 1.0).cgColor : UIColor.init(red: 180/255, green: 182/255, blue: 197/255, alpha: 1.0).cgColor
+        
+        border.frame = CGRect(x: 0, y: self.frame.size.height - width, width: self.frame.size.width, height: self.frame.size.height)
+        border.borderWidth = width
+        
+        self.layer.addSublayer(border)
+        self.layer.masksToBounds = true
+        
+        self.textColor = isOnFocus ? UIColor.init(red: 63/255, green: 95/255, blue: 163/255, alpha: 1.0) : UIColor.init(red: 120/255, green: 131/255, blue: 140/255, alpha: 1.0)
+    }
+    
+}
+
 
