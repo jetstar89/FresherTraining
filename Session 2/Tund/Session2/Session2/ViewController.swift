@@ -17,7 +17,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        loginButton.layer.cornerRadius = 2
         logoImageView .image = #imageLiteral(resourceName: "gem2017.png")
         settingTextField(nameTextField)
         settingTextField(fresherTextField)
@@ -98,7 +98,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         if(nameTextField.isSecureTextEntry) {
             button.setImage(UIImage(named: "icView.png"),for: .normal)
-            nameTextField.isSecureTextEntry = fals
+            nameTextField.isSecureTextEntry = false
             
         } else {
           
