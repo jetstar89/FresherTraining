@@ -28,6 +28,8 @@
 		84F454372117EBBB00217F3D /* Roboto-CondensedItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84F454272117EBBA00217F3D /* Roboto-CondensedItalic.ttf */; };
 		84F454382117EBBB00217F3D /* Roboto-BoldCondensedItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84F454282117EBBA00217F3D /* Roboto-BoldCondensedItalic.ttf */; };
 		84F454392117EBBB00217F3D /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84F454292117EBBB00217F3D /* Roboto-LightItalic.ttf */; };
+		84F4545E21182B9C00217F3D /* ScreenTimekeeping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4545C21182B9C00217F3D /* ScreenTimekeeping.swift */; };
+		84F4545F21182B9C00217F3D /* ScreenTimekeeping.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84F4545D21182B9C00217F3D /* ScreenTimekeeping.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		84F454272117EBBA00217F3D /* Roboto-CondensedItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-CondensedItalic.ttf"; sourceTree = "<group>"; };
 		84F454282117EBBA00217F3D /* Roboto-BoldCondensedItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldCondensedItalic.ttf"; sourceTree = "<group>"; };
 		84F454292117EBBB00217F3D /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		84F4545C21182B9C00217F3D /* ScreenTimekeeping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTimekeeping.swift; sourceTree = "<group>"; };
+		84F4545D21182B9C00217F3D /* ScreenTimekeeping.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScreenTimekeeping.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,8 @@
 				84ED89BB21142E74005D2174 /* Assets.xcassets */,
 				84ED89BD21142E74005D2174 /* LaunchScreen.storyboard */,
 				84ED89C021142E74005D2174 /* Info.plist */,
+				84F4545C21182B9C00217F3D /* ScreenTimekeeping.swift */,
+				84F4545D21182B9C00217F3D /* ScreenTimekeeping.xib */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -202,6 +208,7 @@
 				84F454302117EBBB00217F3D /* Roboto-Italic.ttf in Resources */,
 				84F454332117EBBB00217F3D /* Roboto-Regular.ttf in Resources */,
 				84F454392117EBBB00217F3D /* Roboto-LightItalic.ttf in Resources */,
+				84F4545F21182B9C00217F3D /* ScreenTimekeeping.xib in Resources */,
 				84F4542F2117EBBB00217F3D /* Roboto-BoldCondensed.ttf in Resources */,
 				84F454342117EBBB00217F3D /* Roboto-BoldItalic.ttf in Resources */,
 				84F4542A2117EBBB00217F3D /* Roboto-BlackItalic.ttf in Resources */,
@@ -217,6 +224,7 @@
 			files = (
 				84ED89B721142E73005D2174 /* ViewController.swift in Sources */,
 				84ED89B521142E73005D2174 /* AppDelegate.swift in Sources */,
+				84F4545E21182B9C00217F3D /* ScreenTimekeeping.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

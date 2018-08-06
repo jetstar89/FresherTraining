@@ -27,23 +27,36 @@ class ViewController: UIViewController {
         registerDelegate()
         showIconPassword()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     @IBAction func login(_ sender: Any) {
-        nameTextField.text = ""
-        passWordTextField.text = ""
-        let alert: UIAlertController = UIAlertController(title: "Thông báo", message: "Bạn đã đăng nhập", preferredStyle: .alert);
-        let btnOK = UIAlertAction(title: "Đồng ý", style: .cancel, handler: nil)
-        alert.addAction(btnOK)
-        present(alert, animated: true, completion: nil)
+        let userName = nameTextField.text!
+        let passWord = passWordTextField.text!
+        if userName.isEqual("DuyIoT") && passWord.isEqual("123") {
+            let screenLogin = ScreenTimekeeping(nibName: "ScreenTimekeeping", bundle: nil)
+            navigationController?.pushViewController(screenLogin, animated: true)
+        } else {
+            let alert: UIAlertController = UIAlertController(title: "Thông báo", message: "Đăng nhập không thành công", preferredStyle: .alert);
+            let btnOK = UIAlertAction(title: "Đồng ý", style: .cancel, handler: nil)
+            alert.addAction(btnOK)
+            present(alert, animated: true, completion: nil)
+        }
     }
     func initView() {
         self.logoImageView.image = UIImage(named: "gem2017")
         self.logoImageView.contentMode = .scaleAspectFit
         nameTextField.textColor = UIColor(red: 120/255, green: 131/255, blue: 140/255, alpha: 1.0)
         passWordTextField.textColor = UIColor(red: 120/255, green: 131/255, blue: 140/255, alpha: 1.0)
+        navigationItem.title = "Login"
+        navigationController?.navigationBar.barTintColor = UIColor(red: 120/255, green: 131/255, blue: 140/255, alpha: 1.0)
     }
     func registerDelegate() {
         nameTextField.delegate = self
