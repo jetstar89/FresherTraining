@@ -20,8 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     func setupNavigationController() {
-        let screenTimeKeeping = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController")
-        let rootNavigationController = UINavigationController(rootViewController: screenTimeKeeping)
+        let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController")
+        let rootNavigationController = UINavigationController(rootViewController: viewController)
         window?.rootViewController = rootNavigationController
         window?.makeKeyAndVisible()
     }

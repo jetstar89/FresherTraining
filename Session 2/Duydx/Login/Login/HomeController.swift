@@ -1,5 +1,5 @@
 //
-//  ScreenTimekeeping.swift
+//  HomeController.swift
 //  Login
 //
 //  Created by admin on 8/6/18.
@@ -8,12 +8,12 @@
 
 import UIKit
 
-class ScreenTimekeeping: UIViewController {
+class HomeController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
-//        setTime()
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,4 +39,5 @@ class ScreenTimekeeping: UIViewController {
     @objc func onBack() {
         navigationController?.popViewController(animated: true)
     }
+
 }
