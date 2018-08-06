@@ -10,8 +10,6 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
-
-    
     @IBAction func login(_ sender: Any) {
         nameTextField.text = ""
         passWordTextField.text = ""
@@ -21,7 +19,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         present(alert, animated: true, completion: nil)
     }
     var border: CALayer!
-    var enablePasswordButton: UIButton!
+    var isPasswordButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var fogotLabel: UILabel!
     @IBOutlet weak var passWordTextField: UITextField!
@@ -38,7 +36,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         onTapFogotLabel()
         inVisiableKeyBroad()
         registerDelegate()
-        showIconHidePassword()
+        showIconPassword()
     }
     func initView() {
         self.logoImageView.image = UIImage(named: "gem2017")
@@ -50,21 +48,21 @@ class ViewController: UIViewController, UITextFieldDelegate {
         nameTextField.delegate = self
         passWordTextField.delegate = self
     }
-    func showIconHidePassword() {
-        enablePasswordButton  = UIButton(type: .custom)
-        enablePasswordButton.frame = CGRect(x:0, y:0, width:22, height:18)
-        enablePasswordButton.setImage(UIImage(named: "icView.png"), for: .normal)
+    func showIconPassword() {
+        isPasswordButton  = UIButton(type: .custom)
+        isPasswordButton.frame = CGRect(x:0, y:0, width:22, height:18)
+        isPasswordButton.setImage(UIImage(named: "icView.png"), for: .normal)
         passWordTextField.rightViewMode = .always
-        passWordTextField.rightView = enablePasswordButton
-        enablePasswordButton.addTarget(self, action: #selector(self.tapEnablePassword(_:)), for: .touchUpInside)
-        enablePasswordButton.isHidden = true
+        passWordTextField.rightView = isPasswordButton
+        isPasswordButton.addTarget(self, action: #selector(self.tapEnablePassword(_:)), for: .touchUpInside)
+        isPasswordButton.isHidden = true
     }
     @objc func tapEnablePassword(_ button: UIButton!) {
         if passWordTextField.isSecureTextEntry {
-            enablePasswordButton.setImage(UIImage(named: "icViewShow.png"), for: .normal)
+            isPasswordButton.setImage(UIImage(named: "icViewShow.png"), for: .normal)
             passWordTextField.isSecureTextEntry = false
         } else {
-            enablePasswordButton.setImage(UIImage(named: "icView.png"), for: .normal)
+            isPasswordButton.setImage(UIImage(named: "icView.png"), for: .normal)
             passWordTextField.isSecureTextEntry = true
         }
     }
@@ -103,7 +101,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == passWordTextField {
-            enablePasswordButton.isHidden = false
+            isPasswordButton.isHidden = false
         }
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -111,7 +109,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             passWordTextField.textColor = UIColor(red: 120/255, green: 131/255, blue: 140/255, alpha: 1.0)
             setBorderTextField(passWordTextField, UIColor.gray)
             if passWordTextField.text == "" {
-                enablePasswordButton.isHidden = true
+                isPasswordButton.isHidden = true
             }
         }
         if textField == nameTextField {
