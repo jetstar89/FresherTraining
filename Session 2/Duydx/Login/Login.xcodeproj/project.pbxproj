@@ -12,13 +12,6 @@
 		84ED89BA21142E73005D2174 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84ED89B821142E73005D2174 /* Main.storyboard */; };
 		84ED89BC21142E74005D2174 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84ED89BB21142E74005D2174 /* Assets.xcassets */; };
 		84ED89BF21142E74005D2174 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84ED89BD21142E74005D2174 /* LaunchScreen.storyboard */; };
-		84ED89C721143166005D2174 /* gem2017.png in Resources */ = {isa = PBXBuildFile; fileRef = 84ED89C621143166005D2174 /* gem2017.png */; };
-		84ED89CB211444D1005D2174 /* icView@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84ED89C8211444D1005D2174 /* icView@3x.png */; };
-		84ED89CC211444D1005D2174 /* icView.png in Resources */ = {isa = PBXBuildFile; fileRef = 84ED89C9211444D1005D2174 /* icView.png */; };
-		84ED89CD211444D1005D2174 /* icView@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84ED89CA211444D1005D2174 /* icView@2x.png */; };
-		84ED89D1211449B8005D2174 /* icViewShow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84ED89CE211449B7005D2174 /* icViewShow@2x.png */; };
-		84ED89D2211449B8005D2174 /* icViewShow.png in Resources */ = {isa = PBXBuildFile; fileRef = 84ED89CF211449B7005D2174 /* icViewShow.png */; };
-		84ED89D3211449B8005D2174 /* icViewShow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84ED89D0211449B8005D2174 /* icViewShow@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,13 +22,6 @@
 		84ED89BB21142E74005D2174 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84ED89BE21142E74005D2174 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84ED89C021142E74005D2174 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84ED89C621143166005D2174 /* gem2017.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gem2017.png; path = "../../gem2017_2018-08-03/gem2017.png"; sourceTree = "<group>"; };
-		84ED89C8211444D1005D2174 /* icView@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icView@3x.png"; path = "../../icView_2018-08-03/icView@3x.png"; sourceTree = "<group>"; };
-		84ED89C9211444D1005D2174 /* icView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icView.png; path = "../../icView_2018-08-03/icView.png"; sourceTree = "<group>"; };
-		84ED89CA211444D1005D2174 /* icView@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icView@2x.png"; path = "../../icView_2018-08-03/icView@2x.png"; sourceTree = "<group>"; };
-		84ED89CE211449B7005D2174 /* icViewShow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icViewShow@2x.png"; path = "../../icView_2018-08-03-2/icViewShow@2x.png"; sourceTree = "<group>"; };
-		84ED89CF211449B7005D2174 /* icViewShow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icViewShow.png; path = "../../icView_2018-08-03-2/icViewShow.png"; sourceTree = "<group>"; };
-		84ED89D0211449B8005D2174 /* icViewShow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icViewShow@3x.png"; path = "../../icView_2018-08-03-2/icViewShow@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,13 +54,6 @@
 		84ED89B321142E73005D2174 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				84ED89CF211449B7005D2174 /* icViewShow.png */,
-				84ED89CE211449B7005D2174 /* icViewShow@2x.png */,
-				84ED89D0211449B8005D2174 /* icViewShow@3x.png */,
-				84ED89C621143166005D2174 /* gem2017.png */,
-				84ED89C9211444D1005D2174 /* icView.png */,
-				84ED89CA211444D1005D2174 /* icView@2x.png */,
-				84ED89C8211444D1005D2174 /* icView@3x.png */,
 				84ED89B421142E73005D2174 /* AppDelegate.swift */,
 				84ED89B621142E73005D2174 /* ViewController.swift */,
 				84ED89B821142E73005D2174 /* Main.storyboard */,
@@ -143,16 +122,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84ED89CB211444D1005D2174 /* icView@3x.png in Resources */,
 				84ED89BF21142E74005D2174 /* LaunchScreen.storyboard in Resources */,
-				84ED89CC211444D1005D2174 /* icView.png in Resources */,
-				84ED89C721143166005D2174 /* gem2017.png in Resources */,
 				84ED89BC21142E74005D2174 /* Assets.xcassets in Resources */,
-				84ED89CD211444D1005D2174 /* icView@2x.png in Resources */,
-				84ED89D1211449B8005D2174 /* icViewShow@2x.png in Resources */,
-				84ED89D3211449B8005D2174 /* icViewShow@3x.png in Resources */,
 				84ED89BA21142E73005D2174 /* Main.storyboard in Resources */,
-				84ED89D2211449B8005D2174 /* icViewShow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
