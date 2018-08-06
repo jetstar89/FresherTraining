@@ -8,8 +8,29 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController {
 
+    var borderTextField: CALayer!
+    var showPasswordButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var fogotLabel: UILabel!
+    @IBOutlet weak var passWordTextField: UITextField!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var logoImageView: UIImageView!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        initView()
+        setBorderTextField(nameTextField, UIColor.gray)
+        setBorderTextField(passWordTextField, UIColor.gray)
+        addGestureFogotLabel()
+        addGestureView()
+        registerDelegate()
+        showIconPassword()
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     @IBAction func login(_ sender: Any) {
         nameTextField.text = ""
         passWordTextField.text = ""
@@ -17,26 +38,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let btnOK = UIAlertAction(title: "Đồng ý", style: .cancel, handler: nil)
         alert.addAction(btnOK)
         present(alert, animated: true, completion: nil)
-    }
-    var border: CALayer!
-    var isPasswordButton: UIButton!
-    @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var fogotLabel: UILabel!
-    @IBOutlet weak var passWordTextField: UITextField!
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var logoImageView: UIImageView!
-     @IBOutlet weak var hidePasswordButton: UIButton!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-//        self.logoImageView.image = #imageLiteral(resourceName: "gem2017.png")
-        initView()
-        setBorderTextField(nameTextField, UIColor.gray)
-        setBorderTextField(passWordTextField, UIColor.gray)
-        onTapFogotLabel()
-        inVisiableKeyBroad()
-        registerDelegate()
-        showIconPassword()
     }
     func initView() {
         self.logoImageView.image = UIImage(named: "gem2017")
@@ -49,38 +50,59 @@ class ViewController: UIViewController, UITextFieldDelegate {
         passWordTextField.delegate = self
     }
     func showIconPassword() {
-        isPasswordButton  = UIButton(type: .custom)
-        isPasswordButton.frame = CGRect(x:0, y:0, width:22, height:18)
-        isPasswordButton.setImage(UIImage(named: "icView.png"), for: .normal)
+        showPasswordButton  = UIButton(type: .custom)
+        showPasswordButton.frame = CGRect(x:0, y:0, width:22, height:18)
+        showPasswordButton.setImage(UIImage(named: "icView.png"), for: .normal)
         passWordTextField.rightViewMode = .always
-        passWordTextField.rightView = isPasswordButton
-        isPasswordButton.addTarget(self, action: #selector(self.tapButtonShowPassword(_:)), for: .touchUpInside)
-        isPasswordButton.isHidden = true
+        passWordTextField.rightView = showPasswordButton
+        showPasswordButton.addTarget(self, action: #selector(self.onTapButtonShowPassword(_:)), for: .touchUpInside)
+        showPasswordButton.isHidden = true
     }
-    @objc func tapButtonShowPassword(_ button: UIButton!) {
+    @objc func onTapButtonShowPassword(_ button: UIButton!) {
         if passWordTextField.isSecureTextEntry {
-            isPasswordButton.setImage(UIImage(named: "icViewShow.png"), for: .normal)
+            showPasswordButton.setImage(UIImage(named: "icViewShow.png"), for: .normal)
             passWordTextField.isSecureTextEntry = false
         } else {
-            isPasswordButton.setImage(UIImage(named: "icView.png"), for: .normal)
+            showPasswordButton.setImage(UIImage(named: "icView.png"), for: .normal)
             passWordTextField.isSecureTextEntry = true
         }
     }
-    @objc func onTapFogotLabel() {
+    @objc func addGestureFogotLabel() {
         fogotLabel.isUserInteractionEnabled = true
-        let tapGestureFogotLabel = UITapGestureRecognizer(target: self, action: #selector(tapFogotLabel(_:)))
+        let tapGestureFogotLabel = UITapGestureRecognizer(target: self, action: #selector(onTapFogotLabel(_:)))
         fogotLabel.addGestureRecognizer(tapGestureFogotLabel)
     }
     
-    @objc func inVisiableKeyBroad() {
+    @objc func addGestureView() {
         view.isUserInteractionEnabled = true
-        let tapGestureView = UITapGestureRecognizer(target: self, action: #selector(tapView(_:)))
+        let tapGestureView = UITapGestureRecognizer(target: self, action: #selector(onTapView(_:)))
         view.addGestureRecognizer(tapGestureView)
     }
     
-    @objc func tapView(_ getture: UITapGestureRecognizer) {
+    @objc func onTapView(_ getture: UITapGestureRecognizer) {
         view.endEditing(true)
     }
+    
+    @objc func onTapFogotLabel(_ getture: UITapGestureRecognizer) {
+        let alert: UIAlertController = UIAlertController(title: "Thông báo", message: "Bạn đang chọn chức năng quên mật khẩu", preferredStyle: .alert);
+        let btnOK = UIAlertAction(title: "Đồng ý", style: .cancel, handler: nil)
+        alert.addAction(btnOK)
+        present(alert, animated: true, completion: nil)
+        
+    }
+    func setBorderTextField(_ textField: UITextField, _ uiColor: UIColor) {
+        borderTextField = CALayer()
+        let width = CGFloat(2.0)
+        let color = uiColor
+        borderTextField.borderColor = color.cgColor
+        borderTextField.frame = CGRect(x: 0, y: textField.frame.size.height - width, width: textField.frame.size.width, height: textField.frame.size.height)
+        
+        borderTextField.borderWidth = width
+        textField.layer.addSublayer(borderTextField)
+        textField.layer.masksToBounds = true
+    }
+}
+extension ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == nameTextField {
             passWordTextField.becomeFirstResponder()
@@ -101,7 +123,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == passWordTextField {
-            isPasswordButton.isHidden = false
+            showPasswordButton.isHidden = false
         }
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -109,7 +131,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             passWordTextField.textColor = UIColor(red: 120/255, green: 131/255, blue: 140/255, alpha: 1.0)
             setBorderTextField(passWordTextField, UIColor.gray)
             if passWordTextField.text == "" {
-                isPasswordButton.isHidden = true
+                showPasswordButton.isHidden = true
             }
         }
         if textField == nameTextField {
@@ -121,29 +143,5 @@ class ViewController: UIViewController, UITextFieldDelegate {
         nameTextField.resignFirstResponder()
         return true
     }
-    @objc func tapFogotLabel(_ getture: UITapGestureRecognizer) {
-        let alert: UIAlertController = UIAlertController(title: "Thông báo", message: "Bạn đang chọn chức năng quên mật khẩu", preferredStyle: .alert);
-        let btnOK = UIAlertAction(title: "Đồng ý", style: .cancel, handler: nil)
-        alert.addAction(btnOK)
-        present(alert, animated: true, completion: nil)
-        
-    }
-    func setBorderTextField(_ textField: UITextField, _ uiColor: UIColor) {
-        border = CALayer()
-        let width = CGFloat(2.0)
-        let color = uiColor
-        border.borderColor = color.cgColor
-        border.frame = CGRect(x: 0, y: textField.frame.size.height - width, width: textField.frame.size.width, height: textField.frame.size.height)
-        
-        border.borderWidth = width
-        textField.layer.addSublayer(border)
-        textField.layer.masksToBounds = true
-    }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
