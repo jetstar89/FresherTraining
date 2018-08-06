@@ -1,5 +1,5 @@
 //
-//  ProfileController.swift
+//  HomeViewController.swift
 //  Session2
 //
 //  Created by admin on 8/6/18.
@@ -8,11 +8,17 @@
 
 import UIKit
 
-class ProfileController: UIViewController {
+class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Home"
+        var navigationBarAppearace = UINavigationBar.appearance()
+        navigationBarAppearace.tintColor = UIColor.white
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         
+        navigationController?.navigationBar.barTintColor = UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1)
+
         // Do any additional setup after loading the view.
     }
 

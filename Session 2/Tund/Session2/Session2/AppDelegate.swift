@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
         setupNavigation()
+        window?.makeKeyAndVisible()
         return true
     }
     func setupNavigation() {
@@ -25,8 +26,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let viewcontroller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController")
         let rootNavigationController = UINavigationController(rootViewController: viewcontroller)
         window?.rootViewController = rootNavigationController
-        window?.makeKeyAndVisible()
+        
     }
+    func setupTabbar(){
+        let profileController = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
+        let homeController = HomeViewController(nibName: "HomeViewController", bundle: nil)
+        
+        let navigationProfile = UINavigationController(rootViewController: profileController)
+        let navigationHome = UINavigationController(rootViewController: homeController)
+        let tabbarController = UITabBarController()
+        tabbarController.viewControllers = [navigationProfile, navigationHome]
+        tabbarController.tabBar.items?[0].image = #imageLiteral(resourceName: "home")
+        tabbarController.tabBar.items?[1].image = #imageLiteral(resourceName: "avatar")
+            
+        window?.rootViewController = tabbarController
+    }
+    
+        
+    
+    
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
