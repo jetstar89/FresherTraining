@@ -46,6 +46,7 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = true
+    
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -69,7 +70,7 @@ class ViewController: UIViewController {
         passwordTextField.text = ""
         hiddenPasswordImageView.isHidden = true
         view.endEditing(true)
-        (UIApplication.shared.delegate as? AppDelegate)?.setUpTabbar()
+        (UIApplication.shared.delegate as? AppDelegate)?.setUpRootViewIsHomeTabbar()
     }
     
     

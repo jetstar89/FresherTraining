@@ -13,33 +13,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
-        setUpNavigation()
+        setUpRootViewIsLoginViewController()
         window?.makeKeyAndVisible()
         return true
     }
     
-    func setUpNavigation() {
+    func setUpRootViewIsLoginViewController() {
         let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController")
         let rootNavigationViewController = UINavigationController(rootViewController: viewController)
         window?.rootViewController = rootNavigationViewController
     }
     
-    func setUpTabbar(){
+    func setUpRootViewIsHomeTabbar() {
         let homeViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
         let profileViewController = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
         let homeViewNavigationController = UINavigationController(rootViewController: homeViewController)
         let profileViewNavigationController = UINavigationController(rootViewController: profileViewController)
         let tabbarController = UITabBarController()
-        tabbarController.viewControllers = [homeViewNavigationController, profileViewNavigationController]
+        //tabbarController.viewControllers = [homeViewNavigationController, profileViewNavigationController]
+        tabbarController.setViewControllers([homeViewNavigationController, profileViewNavigationController], animated: true)
+        
         let homeTabbarItem = tabbarController.tabBar.items?[0]
-        homeTabbarItem?.image = #imageLiteral(resourceName: "home").withRenderingMode(.alwaysOriginal)
+        homeTabbarItem?.image = #imageLiteral(resourceName: "home").withRenderingMode(.automatic)
         homeTabbarItem?.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
         let profileTabbarItem = tabbarController.tabBar.items?[1]
-        profileTabbarItem?.image = #imageLiteral(resourceName: "user").withRenderingMode(.alwaysOriginal)
+        profileTabbarItem?.image = #imageLiteral(resourceName: "user").withRenderingMode(.automatic)
         profileTabbarItem?.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
         window?.rootViewController = tabbarController
     }
