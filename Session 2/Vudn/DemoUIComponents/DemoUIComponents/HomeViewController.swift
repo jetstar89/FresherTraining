@@ -9,15 +9,31 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    let tag = "HomeViewController"
+    
+    // MARK: - LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(tag + " did load")
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         navigationItem.title = "Home"
+        print(tag + " will appear")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print(tag + " did appear")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        print(tag + " will disappear")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print(tag + " did disappear")
     }
     
     override func didReceiveMemoryWarning() {
@@ -25,7 +41,14 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    deinit {
+        print(tag + " deinit")
+    }
+    
+    @IBAction func onChangerTabIndex(_ sender: UIButton) {
+        
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -9,14 +9,10 @@
 import UIKit
 
 class FogotPasswordController: UIViewController {
-
-    @IBAction func sendRequest(_ sender: Any) {
-        let alert = UIAlertController(title: "Thông báo", message: "Bạn đã gửi thành công", preferredStyle: .alert)
-        let btnOk  = UIAlertAction(title: "Đồng ý", style: .default, handler: nil)
-        alert.addAction(btnOk)
-        present(alert, animated: true, completion: nil)
-    }
+    
+    //MARK: IBOutlet
     @IBOutlet weak var emailTextField: UITextField!
+    //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         initView();
@@ -24,6 +20,7 @@ class FogotPasswordController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    //MARK: initView
     func initView() {
         emailTextField.delegate = self
         setBorderTextField(emailTextField, UIColor.gray)
@@ -45,7 +42,15 @@ class FogotPasswordController: UIViewController {
         textField.layer.addSublayer(borderTextField)
         textField.layer.masksToBounds = true
     }
+    //MARK: IBAction
+    @IBAction func sendRequest(_ sender: Any) {
+        let alert = UIAlertController(title: "Thông báo", message: "Bạn đã gửi thành công", preferredStyle: .alert)
+        let btnOk  = UIAlertAction(title: "Đồng ý", style: .default, handler: nil)
+        alert.addAction(btnOk)
+        present(alert, animated: true, completion: nil)
+    }
 }
+//MARK: extension UITextFieldDelegate
 extension FogotPasswordController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == emailTextField {
