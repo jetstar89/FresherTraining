@@ -46,11 +46,11 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = true
-    
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        loginButton.layer.cornerRadius = 4
         usernameTextField.setIsOnFocus(false)
         passwordTextField.setIsOnFocus(false)
     }
@@ -134,7 +134,7 @@ extension UITextField {
         let border = CALayer()
         let width = CGFloat(1.0)
         
-        border.borderColor = isOnFocus ? UIColor.init(red: 239/255, green: 137/255, blue: 15/255, alpha: 1.0).cgColor : UIColor.init(red: 180/255, green: 182/255, blue: 197/255, alpha: 1.0).cgColor
+        border.borderColor = isOnFocus ? UIColor.pumpkinOrange.cgColor : UIColor.silver.cgColor
         
         border.frame = CGRect(x: 0, y: self.frame.size.height - width, width: self.frame.size.width, height: self.frame.size.height)
         border.borderWidth = width
@@ -142,6 +142,36 @@ extension UITextField {
         self.layer.addSublayer(border)
         self.layer.masksToBounds = true
         
-        self.textColor = isOnFocus ? UIColor.init(red: 63/255, green: 95/255, blue: 163/255, alpha: 1.0) : UIColor.init(red: 120/255, green: 131/255, blue: 140/255, alpha: 1.0)
+        self.textColor = isOnFocus ? UIColor.frenchBlue : UIColor.steelGrey
+    }
+}
+
+extension UIColor {
+    @nonobjc class var pumpkinOrange: UIColor {
+        return UIColor(red: 242.0 / 255.0, green: 139.0 / 255.0, blue: 15.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var black50: UIColor {
+        return UIColor(white: 0.0, alpha: 0.5)
+    }
+    
+    @nonobjc class var white: UIColor {
+        return UIColor(white: 1.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var frenchBlue: UIColor {
+        return UIColor(red: 63.0 / 255.0, green: 95.0 / 255.0, blue: 163.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var steelGrey: UIColor {
+        return UIColor(red: 120.0 / 255.0, green: 131.0 / 255.0, blue: 140.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var silver: UIColor {
+        return UIColor(red: 180.0 / 255.0, green: 182.0 / 255.0, blue: 197.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var darkSlateBlue: UIColor {
+        return UIColor(red: 35.0 / 255.0, green: 61.0 / 255.0, blue: 117.0 / 255.0, alpha: 1.0)
     }
 }
