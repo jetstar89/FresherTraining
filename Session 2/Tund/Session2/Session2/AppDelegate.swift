@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     }
     func setupTabbar(){
-        let profileController = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
+        let profileController = Profile3ViewController(nibName: "Profile3ViewController", bundle: nil)
         let homeController = HomeViewController(nibName: "HomeViewController", bundle: nil)
         
         let navigationProfile = UINavigationController(rootViewController: profileController)
@@ -37,11 +37,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tabbarController = UITabBarController()
         tabbarController.viewControllers = [navigationHome, navigationProfile]
         let homeTabbarItem = tabbarController.tabBar.items?[0]
-        homeTabbarItem?.image = #imageLiteral(resourceName: "home").withRenderingMode(.alwaysOriginal)
-        homeTabbarItem?.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
+        homeTabbarItem?.image = #imageLiteral(resourceName: "home-1").withRenderingMode(.alwaysOriginal)
+        homeTabbarItem?.imageInsets = UIEdgeInsets(top: 10, left: 0, bottom: -10, right: 0)
         let profileTabbarItem = tabbarController.tabBar.items?[1]
-        profileTabbarItem?.image = #imageLiteral(resourceName: "avatar").withRenderingMode(.alwaysOriginal)
-        profileTabbarItem?.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
+        profileTabbarItem?.image = #imageLiteral(resourceName: "man-user").withRenderingMode(.alwaysOriginal)
+        profileTabbarItem?.imageInsets = UIEdgeInsets(top: 10, left: 0, bottom: -10, right: 0)
+        
+        tabbarController.tabBar.barTintColor = UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1)
+     
         window?.rootViewController = tabbarController
             
         

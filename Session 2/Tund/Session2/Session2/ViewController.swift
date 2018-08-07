@@ -26,10 +26,10 @@ class ViewController: UIViewController {
         textFieldDelegate()
         allViewGestureRecognizer()
         
+        //navigation bar control
         var navigationBarAppearace = UINavigationBar.appearance()
         navigationBarAppearace.tintColor = UIColor.white
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
-        
         navigationController?.navigationBar.barTintColor = UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1)
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -173,6 +173,8 @@ extension UITextField {
         
         self.textColor = isOnFocus ? UIColor.init(red: 63/255, green: 95/255, blue: 163/255, alpha: 1.0) : UIColor.init(red: 120/255, green: 131/255, blue: 140/255, alpha: 1.0)
     }
+    
+    
     
 }
 

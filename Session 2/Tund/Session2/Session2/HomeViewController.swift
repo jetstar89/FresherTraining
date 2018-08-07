@@ -9,10 +9,11 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
+    // MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        initView()
         
         
         // Do any additional setup after loading the view.
@@ -22,6 +23,7 @@ class HomeViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    // MARK: iniview
     func initView() {
         //set up navigationBar
         navigationItem.title = "Home"
@@ -29,10 +31,9 @@ class HomeViewController: UIViewController {
         navigationBarAppearace.tintColor = UIColor.white
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         navigationController?.navigationBar.barTintColor = UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1)
+        
         // set up tabbar
-        tabBarController?.tabBar.barTintColor = UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1)
-        var tabbarAppearace = UITabBar.appearance()
-        tabbarAppearace.tintColor = UIColor.white
+    
         
     }
     
