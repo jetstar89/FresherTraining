@@ -9,9 +9,13 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
+    
+    @IBOutlet weak var logoutButton: UIButton!
+    @IBOutlet weak var avatarImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        initView()
 
         // Do any additional setup after loading the view.
     }
@@ -25,6 +29,19 @@ class ProfileViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func initView(){
+        
+        avatarImageView.layer.cornerRadius = avatarImageView.frame.size.height / 2.0
+        avatarImageView.layer.masksToBounds = true
+        
+        logoutButton.layer.cornerRadius = 3
+    }
+    @IBAction func logoutAction(_ sender: Any) {
+        print("back to login")
+    (UIApplication.shared.delegate as? AppDelegate)?.setupNavigation()
+        
     }
     
 
