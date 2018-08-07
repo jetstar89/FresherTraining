@@ -1,5 +1,5 @@
 //
-//  ProfileController.swift
+//  ProfileViewController.swift
 //  Session2
 //
 //  Created by admin on 8/6/18.
@@ -8,12 +8,18 @@
 
 import UIKit
 
-class ProfileController: UIViewController {
+class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
 
     override func didReceiveMemoryWarning() {

@@ -88,6 +88,7 @@ class ViewController: UIViewController {
     @objc func login() {
         
         
+        
         let username = fresherTextField.text ?? ""
         let password = nameTextField.text ?? ""
         if(!username.isEmpty && !password.isEmpty) {
@@ -97,6 +98,7 @@ class ViewController: UIViewController {
             //
         }
         self.view.endEditing(true)
+        (UIApplication.shared.delegate as? AppDelegate)?.setupTabbar()
         
     }
     

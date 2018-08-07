@@ -1,5 +1,5 @@
 //
-//  ProfileController.swift
+//  SelectionViewController.swift
 //  Session2
 //
 //  Created by admin on 8/6/18.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class ProfileController: UIViewController {
+class SelectionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
     }
 
