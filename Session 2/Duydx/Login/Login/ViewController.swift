@@ -42,7 +42,7 @@ class ViewController: UIViewController {
     @IBAction func login(_ sender: Any) {
         let userName = nameTextField.text!
         let passWord = passWordTextField.text!
-        if userName.isEqual("DuyIoT") && passWord.isEqual("123") {
+        if userName.isEqual("") && passWord.isEqual("") {
             let screenLogin = HomeController(nibName: "HomeController", bundle: nil)
             navigationController?.pushViewController(screenLogin, animated: true)
             (UIApplication.shared.delegate as? AppDelegate)?.setupTabbarController()
