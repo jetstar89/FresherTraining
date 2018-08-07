@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840C0D162118443A00737072 /* ForgotPassWordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C0D142118443A00737072 /* ForgotPassWordController.swift */; };
+		840C0D172118443A00737072 /* ForgotPassWordController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840C0D152118443A00737072 /* ForgotPassWordController.xib */; };
+		840C0D1B2118482600737072 /* paper-plane.png in Resources */ = {isa = PBXBuildFile; fileRef = 840C0D1A2118482500737072 /* paper-plane.png */; };
+		840C0D1E2118554200737072 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C0D1C2118554200737072 /* ProfileController.swift */; };
+		840C0D1F2118554200737072 /* ProfileController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840C0D1D2118554200737072 /* ProfileController.xib */; };
 		8460A6932117EC0700B51FB6 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8460A6822117EC0400B51FB6 /* Roboto-BlackItalic.ttf */; };
 		8460A6942117EC0700B51FB6 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8460A6832117EC0500B51FB6 /* Roboto-Black.ttf */; };
 		8460A6952117EC0700B51FB6 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8460A6842117EC0500B51FB6 /* Roboto-Bold.ttf */; };
@@ -51,6 +56,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		840C0D0D21183A2400737072 /* send@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "send@2x.png"; path = "../../../../../Downloads/send_2018-08-06-2/send@2x.png"; sourceTree = "<group>"; };
+		840C0D0E21183A2500737072 /* send@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "send@3x.png"; path = "../../../../../Downloads/send_2018-08-06-2/send@3x.png"; sourceTree = "<group>"; };
+		840C0D0F21183A2500737072 /* send.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = send.png; path = "../../../../../Downloads/send_2018-08-06-2/send.png"; sourceTree = "<group>"; };
+		840C0D142118443A00737072 /* ForgotPassWordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassWordController.swift; sourceTree = "<group>"; };
+		840C0D152118443A00737072 /* ForgotPassWordController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPassWordController.xib; sourceTree = "<group>"; };
+		840C0D1A2118482500737072 /* paper-plane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper-plane.png"; sourceTree = "<group>"; };
+		840C0D1C2118554200737072 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		840C0D1D2118554200737072 /* ProfileController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileController.xib; sourceTree = "<group>"; };
 		8460A6822117EC0400B51FB6 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
 		8460A6832117EC0500B51FB6 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		8460A6842117EC0500B51FB6 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
@@ -165,11 +178,19 @@
 			children = (
 				8460A6802117EBD400B51FB6 /* Resource */,
 				84EC308C21142E5F000F5AC9 /* AppDelegate.swift */,
+				840C0D1C2118554200737072 /* ProfileController.swift */,
+				840C0D1D2118554200737072 /* ProfileController.xib */,
 				84EC308E21142E5F000F5AC9 /* ViewController.swift */,
 				84EC309021142E5F000F5AC9 /* Main.storyboard */,
 				84EC309321142E61000F5AC9 /* Assets.xcassets */,
+				840C0D1A2118482500737072 /* paper-plane.png */,
+				840C0D0F21183A2500737072 /* send.png */,
+				840C0D0D21183A2400737072 /* send@2x.png */,
+				840C0D0E21183A2500737072 /* send@3x.png */,
 				84EC309521142E61000F5AC9 /* LaunchScreen.storyboard */,
 				84EC309821142E61000F5AC9 /* Info.plist */,
+				840C0D142118443A00737072 /* ForgotPassWordController.swift */,
+				840C0D152118443A00737072 /* ForgotPassWordController.xib */,
 			);
 			path = Session2;
 			sourceTree = "<group>";
@@ -298,6 +319,7 @@
 			files = (
 				8460A69E2117EC0700B51FB6 /* Roboto-BoldItalic.ttf in Resources */,
 				8460A6972117EC0700B51FB6 /* Roboto-ThinItalic.ttf in Resources */,
+				840C0D172118443A00737072 /* ForgotPassWordController.xib in Resources */,
 				8460A6992117EC0700B51FB6 /* Roboto-Italic.ttf in Resources */,
 				8460A69D2117EC0700B51FB6 /* Roboto_Specimen_Book.pdf in Resources */,
 				84EC309721142E61000F5AC9 /* LaunchScreen.storyboard in Resources */,
@@ -311,9 +333,11 @@
 				8460A6952117EC0700B51FB6 /* Roboto-Bold.ttf in Resources */,
 				84EC309221142E5F000F5AC9 /* Main.storyboard in Resources */,
 				8460A69A2117EC0700B51FB6 /* Roboto-Thin.ttf in Resources */,
+				840C0D1F2118554200737072 /* ProfileController.xib in Resources */,
 				8460A69C2117EC0700B51FB6 /* Roboto-Regular.ttf in Resources */,
 				8460A6A22117EC0700B51FB6 /* Roboto-BoldCondensedItalic.ttf in Resources */,
 				8460A6962117EC0700B51FB6 /* Roboto-Light.ttf in Resources */,
+				840C0D1B2118482600737072 /* paper-plane.png in Resources */,
 				8460A6A02117EC0700B51FB6 /* Roboto-MediumItalic.ttf in Resources */,
 				8460A69B2117EC0700B51FB6 /* Roboto-Condensed.ttf in Resources */,
 			);
@@ -340,8 +364,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840C0D162118443A00737072 /* ForgotPassWordController.swift in Sources */,
 				84EC308F21142E5F000F5AC9 /* ViewController.swift in Sources */,
 				84EC308D21142E5F000F5AC9 /* AppDelegate.swift in Sources */,
+				840C0D1E2118554200737072 /* ProfileController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

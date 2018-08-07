@@ -26,24 +26,40 @@ class ViewController: UIViewController {
         addGestureView()
         registerDelegate()
         showIconPassword()
+        
+        self.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 1)
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     @IBAction func login(_ sender: Any) {
-        nameTextField.text = ""
-        passWordTextField.text = ""
-        let alert: UIAlertController = UIAlertController(title: "Thông báo", message: "Bạn đã đăng nhập", preferredStyle: .alert);
-        let btnOK = UIAlertAction(title: "Đồng ý", style: .cancel, handler: nil)
-        alert.addAction(btnOK)
-        present(alert, animated: true, completion: nil)
+        let userName = nameTextField.text!
+        let passWord = passWordTextField.text!
+        if userName.isEqual("DuyIoT") && passWord.isEqual("123") {
+            let screenLogin = HomeController(nibName: "HomeController", bundle: nil)
+            navigationController?.pushViewController(screenLogin, animated: true)
+            (UIApplication.shared.delegate as? AppDelegate)?.setupTabbarController()
+        } else {
+            let alert: UIAlertController = UIAlertController(title: "Thông báo", message: "Đăng nhập không thành công", preferredStyle: .alert);
+            let btnOK = UIAlertAction(title: "Đồng ý", style: .cancel, handler: nil)
+            alert.addAction(btnOK)
+            present(alert, animated: true, completion: nil)
+        }
     }
     func initView() {
         self.logoImageView.image = UIImage(named: "gem2017")
         self.logoImageView.contentMode = .scaleAspectFit
         nameTextField.textColor = UIColor(red: 120/255, green: 131/255, blue: 140/255, alpha: 1.0)
         passWordTextField.textColor = UIColor(red: 120/255, green: 131/255, blue: 140/255, alpha: 1.0)
+        navigationController?.navigationBar.barTintColor = UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1.0)
+            navigationController?.navigationBar.tintColor = UIColor.white
     }
     func registerDelegate() {
         nameTextField.delegate = self
@@ -84,10 +100,8 @@ class ViewController: UIViewController {
     }
     
     @objc func onTapFogotLabel(_ getture: UITapGestureRecognizer) {
-        let alert: UIAlertController = UIAlertController(title: "Thông báo", message: "Bạn đang chọn chức năng quên mật khẩu", preferredStyle: .alert);
-        let btnOK = UIAlertAction(title: "Đồng ý", style: .cancel, handler: nil)
-        alert.addAction(btnOK)
-        present(alert, animated: true, completion: nil)
+        let fogotPasswordController = FogotPasswordController(nibName: "FogotPasswordController", bundle: nil)
+        navigationController?.pushViewController(fogotPasswordController, animated: true)
         
     }
     func setBorderTextField(_ textField: UITextField, _ uiColor: UIColor) {
