@@ -9,14 +9,15 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+    @IBOutlet weak var chamCongView: UIView!
     
     @IBOutlet weak var logoutButton: UIButton!
     @IBOutlet weak var avatarImageView: UIImageView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
-
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -32,16 +33,27 @@ class ProfileViewController: UIViewController {
     }
     
     func initView(){
-        
         avatarImageView.layer.cornerRadius = avatarImageView.frame.size.height / 2.0
         avatarImageView.layer.masksToBounds = true
-        
         logoutButton.layer.cornerRadius = 3
+      
+        // tap cham cong
+        let tap  = UITapGestureRecognizer(target: self, action: #selector(chamCong(_:)))
+        chamCongView.isUserInteractionEnabled = true
+        chamCongView.addGestureRecognizer(tap)
+        
     }
     @IBAction func logoutAction(_ sender: Any) {
         print("back to login")
     (UIApplication.shared.delegate as? AppDelegate)?.setupNavigation()
         
+    }
+    
+    
+    @objc func chamCong(_ sender: UITapGestureRecognizer) {
+        
+        chamCongView.backgroundColor = UIColor.init(red: 35/255, green: 61/255, blue: 117/255, alpha: 1.0)
+       
     }
     
 
@@ -56,3 +68,4 @@ class ProfileViewController: UIViewController {
     */
 
 }
+
