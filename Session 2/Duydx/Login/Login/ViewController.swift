@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    //MARK: IBOutlet
     var borderTextField: CALayer!
     var showPasswordButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var passWordTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var logoImageView: UIImageView!
+    //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
@@ -39,6 +40,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    //MARK: IBAction
     @IBAction func login(_ sender: Any) {
         let userName = nameTextField.text!
         let passWord = passWordTextField.text!
@@ -53,6 +55,7 @@ class ViewController: UIViewController {
             present(alert, animated: true, completion: nil)
         }
     }
+    //MARK: innitView
     func initView() {
         self.logoImageView.image = UIImage(named: "gem2017")
         self.logoImageView.contentMode = .scaleAspectFit
@@ -116,6 +119,7 @@ class ViewController: UIViewController {
         textField.layer.masksToBounds = true
     }
 }
+//MARK: extension UITextField Delegate
 extension ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == nameTextField {

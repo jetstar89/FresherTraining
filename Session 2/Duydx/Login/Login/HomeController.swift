@@ -9,7 +9,7 @@
 import UIKit
 
 class HomeController: UIViewController {
-
+    //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
@@ -20,9 +20,11 @@ class HomeController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    //MARK: IBAction
     @IBAction func onConfirm(_ sender: UIButton) {
         tabBarController?.selectedIndex = 1
     }
+    //MARK: initView
     func initView() {
         navigationItem.title = "Home"
         navigationController?.navigationBar.barTintColor = UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1.0)
