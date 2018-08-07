@@ -58,9 +58,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		840C0D0D21183A2400737072 /* send@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "send@2x.png"; path = "../../../../../Downloads/send_2018-08-06-2/send@2x.png"; sourceTree = "<group>"; };
-		840C0D0E21183A2500737072 /* send@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "send@3x.png"; path = "../../../../../Downloads/send_2018-08-06-2/send@3x.png"; sourceTree = "<group>"; };
-		840C0D0F21183A2500737072 /* send.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = send.png; path = "../../../../../Downloads/send_2018-08-06-2/send.png"; sourceTree = "<group>"; };
 		840C0D142118443A00737072 /* ForgotPassWordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassWordController.swift; sourceTree = "<group>"; };
 		840C0D152118443A00737072 /* ForgotPassWordController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPassWordController.xib; sourceTree = "<group>"; };
 		840C0D1A2118482500737072 /* paper-plane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper-plane.png"; sourceTree = "<group>"; };
@@ -186,9 +183,6 @@
 				84EC309021142E5F000F5AC9 /* Main.storyboard */,
 				84EC309321142E61000F5AC9 /* Assets.xcassets */,
 				840C0D1A2118482500737072 /* paper-plane.png */,
-				840C0D0F21183A2500737072 /* send.png */,
-				840C0D0D21183A2400737072 /* send@2x.png */,
-				840C0D0E21183A2500737072 /* send@3x.png */,
 				84EC309521142E61000F5AC9 /* LaunchScreen.storyboard */,
 				84EC309821142E61000F5AC9 /* Info.plist */,
 				840C0D142118443A00737072 /* ForgotPassWordController.swift */,

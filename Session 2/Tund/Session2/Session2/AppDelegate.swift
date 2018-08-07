@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationProfile = UINavigationController(rootViewController: profileController)
         let navigationHome = UINavigationController(rootViewController: homeController)
         let tabbarController = UITabBarController()
-        tabbarController.viewControllers = [navigationProfile, navigationHome]
+        tabbarController.viewControllers = [navigationHome, navigationProfile]
         tabbarController.tabBar.items?[0].image = #imageLiteral(resourceName: "home")
         tabbarController.tabBar.items?[1].image = #imageLiteral(resourceName: "avatar")
             
