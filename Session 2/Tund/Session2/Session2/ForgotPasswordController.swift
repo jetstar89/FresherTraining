@@ -11,7 +11,7 @@ import UIKit
 class ForgotPassWordController: UIViewController {
     @IBOutlet weak var sendTextField: UITextField!
     
-  
+    // MARK: LifeCycle
     @IBOutlet weak var sendButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +24,7 @@ class ForgotPassWordController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    // MARK: initView
     func initView() {
         //setup textfield and button
         let border = CALayer()
@@ -44,6 +45,7 @@ class ForgotPassWordController: UIViewController {
         view.addGestureRecognizer(onTapViewGestureRecognizer)
     }
     @IBAction func actionSendButton(_ sender: Any) {
+        
         
     }
     @objc func onTapView(_ sender: UITapGestureRecognizer) {

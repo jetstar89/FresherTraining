@@ -17,8 +17,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileController" customModule="Login" customModuleProvider="target">
             <connections>
+                <outlet property="changePasswordButton" destination="em9-ZC-uvS" id="RyX-KE-aMd"/>
+                <outlet property="externalCompanyButton" destination="1bf-Qe-X8X" id="nUj-o3-olb"/>
                 <outlet property="logOutButton" destination="DkR-CC-Ww8" id="tL9-kz-pQf"/>
+                <outlet property="personnelButton" destination="pdI-dJ-iK8" id="uxI-zk-aqq"/>
                 <outlet property="profileImage" destination="r6M-ap-tF6" id="xs9-Pb-WAY"/>
+                <outlet property="requestBrowseButton" destination="Vah-hD-1NZ" id="tYM-Iw-xm4"/>
+                <outlet property="requestTimeKeepButton" destination="KdX-oN-Djw" id="ya0-TM-A6o"/>
+                <outlet property="timeKeepingButton" destination="S8E-Ju-cfa" id="UTy-Y8-awY"/>
+                <outlet property="vacationButton" destination="70m-aN-1qb" id="Xne-7j-gFY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -57,61 +64,89 @@
                         <action selector="onLogOut:" destination="-1" eventType="touchUpInside" id="lXh-rA-NeX"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="70m-aN-1qb">
-                    <rect key="frame" x="16" y="207" width="344" height="48"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="70m-aN-1qb">
+                    <rect key="frame" x="15" y="202" width="343" height="48"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
-                    <state key="normal" title="  🛠   Nghỉ phép">
+                    <inset key="titleEdgeInsets" minX="32" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Nghỉ phép" image="icPhepCopy">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="onPressVacationButton:" destination="-1" eventType="touchUpInside" id="tIZ-nL-uaO"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bf-Qe-X8X">
-                    <rect key="frame" x="15" y="263" width="344" height="48"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bf-Qe-X8X">
+                    <rect key="frame" x="16" y="258" width="342" height="48"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
-                    <state key="normal" title="  📋   Chấm công ngoài công ty">
+                    <inset key="titleEdgeInsets" minX="32" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Chấm công ngoài công ty" image="icChamXongNgoaiCongTy">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="onPresseExternalCompany:" destination="-1" eventType="touchUpInside" id="dgW-nz-vZo"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdI-dJ-iK8">
-                    <rect key="frame" x="16" y="319" width="344" height="48"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdI-dJ-iK8">
+                    <rect key="frame" x="15" y="314" width="343" height="48"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
-                    <state key="normal" title="  👥   Nhân sự">
+                    <inset key="titleEdgeInsets" minX="32" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Nhân sự" image="icNhanSu">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="onPressPersonnel:" destination="-1" eventType="touchUpInside" id="5Jt-wZ-7eP"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vah-hD-1NZ">
-                    <rect key="frame" x="15" y="375" width="344" height="48"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KdX-oN-Djw">
+                    <rect key="frame" x="15" y="426" width="344" height="48"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
-                    <state key="normal" title="  💻   Duyệt request">
+                    <inset key="titleEdgeInsets" minX="32" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Duyệt chấm công ngoài công ty" image="icDuyetChamCongNgoaiCongTy">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="onPressRequestTimeKeep:" destination="-1" eventType="touchUpInside" id="t2X-Yz-x6Z"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KdX-oN-Djw">
-                    <rect key="frame" x="15" y="431" width="344" height="48"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="em9-ZC-uvS">
+                    <rect key="frame" x="16" y="482" width="343" height="48"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
-                    <state key="normal" title="  ⏱   Duyệt chấm công ngoài công ty">
+                    <inset key="titleEdgeInsets" minX="32" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Đổi mật khẩu" image="icPassword">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="onPressChangePassword:" destination="-1" eventType="touchUpInside" id="JMY-vU-5Py"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="em9-ZC-uvS">
-                    <rect key="frame" x="16" y="487" width="344" height="48"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8E-Ju-cfa">
+                    <rect key="frame" x="15" y="146" width="343" height="48"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
-                    <state key="normal" title="  🔐   Đổi mật khẩu">
+                    <inset key="titleEdgeInsets" minX="32" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Chấm công" image="icChamCong">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="onPressTimeKeeping:" destination="-1" eventType="touchUpInside" id="sb1-7z-iIS"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8E-Ju-cfa">
-                    <rect key="frame" x="15" y="151" width="344" height="48"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vah-hD-1NZ">
+                    <rect key="frame" x="16" y="370" width="343" height="48"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
-                    <state key="normal" title="  🗒   Chấm công">
+                    <inset key="titleEdgeInsets" minX="32" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Duyệt request" image="icDuyetRequest">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="onPressRequestBrowse:" destination="-1" eventType="touchUpInside" id="msd-Xg-oYN"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.24705882352941178" green="0.37254901960784315" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -120,6 +155,13 @@
         </view>
     </objects>
     <resources>
+        <image name="icChamCong" width="18" height="18"/>
+        <image name="icChamXongNgoaiCongTy" width="14" height="18"/>
+        <image name="icDuyetChamCongNgoaiCongTy" width="20" height="20"/>
+        <image name="icDuyetRequest" width="17" height="17"/>
+        <image name="icNhanSu" width="20" height="19"/>
+        <image name="icPassword" width="12" height="17"/>
+        <image name="icPhepCopy" width="18" height="18"/>
         <image name="profileImage" width="100" height="125"/>
     </resources>
 </document>
