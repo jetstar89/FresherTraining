@@ -29,6 +29,7 @@ class ProfileController: UIViewController {
     
     func initView() {
         profileImage.layer.cornerRadius = profileImage.frame.width / 2
+        profileImage.clipsToBounds = true
         navigationController?.navigationBar.isHidden = true
         logOutButton.layer.cornerRadius = 4
     }
