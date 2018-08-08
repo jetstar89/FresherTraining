@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -23,38 +23,30 @@
             <objects>
                 <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="DemoUIComponents" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gem2017" translatesAutoresizingMaskIntoConstraints="NO" id="3jS-WD-vm2">
-                                <rect key="frame" x="97" y="87" width="181" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tên đăng nhập" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aG-d0-k0Z">
-                                <rect key="frame" x="47" y="245" width="104" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" text="Tên đăng nhập" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aG-d0-k0Z">
+                                <rect key="frame" x="49" y="269" width="277" height="18"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="18" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="NTd-9S-pQS">
-                                <rect key="frame" x="47" y="272" width="280" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="18" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="NTd-9S-pQS">
+                                <rect key="frame" x="49" y="296" width="277" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Fe1-6G-R71"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mật khẩu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AgH-9x-I0y">
-                                <rect key="frame" x="47" y="327" width="64" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnj-h4-V9e">
-                                <rect key="frame" x="46" y="461" width="280" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnj-h4-V9e">
+                                <rect key="frame" x="49" y="483" width="277" height="42"/>
                                 <color key="backgroundColor" red="0.21568627450980393" green="0.33333333333333331" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="OY3-mk-tKi"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
                                 <state key="normal" title="ĐĂNG NHẬP">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -63,33 +55,66 @@
                                     <action selector="onLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LNM-Xc-t3s"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="l34-pn-xGp">
-                                <rect key="frame" x="47" y="354" width="280" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="l34-pn-xGp">
+                                <rect key="frame" x="49" y="377" width="277" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                             </textField>
-                            <imageView hidden="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icView" translatesAutoresizingMaskIntoConstraints="NO" id="wlE-ef-Dga">
-                                <rect key="frame" x="305" y="362" width="22" height="14"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Version 1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07V-39-9NG">
-                                <rect key="frame" x="150" y="636" width="74" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
-                                <color key="textColor" red="0.42745098040000001" green="0.47058823529999999" blue="0.50588235290000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quên mật khẩu?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MR8-DH-9PE">
-                                <rect key="frame" x="221" y="415" width="106" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quên mật khẩu?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MR8-DH-9PE">
+                                <rect key="frame" x="223.66666666666666" y="437" width="102.33333333333334" height="16"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                 <color key="textColor" red="0.47058823529411764" green="0.51372549019607838" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" text="Mật khẩu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AgH-9x-I0y">
+                                <rect key="frame" x="49" y="350.66666666666669" width="277" height="18"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icView" translatesAutoresizingMaskIntoConstraints="NO" id="wlE-ef-Dga">
+                                <rect key="frame" x="304" y="385" width="22" height="14"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" image="gem2017" translatesAutoresizingMaskIntoConstraints="NO" id="3jS-WD-vm2">
+                                <rect key="frame" x="97" y="111" width="181" height="61"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="Version 1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07V-39-9NG">
+                                <rect key="frame" x="152" y="747" width="71" height="16"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                <color key="textColor" red="0.42745098040000001" green="0.47058823529999999" blue="0.50588235290000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wlE-ef-Dga" firstAttribute="leading" secondItem="l34-pn-xGp" secondAttribute="trailing" constant="-22" id="0pP-TP-5sD"/>
+                            <constraint firstItem="NTd-9S-pQS" firstAttribute="leading" secondItem="2aG-d0-k0Z" secondAttribute="leading" id="1gZ-Vc-JLo"/>
+                            <constraint firstItem="3jS-WD-vm2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="67" id="8bx-fp-Sx3"/>
+                            <constraint firstItem="07V-39-9NG" firstAttribute="top" relation="lessThanOrEqual" secondItem="fnj-h4-V9e" secondAttribute="bottom" constant="250" id="AdO-wa-EaK"/>
+                            <constraint firstItem="3jS-WD-vm2" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="BlS-to-WRx"/>
+                            <constraint firstItem="MR8-DH-9PE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="F0H-rn-1YK"/>
+                            <constraint firstItem="07V-39-9NG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="FW2-Ic-ySj"/>
+                            <constraint firstItem="l34-pn-xGp" firstAttribute="top" secondItem="AgH-9x-I0y" secondAttribute="bottom" constant="9" id="J5j-7a-Pfh"/>
+                            <constraint firstItem="AgH-9x-I0y" firstAttribute="leading" secondItem="2aG-d0-k0Z" secondAttribute="leading" id="Jy1-2I-WGa"/>
+                            <constraint firstItem="l34-pn-xGp" firstAttribute="height" secondItem="NTd-9S-pQS" secondAttribute="height" id="MGO-e7-r5K"/>
+                            <constraint firstItem="AgH-9x-I0y" firstAttribute="trailing" secondItem="2aG-d0-k0Z" secondAttribute="trailing" id="OPJ-X4-Ctq"/>
+                            <constraint firstItem="AgH-9x-I0y" firstAttribute="top" secondItem="NTd-9S-pQS" secondAttribute="bottom" constant="24" id="TvB-jO-UJM"/>
+                            <constraint firstItem="l34-pn-xGp" firstAttribute="centerY" secondItem="wlE-ef-Dga" secondAttribute="centerY" id="Xfa-G3-0R4"/>
+                            <constraint firstItem="NTd-9S-pQS" firstAttribute="top" secondItem="2aG-d0-k0Z" secondAttribute="bottom" constant="9" id="YhP-gq-2vB"/>
+                            <constraint firstItem="MR8-DH-9PE" firstAttribute="top" secondItem="l34-pn-xGp" secondAttribute="bottom" constant="30" id="bV4-yS-yPh"/>
+                            <constraint firstItem="fnj-h4-V9e" firstAttribute="top" secondItem="MR8-DH-9PE" secondAttribute="bottom" constant="30" id="bZm-FS-ulZ"/>
+                            <constraint firstItem="2aG-d0-k0Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="49" id="dG6-N0-3d8"/>
+                            <constraint firstItem="2aG-d0-k0Z" firstAttribute="top" secondItem="3jS-WD-vm2" secondAttribute="bottom" constant="97" id="gVm-Oi-jI6"/>
+                            <constraint firstItem="l34-pn-xGp" firstAttribute="trailing" secondItem="2aG-d0-k0Z" secondAttribute="trailing" id="jVd-cT-mKc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="07V-39-9NG" secondAttribute="bottom" constant="15" id="l3A-Mv-4ES"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2aG-d0-k0Z" secondAttribute="trailing" constant="49" id="lzh-Ru-LX3"/>
+                            <constraint firstItem="NTd-9S-pQS" firstAttribute="trailing" secondItem="2aG-d0-k0Z" secondAttribute="trailing" id="nRh-u8-hwN"/>
+                            <constraint firstItem="fnj-h4-V9e" firstAttribute="trailing" secondItem="2aG-d0-k0Z" secondAttribute="trailing" id="rQ0-h1-fe4"/>
+                            <constraint firstItem="l34-pn-xGp" firstAttribute="leading" secondItem="2aG-d0-k0Z" secondAttribute="leading" id="rhi-6o-NeF"/>
+                            <constraint firstItem="fnj-h4-V9e" firstAttribute="trailing" secondItem="MR8-DH-9PE" secondAttribute="trailing" id="vJq-wa-eAb"/>
+                            <constraint firstItem="fnj-h4-V9e" firstAttribute="leading" secondItem="2aG-d0-k0Z" secondAttribute="leading" id="zhN-Qk-4uh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -103,7 +128,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+            <point key="canvasLocation" x="113.5" y="116"/>
         </scene>
     </scenes>
     <resources>

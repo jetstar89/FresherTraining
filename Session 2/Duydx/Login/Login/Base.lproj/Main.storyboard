@@ -23,51 +23,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZRy-7k-yxA">
-                                <rect key="frame" x="98" y="87" width="181" height="61"/>
-                                <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gem2017" translatesAutoresizingMaskIntoConstraints="NO" id="ZRy-7k-yxA">
+                                <rect key="frame" x="97" y="87" width="181" height="61"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tên đăng nhập" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UP9-yH-EyL">
-                                <rect key="frame" x="49" y="245" width="104" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tên đăng nhập" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UP9-yH-EyL">
+                                <rect key="frame" x="49" y="245" width="100" height="18"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mật khẩu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IA3-9m-srM">
-                                <rect key="frame" x="49" y="327" width="66" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mật khẩu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IA3-9m-srM">
+                                <rect key="frame" x="49" y="327" width="63.5" height="18"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tên đăng nhập" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4Rq-lh-kiw">
-                                <rect key="frame" x="49" y="272" width="280" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tên đăng nhập" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4Rq-lh-kiw">
+                                <rect key="frame" x="49" y="272" width="276" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="cVr-mX-8iz"/>
+                                </constraints>
                                 <color key="textColor" red="0.47058823529411764" green="0.51372549019607838" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mật khẩu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k5G-OW-awM">
-                                <rect key="frame" x="49" y="354" width="280" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mật khẩu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k5G-OW-awM">
+                                <rect key="frame" x="49" y="354" width="276" height="40"/>
                                 <color key="textColor" red="0.24705882352941178" green="0.37254901960784315" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Version 1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oih-cf-a1H">
-                                <rect key="frame" x="151" y="636" width="74" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oih-cf-a1H">
+                                <rect key="frame" x="152" y="636" width="71" height="16"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                 <color key="textColor" red="0.47058823529411764" green="0.51372549019607838" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A96-6y-3ZA">
-                                <rect key="frame" x="46" y="461" width="280" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A96-6y-3ZA">
+                                <rect key="frame" x="49" y="470" width="276" height="42"/>
                                 <color key="backgroundColor" red="0.24705882352941178" green="0.37254901960784315" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="rMm-kD-RvV"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
-                                <inset key="contentEdgeInsets" minX="93" minY="13" maxX="92" maxY="10"/>
                                 <state key="normal" title="Đăng nhập">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -75,15 +73,37 @@
                                     <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q43-xB-ay0"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quên mật khẩu?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3F-Bx-bnI">
-                                <rect key="frame" x="223" y="414" width="106" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quên mật khẩu?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3F-Bx-bnI">
+                                <rect key="frame" x="222.5" y="424" width="102.5" height="16"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                 <color key="textColor" red="0.47058823529411764" green="0.51372549019607838" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="k5G-OW-awM" firstAttribute="top" secondItem="IA3-9m-srM" secondAttribute="bottom" constant="9" id="A3n-Je-GuC"/>
+                            <constraint firstItem="IA3-9m-srM" firstAttribute="leading" secondItem="k5G-OW-awM" secondAttribute="leading" id="CEi-UZ-9fe"/>
+                            <constraint firstItem="4Rq-lh-kiw" firstAttribute="leading" secondItem="IA3-9m-srM" secondAttribute="leading" id="Eur-v2-z3D"/>
+                            <constraint firstItem="4Rq-lh-kiw" firstAttribute="width" secondItem="k5G-OW-awM" secondAttribute="width" id="L88-7K-AK2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oih-cf-a1H" secondAttribute="bottom" constant="15" id="MhY-tB-IFz"/>
+                            <constraint firstItem="UP9-yH-EyL" firstAttribute="top" secondItem="ZRy-7k-yxA" secondAttribute="bottom" constant="97" id="Nm9-XP-U41"/>
+                            <constraint firstItem="4Rq-lh-kiw" firstAttribute="trailing" secondItem="k5G-OW-awM" secondAttribute="trailing" id="PHz-5F-MsZ"/>
+                            <constraint firstItem="IA3-9m-srM" firstAttribute="top" secondItem="4Rq-lh-kiw" secondAttribute="bottom" constant="15" id="Pd5-Oj-Fkf"/>
+                            <constraint firstItem="4Rq-lh-kiw" firstAttribute="top" secondItem="UP9-yH-EyL" secondAttribute="bottom" constant="9" id="Taz-xV-ARH"/>
+                            <constraint firstItem="b3F-Bx-bnI" firstAttribute="top" secondItem="k5G-OW-awM" secondAttribute="bottom" constant="30" id="Tjr-wE-nsw"/>
+                            <constraint firstItem="UP9-yH-EyL" firstAttribute="leading" secondItem="4Rq-lh-kiw" secondAttribute="leading" id="Xbg-WA-oZS"/>
+                            <constraint firstItem="k5G-OW-awM" firstAttribute="leading" secondItem="A96-6y-3ZA" secondAttribute="leading" id="ZOv-5k-jpG"/>
+                            <constraint firstItem="4Rq-lh-kiw" firstAttribute="height" secondItem="k5G-OW-awM" secondAttribute="height" id="ZbI-70-3x4"/>
+                            <constraint firstItem="oih-cf-a1H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zfb-kb-NK2"/>
+                            <constraint firstItem="A96-6y-3ZA" firstAttribute="top" secondItem="b3F-Bx-bnI" secondAttribute="bottom" constant="30" id="bpi-pz-a7b"/>
+                            <constraint firstItem="ZRy-7k-yxA" firstAttribute="centerX" secondItem="oih-cf-a1H" secondAttribute="centerX" id="fTl-yM-quv"/>
+                            <constraint firstItem="ZRy-7k-yxA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="67" id="o4d-GA-WIr"/>
+                            <constraint firstItem="b3F-Bx-bnI" firstAttribute="trailing" secondItem="A96-6y-3ZA" secondAttribute="trailing" id="uPo-2V-qTt"/>
+                            <constraint firstItem="k5G-OW-awM" firstAttribute="trailing" secondItem="b3F-Bx-bnI" secondAttribute="trailing" id="wXT-Gl-QSS"/>
+                            <constraint firstItem="ZRy-7k-yxA" firstAttribute="centerX" secondItem="4Rq-lh-kiw" secondAttribute="centerX" id="yMj-nI-Syx"/>
+                            <constraint firstItem="UP9-yH-EyL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="49" id="zbf-uD-tFQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -96,7 +116,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="118.96551724137932"/>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gem2017" width="181" height="61"/>
+    </resources>
 </document>

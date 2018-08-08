@@ -10,10 +10,10 @@ import UIKit
 
 class ForgotPasswordViewController: UIViewController {
 
-    
     @IBOutlet weak var iconPlaneImageView: UIImageView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var sendRequestButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         emailTextField.delegate = self
@@ -28,7 +28,6 @@ class ForgotPasswordViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        iconPlaneImageView.image = #imageLiteral(resourceName: "paper_plane")
         navigationController?.navigationBar.isHidden = false
         navigationController?.navigationBar.barTintColor = UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1)
         navigationController?.navigationBar.tintColor = UIColor.white
@@ -36,11 +35,10 @@ class ForgotPasswordViewController: UIViewController {
         
         navigationItem.title = "QUÊN MẬT KHẨU"
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "back"), style: .plain, target: self, action: #selector(onBack(_:)))
-        emailTextField.setIsOnFocus(false)
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
+        emailTextField.setIsOnFocus(false)
     }
 
     override func didReceiveMemoryWarning() {
