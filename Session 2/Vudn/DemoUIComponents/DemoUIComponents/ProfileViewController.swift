@@ -32,7 +32,6 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         print(tag + " did load")
         listButton = [timeKeepingButton, vacationButton, timeKeepingOutCorpButton, humanResourceButton, browseRequestButton, browseTimeKeepingOutCorpButton, changePasswordButton]
-        setButtonBackground(timeKeepingButton)
         // Do any additional setup after loading the view.
     }
     
@@ -68,6 +67,8 @@ class ProfileViewController: UIViewController {
     
     @IBAction func onTimeKeepingButtonSelected(_ sender: UIButton) {
         setButtonBackground(sender)
+        let timeKeepingViewController = TimeKeepingViewController(nibName: "TimeKeepingViewController", bundle: nil)
+        navigationController?.pushViewController(timeKeepingViewController, animated: true)
     }
     
     @IBAction func onVacationButtonSelected(_ sender: UIButton) {
