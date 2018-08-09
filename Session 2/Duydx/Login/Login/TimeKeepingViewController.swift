@@ -21,7 +21,7 @@ class TimeKeepingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     override func viewDidDisappear(_ animated: Bool) {
-        navigationController?.popViewController(animated: true)
+//        navigationController?.popViewController(animated: true)
     }
 
     //MARK: initView

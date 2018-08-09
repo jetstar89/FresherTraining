@@ -12,14 +12,32 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PersonnelViewController" customModule="Login" customModuleProvider="target">
             <connections>
+                <outlet property="personTableView" destination="6FU-DZ-u7k" id="1KM-Es-fqA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6FU-DZ-u7k">
+                    <rect key="frame" x="0.0" y="15" width="375" height="588"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="mKh-eb-Mhf"/>
+                        <outlet property="delegate" destination="-1" id="o1e-di-YaO"/>
+                    </connections>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6FU-DZ-u7k" secondAttribute="trailing" id="GgV-Nt-gbw"/>
+                <constraint firstItem="6FU-DZ-u7k" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="QAE-sN-DDR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6FU-DZ-u7k" secondAttribute="bottom" id="VxO-XI-qto"/>
+                <constraint firstItem="6FU-DZ-u7k" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="cST-uV-Gcm"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>
