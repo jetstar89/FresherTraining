@@ -36,28 +36,31 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="flower" translatesAutoresizingMaskIntoConstraints="NO" id="V6k-Mw-OW3">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flower" translatesAutoresizingMaskIntoConstraints="NO" id="V6k-Mw-OW3">
                     <rect key="frame" x="15" y="50" width="62" height="62"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="62" id="Z88-9w-3yn"/>
+                        <constraint firstAttribute="width" constant="62" id="sf9-jJ-2V7"/>
+                    </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVH-C1-G2R">
-                    <rect key="frame" x="89" y="60" width="270" height="20"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVH-C1-G2R">
+                    <rect key="frame" x="89" y="60" width="270" height="19"/>
                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xp-UI-1h9">
-                    <rect key="frame" x="89" y="87" width="270" height="20"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xp-UI-1h9">
+                    <rect key="frame" x="89" y="86" width="270" height="19"/>
                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beJ-8u-WfG">
-                    <rect key="frame" x="53" y="568" width="268" height="41.999999999999943"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beJ-8u-WfG">
+                    <rect key="frame" x="22" y="560" width="331" height="42"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="a7U-bJ-5mG"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                     <state key="normal" title="ĐĂNG XUẤT">
                         <color key="titleColor" red="0.2470588235" green="0.37254901959999998" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -66,9 +69,8 @@
                         <action selector="onLogOut:" destination="-1" eventType="touchUpInside" id="fYR-Gx-3jJ"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIw-ik-AiL">
-                    <rect key="frame" x="0.0" y="198" width="375" height="48"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIw-ik-AiL">
+                    <rect key="frame" x="0.0" y="199" width="375" height="48.5"/>
                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                     <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                     <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -79,12 +81,14 @@
                         <action selector="onVacationButtonSelected:" destination="-1" eventType="touchUpInside" id="frj-UB-ZZe"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ic3-VB-bDc">
-                    <rect key="frame" x="0.0" y="150" width="375" height="48"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ic3-VB-bDc">
+                    <rect key="frame" x="0.0" y="151" width="375" height="48"/>
                     <accessibility key="accessibilityConfiguration">
                         <accessibilityTraits key="traits" button="YES" image="YES"/>
                     </accessibility>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="6PL-Tj-Tra"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                     <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                     <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -95,9 +99,8 @@
                         <action selector="onTimeKeepingButtonSelected:" destination="-1" eventType="touchUpInside" id="205-G6-qsO"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMH-yI-pfZ">
-                    <rect key="frame" x="0.0" y="246" width="375" height="48"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMH-yI-pfZ">
+                    <rect key="frame" x="0.0" y="247.5" width="375" height="48"/>
                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                     <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                     <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -108,9 +111,8 @@
                         <action selector="onTimeKeepingOutCorpButtomSelected:" destination="-1" eventType="touchUpInside" id="o2y-Yv-1xH"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hat-QP-kcf">
-                    <rect key="frame" x="0.0" y="294" width="375" height="48"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hat-QP-kcf">
+                    <rect key="frame" x="0.0" y="295.5" width="375" height="48.5"/>
                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                     <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                     <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -121,9 +123,8 @@
                         <action selector="onHumanResourceButtonSelected:" destination="-1" eventType="touchUpInside" id="v1f-gk-3CK"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvn-tC-Kkl">
-                    <rect key="frame" x="0.0" y="342" width="375" height="48"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvn-tC-Kkl">
+                    <rect key="frame" x="0.0" y="344" width="375" height="48"/>
                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                     <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                     <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -134,9 +135,8 @@
                         <action selector="onBrowseRequestButtonSelected:" destination="-1" eventType="touchUpInside" id="ONn-Zc-ViT"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8j-GZ-6GE">
-                    <rect key="frame" x="0.0" y="390" width="375" height="48"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8j-GZ-6GE">
+                    <rect key="frame" x="0.0" y="392" width="375" height="48"/>
                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                     <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                     <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -147,9 +147,8 @@
                         <action selector="onBrowseTimeKeepingOutCorpButtonSelected:" destination="-1" eventType="touchUpInside" id="clQ-tz-RjG"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHn-pW-0G2">
-                    <rect key="frame" x="0.0" y="438" width="375" height="48"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHn-pW-0G2">
+                    <rect key="frame" x="0.0" y="440" width="375" height="48"/>
                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                     <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                     <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -162,6 +161,48 @@
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.2470588235" green="0.37254901959999998" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="nVH-C1-G2R" firstAttribute="leading" secondItem="V6k-Mw-OW3" secondAttribute="trailing" constant="12" id="3qX-Q1-ZHs"/>
+                <constraint firstItem="fvn-tC-Kkl" firstAttribute="top" secondItem="hat-QP-kcf" secondAttribute="bottom" id="3w8-9G-Kan"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="beJ-8u-WfG" secondAttribute="bottom" constant="16" id="5nb-dr-pdZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="beJ-8u-WfG" secondAttribute="trailing" constant="22" id="5ok-cz-UQW"/>
+                <constraint firstItem="ic3-VB-bDc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="131" id="B4Y-E5-zEo"/>
+                <constraint firstItem="hat-QP-kcf" firstAttribute="trailing" secondItem="ic3-VB-bDc" secondAttribute="trailing" id="BNK-xx-CnF"/>
+                <constraint firstItem="hat-QP-kcf" firstAttribute="top" secondItem="HMH-yI-pfZ" secondAttribute="bottom" id="CeP-rb-ZmI"/>
+                <constraint firstItem="OIw-ik-AiL" firstAttribute="leading" secondItem="ic3-VB-bDc" secondAttribute="leading" id="FRB-Fc-d0c"/>
+                <constraint firstItem="V6k-Mw-OW3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="FmK-4J-UBk"/>
+                <constraint firstItem="lHn-pW-0G2" firstAttribute="height" secondItem="ic3-VB-bDc" secondAttribute="height" id="GVj-rb-u6t"/>
+                <constraint firstItem="beJ-8u-WfG" firstAttribute="top" relation="lessThanOrEqual" secondItem="lHn-pW-0G2" secondAttribute="bottom" constant="103" id="Hbm-oA-RZA"/>
+                <constraint firstItem="HMH-yI-pfZ" firstAttribute="leading" secondItem="ic3-VB-bDc" secondAttribute="leading" id="I55-3c-JLG"/>
+                <constraint firstItem="nVH-C1-G2R" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="K5i-nQ-ehg"/>
+                <constraint firstItem="8xp-UI-1h9" firstAttribute="leading" secondItem="nVH-C1-G2R" secondAttribute="leading" id="KDK-rU-2Kl"/>
+                <constraint firstItem="OIw-ik-AiL" firstAttribute="trailing" secondItem="ic3-VB-bDc" secondAttribute="trailing" id="Lww-lO-FKQ"/>
+                <constraint firstItem="HMH-yI-pfZ" firstAttribute="trailing" secondItem="ic3-VB-bDc" secondAttribute="trailing" id="MTX-yf-tuD"/>
+                <constraint firstItem="e8j-GZ-6GE" firstAttribute="height" secondItem="ic3-VB-bDc" secondAttribute="height" id="MwV-jV-SE0"/>
+                <constraint firstItem="fvn-tC-Kkl" firstAttribute="trailing" secondItem="ic3-VB-bDc" secondAttribute="trailing" id="OSZ-SH-Rzv"/>
+                <constraint firstItem="V6k-Mw-OW3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="PUN-VA-sb0"/>
+                <constraint firstItem="fvn-tC-Kkl" firstAttribute="height" secondItem="ic3-VB-bDc" secondAttribute="height" id="QzT-1P-VjI"/>
+                <constraint firstItem="fvn-tC-Kkl" firstAttribute="leading" secondItem="ic3-VB-bDc" secondAttribute="leading" id="RyX-td-wkN"/>
+                <constraint firstItem="hat-QP-kcf" firstAttribute="leading" secondItem="ic3-VB-bDc" secondAttribute="leading" id="SQz-qf-Ifl"/>
+                <constraint firstItem="OIw-ik-AiL" firstAttribute="top" secondItem="ic3-VB-bDc" secondAttribute="bottom" id="VBt-Zl-OyG"/>
+                <constraint firstItem="HMH-yI-pfZ" firstAttribute="top" secondItem="OIw-ik-AiL" secondAttribute="bottom" id="WEc-g9-XfL"/>
+                <constraint firstItem="beJ-8u-WfG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="22" id="YX0-0w-aFc"/>
+                <constraint firstItem="HMH-yI-pfZ" firstAttribute="height" secondItem="ic3-VB-bDc" secondAttribute="height" id="at5-9m-sdT"/>
+                <constraint firstItem="8xp-UI-1h9" firstAttribute="trailing" secondItem="nVH-C1-G2R" secondAttribute="trailing" id="g1s-Ny-cg6"/>
+                <constraint firstItem="hat-QP-kcf" firstAttribute="height" secondItem="ic3-VB-bDc" secondAttribute="height" id="hO5-cP-ker"/>
+                <constraint firstItem="e8j-GZ-6GE" firstAttribute="top" secondItem="fvn-tC-Kkl" secondAttribute="bottom" id="hSe-dM-oFX"/>
+                <constraint firstItem="e8j-GZ-6GE" firstAttribute="leading" secondItem="ic3-VB-bDc" secondAttribute="leading" id="jS1-nk-NOg"/>
+                <constraint firstItem="OIw-ik-AiL" firstAttribute="height" secondItem="ic3-VB-bDc" secondAttribute="height" id="nP9-lu-pwd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nVH-C1-G2R" secondAttribute="trailing" constant="16" id="qXY-1n-DHy"/>
+                <constraint firstItem="e8j-GZ-6GE" firstAttribute="trailing" secondItem="ic3-VB-bDc" secondAttribute="trailing" id="qyV-Vs-J2U"/>
+                <constraint firstItem="lHn-pW-0G2" firstAttribute="top" secondItem="e8j-GZ-6GE" secondAttribute="bottom" id="rD6-Y0-rna"/>
+                <constraint firstItem="8xp-UI-1h9" firstAttribute="top" secondItem="nVH-C1-G2R" secondAttribute="bottom" constant="7" id="rdG-Z2-ZsB"/>
+                <constraint firstItem="lHn-pW-0G2" firstAttribute="leading" secondItem="ic3-VB-bDc" secondAttribute="leading" id="sDN-2N-aQy"/>
+                <constraint firstItem="ic3-VB-bDc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="sJk-XW-iqM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8xp-UI-1h9" secondAttribute="trailing" constant="16" id="t6g-wS-3Gi"/>
+                <constraint firstItem="lHn-pW-0G2" firstAttribute="trailing" secondItem="ic3-VB-bDc" secondAttribute="trailing" id="wBY-bF-jM2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ic3-VB-bDc" secondAttribute="trailing" id="xRV-IY-VXc"/>
+            </constraints>
             <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="25.5" y="51.5"/>
