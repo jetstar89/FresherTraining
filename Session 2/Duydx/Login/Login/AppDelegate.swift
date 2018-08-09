@@ -18,11 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
 //        setupTabbarController()
         window = UIWindow(frame: UIScreen.main.bounds)
-        setupNavigationController()
+        setupNavigationViewController()
         window?.makeKeyAndVisible()
         return true
     }
-    func setupNavigationController() {
+    func setupNavigationViewController() {
         let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController")
         let rootNavigationController = UINavigationController(rootViewController: viewController)
         window?.rootViewController = rootNavigationController
