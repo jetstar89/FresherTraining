@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina3_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,11 +20,11 @@
             <objects>
                 <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Login" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gem2017" translatesAutoresizingMaskIntoConstraints="NO" id="ZRy-7k-yxA">
-                                <rect key="frame" x="69.5" y="87" width="181" height="61"/>
+                                <rect key="frame" x="97" y="87" width="181" height="61"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tên đăng nhập" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UP9-yH-EyL">
                                 <rect key="frame" x="49" y="245" width="100" height="18"/>
@@ -39,7 +39,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tên đăng nhập" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4Rq-lh-kiw">
-                                <rect key="frame" x="49" y="272" width="221" height="40"/>
+                                <rect key="frame" x="49" y="272" width="276" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="cVr-mX-8iz"/>
                                 </constraints>
@@ -48,19 +48,19 @@
                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mật khẩu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k5G-OW-awM">
-                                <rect key="frame" x="49" y="354" width="221" height="40"/>
+                                <rect key="frame" x="49" y="354" width="276" height="40"/>
                                 <color key="textColor" red="0.24705882352941178" green="0.37254901960784315" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oih-cf-a1H">
-                                <rect key="frame" x="124.5" y="449" width="71" height="16"/>
+                                <rect key="frame" x="152" y="636" width="71" height="16"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                 <color key="textColor" red="0.47058823529411764" green="0.51372549019607838" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A96-6y-3ZA">
-                                <rect key="frame" x="49" y="470" width="221" height="42"/>
+                                <rect key="frame" x="49" y="470" width="276" height="42"/>
                                 <color key="backgroundColor" red="0.24705882352941178" green="0.37254901960784315" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="rMm-kD-RvV"/>
@@ -74,7 +74,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quên mật khẩu?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3F-Bx-bnI">
-                                <rect key="frame" x="167.5" y="424" width="102.5" height="16"/>
+                                <rect key="frame" x="222.5" y="424" width="102.5" height="16"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                 <color key="textColor" red="0.47058823529411764" green="0.51372549019607838" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -82,8 +82,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IA3-9m-srM" secondAttribute="trailing" constant="20" symbolic="YES" id="2m8-5b-0ow"/>
                             <constraint firstItem="k5G-OW-awM" firstAttribute="top" secondItem="IA3-9m-srM" secondAttribute="bottom" constant="9" id="A3n-Je-GuC"/>
                             <constraint firstItem="IA3-9m-srM" firstAttribute="leading" secondItem="k5G-OW-awM" secondAttribute="leading" id="CEi-UZ-9fe"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="UP9-yH-EyL" secondAttribute="trailing" constant="20" symbolic="YES" id="EGj-EP-zYB"/>
                             <constraint firstItem="4Rq-lh-kiw" firstAttribute="leading" secondItem="IA3-9m-srM" secondAttribute="leading" id="Eur-v2-z3D"/>
                             <constraint firstItem="4Rq-lh-kiw" firstAttribute="width" secondItem="k5G-OW-awM" secondAttribute="width" id="L88-7K-AK2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oih-cf-a1H" secondAttribute="bottom" constant="15" id="MhY-tB-IFz"/>

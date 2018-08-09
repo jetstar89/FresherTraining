@@ -10,16 +10,10 @@ import UIKit
 
 class ProfileController: UIViewController {
     //MARK: IBOutlet
-    @IBOutlet weak var logOutButton: UIButton!
     @IBOutlet weak var profileImage: UIImageView!
-    @IBOutlet weak var vacationButton: UIButton!
-    @IBOutlet weak var timeKeepingButton: UIButton!
-    @IBOutlet weak var externalCompanyButton: UIButton!
-    @IBOutlet weak var personnelButton: UIButton!
-    @IBOutlet weak var requestBrowseButton: UIButton!
-    @IBOutlet weak var changePasswordButton: UIButton!
-    @IBOutlet weak var requestTimeKeepButton: UIButton!
-    var listUIButton: Array<UIButton> = Array<UIButton>()
+    @IBOutlet weak var logOutButton: UIButton!
+    @IBOutlet weak var functionTableView: UITableView!
+    var listFunction = [Funciton]()
     //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,8 +36,9 @@ class ProfileController: UIViewController {
         profileImage.clipsToBounds = true
         navigationController?.navigationBar.isHidden = true
         logOutButton.layer.cornerRadius = 4
-        listUIButton = [timeKeepingButton, vacationButton, externalCompanyButton, personnelButton, requestBrowseButton, requestTimeKeepButton, changePasswordButton]
-        onBackground(listUIButton, nil)
+        listFunction = [Funciton("icChamCong", "Chấm công"), Funciton("icPhepCopy", "Nghỉ phép"), Funciton("icChamXongNgoaiCongTy", "Chấm công ngoài công ty"), Funciton("icNhanSu", "Nhân sự") , Funciton("icDuyetRequest", "Duyệt Request"), Funciton("icDuyetChamCongNgoaiCongTy", "Duyệt chấm công ngoài công ty"), Funciton("icPassword", "Đổi mật khẩu")]
+        functionTableView.register(UINib(nibName: "FunctionTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+        
     }
     //MARK: Background Button when Click and Default
     func setBackgroudSelected(_ uiButton: UIButton) {
@@ -52,41 +47,57 @@ class ProfileController: UIViewController {
     func setBackgroundDefault(_ uiButton: UIButton) {
         uiButton.layer.backgroundColor = UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1).cgColor
     }
-    func onBackground(_ listButton: Array<UIButton>,_ uiButton: UIButton?) {
-        for items in listUIButton {
-            if items == uiButton {
-                setBackgroudSelected(uiButton!)
-            } else {
-                setBackgroundDefault(items)
-            }
+    
+}
+extension ProfileController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return listFunction.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: FunctionTableViewCell = functionTableView.dequeueReusableCell(withIdentifier: "cell",
+                                                                                for: indexPath) as! FunctionTableViewCell
+        cell.logoImage.image = UIImage(named: listFunction[indexPath.row].logoImage)
+        cell.contentLabel.text = listFunction[indexPath.row].content
+        return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let item = functionTableView.cellForRow(at: indexPath)?.contentView {
+            item.isSelected(true)
+        }
+        switch indexPath.row {
+        case 0:
+            let timeKeepingController = TimeKeepingViewController(nibName: "TimeKeepingViewController", bundle: nil)
+            navigationController?.pushViewController(timeKeepingController, animated: true)
+        default:
+            break
         }
     }
-    //MARK: IBAction
-    @IBAction func onPressVacationButton(_ sender: UIButton) {
-        onBackground(listUIButton, vacationButton)
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        if let item = functionTableView.cellForRow(at: indexPath)?.contentView {
+            item.isSelected(false)
+        }
     }
-    @IBAction func onPressTimeKeeping(_ sender: UIButton) {
-        onBackground(listUIButton, timeKeepingButton)
-        let timeKeeepingViewController = TimeKeepingViewController(nibName: "TimeKeepingViewController", bundle: nil)
-        navigationController?.pushViewController(timeKeeepingViewController, animated: true)
+    
+}
+extension ProfileController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 48
+    }
+    
+}
+extension UIView {
+    func isSelected(_ isSelected: Bool) {
+        self.backgroundColor = isSelected ? UIColor(red: 35/255, green: 61/255, blue: 117/255, alpha: 1) : UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1)
+        let border = CALayer()
+        let width = CGFloat(4.0)
+        border.borderColor = isSelected ? UIColor.white.cgColor : UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1).cgColor
+        border.frame = CGRect(x: 0, y: 0, width: width, height: self.frame.height)
+        border.borderWidth = width
+        self.layer.addSublayer(border)
+        self.layer.masksToBounds = true
         
     }
-    @IBAction func onPresseExternalCompany(_ sender: UIButton) {
-        onBackground(listUIButton, externalCompanyButton)
-    }
-    
-    @IBAction func onPressPersonnel(_ sender: UIButton) {
-        onBackground(listUIButton, personnelButton)
-    }
-    
-    @IBAction func onPressRequestBrowse(_ sender: UIButton) {
-        onBackground(listUIButton, requestBrowseButton)
-    }
-    @IBAction func onPressRequestTimeKeep(_ sender: UIButton) {
-        onBackground(listUIButton, requestTimeKeepButton)
-    }
-    @IBAction func onPressChangePassword(_ sender: UIButton) {
-        onBackground(listUIButton, changePasswordButton)
-    }
-
 }
