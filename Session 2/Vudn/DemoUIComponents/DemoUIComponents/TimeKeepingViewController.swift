@@ -31,6 +31,8 @@ class TimeKeepingViewController: UIViewController {
         navigationController?.navigationBar.barTintColor = UIColor.frenchBlue
         navigationController?.navigationBar.tintColor = UIColor.white
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        
+//        NotificationCenter.default.addObserver(self, selector: <#T##Selector#>, name: <#T##NSNotification.Name?#>, object: <#T##Any?#>)
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,7 +71,6 @@ extension TimeKeepingViewController: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         //if let keyBoardSize = UIKeyboardFrameBeginUserInfoKey as
-        myScrollView.isScrollEnabled = true
         myScrollView.contentOffset = CGPoint(x: 0, y: 100)
     }
     
