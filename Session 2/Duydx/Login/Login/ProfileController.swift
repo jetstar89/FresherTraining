@@ -34,7 +34,7 @@ class ProfileController: UIViewController {
     }
     //MARK: IBAction
     @IBAction func onLogOut(_ sender: Any) {
-        (UIApplication.shared.delegate as? AppDelegate)?.setupNavigationController()
+        (UIApplication.shared.delegate as? AppDelegate)?.setupNavigationViewController()
     }
     //MARK: initView
     func initView() {
@@ -67,6 +67,9 @@ class ProfileController: UIViewController {
     }
     @IBAction func onPressTimeKeeping(_ sender: UIButton) {
         onBackground(listUIButton, timeKeepingButton)
+        let timeKeeepingViewController = TimeKeepingViewController(nibName: "TimeKeepingViewController", bundle: nil)
+        navigationController?.pushViewController(timeKeeepingViewController, animated: true)
+        
     }
     @IBAction func onPresseExternalCompany(_ sender: UIButton) {
         onBackground(listUIButton, externalCompanyButton)

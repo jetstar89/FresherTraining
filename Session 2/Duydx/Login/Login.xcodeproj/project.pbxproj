@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84E87E02211BE1D700C896B7 /* TimeKeepingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E87E00211BE1D700C896B7 /* TimeKeepingViewController.swift */; };
+		84E87E03211BE1D700C896B7 /* TimeKeepingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E87E01211BE1D700C896B7 /* TimeKeepingViewController.xib */; };
+		84E87E06211BE37C00C896B7 /* PersonnelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E87E04211BE37C00C896B7 /* PersonnelViewController.swift */; };
+		84E87E07211BE37C00C896B7 /* PersonnelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E87E05211BE37C00C896B7 /* PersonnelViewController.xib */; };
 		84ED89B521142E73005D2174 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED89B421142E73005D2174 /* AppDelegate.swift */; };
 		84ED89B721142E73005D2174 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED89B621142E73005D2174 /* ViewController.swift */; };
 		84ED89BA21142E73005D2174 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84ED89B821142E73005D2174 /* Main.storyboard */; };
@@ -37,6 +41,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84E87E00211BE1D700C896B7 /* TimeKeepingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeKeepingViewController.swift; sourceTree = "<group>"; };
+		84E87E01211BE1D700C896B7 /* TimeKeepingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeKeepingViewController.xib; sourceTree = "<group>"; };
+		84E87E04211BE37C00C896B7 /* PersonnelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonnelViewController.swift; sourceTree = "<group>"; };
+		84E87E05211BE37C00C896B7 /* PersonnelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonnelViewController.xib; sourceTree = "<group>"; };
 		84ED89B121142E73005D2174 /* Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Login.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84ED89B421142E73005D2174 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84ED89B621142E73005D2174 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +120,10 @@
 				84F454732118555800217F3D /* HomeController.xib */,
 				84F454762118570E00217F3D /* ProfileController.swift */,
 				84F454772118570E00217F3D /* ProfileController.xib */,
+				84E87E00211BE1D700C896B7 /* TimeKeepingViewController.swift */,
+				84E87E01211BE1D700C896B7 /* TimeKeepingViewController.xib */,
+				84E87E04211BE37C00C896B7 /* PersonnelViewController.swift */,
+				84E87E05211BE37C00C896B7 /* PersonnelViewController.xib */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -213,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84F454362117EBBB00217F3D /* Roboto-Medium.ttf in Resources */,
+				84E87E07211BE37C00C896B7 /* PersonnelViewController.xib in Resources */,
 				84F45471211853CC00217F3D /* FogotPasswordController.xib in Resources */,
 				84F454752118555800217F3D /* HomeController.xib in Resources */,
 				84ED89BF21142E74005D2174 /* LaunchScreen.storyboard in Resources */,
@@ -227,6 +240,7 @@
 				84F4542E2117EBBB00217F3D /* Roboto-ThinItalic.ttf in Resources */,
 				84F454792118570E00217F3D /* ProfileController.xib in Resources */,
 				84F4542D2117EBBB00217F3D /* Roboto-Light.ttf in Resources */,
+				84E87E03211BE1D700C896B7 /* TimeKeepingViewController.xib in Resources */,
 				84ED89BA21142E73005D2174 /* Main.storyboard in Resources */,
 				84F454302117EBBB00217F3D /* Roboto-Italic.ttf in Resources */,
 				84F454332117EBBB00217F3D /* Roboto-Regular.ttf in Resources */,
@@ -249,6 +263,8 @@
 				84ED89B521142E73005D2174 /* AppDelegate.swift in Sources */,
 				84F45470211853CC00217F3D /* FogotPasswordController.swift in Sources */,
 				84F454742118555800217F3D /* HomeController.swift in Sources */,
+				84E87E06211BE37C00C896B7 /* PersonnelViewController.swift in Sources */,
+				84E87E02211BE1D700C896B7 /* TimeKeepingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
