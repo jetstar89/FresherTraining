@@ -15,15 +15,14 @@ class Profile3ViewController: UIViewController {
     
     
     @IBOutlet weak var timeKeepingButton: UIButton!
-    @IBOutlet weak var restButton: UIButton!
-    @IBOutlet weak var timeKeepingOutButton: UIButton!
-    @IBOutlet weak var changePasswordButton: UIButton!
+    
     @IBOutlet weak var logoutButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
         
-        listButton = [timeKeepingButton,restButton,timeKeepingOutButton,changePasswordButton]
+        listButton = [timeKeepingButton]
+        
         
         
         
@@ -40,26 +39,19 @@ class Profile3ViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     override func viewWillDisappear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     // MARK: init and func
     @IBAction func logout(_ sender: Any) {
         (UIApplication.shared.delegate as? AppDelegate)?.setupNavigation()
         
     }
-    @IBAction func actionChangePassword(_ sender: Any) {
-        setButtonColor(changePasswordButton)
-    }
-    
-    @IBAction func actionTimeKeepOut(_ sender: Any) {
-        setButtonColor(timeKeepingOutButton)
-    }
-    @IBAction func actionRest1(_ sender: Any) {
-        setButtonColor(restButton)
-    }
+  
     
     @IBAction func actionTimeKeep(_ sender: Any) {
         setButtonColor(timeKeepingButton)
+        let timekeepingController = TimeKeepingViewController(nibName: "TimeKeepingViewController", bundle: nil)
+        navigationController?.pushViewController(timekeepingController, animated: true)
     }
     func setButtonColor(_ button: UIButton) {
         for item in listButton {
