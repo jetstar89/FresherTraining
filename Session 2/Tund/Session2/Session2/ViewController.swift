@@ -9,12 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var showPasswordImageView: UIImageView!
     
-    
+ 
     
     @IBOutlet weak var forgotPasswordLabel: UILabel!
     
-    @IBOutlet weak var hiddenPasswordImageView: UIImageView!
+    
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var nameTextField: UITextField!
@@ -76,9 +77,9 @@ class ViewController: UIViewController {
         
         //tap icon show password
         let showPasswordGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(showPassword(_:)))
-        hiddenPasswordImageView.isUserInteractionEnabled = true
-        hiddenPasswordImageView.addGestureRecognizer(showPasswordGestureRecognizer)
-        
+        showPasswordImageView.isUserInteractionEnabled = true
+        showPasswordImageView.addGestureRecognizer(showPasswordGestureRecognizer)
+
         //tap screen
         let onTapViewGestureRecognizer = UITapGestureRecognizer(target: self,action: #selector(onTapView(_:)))
         view.isUserInteractionEnabled = true
@@ -106,12 +107,12 @@ class ViewController: UIViewController {
     @objc func showPassword(_ sender: UITapGestureRecognizer) {
         if nameTextField.isSecureTextEntry {
             nameTextField.isSecureTextEntry = false
-            hiddenPasswordImageView.frame = CGRect(x: hiddenPasswordImageView.frame.minX, y: hiddenPasswordImageView.frame.minY - 2, width: hiddenPasswordImageView.frame.width, height: 18)
-            hiddenPasswordImageView.image = UIImage(named: "icView")
+            showPasswordImageView.frame = CGRect(x: showPasswordImageView.frame.minX, y: showPasswordImageView.frame.minY - 2, width: showPasswordImageView.frame.width, height: 18)
+            showPasswordImageView.image = UIImage(named: "icView")
         } else {
             nameTextField.isSecureTextEntry = true
-            hiddenPasswordImageView.frame = CGRect(x: hiddenPasswordImageView.frame.minX, y: hiddenPasswordImageView.frame.minY + 2, width: hiddenPasswordImageView.frame.width, height: 14)
-            hiddenPasswordImageView.image = UIImage(named: "icshowView")
+            showPasswordImageView.frame = CGRect(x: showPasswordImageView.frame.minX, y: showPasswordImageView.frame.minY + 2, width: showPasswordImageView.frame.width, height: 14)
+            showPasswordImageView.image = UIImage(named: "icshowView")
         }
     }
     @objc func onTapView(_ sender: UITapGestureRecognizer) {
@@ -132,7 +133,7 @@ extension ViewController: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == nameTextField {
-            hiddenPasswordImageView.isHidden = false
+            showPasswordImageView.isHidden = false
         } else {
             //
         }
@@ -146,7 +147,7 @@ extension ViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == nameTextField && nameTextField.text == "" {
-            hiddenPasswordImageView.isHidden = true
+            showPasswordImageView.isHidden = true
         } else {
             //
         }
