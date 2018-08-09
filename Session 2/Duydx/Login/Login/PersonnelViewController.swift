@@ -64,12 +64,13 @@ extension PersonnelViewController: UITableViewDataSource {
             cell.statusLabel.text = "Đã nghỉ"
             cell.statusLabel.backgroundColor = UIColor(red: 208/255, green: 2/255, blue: 27/255, alpha: 1)
         }
+        cell.selectionStyle = .none
         return cell
     }
 }
 extension PersonnelViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 104
+        return UITableViewAutomaticDimension
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let item = personTableView.cellForRow(at: indexPath)?.contentView {
