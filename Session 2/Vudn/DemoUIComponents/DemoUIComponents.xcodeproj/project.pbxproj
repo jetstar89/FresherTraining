@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D34222A211BDFD3006B8853 /* TimeKeepingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D342228211BDFD3006B8853 /* TimeKeepingViewController.swift */; };
+		1D34222B211BDFD3006B8853 /* TimeKeepingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D342229211BDFD3006B8853 /* TimeKeepingViewController.xib */; };
 		1D4252EC2117ED2D00DC95A3 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D4252DA2117ED2B00DC95A3 /* Roboto-Black.ttf */; };
 		1D4252ED2117ED2D00DC95A3 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D4252DB2117ED2B00DC95A3 /* Roboto-LightItalic.ttf */; };
 		1D4252EE2117ED2D00DC95A3 /* Roboto-BoldCondensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D4252DC2117ED2B00DC95A3 /* Roboto-BoldCondensed.ttf */; };
@@ -39,6 +41,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D342228211BDFD3006B8853 /* TimeKeepingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeKeepingViewController.swift; sourceTree = "<group>"; };
+		1D342229211BDFD3006B8853 /* TimeKeepingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeKeepingViewController.xib; sourceTree = "<group>"; };
 		1D4252DA2117ED2B00DC95A3 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		1D4252DB2117ED2B00DC95A3 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
 		1D4252DC2117ED2B00DC95A3 /* Roboto-BoldCondensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldCondensed.ttf"; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 				1D42532D211854D100DC95A3 /* HomeViewController.xib */,
 				1D425330211854E600DC95A3 /* ProfileViewController.swift */,
 				1D425331211854E600DC95A3 /* ProfileViewController.xib */,
+				1D342228211BDFD3006B8853 /* TimeKeepingViewController.swift */,
+				1D342229211BDFD3006B8853 /* TimeKeepingViewController.xib */,
 			);
 			path = DemoUIComponents;
 			sourceTree = "<group>";
@@ -216,6 +222,7 @@
 				1D4252F52117ED2D00DC95A3 /* Roboto-Medium.ttf in Resources */,
 				1D4252F92117ED2D00DC95A3 /* Roboto-BlackItalic.ttf in Resources */,
 				1D4252F22117ED2D00DC95A3 /* Roboto-ThinItalic.ttf in Resources */,
+				1D34222B211BDFD3006B8853 /* TimeKeepingViewController.xib in Resources */,
 				1D4252F32117ED2D00DC95A3 /* Roboto-BoldItalic.ttf in Resources */,
 				1D42532F211854D100DC95A3 /* HomeViewController.xib in Resources */,
 				1D42532B21183B5500DC95A3 /* ForgotPasswordViewController.xib in Resources */,
@@ -249,6 +256,7 @@
 				844FEB3221143A130035952C /* ViewController.swift in Sources */,
 				1D42532A21183B5500DC95A3 /* ForgotPasswordViewController.swift in Sources */,
 				844FEB3021143A130035952C /* AppDelegate.swift in Sources */,
+				1D34222A211BDFD3006B8853 /* TimeKeepingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
