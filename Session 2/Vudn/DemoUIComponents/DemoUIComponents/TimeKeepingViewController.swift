@@ -20,6 +20,7 @@ class TimeKeepingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         answerTextField.delegate = self
+        confirmButton.layer.cornerRadius = 4
         // Do any additional setup after loading the view.
     }
     

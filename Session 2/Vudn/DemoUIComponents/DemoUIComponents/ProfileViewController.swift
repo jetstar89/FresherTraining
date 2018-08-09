@@ -34,7 +34,6 @@ class ProfileViewController: UIViewController {
         navigationController?.navigationBar.isHidden = true
         avatarImageView.layer.cornerRadius = avatarImageView.frame.width / 2
         menuTableView.register(UINib(nibName: "MenuTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
-        menuTableView.register(UINib(nibName: "LogOutTableViewCell", bundle: nil), forHeaderFooterViewReuseIdentifier: "logout")
         print(tag + " will appear")
     }
     
@@ -71,35 +70,20 @@ class ProfileViewController: UIViewController {
 
 extension ProfileViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
-        return 2
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            return listOption.count
-        case 1:
-            return 1
-        default:
-            return 0
-        }
+        return listOption.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0{
-            let indentifier = "cell"
-            let cell: MenuTableViewCell = tableView.dequeueReusableCell(withIdentifier: indentifier, for: indexPath) as! MenuTableViewCell
-            
-            cell.iconImageView.image = listOption[indexPath.row].image
-            cell.nameLabel.text = listOption[indexPath.row].name
-            return cell
-        } else {
-            let indentifier = "logout"
-            let button: LogOutTableViewCell = tableView.dequeueReusableCell(withIdentifier: indentifier, for: indexPath) as! LogOutTableViewCell
-            
-            return button
-        }
-        
+        let indentifier = "cell"
+        let cell: MenuTableViewCell = tableView.dequeueReusableCell(withIdentifier: indentifier, for: indexPath) as! MenuTableViewCell
+        cell.iconImageView.image = listOption[indexPath.row].image
+        cell.nameLabel.text = listOption[indexPath.row].name
+        cell.selectionStyle = .none
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
