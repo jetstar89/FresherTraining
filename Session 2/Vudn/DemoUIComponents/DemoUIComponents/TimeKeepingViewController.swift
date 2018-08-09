@@ -62,17 +62,11 @@ class TimeKeepingViewController: UIViewController {
 
 extension TimeKeepingViewController: UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        if  textField == answerTextField {
-            answerTextField.setIsOnFocus(true)
-        } else {
-            // Nothing
-        }
         return true
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        //if let keyBoardSize = UIKeyboardFrameBeginUserInfoKey as
-        myScrollView.contentOffset = CGPoint(x: 0, y: 100)
+        //myScrollView.contentOffset = CGPoint(x: 0, y: 0)
     }
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
@@ -87,7 +81,6 @@ extension TimeKeepingViewController: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        //myScrollView.isScrollEnabled = false
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
