@@ -9,29 +9,30 @@
 import UIKit
 
 class TimeKeepingViewController: UIViewController {
-
+    
+    var dataTableView = [sectionData]()
+    
     // MARK: - IBOutlet
-    @IBOutlet weak var myScrollView: UIScrollView!
-    @IBOutlet weak var avatarImageView: UIImageView!
-    @IBOutlet weak var answerTextField: UITextField!
-    @IBOutlet weak var confirmButton: UIButton!
+    
+    @IBOutlet weak var timeKeepingTableView: UITableView!
     // MARK: - LIFE CYCLE
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        answerTextField.delegate = self
-        confirmButton.layer.cornerRadius = 4
-        // Do any additional setup after loading the view.
+        dataTableView = [sectionData(isExpand: false, cellData: ["a", "b", "c", "d", "e", "f", "g"]),sectionData(isExpand: false, cellData: ["h", "i", "j", "k", "l", "m", "n"]),sectionData(isExpand: false, cellData: ["1", "2", "3", "4", "5", "6", "7"]),sectionData(isExpand: false, cellData: ["8", "9", "10", "11", "12", "13", "14"])]
+        
+        timeKeepingTableView.register(UINib(nibName: "WeekTableViewCell", bundle: nil), forCellReuseIdentifier: "week")
+        timeKeepingTableView.register(UINib(nibName: "DayTableViewCell", bundle: nil), forCellReuseIdentifier: "day")
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        answerTextField.setIsOnFocus(false)
-        myScrollView.isScrollEnabled = false
-        navigationController?.navigationBar.isHidden = false
-        navigationItem.title = "Time Keeping"
-        navigationController?.navigationBar.barTintColor = UIColor.frenchBlue
-        navigationController?.navigationBar.tintColor = UIColor.white
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        
+        guard let navigationBar = navigationController?.navigationBar else {return}
+        navigationBar.isHidden = false
+        navigationBar.barTintColor = UIColor.frenchBlue
+        navigationBar.tintColor = UIColor.white
+        navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        navigationItem.title = "CHẤM CÔNG"
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,53 +41,89 @@ class TimeKeepingViewController: UIViewController {
     }
     
     //MARK: - IBAction
-
-    @IBAction func onConfirm(_ sender: UIButton) {
-        view.endEditing(true)
-    }
-    
-    /*
-    // MARK: - Navigation
-     
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
-extension TimeKeepingViewController: UITextFieldDelegate {
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        return true
+extension TimeKeepingViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return dataTableView.count
     }
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-
-        //myScrollView.contentOffset = CGPoint(x: 0, y: 0)
-        //if let keyBoardSize = UIKeyboardFrameBeginUserInfoKey as
-        myScrollView.isScrollEnabled = true
-        myScrollView.contentOffset = CGPoint(x: 0, y: 100)
-    }
-    
-    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        if textField == answerTextField {
-            answerTextField.setIsOnFocus(false)
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let numberRow = dataTableView[section].cellData.count + 1
+        if dataTableView[section].isExpand {
+            print("number of row in section \(section) = \(numberRow)")
+            return numberRow
         } else {
-            // Do nothing
+            print("number of row in section = 1")
+            return 1
         }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row == 0 {
+            guard let cell: WeekTableViewCell = tableView.dequeueReusableCell(withIdentifier: "week", for: indexPath) as? WeekTableViewCell else {return UITableViewCell()}
+            cell.weekLabel.text = "Tuần " + (indexPath.section + 1).description
+            return cell
+        } else {
+            guard let cell: DayTableViewCell = tableView.dequeueReusableCell(withIdentifier: "day", for: indexPath) as? DayTableViewCell else {return UITableViewCell()}
+            
+            cell.afternoonChekingTimeLabel.text = dataTableView[indexPath.section].cellData[indexPath.row - 1]
+            let day = indexPath.row + 1
+            if day <= 7 {
+                cell.WeekdayLabel.text = "T" + (day).description
+            } else {
+                cell.WeekdayLabel.text = "CN"
+            }
+            
+            return cell
+        }
+    }
+    
+    
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+}
+
+extension TimeKeepingViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("did select row at \(indexPath.row) in section \(indexPath.section)")
+        if indexPath.row == 0 {
+            if dataTableView[indexPath.section].isExpand {
+                dataTableView[indexPath.section].isExpand = false
+            } else {
+                dataTableView[indexPath.section].isExpand = true
+            }
+            
+            //reload table view
+            let sections = IndexSet.init(integer: indexPath.section)
+            tableView.reloadSections(sections, with: .none)
+            
+            if dataTableView[indexPath.section].isExpand {
+                if let item = tableView.cellForRow(at: indexPath)?.contentView {
+                    print("set Expand on section \(indexPath.section)")
+                    item.setIsOnExpand(true)
+                }
+            } else {
+                if let item = tableView.cellForRow(at: indexPath)?.contentView {
+                    print("set Unexpand on section \(indexPath.section)")
+                    item.setIsOnExpand(false)
+                }
+            }
+        } else {
+            
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         
-        myScrollView.scrollsToTop = true
-        return true
     }
+}
+
+struct sectionData {
+    var isExpand = Bool()
+    var cellData = [String]()
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        answerTextField.resignFirstResponder()
-        return true
-    }
 }

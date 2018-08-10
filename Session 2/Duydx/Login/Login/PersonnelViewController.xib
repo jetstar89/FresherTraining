@@ -77,50 +77,50 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="A4j-AX-p0D">
-                    <rect key="frame" x="175" y="75" width="200" height="200"/>
+                    <rect key="frame" x="15" y="79" width="360" height="200"/>
                     <subviews>
-                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xr7-zm-KBC">
-                            <rect key="frame" x="0.0" y="0.0" width="200" height="50.5"/>
-                            <color key="backgroundColor" red="0.23921568627450979" green="0.71372549019607845" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xr7-zm-KBC">
+                            <rect key="frame" x="0.0" y="0.0" width="360" height="50.5"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="EUg-YU-0UK"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                             <state key="normal" title="Developer">
-                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
                                 <action selector="onTapChoosePostition:" destination="-1" eventType="touchUpInside" id="7xS-CB-dtr"/>
                             </connections>
                         </button>
-                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbz-Qn-BI3">
-                            <rect key="frame" x="0.0" y="50.5" width="200" height="50.5"/>
-                            <color key="backgroundColor" red="0.23921568627450979" green="0.71372549019607845" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbz-Qn-BI3">
+                            <rect key="frame" x="0.0" y="50.5" width="360" height="50.5"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                             <state key="normal" title="Hành Chính nhân sự">
-                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
                                 <action selector="onTapChoosePostition:" destination="-1" eventType="touchUpInside" id="bEK-al-vEa"/>
                             </connections>
                         </button>
-                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TW8-O1-fog">
-                            <rect key="frame" x="0.0" y="101" width="200" height="50.5"/>
-                            <color key="backgroundColor" red="0.23921568627450979" green="0.71372549019607845" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TW8-O1-fog">
+                            <rect key="frame" x="0.0" y="101" width="360" height="50.5"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                             <state key="normal" title="Kế toán">
-                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
                                 <action selector="onTapChoosePostition:" destination="-1" eventType="touchUpInside" id="rSt-Cy-yKd"/>
                             </connections>
                         </button>
-                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYK-zg-bZa">
-                            <rect key="frame" x="0.0" y="151.5" width="200" height="50.5"/>
-                            <color key="backgroundColor" red="0.23921568627450979" green="0.71372549019607845" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYK-zg-bZa">
+                            <rect key="frame" x="0.0" y="151.5" width="360" height="50.5"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                             <state key="normal" title="Tester">
-                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
                                 <action selector="onTapChoosePostition:" destination="-1" eventType="touchUpInside" id="lAO-hb-0R5"/>
@@ -142,7 +142,6 @@
                         <constraint firstItem="kbz-Qn-BI3" firstAttribute="top" secondItem="xr7-zm-KBC" secondAttribute="bottom" id="p8g-DQ-Zc5"/>
                         <constraint firstItem="TW8-O1-fog" firstAttribute="height" secondItem="kbz-Qn-BI3" secondAttribute="height" id="reJ-yR-2PS"/>
                         <constraint firstItem="YYK-zg-bZa" firstAttribute="width" secondItem="TW8-O1-fog" secondAttribute="width" id="uFt-Rh-Fak"/>
-                        <constraint firstAttribute="width" constant="200" id="xgP-An-BOr"/>
                         <constraint firstItem="YYK-zg-bZa" firstAttribute="height" secondItem="TW8-O1-fog" secondAttribute="height" id="zag-d6-C87"/>
                     </constraints>
                 </stackView>
@@ -150,14 +149,15 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Uks-rZ-mGF" secondAttribute="trailing" constant="15" id="0OF-LG-l9o"/>
+                <constraint firstItem="A4j-AX-p0D" firstAttribute="leading" secondItem="QeG-OF-rhV" secondAttribute="leading" id="0cL-eJ-3vX"/>
                 <constraint firstItem="NOC-NU-dlu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4gR-iW-9kU"/>
+                <constraint firstItem="A4j-AX-p0D" firstAttribute="top" secondItem="QeG-OF-rhV" secondAttribute="bottom" id="AOl-sy-bbd"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6FU-DZ-u7k" secondAttribute="trailing" id="GgV-Nt-gbw"/>
                 <constraint firstItem="6FU-DZ-u7k" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="QAE-sN-DDR"/>
                 <constraint firstItem="QeG-OF-rhV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="UgD-x7-bcx"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6FU-DZ-u7k" secondAttribute="bottom" id="VxO-XI-qto"/>
                 <constraint firstItem="QeG-OF-rhV" firstAttribute="top" secondItem="NOC-NU-dlu" secondAttribute="bottom" constant="13" id="aHc-cX-LjN"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NOC-NU-dlu" secondAttribute="trailing" id="aKT-hD-std"/>
-                <constraint firstItem="A4j-AX-p0D" firstAttribute="top" secondItem="Uks-rZ-mGF" secondAttribute="bottom" constant="5" id="cPH-vl-eov"/>
                 <constraint firstItem="Uks-rZ-mGF" firstAttribute="leading" secondItem="QeG-OF-rhV" secondAttribute="trailing" constant="100" id="dcW-zc-EDK"/>
                 <constraint firstItem="NOC-NU-dlu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nsG-Fr-Dms"/>
                 <constraint firstItem="Uks-rZ-mGF" firstAttribute="top" secondItem="NOC-NU-dlu" secondAttribute="bottom" constant="18" id="nwi-Fe-DGf"/>
