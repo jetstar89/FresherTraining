@@ -89,22 +89,36 @@ class Profile3ViewController: UIViewController {
     }
 
 }
+// MARK: UITableViewDataSource
 extension Profile3ViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let item = tableView.cellForRow(at: indexPath)?.contentView {
             item.iSelected(true)
+            
         }
+        
         switch indexPath.row {
         case 0:
             let timekeepingController = TimeKeepingViewController(nibName: "TimeKeepingViewController", bundle: nil)
                 navigationController?.pushViewController(timekeepingController, animated: true)
+            print(listOption[0].name)
             break
-        
+        case 1:
+            let personController = PersonViewController(nibName: "PersonViewController", bundle: nil)
+                navigationController?.pushViewController(personController, animated: true)
+            break
+        case 3:
+            let changePasswordController = ChangePasswordViewController(nibName: "ChangePasswordViewController", bundle: nil)
+            navigationController?.pushViewController(changePasswordController, animated: true)
+            break
+         
         default:
             break
+           
         }
     }
 }
+// MARK: UITableViewDataSource
 extension Profile3ViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

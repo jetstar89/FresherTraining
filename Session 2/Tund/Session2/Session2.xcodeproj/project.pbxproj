@@ -16,6 +16,13 @@
 		84379E85211BECA0006E1CDC /* TimeKeepingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84379E83211BECA0006E1CDC /* TimeKeepingViewController.xib */; };
 		84379EC2211C1CCA006E1CDC /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84379EC0211C1CCA006E1CDC /* MenuTableViewCell.swift */; };
 		84379EC3211C1CCA006E1CDC /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84379EC1211C1CCA006E1CDC /* MenuTableViewCell.xib */; };
+		8441E58D211D2921000FC10B /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8441E58B211D2921000FC10B /* PersonTableViewCell.swift */; };
+		8441E58E211D2921000FC10B /* PersonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8441E58C211D2921000FC10B /* PersonTableViewCell.xib */; };
+		8441E591211D2996000FC10B /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8441E58F211D2996000FC10B /* PersonViewController.swift */; };
+		8441E592211D2996000FC10B /* PersonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8441E590211D2996000FC10B /* PersonViewController.xib */; };
+		8441E595211D3849000FC10B /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8441E594211D3849000FC10B /* Person.swift */; };
+		8441E598211D4F7C000FC10B /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8441E596211D4F7C000FC10B /* ChangePasswordViewController.swift */; };
+		8441E599211D4F7C000FC10B /* ChangePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8441E597211D4F7C000FC10B /* ChangePasswordViewController.xib */; };
 		8460A6932117EC0700B51FB6 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8460A6822117EC0400B51FB6 /* Roboto-BlackItalic.ttf */; };
 		8460A6942117EC0700B51FB6 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8460A6832117EC0500B51FB6 /* Roboto-Black.ttf */; };
 		8460A6952117EC0700B51FB6 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8460A6842117EC0500B51FB6 /* Roboto-Bold.ttf */; };
@@ -71,6 +78,13 @@
 		84379E83211BECA0006E1CDC /* TimeKeepingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeKeepingViewController.xib; sourceTree = "<group>"; };
 		84379EC0211C1CCA006E1CDC /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		84379EC1211C1CCA006E1CDC /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
+		8441E58B211D2921000FC10B /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
+		8441E58C211D2921000FC10B /* PersonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonTableViewCell.xib; sourceTree = "<group>"; };
+		8441E58F211D2996000FC10B /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
+		8441E590211D2996000FC10B /* PersonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonViewController.xib; sourceTree = "<group>"; };
+		8441E594211D3849000FC10B /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		8441E596211D4F7C000FC10B /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		8441E597211D4F7C000FC10B /* ChangePasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangePasswordViewController.xib; sourceTree = "<group>"; };
 		8460A6822117EC0400B51FB6 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
 		8460A6832117EC0500B51FB6 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		8460A6842117EC0500B51FB6 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
@@ -130,6 +144,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8441E589211D2886000FC10B /* Personal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Personal;
+			sourceTree = "<group>";
+		};
+		8441E58A211D28FE000FC10B /* PersonTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				8441E58B211D2921000FC10B /* PersonTableViewCell.swift */,
+				8441E58C211D2921000FC10B /* PersonTableViewCell.xib */,
+			);
+			path = PersonTableViewCell;
+			sourceTree = "<group>";
+		};
+		8441E593211D3834000FC10B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8441E594211D3849000FC10B /* Person.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		8460A6802117EBD400B51FB6 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,9 +223,16 @@
 		84EC308B21142E5F000F5AC9 /* Session2 */ = {
 			isa = PBXGroup;
 			children = (
+				8441E593211D3834000FC10B /* Model */,
+				8441E58A211D28FE000FC10B /* PersonTableViewCell */,
+				8441E589211D2886000FC10B /* Personal */,
 				8460A6802117EBD400B51FB6 /* Resource */,
 				84EC308C21142E5F000F5AC9 /* AppDelegate.swift */,
 				84EC308E21142E5F000F5AC9 /* ViewController.swift */,
+				8441E58F211D2996000FC10B /* PersonViewController.swift */,
+				8441E596211D4F7C000FC10B /* ChangePasswordViewController.swift */,
+				8441E597211D4F7C000FC10B /* ChangePasswordViewController.xib */,
+				8441E590211D2996000FC10B /* PersonViewController.xib */,
 				84EC309021142E5F000F5AC9 /* Main.storyboard */,
 				84EC309321142E61000F5AC9 /* Assets.xcassets */,
 				840C0D1A2118482500737072 /* paper-plane.png */,
@@ -335,11 +380,14 @@
 				8460A6992117EC0700B51FB6 /* Roboto-Italic.ttf in Resources */,
 				8460A69D2117EC0700B51FB6 /* Roboto_Specimen_Book.pdf in Resources */,
 				84EC309721142E61000F5AC9 /* LaunchScreen.storyboard in Resources */,
+				8441E599211D4F7C000FC10B /* ChangePasswordViewController.xib in Resources */,
 				84379E85211BECA0006E1CDC /* TimeKeepingViewController.xib in Resources */,
 				8460A6A12117EC0700B51FB6 /* Roboto-CondensedItalic.ttf in Resources */,
 				84379EC3211C1CCA006E1CDC /* MenuTableViewCell.xib in Resources */,
 				8460A6932117EC0700B51FB6 /* Roboto-BlackItalic.ttf in Resources */,
 				84EC309421142E61000F5AC9 /* Assets.xcassets in Resources */,
+				8441E592211D2996000FC10B /* PersonViewController.xib in Resources */,
+				8441E58E211D2921000FC10B /* PersonTableViewCell.xib in Resources */,
 				8460A69F2117EC0700B51FB6 /* Roboto-Medium.ttf in Resources */,
 				84E5289721198DD40043EB58 /* Profile3ViewController.xib in Resources */,
 				8460A6982117EC0700B51FB6 /* Roboto-BoldCondensed.ttf in Resources */,
@@ -379,12 +427,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8441E598211D4F7C000FC10B /* ChangePasswordViewController.swift in Sources */,
+				8441E595211D3849000FC10B /* Person.swift in Sources */,
 				84E5289621198DD40043EB58 /* Profile3ViewController.swift in Sources */,
 				840C0D162118443A00737072 /* ForgotPassWordController.swift in Sources */,
 				84379EC2211C1CCA006E1CDC /* MenuTableViewCell.swift in Sources */,
 				84EC308F21142E5F000F5AC9 /* ViewController.swift in Sources */,
 				84EC308D21142E5F000F5AC9 /* AppDelegate.swift in Sources */,
 				840C0D322118658B00737072 /* HomeViewController.swift in Sources */,
+				8441E58D211D2921000FC10B /* PersonTableViewCell.swift in Sources */,
+				8441E591211D2996000FC10B /* PersonViewController.swift in Sources */,
 				84379E84211BECA0006E1CDC /* TimeKeepingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

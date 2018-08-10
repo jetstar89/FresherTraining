@@ -10,11 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var showPasswordImageView: UIImageView!
-    
- 
-    
     @IBOutlet weak var forgotPasswordLabel: UILabel!
-    
     
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var logoImageView: UIImageView!
