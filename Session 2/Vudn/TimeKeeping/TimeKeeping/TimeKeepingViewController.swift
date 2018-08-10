@@ -20,6 +20,7 @@ class TimeKeepingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         answerTextField.delegate = self
+        confirmButton.layer.cornerRadius = 4
         // Do any additional setup after loading the view.
     }
     
@@ -59,15 +60,12 @@ class TimeKeepingViewController: UIViewController {
 
 extension TimeKeepingViewController: UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        if  textField == answerTextField {
-            answerTextField.setIsOnFocus(true)
-        } else {
-            // Nothing
-        }
         return true
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
+
+        //myScrollView.contentOffset = CGPoint(x: 0, y: 0)
         //if let keyBoardSize = UIKeyboardFrameBeginUserInfoKey as
         myScrollView.isScrollEnabled = true
         myScrollView.contentOffset = CGPoint(x: 0, y: 100)
@@ -85,7 +83,6 @@ extension TimeKeepingViewController: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        //myScrollView.isScrollEnabled = false
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

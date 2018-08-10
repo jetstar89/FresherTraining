@@ -65,19 +65,28 @@ extension ProfileController: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let item = functionTableView.cellForRow(at: indexPath)?.contentView {
-            item.isSelected(true)
+            item.isSelected(true, "ProfileController")
+            item.setBorder(true)
         }
         switch indexPath.row {
         case 0:
             let timeKeepingController = TimeKeepingViewController(nibName: "TimeKeepingViewController", bundle: nil)
             navigationController?.pushViewController(timeKeepingController, animated: true)
+        case 3:
+            let personViewController = PersonnelViewController(nibName: "PersonnelViewController", bundle: nil)
+            navigationController?.pushViewController(personViewController, animated: true)
+        case 6:
+            let changePasswordController = ChangePasswordViewController(nibName: "ChangePasswordViewController", bundle: nil)
+            navigationController?.pushViewController(changePasswordController, animated: true)
+            
         default:
             break
         }
     }
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         if let item = functionTableView.cellForRow(at: indexPath)?.contentView {
-            item.isSelected(false)
+            item.isSelected(false, "ProfileController")
+            item.setBorder(false)
         }
     }
     
@@ -89,8 +98,14 @@ extension ProfileController: UITableViewDelegate {
     
 }
 extension UIView {
-    func isSelected(_ isSelected: Bool) {
-        self.backgroundColor = isSelected ? UIColor(red: 35/255, green: 61/255, blue: 117/255, alpha: 1) : UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1)
+    func isSelected(_ isSelected: Bool, _ screen: String) {
+        if screen.isEqual("ProfileController") {
+            self.backgroundColor = isSelected ? UIColor(red: 35/255, green: 61/255, blue: 117/255, alpha: 1) : UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1)
+        } else if screen.isEqual("PersonnelViewController") {
+            self.backgroundColor = isSelected ? UIColor(red: 35/255, green: 61/255, blue: 117/255, alpha: 1) : UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+        }
+    }
+    func setBorder(_ isSelected: Bool) {
         let border = CALayer()
         let width = CGFloat(4.0)
         border.borderColor = isSelected ? UIColor.white.cgColor : UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1).cgColor
@@ -98,6 +113,5 @@ extension UIView {
         border.borderWidth = width
         self.layer.addSublayer(border)
         self.layer.masksToBounds = true
-        
     }
 }
