@@ -37,6 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let homeController = HomeViewController(nibName: "HomeViewController", bundle: nil)
         
         let navigationProfile = UINavigationController(rootViewController: profileController)
+        navigationProfile.navigationBar.isTranslucent = false
         let navigationHome = UINavigationController(rootViewController: homeController)
         let tabbarController = UITabBarController()
         
