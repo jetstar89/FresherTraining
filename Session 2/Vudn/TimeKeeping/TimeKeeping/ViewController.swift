@@ -188,5 +188,9 @@ extension UIView {
         self.layer.addSublayer(border)
         self.layer.masksToBounds = true
     }
+    
+    func setIsOnExpand(_ isOnExpand: Bool) {
+        self.backgroundColor = isOnExpand ? UIColor.frenchBlue : UIColor.white
+    }
 }
 

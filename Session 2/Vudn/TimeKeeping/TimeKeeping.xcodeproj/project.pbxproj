@@ -42,6 +42,10 @@
 		1D8DF672211D3FF10006D2CB /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D8DF660211D3FF10006D2CB /* Roboto-Black.ttf */; };
 		1D8DF673211D3FF10006D2CB /* NOTICE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1D8DF661211D3FF10006D2CB /* NOTICE.txt */; };
 		1D8DF674211D3FF10006D2CB /* Roboto-BoldCondensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D8DF662211D3FF10006D2CB /* Roboto-BoldCondensed.ttf */; };
+		1D8DF677211D7D390006D2CB /* WeekTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DF675211D7D390006D2CB /* WeekTableViewCell.swift */; };
+		1D8DF678211D7D390006D2CB /* WeekTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D8DF676211D7D390006D2CB /* WeekTableViewCell.xib */; };
+		1D8DF67B211D82100006D2CB /* DayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DF679211D82100006D2CB /* DayTableViewCell.swift */; };
+		1D8DF67C211D82100006D2CB /* DayTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D8DF67A211D82100006D2CB /* DayTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +86,10 @@
 		1D8DF660211D3FF10006D2CB /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		1D8DF661211D3FF10006D2CB /* NOTICE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NOTICE.txt; sourceTree = "<group>"; };
 		1D8DF662211D3FF10006D2CB /* Roboto-BoldCondensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldCondensed.ttf"; sourceTree = "<group>"; };
+		1D8DF675211D7D390006D2CB /* WeekTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekTableViewCell.swift; sourceTree = "<group>"; };
+		1D8DF676211D7D390006D2CB /* WeekTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeekTableViewCell.xib; sourceTree = "<group>"; };
+		1D8DF679211D82100006D2CB /* DayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTableViewCell.swift; sourceTree = "<group>"; };
+		1D8DF67A211D82100006D2CB /* DayTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +141,10 @@
 				1D8DF64A211D38CC0006D2CB /* ProfileViewController.xib */,
 				1D8DF64D211D3F5A0006D2CB /* ChangePasswordViewController.swift */,
 				1D8DF64E211D3F5A0006D2CB /* ChangePasswordViewController.xib */,
+				1D8DF675211D7D390006D2CB /* WeekTableViewCell.swift */,
+				1D8DF676211D7D390006D2CB /* WeekTableViewCell.xib */,
+				1D8DF679211D82100006D2CB /* DayTableViewCell.swift */,
+				1D8DF67A211D82100006D2CB /* DayTableViewCell.xib */,
 			);
 			path = TimeKeeping;
 			sourceTree = "<group>";
@@ -230,6 +242,7 @@
 			files = (
 				1D8DF673211D3FF10006D2CB /* NOTICE.txt in Resources */,
 				1D8DF66A211D3FF10006D2CB /* Roboto-MediumItalic.ttf in Resources */,
+				1D8DF67C211D82100006D2CB /* DayTableViewCell.xib in Resources */,
 				1D8DF666211D3FF10006D2CB /* Roboto_Specimen_Book.pdf in Resources */,
 				1D8DF66D211D3FF10006D2CB /* Roboto-Light.ttf in Resources */,
 				1D8DF663211D3FF10006D2CB /* Roboto-Medium.ttf in Resources */,
@@ -249,6 +262,7 @@
 				1D8DF648211D37CA0006D2CB /* MenuTableViewCell.xib in Resources */,
 				1D8DF66B211D3FF10006D2CB /* Roboto-BlackItalic.ttf in Resources */,
 				1D8DF667211D3FF10006D2CB /* Roboto-Italic.ttf in Resources */,
+				1D8DF678211D7D390006D2CB /* WeekTableViewCell.xib in Resources */,
 				1D8DF668211D3FF10006D2CB /* Roboto-Regular.ttf in Resources */,
 				1D8DF650211D3F5A0006D2CB /* ChangePasswordViewController.xib in Resources */,
 				1D8DF66C211D3FF10006D2CB /* Roboto-CondensedItalic.ttf in Resources */,
@@ -267,8 +281,10 @@
 			files = (
 				1D8DF623211D370A0006D2CB /* ViewController.swift in Sources */,
 				1D8DF64F211D3F5A0006D2CB /* ChangePasswordViewController.swift in Sources */,
+				1D8DF67B211D82100006D2CB /* DayTableViewCell.swift in Sources */,
 				1D8DF621211D370A0006D2CB /* AppDelegate.swift in Sources */,
 				1D8DF647211D37CA0006D2CB /* MenuTableViewCell.swift in Sources */,
+				1D8DF677211D7D390006D2CB /* WeekTableViewCell.swift in Sources */,
 				1D8DF636211D37610006D2CB /* ForgotPasswordViewController.swift in Sources */,
 				1D8DF64B211D38CC0006D2CB /* ProfileViewController.swift in Sources */,
 				1D8DF63A211D37720006D2CB /* HomeViewController.swift in Sources */,

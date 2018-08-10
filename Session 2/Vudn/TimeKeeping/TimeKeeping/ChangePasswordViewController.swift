@@ -26,13 +26,22 @@ class ChangePasswordViewController: UIViewController {
         oldPasswordTextField.delegate = self
         newPasswordTextField.delegate = self
         confirmNewPasswordTextField.delegate = self
+        agreeButton.layer.cornerRadius = 4
     }
     
     override func viewWillAppear(_ animated: Bool) {
         oldPasswordTextField.setIsOnFocus(false)
         newPasswordTextField.setIsOnFocus(false)
         confirmNewPasswordTextField.setIsOnFocus(false)
-        navigationController?.navigationBar.isHidden = false
+        
+        if let navigationBar = navigationController?.navigationBar {
+            navigationBar.isHidden = false
+            navigationBar.barTintColor = UIColor.frenchBlue
+            navigationBar.tintColor = UIColor.white
+            navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+            navigationItem.title = "ĐỔI MẬT KHẨU"
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {
