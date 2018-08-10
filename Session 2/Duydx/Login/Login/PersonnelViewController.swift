@@ -11,15 +11,23 @@ import UIKit
 class PersonnelViewController: UIViewController {
     var listPerson = [Person]()
     @IBOutlet weak var personTableView: UITableView!
-    
+    @IBOutlet weak var positionLabel: UILabel!
+    @IBOutlet var choosePositionButton: [UIButton]!
+    @IBOutlet weak var searchTextField: UITextField!
+    //MARK: LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
         // Do any additional setup after loading the view.
     }
+    override func viewDidDisappear(_ animated: Bool) {
+        navigationController?.popViewController(animated: true)
+    }
+    //MARK: initView
     func initView() {
+        positionLabel.text = "Developer"
         navigationController?.navigationBar.isHidden = false
-        navigationItem.title = "Person"
+        navigationItem.title = "NHÂN SỰ"
         navigationController?.navigationBar.tintColor = UIColor.white
         navigationController?.navigationBar.barTintColor = UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1.0)
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
@@ -33,7 +41,19 @@ class PersonnelViewController: UIViewController {
                       Person("Nguyễn Văn Lâm", "ID: 00156", "0967505425", "Developer", false, "gaixinha"),
                       Person("Đặng Xuân Duy", "ID: 00156", "0967505425", "Developer", true, "gaixinh")
         ]
+        searchTextField.layer.cornerRadius = 15.0
+        searchTextField.layer.borderWidth = 1
+        searchTextField.layer.borderColor = UIColor.white.cgColor
+        searchTextField.layer.backgroundColor = UIColor.white.cgColor
+        let searchImage = UIImageView();
+        let image = UIImage(named: "search");
+        searchImage.image = image;
+        searchImage.frame = CGRect(x: 0, y: 0, width: 14, height: 14)
+        searchTextField.leftViewMode = .always
+        searchTextField.leftView = searchImage;
+        
     }
+    
     @objc func selectedMenu() {
         print("Chọn chức năng menu")
     }
@@ -41,8 +61,42 @@ class PersonnelViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    func showPosition() {
+        
+        choosePositionButton.forEach { (buttonPosition) in
+            UIView.animate(withDuration: 0.3, animations: {
+                buttonPosition.isHidden = !buttonPosition.isHidden
+                self.view.layoutIfNeeded()
+            })
+        }
+    }
+    //MARK: IBAction
+    @IBAction func choosePosition(_ sender: UIButton) {
+        showPosition()
+    }
+    @IBAction func onTapChoosePostition(_ sender: UIButton) {
+        if let title = sender.currentTitle {
+            switch title {
+            case "Developer":
+                positionLabel.text = "Developer"
+                showPosition()
+            case "Hành Chính nhân sự":
+                positionLabel.text = "Hành Chính nhân sự"
+                showPosition()
+            case "Kế toán":
+                positionLabel.text = "Kế toán"
+                showPosition()
+            case "Tester":
+                positionLabel.text = "Tester"
+                showPosition()
+            default:
+                break
+            }
+        }
+    }
     
 }
+//MARK: extension UITableViewDataSource
 extension PersonnelViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -68,6 +122,7 @@ extension PersonnelViewController: UITableViewDataSource {
         return cell
     }
 }
+//MARK: extension UITableViewDelegate
 extension PersonnelViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
@@ -76,6 +131,7 @@ extension PersonnelViewController: UITableViewDelegate {
         if let item = personTableView.cellForRow(at: indexPath)?.contentView {
             item.isSelected(true, "PersonnelViewController")
         }
+        print(listPerson[indexPath.row].namePersion)
     }
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         if let item = personTableView.cellForRow(at: indexPath)?.contentView {
@@ -83,4 +139,5 @@ extension PersonnelViewController: UITableViewDelegate {
         }
     }
 }
+
 

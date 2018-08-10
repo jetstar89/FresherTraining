@@ -1,15 +1,15 @@
 //
-//  TimeKeepingViewController.swift
+//  ChangePasswordViewController.swift
 //  Login
 //
-//  Created by admin on 8/9/18.
+//  Created by admin on 8/10/18.
 //  Copyright © 2018 admin. All rights reserved.
 //
 
 import UIKit
 
-class TimeKeepingViewController: UIViewController {
-    //MARK: LIFECYCLE
+class ChangePasswordViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
@@ -20,21 +20,16 @@ class TimeKeepingViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    override func viewDidDisappear(_ animated: Bool) {
-        navigationController?.popViewController(animated: true)
-    }
-
     //MARK: initView
     func initView() {
         navigationController?.navigationBar.isHidden = false
-        navigationItem.title = "TimeKeeping"
+        navigationItem.title = "ĐỔI MẬT KHẨU"
         navigationController?.navigationBar.tintColor = UIColor.white
         navigationController?.navigationBar.barTintColor = UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1.0)
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "iconMenu"), style: .plain, target: self, action: #selector(selectedMenu))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "left"), style: .plain, target: self, action: #selector(onBack))
     }
-    @objc func selectedMenu() {
-        print("Chọn chức năng menu")
+    @objc func onBack() {
+        navigationController?.popViewController(animated: true)
     }
-    
 }
