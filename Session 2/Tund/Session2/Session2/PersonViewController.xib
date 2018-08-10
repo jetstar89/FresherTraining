@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PersonViewController" customModule="Session2" customModuleProvider="target">
+            <connections>
+                <outlet property="personTableView" destination="zL4-cv-8bQ" id="M8V-TB-AMT"/>
+                <outlet property="searchImageView" destination="LeZ-3E-4FW" id="HjH-FG-JPx"/>
+                <outlet property="searchTextField" destination="fEa-fN-jS7" id="xNu-Rq-zzd"/>
+                <outlet property="titleLabel" destination="zAX-v2-Sre" id="mem-Ls-8lh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qUY-2m-8IB">
+                    <rect key="frame" x="0.0" y="20" width="375" height="47"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  Tìm kiếm" minimumFontSize="17" background="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="fEa-fN-jS7">
+                            <rect key="frame" x="16" y="2" width="343" height="32"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" red="0.2470588235" green="0.37254901959999998" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="fEa-fN-jS7" firstAttribute="top" secondItem="qUY-2m-8IB" secondAttribute="top" constant="2" id="1CE-BX-KTS"/>
+                        <constraint firstAttribute="trailing" secondItem="fEa-fN-jS7" secondAttribute="trailing" constant="16" id="5qC-zd-5Pa"/>
+                        <constraint firstAttribute="height" constant="47" id="8wx-Sr-XeC"/>
+                        <constraint firstItem="fEa-fN-jS7" firstAttribute="leading" secondItem="qUY-2m-8IB" secondAttribute="leading" constant="16" id="jy6-I1-nNP"/>
+                        <constraint firstAttribute="bottom" secondItem="fEa-fN-jS7" secondAttribute="bottom" constant="13" id="udv-UA-fuK"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BCO-eG-CHX">
+                    <rect key="frame" x="0.0" y="67" width="375" height="47"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hành chính nhân sự" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAX-v2-Sre">
+                            <rect key="frame" x="15" y="14" width="144" height="19"/>
+                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                            <color key="textColor" red="0.2470588235" green="0.37254901959999998" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="triangleCopy" translatesAutoresizingMaskIntoConstraints="NO" id="kLr-qL-LDO">
+                            <rect key="frame" x="351" y="21" width="9" height="5"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.93333333333333335" green="0.93725490196078431" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="zAX-v2-Sre" firstAttribute="leading" secondItem="BCO-eG-CHX" secondAttribute="leading" constant="15" id="Aef-hZ-jjd"/>
+                        <constraint firstItem="kLr-qL-LDO" firstAttribute="centerY" secondItem="BCO-eG-CHX" secondAttribute="centerY" id="Cxn-v7-yBo"/>
+                        <constraint firstAttribute="height" constant="47" id="HgV-Uk-75f"/>
+                        <constraint firstItem="zAX-v2-Sre" firstAttribute="centerY" secondItem="BCO-eG-CHX" secondAttribute="centerY" id="TVU-1K-Ej3"/>
+                        <constraint firstAttribute="trailing" secondItem="kLr-qL-LDO" secondAttribute="trailing" constant="15" id="XGN-t0-r08"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zL4-cv-8bQ">
+                    <rect key="frame" x="0.0" y="114" width="375" height="553"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="LeZ-3E-4FW">
+                    <rect key="frame" x="24" y="31" width="14" height="14"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="zL4-cv-8bQ" firstAttribute="top" secondItem="BCO-eG-CHX" secondAttribute="bottom" id="1ZL-1V-nPR"/>
+                <constraint firstItem="qUY-2m-8IB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="EjX-CA-kbS"/>
+                <constraint firstItem="LeZ-3E-4FW" firstAttribute="leading" secondItem="fEa-fN-jS7" secondAttribute="leading" constant="8" id="Hm6-Zk-1kx"/>
+                <constraint firstItem="BCO-eG-CHX" firstAttribute="top" secondItem="qUY-2m-8IB" secondAttribute="bottom" id="IRU-2Q-6O3"/>
+                <constraint firstItem="qUY-2m-8IB" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="MGt-Fs-GVk"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zL4-cv-8bQ" secondAttribute="trailing" id="Ogq-r1-uHS"/>
+                <constraint firstItem="BCO-eG-CHX" firstAttribute="leading" secondItem="qUY-2m-8IB" secondAttribute="leading" id="PCz-Bd-2Fi"/>
+                <constraint firstItem="LeZ-3E-4FW" firstAttribute="centerY" secondItem="fEa-fN-jS7" secondAttribute="centerY" id="XHJ-nJ-GYU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="zL4-cv-8bQ" secondAttribute="bottom" id="h2J-Fe-h7w"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qUY-2m-8IB" secondAttribute="trailing" id="hkD-ZP-7He"/>
+                <constraint firstItem="zL4-cv-8bQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kOP-2K-XzH"/>
+                <constraint firstItem="BCO-eG-CHX" firstAttribute="trailing" secondItem="qUY-2m-8IB" secondAttribute="trailing" id="qO0-So-9JN"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="-327.5" y="139.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="avatar" width="32" height="32"/>
+        <image name="search" width="14" height="14"/>
+        <image name="triangleCopy" width="9" height="5"/>
+    </resources>
+</document>
