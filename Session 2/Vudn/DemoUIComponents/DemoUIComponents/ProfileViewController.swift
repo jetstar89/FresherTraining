@@ -10,13 +10,19 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     let tag = "ProfileViewController"
-    var listOption: [(image: UIImage, name: String)] = []
+    var listButton: [UIButton] = []
     // MARK: - Outlet
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var IdLabel: UILabel!
     @IBOutlet weak var avatarImageView: UIImageView!
-    @IBOutlet weak var menuTableView: UITableView!
+    @IBOutlet weak var timeKeepingButton: UIButton!
+    @IBOutlet weak var vacationButton: UIButton!
+    @IBOutlet weak var timeKeepingOutCorpButton: UIButton!
+    @IBOutlet weak var humanResourceButton: UIButton!
+    @IBOutlet weak var browseRequestButton: UIButton!
+    @IBOutlet weak var browseTimeKeepingOutCorpButton: UIButton!
+    @IBOutlet weak var changePasswordButton: UIButton!
     @IBOutlet weak var logOutButton: UIButton!
     
 
@@ -25,15 +31,18 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print(tag + " did load")
-        listOption = [(#imageLiteral(resourceName: "icChamCong"), "Chấm công"), (#imageLiteral(resourceName: "icPhep"), "Nghỉ phép"), (#imageLiteral(resourceName: "icChamCongNgoaiCongTy"), "Chấm công ngoài công ty") , (#imageLiteral(resourceName: "icNhanSu"), "Nhân sự"), (#imageLiteral(resourceName: "icDuyetRequest"), "Duyệt Request"), (#imageLiteral(resourceName: "icDuyetChamCongNgoaiCongTy"), "Duyệt chấm công ngoài công ty"), (#imageLiteral(resourceName: "icPassword"), "Đổi mật khẩu")]
-        logOutButton.layer.cornerRadius = 4
-        //menuTableView.tableFooterView = UIView(frame: .zero)
+        listButton = [timeKeepingButton, vacationButton, timeKeepingOutCorpButton, humanResourceButton, browseRequestButton, browseTimeKeepingOutCorpButton, changePasswordButton]
+        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = true
         avatarImageView.layer.cornerRadius = avatarImageView.frame.width / 2
+<<<<<<< HEAD
         menuTableView.register(UINib(nibName: "MenuTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+=======
+        logOutButton.layer.cornerRadius = 4
+>>>>>>> parent of 7c372eb... Edit UI using tableView
         print(tag + " will appear")
     }
     
@@ -60,10 +69,13 @@ class ProfileViewController: UIViewController {
     
     // MARK: - IBAction
     
-    @IBAction func onLogOut(_ sender: UIButton) {
-        (UIApplication.shared.delegate as? AppDelegate)?.setUpRootViewIsLoginViewController()
+    @IBAction func onTimeKeepingButtonSelected(_ sender: UIButton) {
+        setButtonBackground(sender)
+        let timeKeepingViewController = TimeKeepingViewController(nibName: "TimeKeepingViewController", bundle: nil)
+        navigationController?.pushViewController(timeKeepingViewController, animated: true)
     }
     
+<<<<<<< HEAD
 }
 
 // MARK: - Extension
@@ -84,31 +96,53 @@ extension ProfileViewController: UITableViewDataSource {
         cell.nameLabel.text = listOption[indexPath.row].name
         cell.selectionStyle = .none
         return cell
+=======
+    @IBAction func onVacationButtonSelected(_ sender: UIButton) {
+        setButtonBackground(sender)
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let item = tableView.cellForRow(at: indexPath)?.contentView {
-            item.setIsOnSelect(true)
-        }
-        
-        switch indexPath.row {
-        case 0:
-            let timeKeepingViewController = TimeKeepingViewController(nibName: "TimeKeepingViewController", bundle: nil)
-            navigationController?.pushViewController(timeKeepingViewController, animated: true)
-            break
-        default:
-            break
+    @IBAction func onTimeKeepingOutCorpButtomSelected(_ sender: UIButton) {
+        setButtonBackground(sender)
+>>>>>>> parent of 7c372eb... Edit UI using tableView
+    }
+    
+    @IBAction func onHumanResourceButtonSelected(_ sender: UIButton) {
+        setButtonBackground(sender)
+    }
+    
+    @IBAction func onBrowseRequestButtonSelected(_ sender: UIButton) {
+        setButtonBackground(sender)
+    }
+    
+    @IBAction func onBrowseTimeKeepingOutCorpButtonSelected(_ sender: UIButton) {
+        setButtonBackground(sender)
+    }
+    
+    @IBAction func onChangePasswordButtonSelected(_ sender: UIButton) {
+        setButtonBackground(sender)
+    }
+    
+    @IBAction func onLogOut(_ sender: UIButton) {
+        (UIApplication.shared.delegate as? AppDelegate)?.setUpRootViewIsLoginViewController()
+    }
+    
+    func setButtonBackground(_ sender: UIButton) {
+        for item in listButton {
+            if item == sender {
+                item.layer.backgroundColor = UIColor.darkSlateBlue.cgColor
+            } else {
+                item.layer.backgroundColor = UIColor.frenchBlue.cgColor
+            }
         }
     }
     
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        tableView.cellForRow(at: indexPath)?.contentView.backgroundColor = UIColor.frenchBlue
-        if let item = tableView.cellForRow(at: indexPath)?.contentView {
-            item.setIsOnSelect(false)
-        }
-    }
-}
+    /*
+    // MARK: - Navigation
 
-extension ProfileViewController: UITableViewDelegate {
-    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
 }

@@ -9,8 +9,11 @@
 /* Begin PBXBuildFile section */
 		1D34222A211BDFD3006B8853 /* TimeKeepingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D342228211BDFD3006B8853 /* TimeKeepingViewController.swift */; };
 		1D34222B211BDFD3006B8853 /* TimeKeepingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D342229211BDFD3006B8853 /* TimeKeepingViewController.xib */; };
+<<<<<<< HEAD
 		1D34222E211C1DF4006B8853 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D34222C211C1DF4006B8853 /* MenuTableViewCell.swift */; };
 		1D34222F211C1DF4006B8853 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D34222D211C1DF4006B8853 /* MenuTableViewCell.xib */; };
+=======
+>>>>>>> parent of 7c372eb... Edit UI using tableView
 		1D4252EC2117ED2D00DC95A3 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D4252DA2117ED2B00DC95A3 /* Roboto-Black.ttf */; };
 		1D4252ED2117ED2D00DC95A3 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D4252DB2117ED2B00DC95A3 /* Roboto-LightItalic.ttf */; };
 		1D4252EE2117ED2D00DC95A3 /* Roboto-BoldCondensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D4252DC2117ED2B00DC95A3 /* Roboto-BoldCondensed.ttf */; };
@@ -45,8 +48,11 @@
 /* Begin PBXFileReference section */
 		1D342228211BDFD3006B8853 /* TimeKeepingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeKeepingViewController.swift; sourceTree = "<group>"; };
 		1D342229211BDFD3006B8853 /* TimeKeepingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeKeepingViewController.xib; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		1D34222C211C1DF4006B8853 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		1D34222D211C1DF4006B8853 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
+=======
+>>>>>>> parent of 7c372eb... Edit UI using tableView
 		1D4252DA2117ED2B00DC95A3 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		1D4252DB2117ED2B00DC95A3 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
 		1D4252DC2117ED2B00DC95A3 /* Roboto-BoldCondensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldCondensed.ttf"; sourceTree = "<group>"; };
@@ -158,8 +164,11 @@
 				1D425331211854E600DC95A3 /* ProfileViewController.xib */,
 				1D342228211BDFD3006B8853 /* TimeKeepingViewController.swift */,
 				1D342229211BDFD3006B8853 /* TimeKeepingViewController.xib */,
+<<<<<<< HEAD
 				1D34222C211C1DF4006B8853 /* MenuTableViewCell.swift */,
 				1D34222D211C1DF4006B8853 /* MenuTableViewCell.xib */,
+=======
+>>>>>>> parent of 7c372eb... Edit UI using tableView
 			);
 			path = DemoUIComponents;
 			sourceTree = "<group>";
@@ -244,7 +253,6 @@
 				1D4252F02117ED2D00DC95A3 /* Roboto-BoldCondensedItalic.ttf in Resources */,
 				1D425333211854E600DC95A3 /* ProfileViewController.xib in Resources */,
 				1D4252FC2117ED2D00DC95A3 /* Roboto-MediumItalic.ttf in Resources */,
-				1D34222F211C1DF4006B8853 /* MenuTableViewCell.xib in Resources */,
 				1D4252EC2117ED2D00DC95A3 /* Roboto-Black.ttf in Resources */,
 				1D4252F42117ED2D00DC95A3 /* Roboto_Specimen_Book.pdf in Resources */,
 				1D4252F12117ED2D00DC95A3 /* Roboto-Thin.ttf in Resources */,
@@ -264,7 +272,6 @@
 				1D42532A21183B5500DC95A3 /* ForgotPasswordViewController.swift in Sources */,
 				844FEB3021143A130035952C /* AppDelegate.swift in Sources */,
 				1D34222A211BDFD3006B8853 /* TimeKeepingViewController.swift in Sources */,
-				1D34222E211C1DF4006B8853 /* MenuTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

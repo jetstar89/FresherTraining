@@ -82,8 +82,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IA3-9m-srM" secondAttribute="trailing" constant="20" symbolic="YES" id="2m8-5b-0ow"/>
                             <constraint firstItem="k5G-OW-awM" firstAttribute="top" secondItem="IA3-9m-srM" secondAttribute="bottom" constant="9" id="A3n-Je-GuC"/>
                             <constraint firstItem="IA3-9m-srM" firstAttribute="leading" secondItem="k5G-OW-awM" secondAttribute="leading" id="CEi-UZ-9fe"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="UP9-yH-EyL" secondAttribute="trailing" constant="20" symbolic="YES" id="EGj-EP-zYB"/>
                             <constraint firstItem="4Rq-lh-kiw" firstAttribute="leading" secondItem="IA3-9m-srM" secondAttribute="leading" id="Eur-v2-z3D"/>
                             <constraint firstItem="4Rq-lh-kiw" firstAttribute="width" secondItem="k5G-OW-awM" secondAttribute="width" id="L88-7K-AK2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oih-cf-a1H" secondAttribute="bottom" constant="15" id="MhY-tB-IFz"/>

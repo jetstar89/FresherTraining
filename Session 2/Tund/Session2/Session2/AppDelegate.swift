@@ -22,11 +22,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     func setupNavigation() {
-        
         let viewcontroller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController")
         let rootNavigationController = UINavigationController(rootViewController: viewcontroller)
         window?.rootViewController = rootNavigationController
         
+    }
+    func setUpNavigationTimeKeeping(){
+        let viewcontroller = UIStoryboard(name: "TimeKeepingViewController", bundle: nil).instantiateViewController(withIdentifier: "TimeKeepingViewController")
+        let rootNavigationController = UINavigationController(rootViewController: viewcontroller)
+        window?.rootViewController = rootNavigationController
     }
     func setupTabbar(){
         let profileController = Profile3ViewController(nibName: "Profile3ViewController", bundle: nil)
@@ -35,6 +39,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationProfile = UINavigationController(rootViewController: profileController)
         let navigationHome = UINavigationController(rootViewController: homeController)
         let tabbarController = UITabBarController()
+        
+        
         tabbarController.viewControllers = [navigationHome, navigationProfile]
         let homeTabbarItem = tabbarController.tabBar.items?[0]
         homeTabbarItem?.image = #imageLiteral(resourceName: "home-1").withRenderingMode(.alwaysOriginal)
