@@ -1,0 +1,395 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D8DF621211D370A0006D2CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DF620211D370A0006D2CB /* AppDelegate.swift */; };
+		1D8DF623211D370A0006D2CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DF622211D370A0006D2CB /* ViewController.swift */; };
+		1D8DF626211D370A0006D2CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D8DF624211D370A0006D2CB /* Main.storyboard */; };
+		1D8DF628211D370B0006D2CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D8DF627211D370B0006D2CB /* Assets.xcassets */; };
+		1D8DF62B211D370B0006D2CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D8DF629211D370B0006D2CB /* LaunchScreen.storyboard */; };
+		1D8DF636211D37610006D2CB /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DF634211D37610006D2CB /* ForgotPasswordViewController.swift */; };
+		1D8DF637211D37610006D2CB /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D8DF635211D37610006D2CB /* ForgotPasswordViewController.xib */; };
+		1D8DF63A211D37720006D2CB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DF638211D37720006D2CB /* HomeViewController.swift */; };
+		1D8DF63B211D37720006D2CB /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D8DF639211D37720006D2CB /* HomeViewController.xib */; };
+		1D8DF643211D37AD0006D2CB /* TimeKeepingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DF641211D37AD0006D2CB /* TimeKeepingViewController.swift */; };
+		1D8DF644211D37AD0006D2CB /* TimeKeepingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D8DF642211D37AD0006D2CB /* TimeKeepingViewController.xib */; };
+		1D8DF647211D37CA0006D2CB /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DF645211D37CA0006D2CB /* MenuTableViewCell.swift */; };
+		1D8DF648211D37CA0006D2CB /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D8DF646211D37CA0006D2CB /* MenuTableViewCell.xib */; };
+		1D8DF64B211D38CC0006D2CB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DF649211D38CC0006D2CB /* ProfileViewController.swift */; };
+		1D8DF64C211D38CC0006D2CB /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D8DF64A211D38CC0006D2CB /* ProfileViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D8DF61D211D370A0006D2CB /* TimeKeeping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeKeeping.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D8DF620211D370A0006D2CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1D8DF622211D370A0006D2CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1D8DF625211D370A0006D2CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1D8DF627211D370B0006D2CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1D8DF62A211D370B0006D2CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1D8DF62C211D370B0006D2CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D8DF634211D37610006D2CB /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		1D8DF635211D37610006D2CB /* ForgotPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordViewController.xib; sourceTree = "<group>"; };
+		1D8DF638211D37720006D2CB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1D8DF639211D37720006D2CB /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		1D8DF641211D37AD0006D2CB /* TimeKeepingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeKeepingViewController.swift; sourceTree = "<group>"; };
+		1D8DF642211D37AD0006D2CB /* TimeKeepingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeKeepingViewController.xib; sourceTree = "<group>"; };
+		1D8DF645211D37CA0006D2CB /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		1D8DF646211D37CA0006D2CB /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
+		1D8DF649211D38CC0006D2CB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		1D8DF64A211D38CC0006D2CB /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D8DF61A211D370A0006D2CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D8DF614211D370A0006D2CB = {
+			isa = PBXGroup;
+			children = (
+				1D8DF61F211D370A0006D2CB /* TimeKeeping */,
+				1D8DF61E211D370A0006D2CB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1D8DF61E211D370A0006D2CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D8DF61D211D370A0006D2CB /* TimeKeeping.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1D8DF61F211D370A0006D2CB /* TimeKeeping */ = {
+			isa = PBXGroup;
+			children = (
+				1D8DF632211D37360006D2CB /* Resource */,
+				1D8DF620211D370A0006D2CB /* AppDelegate.swift */,
+				1D8DF622211D370A0006D2CB /* ViewController.swift */,
+				1D8DF624211D370A0006D2CB /* Main.storyboard */,
+				1D8DF627211D370B0006D2CB /* Assets.xcassets */,
+				1D8DF629211D370B0006D2CB /* LaunchScreen.storyboard */,
+				1D8DF62C211D370B0006D2CB /* Info.plist */,
+				1D8DF634211D37610006D2CB /* ForgotPasswordViewController.swift */,
+				1D8DF635211D37610006D2CB /* ForgotPasswordViewController.xib */,
+				1D8DF638211D37720006D2CB /* HomeViewController.swift */,
+				1D8DF639211D37720006D2CB /* HomeViewController.xib */,
+				1D8DF641211D37AD0006D2CB /* TimeKeepingViewController.swift */,
+				1D8DF642211D37AD0006D2CB /* TimeKeepingViewController.xib */,
+				1D8DF645211D37CA0006D2CB /* MenuTableViewCell.swift */,
+				1D8DF646211D37CA0006D2CB /* MenuTableViewCell.xib */,
+				1D8DF649211D38CC0006D2CB /* ProfileViewController.swift */,
+				1D8DF64A211D38CC0006D2CB /* ProfileViewController.xib */,
+			);
+			path = TimeKeeping;
+			sourceTree = "<group>";
+		};
+		1D8DF632211D37360006D2CB /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				1D8DF633211D373F0006D2CB /* Fonts */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		1D8DF633211D373F0006D2CB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D8DF61C211D370A0006D2CB /* TimeKeeping */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D8DF62F211D370B0006D2CB /* Build configuration list for PBXNativeTarget "TimeKeeping" */;
+			buildPhases = (
+				1D8DF619211D370A0006D2CB /* Sources */,
+				1D8DF61A211D370A0006D2CB /* Frameworks */,
+				1D8DF61B211D370A0006D2CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TimeKeeping;
+			productName = TimeKeeping;
+			productReference = 1D8DF61D211D370A0006D2CB /* TimeKeeping.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1D8DF615211D370A0006D2CB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = GEM;
+				TargetAttributes = {
+					1D8DF61C211D370A0006D2CB = {
+						CreatedOnToolsVersion = 9.4;
+					};
+				};
+			};
+			buildConfigurationList = 1D8DF618211D370A0006D2CB /* Build configuration list for PBXProject "TimeKeeping" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1D8DF614211D370A0006D2CB;
+			productRefGroup = 1D8DF61E211D370A0006D2CB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D8DF61C211D370A0006D2CB /* TimeKeeping */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D8DF61B211D370A0006D2CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D8DF644211D37AD0006D2CB /* TimeKeepingViewController.xib in Resources */,
+				1D8DF637211D37610006D2CB /* ForgotPasswordViewController.xib in Resources */,
+				1D8DF64C211D38CC0006D2CB /* ProfileViewController.xib in Resources */,
+				1D8DF62B211D370B0006D2CB /* LaunchScreen.storyboard in Resources */,
+				1D8DF63B211D37720006D2CB /* HomeViewController.xib in Resources */,
+				1D8DF628211D370B0006D2CB /* Assets.xcassets in Resources */,
+				1D8DF648211D37CA0006D2CB /* MenuTableViewCell.xib in Resources */,
+				1D8DF626211D370A0006D2CB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D8DF619211D370A0006D2CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D8DF623211D370A0006D2CB /* ViewController.swift in Sources */,
+				1D8DF621211D370A0006D2CB /* AppDelegate.swift in Sources */,
+				1D8DF647211D37CA0006D2CB /* MenuTableViewCell.swift in Sources */,
+				1D8DF636211D37610006D2CB /* ForgotPasswordViewController.swift in Sources */,
+				1D8DF64B211D38CC0006D2CB /* ProfileViewController.swift in Sources */,
+				1D8DF63A211D37720006D2CB /* HomeViewController.swift in Sources */,
+				1D8DF643211D37AD0006D2CB /* TimeKeepingViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1D8DF624211D370A0006D2CB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D8DF625211D370A0006D2CB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1D8DF629211D370B0006D2CB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D8DF62A211D370B0006D2CB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D8DF62D211D370B0006D2CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1D8DF62E211D370B0006D2CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1D8DF630211D370B0006D2CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 432LPA47M8;
+				INFOPLIST_FILE = TimeKeeping/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = GEM.TimeKeeping;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1D8DF631211D370B0006D2CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 432LPA47M8;
+				INFOPLIST_FILE = TimeKeeping/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = GEM.TimeKeeping;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D8DF618211D370A0006D2CB /* Build configuration list for PBXProject "TimeKeeping" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D8DF62D211D370B0006D2CB /* Debug */,
+				1D8DF62E211D370B0006D2CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D8DF62F211D370B0006D2CB /* Build configuration list for PBXNativeTarget "TimeKeeping" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D8DF630211D370B0006D2CB /* Debug */,
+				1D8DF631211D370B0006D2CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1D8DF615211D370A0006D2CB /* Project object */;
+}

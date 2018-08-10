@@ -64,13 +64,11 @@ extension TimeKeepingViewController: UITextFieldDelegate {
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-<<<<<<< HEAD
+
         //myScrollView.contentOffset = CGPoint(x: 0, y: 0)
-=======
         //if let keyBoardSize = UIKeyboardFrameBeginUserInfoKey as
         myScrollView.isScrollEnabled = true
         myScrollView.contentOffset = CGPoint(x: 0, y: 100)
->>>>>>> parent of 7c372eb... Edit UI using tableView
     }
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
