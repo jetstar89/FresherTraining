@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		84E5AB9C211D4D44003D1BF9 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5AB9A211D4D44003D1BF9 /* ChangePasswordViewController.swift */; };
 		84E5AB9D211D4D44003D1BF9 /* ChangePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E5AB9B211D4D44003D1BF9 /* ChangePasswordViewController.xib */; };
+		84E5ABA4211D8549003D1BF9 /* WeeksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5ABA2211D8549003D1BF9 /* WeeksTableViewCell.swift */; };
+		84E5ABA5211D8549003D1BF9 /* WeeksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E5ABA3211D8549003D1BF9 /* WeeksTableViewCell.xib */; };
+		84E5ABA8211D87BA003D1BF9 /* DaysTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5ABA6211D87BA003D1BF9 /* DaysTableViewCell.swift */; };
+		84E5ABA9211D87BA003D1BF9 /* DaysTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E5ABA7211D87BA003D1BF9 /* DaysTableViewCell.xib */; };
+		84E5ABAB211D97D5003D1BF9 /* DayOfWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5ABAA211D97D5003D1BF9 /* DayOfWeek.swift */; };
+		84E5ABAD211D98D5003D1BF9 /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5ABAC211D98D5003D1BF9 /* Week.swift */; };
 		84E87E02211BE1D700C896B7 /* TimeKeepingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E87E00211BE1D700C896B7 /* TimeKeepingViewController.swift */; };
 		84E87E03211BE1D700C896B7 /* TimeKeepingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E87E01211BE1D700C896B7 /* TimeKeepingViewController.xib */; };
 		84E87E06211BE37C00C896B7 /* PersonnelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E87E04211BE37C00C896B7 /* PersonnelViewController.swift */; };
@@ -51,6 +57,12 @@
 /* Begin PBXFileReference section */
 		84E5AB9A211D4D44003D1BF9 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		84E5AB9B211D4D44003D1BF9 /* ChangePasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangePasswordViewController.xib; sourceTree = "<group>"; };
+		84E5ABA2211D8549003D1BF9 /* WeeksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeksTableViewCell.swift; sourceTree = "<group>"; };
+		84E5ABA3211D8549003D1BF9 /* WeeksTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeeksTableViewCell.xib; sourceTree = "<group>"; };
+		84E5ABA6211D87BA003D1BF9 /* DaysTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysTableViewCell.swift; sourceTree = "<group>"; };
+		84E5ABA7211D87BA003D1BF9 /* DaysTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DaysTableViewCell.xib; sourceTree = "<group>"; };
+		84E5ABAA211D97D5003D1BF9 /* DayOfWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOfWeek.swift; sourceTree = "<group>"; };
+		84E5ABAC211D98D5003D1BF9 /* Week.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; };
 		84E87E00211BE1D700C896B7 /* TimeKeepingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeKeepingViewController.swift; sourceTree = "<group>"; };
 		84E87E01211BE1D700C896B7 /* TimeKeepingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeKeepingViewController.xib; sourceTree = "<group>"; };
 		84E87E04211BE37C00C896B7 /* PersonnelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonnelViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +160,12 @@
 				84E87E11211C462200C896B7 /* PersonTableViewCell.xib */,
 				84E5AB9A211D4D44003D1BF9 /* ChangePasswordViewController.swift */,
 				84E5AB9B211D4D44003D1BF9 /* ChangePasswordViewController.xib */,
+				84E5ABA2211D8549003D1BF9 /* WeeksTableViewCell.swift */,
+				84E5ABA3211D8549003D1BF9 /* WeeksTableViewCell.xib */,
+				84E5ABA6211D87BA003D1BF9 /* DaysTableViewCell.swift */,
+				84E5ABA7211D87BA003D1BF9 /* DaysTableViewCell.xib */,
+				84E5ABAA211D97D5003D1BF9 /* DayOfWeek.swift */,
+				84E5ABAC211D98D5003D1BF9 /* Week.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -271,8 +289,10 @@
 				84ED89BA21142E73005D2174 /* Main.storyboard in Resources */,
 				84F454302117EBBB00217F3D /* Roboto-Italic.ttf in Resources */,
 				84F454332117EBBB00217F3D /* Roboto-Regular.ttf in Resources */,
+				84E5ABA9211D87BA003D1BF9 /* DaysTableViewCell.xib in Resources */,
 				84F454392117EBBB00217F3D /* Roboto-LightItalic.ttf in Resources */,
 				84F4542F2117EBBB00217F3D /* Roboto-BoldCondensed.ttf in Resources */,
+				84E5ABA5211D8549003D1BF9 /* WeeksTableViewCell.xib in Resources */,
 				84F454342117EBBB00217F3D /* Roboto-BoldItalic.ttf in Resources */,
 				84F4542A2117EBBB00217F3D /* Roboto-BlackItalic.ttf in Resources */,
 			);
@@ -286,10 +306,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				84E87E0F211C44D200C896B7 /* Person.swift in Sources */,
+				84E5ABAD211D98D5003D1BF9 /* Week.swift in Sources */,
 				84F454782118570E00217F3D /* ProfileController.swift in Sources */,
 				84E87E0D211C1C3E00C896B7 /* Funciton.swift in Sources */,
 				84ED89B721142E73005D2174 /* ViewController.swift in Sources */,
+				84E5ABA8211D87BA003D1BF9 /* DaysTableViewCell.swift in Sources */,
 				84E87E12211C462200C896B7 /* PersonTableViewCell.swift in Sources */,
+				84E5ABAB211D97D5003D1BF9 /* DayOfWeek.swift in Sources */,
 				84ED89B521142E73005D2174 /* AppDelegate.swift in Sources */,
 				84F45470211853CC00217F3D /* FogotPasswordController.swift in Sources */,
 				84F454742118555800217F3D /* HomeController.swift in Sources */,
@@ -297,6 +320,7 @@
 				84E5AB9C211D4D44003D1BF9 /* ChangePasswordViewController.swift in Sources */,
 				84E87E02211BE1D700C896B7 /* TimeKeepingViewController.swift in Sources */,
 				84E87E0A211C1AAB00C896B7 /* FunctionTableViewCell.swift in Sources */,
+				84E5ABA4211D8549003D1BF9 /* WeeksTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

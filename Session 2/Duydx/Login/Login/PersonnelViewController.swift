@@ -67,6 +67,9 @@ class PersonnelViewController: UIViewController {
             UIView.animate(withDuration: 0.3, animations: {
                 buttonPosition.isHidden = !buttonPosition.isHidden
                 self.view.layoutIfNeeded()
+                if buttonPosition.currentTitle == self.positionLabel.text {
+                    buttonPosition.titleLabel?.textColor = UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1)
+                }
             })
         }
     }
