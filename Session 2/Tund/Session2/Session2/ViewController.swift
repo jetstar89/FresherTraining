@@ -173,6 +173,24 @@ extension UITextField {
     
     
     
+    
+}
+extension UIView {
+    func setIsOnSelect(_ isOnSelect: Bool) {
+        self.backgroundColor = isOnSelect ? UIColor.darkGray : UIColor.blue
+        
+        let border = CALayer()
+        let width = CGFloat(4.0)
+        border.borderColor = isOnSelect ? UIColor.white.cgColor : UIColor.blue.cgColor
+        border.frame = CGRect(x: 0, y: 0, width: width, height: self.frame.height)
+        border.borderWidth = width
+        self.layer.addSublayer(border)
+        self.layer.masksToBounds = true
+    }
+    
+    func setIsOnExpand(_ isOnExpand: Bool) {
+        self.backgroundColor = isOnExpand ? UIColor.blue : UIColor.white
+    }
 }
 
 

@@ -18,7 +18,7 @@ class TimeKeepingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableList = [selectionData(isExpand: true, celData: ["a","b","c","d"]),selectionData(isExpand: true, celData: ["1","2",""])]
+        tableList = [selectionData(isExpand: false, celData: ["a","b","c","d"]),selectionData(isExpand: false, celData: ["1","2","3","4"]), selectionData(isExpand: false, celData: ["a","b","c","d"]), selectionData(isExpand: false, celData: ["a","b","c","d"])]
        
         let timeKeeping = TimeKeeping(isExpand: true, week: "Tuan 3", day: "5/5", dayOfWeek: [DayOfWeek(weekday: "T2", day: "15", checkIn: "08:00 SA", checkOut: "05: 00 CH", workday: "1 ngay", status: "Dang lam viec")])
         listTimeKeeping.append(timeKeeping)
@@ -60,21 +60,55 @@ class TimeKeepingViewController: UIViewController {
 }
 extension TimeKeepingViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return UITableViewAutomaticDimension
+        return UITableViewAutomaticDimension
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Cham")
+        print("did select row at \(indexPath.row) in section \(indexPath.section)")
+        if indexPath.row == 0 {
+            if tableList[indexPath.section].isExpand {
+                tableList[indexPath.section].isExpand = false
+            } else {
+                tableList[indexPath.section].isExpand = true
+            }
+            
+            //reload table view
+            let sections = IndexSet.init(integer: indexPath.section)
+            weekTableView.reloadSections(sections, with: .none)
+            
+            if tableList[indexPath.section].isExpand {
+                if let item = weekTableView.cellForRow(at: indexPath)?.contentView {
+                    print("set Expand on section \(indexPath.section)")
+                    item.setIsOnExpand(true)
+                }
+            } else {
+                if let item = weekTableView.cellForRow(at: indexPath)?.contentView {
+                    print("set Unexpand on section \(indexPath.section)")
+                    item.setIsOnExpand(false)
+                }
+            }
+        } else {
+            
+        }
+        
         
     }
     
 }
 extension TimeKeepingViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return tableList.count
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listTimeKeeping.count
+        let numberRow = tableList[section].celData.count + 1
+        if tableList[section].isExpand {
+            print("number of row in section \(section) = \(numberRow)")
+            return numberRow
+        } else {
+            print("number of row in section = 1")
+            return 1
+        }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -82,12 +116,20 @@ extension TimeKeepingViewController: UITableViewDataSource {
             guard let cell: WeekTableViewCell = weekTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? WeekTableViewCell else {
                 return UITableViewCell()
             }
-            cell.weekLabel.text = listTimeKeeping[indexPath.row].week
-            cell.dayLabel.text = listTimeKeeping[indexPath.row].day
+            cell.weekLabel.text = "Tuần " + (indexPath.section + 1).description
+         
             return cell
         } else {
             guard let cell: DayTableViewCell = weekTableView.dequeueReusableCell(withIdentifier: "day", for: indexPath) as? DayTableViewCell else {
                 return UITableViewCell()
+            }
+            
+            cell.checkOutLabel.text = tableList[indexPath.section].celData[indexPath.row - 1]
+            let day = indexPath.row + 1
+            if day <= 7 {
+                cell.weekDayLabel.text = "T" + (day).description
+            } else {
+                cell.weekDayLabel.text = "CN"
             }
             
             
