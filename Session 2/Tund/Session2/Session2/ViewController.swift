@@ -173,6 +173,41 @@ extension UITextField {
     
     
     
+    
+}
+extension UIView {
+    func setIsOnSelect(_ isOnSelect: Bool) {
+        self.backgroundColor = isOnSelect ? UIColor.darkGray : UIColor.init(red: 63/255, green: 95/255, blue: 163/255, alpha: 1.0)
+        
+        let border = CALayer()
+        let width = CGFloat(4.0)
+        border.borderColor = isOnSelect ? UIColor.white.cgColor : UIColor.init(red: 63/255, green: 95/255, blue: 163/255, alpha: 1.0).cgColor
+        border.frame = CGRect(x: 0, y: 0, width: width, height: self.frame.height)
+        border.borderWidth = width
+        self.layer.addSublayer(border)
+        self.layer.masksToBounds = true
+    }
+    
+    func setIsOnExpand(_ isOnExpand: Bool) {
+        self.backgroundColor = isOnExpand ? UIColor.init(red: 63/255, green: 95/255, blue: 163/255, alpha: 1.0) : UIColor.white
+
+
+
+    }
+}
+extension UITableViewCell {
+    func setIsTableViewExpand(_ isOnExpand: Bool) {
+        self.backgroundColor = isOnExpand ? UIColor.init(red: 63/255, green: 95/255, blue: 163/255, alpha: 1.0) : UIColor.white
+        guard let view: WeekTableViewCell = self as? WeekTableViewCell else {
+            return
+        }
+        view.countDayLabel.textColor = isOnExpand ? UIColor.white : UIColor.black
+        view.weekLabel.textColor = isOnExpand ? UIColor.white : UIColor.black
+        view.dayLabel.textColor = isOnExpand ? UIColor.white : UIColor.black
+        view.expandImageView.image = isOnExpand ? #imageLiteral(resourceName: "expand-close"): #imageLiteral(resourceName: "expand-open")
+
+        
+    }
 }
 
 

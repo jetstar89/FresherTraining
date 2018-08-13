@@ -37,10 +37,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tabbarController.setViewControllers([homeViewNavigationController, profileViewNavigationController], animated: true)
         
         let homeTabbarItem = tabbarController.tabBar.items?[0]
-        homeTabbarItem?.image = #imageLiteral(resourceName: "home").withRenderingMode(.automatic)
+        homeTabbarItem?.image = #imageLiteral(resourceName: "ic_home").withRenderingMode(.automatic)
         homeTabbarItem?.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
         let profileTabbarItem = tabbarController.tabBar.items?[1]
-        profileTabbarItem?.image = #imageLiteral(resourceName: "user").withRenderingMode(.automatic)
+        profileTabbarItem?.image = #imageLiteral(resourceName: "ic_user").withRenderingMode(.automatic)
         profileTabbarItem?.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
         window?.rootViewController = tabbarController
     }

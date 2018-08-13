@@ -63,6 +63,18 @@ class ProfileViewController: UIViewController {
     @IBAction func onLogOut(_ sender: UIButton) {
         (UIApplication.shared.delegate as? AppDelegate)?.setUpRootViewIsLoginViewController()
     }
+    
+    // MARK: - Push ViewController
+    
+    func pushTimeKeepingViewController() {
+        let timeKeepingViewController = TimeKeepingViewController(nibName: "TimeKeepingViewController", bundle: nil)
+        navigationController?.pushViewController(timeKeepingViewController, animated: true)
+    }
+    
+    func pushChangePasswordViewController() {
+        let changePasswordViewController = ChangePasswordViewController(nibName: "ChangePasswordViewController", bundle: nil)
+        navigationController?.pushViewController(changePasswordViewController, animated: true)
+    }
 }
 
 // MARK: - Extension
@@ -84,6 +96,7 @@ extension ProfileViewController: UITableViewDataSource {
         cell.selectionStyle = .none
         return cell
     }
+
 }
 
 extension ProfileViewController: UITableViewDelegate {
@@ -94,9 +107,12 @@ extension ProfileViewController: UITableViewDelegate {
         
         switch indexPath.row {
         case 0:
-            let timeKeepingViewController = TimeKeepingViewController(nibName: "TimeKeepingViewController", bundle: nil)
-            navigationController?.pushViewController(timeKeepingViewController, animated: true)
+            pushTimeKeepingViewController()
             break
+            
+        case 6:
+            print("change password")
+            pushChangePasswordViewController()
         default:
             break
         }

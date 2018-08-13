@@ -188,5 +188,23 @@ extension UIView {
         self.layer.addSublayer(border)
         self.layer.masksToBounds = true
     }
+    
+//    func setIsOnExpand(_ isOnExpand: Bool) {
+//        self.backgroundColor = isOnExpand ? UIColor.frenchBlue : UIColor.white
+//    }
 }
 
+extension UITableViewCell {
+    func setIsOnExpand(_ isOnExpand: Bool) {
+        self.backgroundColor = isOnExpand ? UIColor.frenchBlue : UIColor.white
+        guard let view: WeekTableViewCell = self as? WeekTableViewCell else {
+            print("view is not as WeekTableViewCell")
+            return
+        }
+
+        view.weekLabel.textColor = isOnExpand ? UIColor.white : UIColor.black
+        view.countDayLabel.textColor = isOnExpand ? UIColor.white : UIColor.black
+        view.dayLabel.textColor = isOnExpand ? UIColor.white : UIColor.steelGrey
+        view.expandImageView.image = isOnExpand ? #imageLiteral(resourceName: "ic_unexpand_arrow") : #imageLiteral(resourceName: "ic_expand_arrow")
+    }
+}
