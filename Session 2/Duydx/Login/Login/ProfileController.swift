@@ -32,6 +32,7 @@ class ProfileController: UIViewController {
     }
     //MARK: initView
     func initView() {
+        tabBarController?.tabBar.isHidden = false
         profileImage.layer.cornerRadius = profileImage.frame.width / 2
         profileImage.clipsToBounds = true
         navigationController?.navigationBar.isHidden = true

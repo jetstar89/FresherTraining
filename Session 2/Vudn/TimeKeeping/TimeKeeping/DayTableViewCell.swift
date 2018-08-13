@@ -10,7 +10,7 @@ import UIKit
 
 class DayTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var WeekdayLabel: UILabel!
+    @IBOutlet weak var weekdayLabel: UILabel!
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var morningChekingTimeLabel: UILabel!
     @IBOutlet weak var afternoonChekingTimeLabel: UILabel!

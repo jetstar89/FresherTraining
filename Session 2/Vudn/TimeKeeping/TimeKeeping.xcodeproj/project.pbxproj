@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D530FC4212120E6006A5029 /* VacationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D530FC2212120E6006A5029 /* VacationViewController.swift */; };
+		1D530FC5212120E6006A5029 /* VacationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D530FC3212120E6006A5029 /* VacationViewController.xib */; };
+		1D530FC821216640006A5029 /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D530FC721216640006A5029 /* Extention.swift */; };
 		1D8DF621211D370A0006D2CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DF620211D370A0006D2CB /* AppDelegate.swift */; };
 		1D8DF623211D370A0006D2CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DF622211D370A0006D2CB /* ViewController.swift */; };
 		1D8DF626211D370A0006D2CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D8DF624211D370A0006D2CB /* Main.storyboard */; };
@@ -46,9 +49,14 @@
 		1D8DF678211D7D390006D2CB /* WeekTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D8DF676211D7D390006D2CB /* WeekTableViewCell.xib */; };
 		1D8DF67B211D82100006D2CB /* DayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DF679211D82100006D2CB /* DayTableViewCell.swift */; };
 		1D8DF67C211D82100006D2CB /* DayTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D8DF67A211D82100006D2CB /* DayTableViewCell.xib */; };
+		1DD30929212187E200217E3F /* TimeKeepingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD30928212187E200217E3F /* TimeKeepingHeaderView.swift */; };
+		1DD3092B2121880B00217E3F /* TimeKeepingHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DD3092A2121880B00217E3F /* TimeKeepingHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D530FC2212120E6006A5029 /* VacationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationViewController.swift; sourceTree = "<group>"; };
+		1D530FC3212120E6006A5029 /* VacationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VacationViewController.xib; sourceTree = "<group>"; };
+		1D530FC721216640006A5029 /* Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
 		1D8DF61D211D370A0006D2CB /* TimeKeeping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeKeeping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8DF620211D370A0006D2CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D8DF622211D370A0006D2CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +98,8 @@
 		1D8DF676211D7D390006D2CB /* WeekTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeekTableViewCell.xib; sourceTree = "<group>"; };
 		1D8DF679211D82100006D2CB /* DayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTableViewCell.swift; sourceTree = "<group>"; };
 		1D8DF67A211D82100006D2CB /* DayTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayTableViewCell.xib; sourceTree = "<group>"; };
+		1DD30928212187E200217E3F /* TimeKeepingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeKeepingHeaderView.swift; sourceTree = "<group>"; };
+		1DD3092A2121880B00217E3F /* TimeKeepingHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeKeepingHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +113,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D530FC62121661D006A5029 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1D530FC721216640006A5029 /* Extention.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		1D8DF614211D370A0006D2CB = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +140,7 @@
 		1D8DF61F211D370A0006D2CB /* TimeKeeping */ = {
 			isa = PBXGroup;
 			children = (
+				1D530FC62121661D006A5029 /* Extension */,
 				1D8DF632211D37360006D2CB /* Resource */,
 				1D8DF620211D370A0006D2CB /* AppDelegate.swift */,
 				1D8DF622211D370A0006D2CB /* ViewController.swift */,
@@ -145,6 +164,10 @@
 				1D8DF676211D7D390006D2CB /* WeekTableViewCell.xib */,
 				1D8DF679211D82100006D2CB /* DayTableViewCell.swift */,
 				1D8DF67A211D82100006D2CB /* DayTableViewCell.xib */,
+				1D530FC2212120E6006A5029 /* VacationViewController.swift */,
+				1D530FC3212120E6006A5029 /* VacationViewController.xib */,
+				1DD30928212187E200217E3F /* TimeKeepingHeaderView.swift */,
+				1DD3092A2121880B00217E3F /* TimeKeepingHeaderView.xib */,
 			);
 			path = TimeKeeping;
 			sourceTree = "<group>";
@@ -257,6 +280,7 @@
 				1D8DF670211D3FF10006D2CB /* Roboto-LightItalic.ttf in Resources */,
 				1D8DF671211D3FF10006D2CB /* Roboto-ThinItalic.ttf in Resources */,
 				1D8DF63B211D37720006D2CB /* HomeViewController.xib in Resources */,
+				1DD3092B2121880B00217E3F /* TimeKeepingHeaderView.xib in Resources */,
 				1D8DF628211D370B0006D2CB /* Assets.xcassets in Resources */,
 				1D8DF669211D3FF10006D2CB /* Roboto-BoldItalic.ttf in Resources */,
 				1D8DF648211D37CA0006D2CB /* MenuTableViewCell.xib in Resources */,
@@ -265,6 +289,7 @@
 				1D8DF678211D7D390006D2CB /* WeekTableViewCell.xib in Resources */,
 				1D8DF668211D3FF10006D2CB /* Roboto-Regular.ttf in Resources */,
 				1D8DF650211D3F5A0006D2CB /* ChangePasswordViewController.xib in Resources */,
+				1D530FC5212120E6006A5029 /* VacationViewController.xib in Resources */,
 				1D8DF66C211D3FF10006D2CB /* Roboto-CondensedItalic.ttf in Resources */,
 				1D8DF672211D3FF10006D2CB /* Roboto-Black.ttf in Resources */,
 				1D8DF626211D370A0006D2CB /* Main.storyboard in Resources */,
@@ -283,8 +308,11 @@
 				1D8DF64F211D3F5A0006D2CB /* ChangePasswordViewController.swift in Sources */,
 				1D8DF67B211D82100006D2CB /* DayTableViewCell.swift in Sources */,
 				1D8DF621211D370A0006D2CB /* AppDelegate.swift in Sources */,
+				1DD30929212187E200217E3F /* TimeKeepingHeaderView.swift in Sources */,
+				1D530FC821216640006A5029 /* Extention.swift in Sources */,
 				1D8DF647211D37CA0006D2CB /* MenuTableViewCell.swift in Sources */,
 				1D8DF677211D7D390006D2CB /* WeekTableViewCell.swift in Sources */,
+				1D530FC4212120E6006A5029 /* VacationViewController.swift in Sources */,
 				1D8DF636211D37610006D2CB /* ForgotPasswordViewController.swift in Sources */,
 				1D8DF64B211D38CC0006D2CB /* ProfileViewController.swift in Sources */,
 				1D8DF63A211D37720006D2CB /* HomeViewController.swift in Sources */,

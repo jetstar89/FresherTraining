@@ -10,6 +10,8 @@ import UIKit
 
 class TimeKeepingViewController: UIViewController {
     var listTimeKeeping: [TimeKeeping] = []
+    var weekSectionHeader = [TimeKeeping]()
+    var rowOfSection = [DayOfWeek]()
     var tableList = [selectionData]()
     
     @IBOutlet weak var weekTableView: UITableView!
@@ -18,15 +20,41 @@ class TimeKeepingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableList = [selectionData(isExpand: false, celData: ["a","b","c","d"]),selectionData(isExpand: false, celData: ["1","2","3","4"]), selectionData(isExpand: false, celData: ["a","b","c","d"]), selectionData(isExpand: false, celData: ["a","b","c","d"])]
+        weekSectionHeader = [TimeKeeping(isExpand: true, week: "Tuần 3", day: "5/5"),
+                             TimeKeeping(isExpand: true, week: "Tuần 3", day: "5/5"),
+                             TimeKeeping(isExpand: true, week: "Tuần 3", day: "5/5"),
+                             TimeKeeping(isExpand: true, week: "Tuần 3", day: "5/5")]
+        
+        rowOfSection = [DayOfWeek(weekday: "T2", day: "15", checkIn: "08:00 SA", checkOut: "05:00 CH", workday:             "1", status: "Đang làm việc"),
+                        DayOfWeek(weekday: "T3", day: "15", checkIn: "08:00 SA", checkOut: "05:00 CH", workday: "1", status: "Đang làm việc"),
+                        DayOfWeek(weekday: "T4", day: "15", checkIn: "08:00 SA", checkOut: "05:00 CH", workday: "1", status: "Đang làm việc"),
+                        DayOfWeek(weekday: "T5", day: "15", checkIn: "08:00 SA", checkOut: "05:00 CH", workday: "1", status: "Đang làm việc"),
+                        DayOfWeek(weekday: "T6", day: "15", checkIn: "08:00 SA", checkOut: "05:00 CH", workday: "1", status: "Đang làm việc"),
+                        DayOfWeek(weekday: "T7", day: "15", checkIn: "08:00 SA", checkOut: "05:00 CH", workday: "1", status: "Đang làm việc"),
+                        DayOfWeek(weekday: "CN", day: "15", checkIn: "08:00 SA", checkOut: "05:00 CH", workday: "1", status: "Đang làm việc")]
+                        
+//                        [DayOfWeek(weekday: "T2", day: "15", checkIn: "08:00 SA", checkOut: "05:00 CH", workday:             "1", status: "Đang làm việc"),
+//                        DayOfWeek(weekday: "T3", day: "15", checkIn: "08:00 SA", checkOut: "05:00 CH", workday: "1", status: "Đang làm việc"),
+//                        DayOfWeek(weekday: "T4", day: "15", checkIn: "08:00 SA", checkOut: "05:00 CH", workday: "1", status: "Đang làm việc")],
+//
+//                        [DayOfWeek(weekday: "T2", day: "15", checkIn: "08:00 SA", checkOut: "05:00 CH", workday:             "1", status: "Đang làm việc"),
+//                        DayOfWeek(weekday: "T3", day: "15", checkIn: "08:00 SA", checkOut: "05:00 CH", workday: "1", status: "Đang làm việc"),
+//                        DayOfWeek(weekday: "T4", day: "15", checkIn: "08:00 SA", checkOut: "05:00 CH", workday: "1", status: "Đang làm việc")],
+//
+//                        [DayOfWeek(weekday: "T2", day: "15", checkIn: "08:00 SA", checkOut: "05:00 CH", workday:             "1", status: "Đang làm việc"),
+//                        DayOfWeek(weekday: "T3", day: "15", checkIn: "08:00 SA", checkOut: "05:00 CH", workday: "1", status: "Đang làm việc"),
+//                        DayOfWeek(weekday: "T4", day: "15", checkIn: "08:00 SA", checkOut: "05:00 CH", workday: "1", status: "Đang làm việc")]]
+        
+//        tableList = [selectionData(isExpand: false, celData: ["a","b","c","d"]),
+//                     selectionData(isExpand: false, celData: ["1","2","3","4"]),
+//                     selectionData(isExpand: false, celData: ["a","b","c","d"]),
+//                     selectionData(isExpand: false, celData: ["a","b","c","d"])]
        
-        let timeKeeping = TimeKeeping(isExpand: true, week: "Tuan 3", day: "5/5", dayOfWeek: [DayOfWeek(weekday: "T2", day: "15", checkIn: "08:00 SA", checkOut: "05: 00 CH", workday: "1 ngay", status: "Dang lam viec")])
-        listTimeKeeping.append(timeKeeping)
        
         weekTableView.dataSource = self
         weekTableView.delegate = self
-        weekTableView.register(UINib(nibName: "WeekTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
-        weekTableView.register(UINib(nibName: "DayTableViewCell", bundle: nil), forCellReuseIdentifier: "day")
+        weekTableView.register(UINib(nibName: "WeekTableViewCell", bundle: nil), forHeaderFooterViewReuseIdentifier: "WeekTableViewCell")
+        weekTableView.register(UINib(nibName: "DayTableViewCell", bundle: nil), forCellReuseIdentifier: "DayTableViewCell")
         
         
         initNav()
@@ -62,34 +90,39 @@ extension TimeKeepingViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Cham")
-        print("did select row at \(indexPath.row) in section \(indexPath.section)")
-        if indexPath.row == 0 {
-            if tableList[indexPath.section].isExpand {
-                tableList[indexPath.section].isExpand = false
-            } else {
-                tableList[indexPath.section].isExpand = true
-            }
-            
-            //reload table view
-            let sections = IndexSet.init(integer: indexPath.section)
-            weekTableView.reloadSections(sections, with: .none)
-            
-            if tableList[indexPath.section].isExpand {
-                if let item = weekTableView.cellForRow(at: indexPath)?.contentView {
-                    print("set Expand on section \(indexPath.section)")
-                    item.setIsOnExpand(true)
-                }
-            } else {
-                if let item = weekTableView.cellForRow(at: indexPath)?.contentView {
-                    print("set Unexpand on section \(indexPath.section)")
-                    item.setIsOnExpand(false)
-                }
-            }
-        } else {
-            
-        }
+//        print("Cham")
+//        print("did select row at \(indexPath.row) in section \(indexPath.section)")
+//
+//        if indexPath.row == 0 {
+//            if listTimeKeeping[indexPath.section].isExpand {
+//                listTimeKeeping[indexPath.section].isExpand = false
+//            } else {
+//                listTimeKeeping[indexPath.section].isExpand = true
+//            }
+//            tableView.reloadData()
+        
+         //   reload table view
+//            let sections = IndexSet.init(integer: indexPath.section)
+//            weekTableView.reloadSections(sections, with: .none)
+//
+//            if listTimeKeeping[indexPath.section].isExpand {
+//                if let item = tableView.cellForRow(at: indexPath) {
+//                    print("set Expand on section \(indexPath.section)")
+//                    item.setIsTableViewExpand(true)
+//                }
+//            } else {
+//                if let item = tableView.cellForRow(at: indexPath){
+//                    print("set Unexpand on section \(indexPath.section)")
+//                    item.setIsTableViewExpand(false)
+//
+//
+//                }
+//            }
+//        } else {
+//
+//        }
         
         
     }
@@ -97,48 +130,41 @@ extension TimeKeepingViewController: UITableViewDelegate {
 }
 extension TimeKeepingViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return tableList.count
+       return weekSectionHeader.count
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let numberRow = tableList[section].celData.count + 1
-        if tableList[section].isExpand {
-            print("number of row in section \(section) = \(numberRow)")
-            return numberRow
-        } else {
-            print("number of row in section = 1")
-            return 1
-        }
+        return rowOfSection.count
+       
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0{
-            guard let cell: WeekTableViewCell = weekTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? WeekTableViewCell else {
+        
+            guard let cell: DayTableViewCell = weekTableView.dequeueReusableCell(withIdentifier: "DayTableViewCell", for: indexPath) as? DayTableViewCell else {
                 return UITableViewCell()
             }
-            cell.weekLabel.text = "Tuần " + (indexPath.section + 1).description
-         
+            cell.checkInLabel.text = rowOfSection[indexPath.row].checkIn
+            cell.checkOutLabel.text = rowOfSection[indexPath.row].checkOut
+            cell.dayLabel.text = rowOfSection[indexPath.row].day
+            cell.statusLabel.text = rowOfSection[indexPath.row].status
+            cell.workDayLabel.text = rowOfSection[indexPath.row].workday
+            cell.weekDayLabel.text = rowOfSection[indexPath.row].weekday
             return cell
-        } else {
-            guard let cell: DayTableViewCell = weekTableView.dequeueReusableCell(withIdentifier: "day", for: indexPath) as? DayTableViewCell else {
-                return UITableViewCell()
-            }
-            
-            cell.checkOutLabel.text = tableList[indexPath.section].celData[indexPath.row - 1]
-            let day = indexPath.row + 1
-            if day <= 7 {
-                cell.weekDayLabel.text = "T" + (day).description
-            } else {
-                cell.weekDayLabel.text = "CN"
-            }
-            
-            
-            return cell
-        }
+   
        
+    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let cell: WeekTableViewCell = tableView.dequeueReusableHeaderFooterView(withIdentifier: "WeekTableViewCell") as? WeekTableViewCell else {
+            return UITableViewHeaderFooterView()
+        }
+        cell.dayLabel.text = weekSectionHeader[section].day
+        cell.weekLabel.text = weekSectionHeader[section].week
        
         
+        return cell
     }
+    
+  
 }
 struct selectionData {
     var isExpand = Bool()
