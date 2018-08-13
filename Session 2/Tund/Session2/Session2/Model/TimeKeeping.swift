@@ -12,14 +12,14 @@ class TimeKeeping: NSObject {
     var isExpand: Bool
     var week: String
     var day: String
-    var dayOfWeek: [DayOfWeek]
+   
     
     
-    init(isExpand: Bool, week: String, day: String, dayOfWeek: [DayOfWeek]) {
+    init(isExpand: Bool, week: String, day: String) {
         self.week = week
         self.day = day
         self.isExpand = isExpand
-        self.dayOfWeek = dayOfWeek
+        
     }
 
 }

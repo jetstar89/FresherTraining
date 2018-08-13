@@ -66,4 +66,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
+extension UITableViewCell {
+    func isExpand(_ isExpand: Bool) {
+//        self.backgroundColor = isExpand ? UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1.0) :
+//                                        UIColor.white
+//        guard let view: WeeksTableViewCell = self as? WeeksTableViewCell else {
+//            return
+//        }
+//        view.weekLabel.textColor = isExpand ? UIColor.white : UIColor.black
+//        view.numberDayLabel.textColor = isExpand ? UIColor.white : UIColor.black
+//        view.isExpandImage.image = isExpand ? #imageLiteral(resourceName: "top") : #imageLiteral(resourceName: "down")
+    }
+}
 

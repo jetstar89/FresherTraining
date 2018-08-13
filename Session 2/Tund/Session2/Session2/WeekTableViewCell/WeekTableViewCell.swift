@@ -8,19 +8,13 @@
 
 import UIKit
 
-class WeekTableViewCell: UITableViewCell {
+class WeekTableViewCell: UITableViewHeaderFooterView {
     @IBOutlet weak var weekLabel: UILabel!
     @IBOutlet weak var dayLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    @IBOutlet weak var countDayLabel: UILabel!
+    @IBOutlet weak var expandImageView: UIImageView!
+    
+  
     
 }

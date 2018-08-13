@@ -107,6 +107,9 @@ extension Profile3ViewController: UITableViewDelegate{
             let personController = PersonViewController(nibName: "PersonViewController", bundle: nil)
                 navigationController?.pushViewController(personController, animated: true)
             break
+        case 2:
+           
+            break
         case 3:
             let changePasswordController = ChangePasswordViewController(nibName: "ChangePasswordViewController", bundle: nil)
             navigationController?.pushViewController(changePasswordController, animated: true)
@@ -148,7 +151,7 @@ extension UIView {
         let border = CALayer()
         let width = CGFloat(5.0)
         border.borderColor = isSelected ? UIColor.red.cgColor: UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1).cgColor
-        border.frame = CGRect(x: 0, y: 0, width: width, height: self.frame.height)
+        border.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
         self.layer.addSublayer(border)
         self.layer.masksToBounds = true
         
