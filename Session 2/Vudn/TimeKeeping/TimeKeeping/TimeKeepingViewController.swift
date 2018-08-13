@@ -63,11 +63,13 @@ extension TimeKeepingViewController: UITableViewDataSource {
         if indexPath.row == 0 {
             guard let cell: WeekTableViewCell = tableView.dequeueReusableCell(withIdentifier: "week", for: indexPath) as? WeekTableViewCell else {return UITableViewCell()}
             cell.weekLabel.text = "Tuần " + (indexPath.section + 1).description
+            
             return cell
         } else {
             guard let cell: DayTableViewCell = tableView.dequeueReusableCell(withIdentifier: "day", for: indexPath) as? DayTableViewCell else {return UITableViewCell()}
             
             cell.afternoonChekingTimeLabel.text = dataTableView[indexPath.section].cellData[indexPath.row - 1]
+            
             let day = indexPath.row + 1
             if day <= 7 {
                 cell.WeekdayLabel.text = "T" + (day).description
@@ -79,7 +81,26 @@ extension TimeKeepingViewController: UITableViewDataSource {
         }
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        if indexPath.section <= dataTableView.count {
+//            switch indexPath.row {
+//            case 0:
+//                let separator = UIImageView.init(image: #imageLiteral(resourceName: "flower"))
+//                let width = CGFloat(2)
+//
+//                separator.frame = CGRect(x: 0, y: cell.contentView.frame.height - width, width: cell.contentView.frame.width, height: cell.contentView.frame.height)
+//
+//            default:
+//                break
+//            }
+//        } else {
+//
+//        }
+    }
     
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return CGFloat(3)
+    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
@@ -102,12 +123,12 @@ extension TimeKeepingViewController: UITableViewDelegate {
             tableView.reloadSections(sections, with: .none)
             
             if dataTableView[indexPath.section].isExpand {
-                if let item = tableView.cellForRow(at: indexPath)?.contentView {
+                if let item = tableView.cellForRow(at: indexPath) {
                     print("set Expand on section \(indexPath.section)")
                     item.setIsOnExpand(true)
                 }
             } else {
-                if let item = tableView.cellForRow(at: indexPath)?.contentView {
+                if let item = tableView.cellForRow(at: indexPath) {
                     print("set Unexpand on section \(indexPath.section)")
                     item.setIsOnExpand(false)
                 }
