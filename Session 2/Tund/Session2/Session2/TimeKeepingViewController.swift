@@ -20,9 +20,9 @@ class TimeKeepingViewController: UIViewController {
         super.viewDidLoad()
         tableList = [selectionData(isExpand: false, celData: ["a","b","c","d"]),selectionData(isExpand: false, celData: ["1","2","3","4"]), selectionData(isExpand: false, celData: ["a","b","c","d"]), selectionData(isExpand: false, celData: ["a","b","c","d"])]
        
-        let timeKeeping = TimeKeeping(isExpand: true, week: "Tuan 3", day: "5/5", dayOfWeek: [DayOfWeek(weekday: "T2", day: "15", checkIn: "08:00 SA", checkOut: "05: 00 CH", workday: "1 ngay", status: "Dang lam viec")])
+        let timeKeeping = TimeKeeping(isExpand: false, week: "Tuần 3", day: "5/5", dayOfWeek: [DayOfWeek(weekday: "T2", day: "15", checkIn: "08:00 SA", checkOut: "05: 00 CH", workday: "1", status: "Đang làm việc")])
         listTimeKeeping.append(timeKeeping)
-       
+
         weekTableView.dataSource = self
         weekTableView.delegate = self
         weekTableView.register(UINib(nibName: "WeekTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
@@ -66,25 +66,29 @@ extension TimeKeepingViewController: UITableViewDelegate {
         print("Cham")
         print("did select row at \(indexPath.row) in section \(indexPath.section)")
         if indexPath.row == 0 {
-            if tableList[indexPath.section].isExpand {
-                tableList[indexPath.section].isExpand = false
+            if listTimeKeeping[indexPath.section].isExpand {
+                listTimeKeeping[indexPath.section].isExpand = false
             } else {
-                tableList[indexPath.section].isExpand = true
+                listTimeKeeping[indexPath.section].isExpand = true
             }
             
             //reload table view
             let sections = IndexSet.init(integer: indexPath.section)
             weekTableView.reloadSections(sections, with: .none)
             
-            if tableList[indexPath.section].isExpand {
-                if let item = weekTableView.cellForRow(at: indexPath)?.contentView {
+            if listTimeKeeping[indexPath.section].isExpand {
+                if let item = tableView.cellForRow(at: indexPath) {
                     print("set Expand on section \(indexPath.section)")
-                    item.setIsOnExpand(true)
+                    item.setIsTableViewExpand(true)
+                   
+                    
                 }
             } else {
-                if let item = weekTableView.cellForRow(at: indexPath)?.contentView {
+                if let item = tableView.cellForRow(at: indexPath){
                     print("set Unexpand on section \(indexPath.section)")
-                    item.setIsOnExpand(false)
+                    item.setIsTableViewExpand(false)
+                   
+                 
                 }
             }
         } else {
@@ -97,12 +101,13 @@ extension TimeKeepingViewController: UITableViewDelegate {
 }
 extension TimeKeepingViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return tableList.count
+        return listTimeKeeping.count
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let numberRow = tableList[section].celData.count + 1
-        if tableList[section].isExpand {
+        let numberRow = listTimeKeeping[section].dayOfWeek.count + 1
+        
+        if listTimeKeeping[section].isExpand {
             print("number of row in section \(section) = \(numberRow)")
             return numberRow
         } else {
@@ -116,7 +121,8 @@ extension TimeKeepingViewController: UITableViewDataSource {
             guard let cell: WeekTableViewCell = weekTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? WeekTableViewCell else {
                 return UITableViewCell()
             }
-            cell.weekLabel.text = "Tuần " + (indexPath.section + 1).description
+            cell.weekLabel.text = listTimeKeeping[indexPath.section].week
+            cell.dayLabel.text  = listTimeKeeping[indexPath.section].day
          
             return cell
         } else {
@@ -124,13 +130,14 @@ extension TimeKeepingViewController: UITableViewDataSource {
                 return UITableViewCell()
             }
             
-            cell.checkOutLabel.text = tableList[indexPath.section].celData[indexPath.row - 1]
-            let day = indexPath.row + 1
-            if day <= 7 {
-                cell.weekDayLabel.text = "T" + (day).description
-            } else {
-                cell.weekDayLabel.text = "CN"
-            }
+            
+            cell.checkOutLabel.text = listTimeKeeping[indexPath.section].dayOfWeek[indexPath.row - 1].checkOut
+            cell.checkInLabel.text = listTimeKeeping[indexPath.section].dayOfWeek[indexPath.row - 1].checkIn
+            cell.weekDayLabel.text = listTimeKeeping[indexPath.section].dayOfWeek[indexPath.row - 1].weekday
+            cell.dayLabel.text = listTimeKeeping[indexPath.section].dayOfWeek[indexPath.row - 1].day
+            cell.statusLabel.text = listTimeKeeping[indexPath.section].dayOfWeek[indexPath.row - 1].status
+            cell.workDayLabel.text = listTimeKeeping[indexPath.section].dayOfWeek[indexPath.row - 1].workday
+         
             
             
             return cell
