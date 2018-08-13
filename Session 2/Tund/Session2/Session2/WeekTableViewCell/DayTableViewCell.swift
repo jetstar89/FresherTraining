@@ -24,7 +24,17 @@ class DayTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+       
+    }
+    func customInit(weekDay: String, status: String, checkIn: String, checkOut: String, workDay: String, day: String ,section: Int) {
+        self.weekDayLabel.text = weekDay
+        self.statusLabel.text = status
+        self.workDayLabel.text = workDay
+        self.checkInLabel.text = checkIn
+        self.checkOutLabel.text = checkOut
+        self.dayLabel.text = day
+        
+        
     }
     
 }
