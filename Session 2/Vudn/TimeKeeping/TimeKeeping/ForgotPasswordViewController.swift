@@ -34,7 +34,7 @@ class ForgotPasswordViewController: UIViewController {
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         
         navigationItem.title = "QUÊN MẬT KHẨU"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "back"), style: .plain, target: self, action: #selector(onBack(_:)))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ic_back"), style: .plain, target: self, action: #selector(onBack(_:)))
         emailTextField.setIsOnFocus(false)
     }
     

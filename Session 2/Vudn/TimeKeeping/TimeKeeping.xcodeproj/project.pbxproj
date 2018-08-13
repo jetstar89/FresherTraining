@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D530FC4212120E6006A5029 /* VacationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D530FC2212120E6006A5029 /* VacationViewController.swift */; };
+		1D530FC5212120E6006A5029 /* VacationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D530FC3212120E6006A5029 /* VacationViewController.xib */; };
 		1D8DF621211D370A0006D2CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DF620211D370A0006D2CB /* AppDelegate.swift */; };
 		1D8DF623211D370A0006D2CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DF622211D370A0006D2CB /* ViewController.swift */; };
 		1D8DF626211D370A0006D2CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D8DF624211D370A0006D2CB /* Main.storyboard */; };
@@ -49,6 +51,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D530FC2212120E6006A5029 /* VacationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationViewController.swift; sourceTree = "<group>"; };
+		1D530FC3212120E6006A5029 /* VacationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VacationViewController.xib; sourceTree = "<group>"; };
 		1D8DF61D211D370A0006D2CB /* TimeKeeping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeKeeping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8DF620211D370A0006D2CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D8DF622211D370A0006D2CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 				1D8DF676211D7D390006D2CB /* WeekTableViewCell.xib */,
 				1D8DF679211D82100006D2CB /* DayTableViewCell.swift */,
 				1D8DF67A211D82100006D2CB /* DayTableViewCell.xib */,
+				1D530FC2212120E6006A5029 /* VacationViewController.swift */,
+				1D530FC3212120E6006A5029 /* VacationViewController.xib */,
 			);
 			path = TimeKeeping;
 			sourceTree = "<group>";
@@ -265,6 +271,7 @@
 				1D8DF678211D7D390006D2CB /* WeekTableViewCell.xib in Resources */,
 				1D8DF668211D3FF10006D2CB /* Roboto-Regular.ttf in Resources */,
 				1D8DF650211D3F5A0006D2CB /* ChangePasswordViewController.xib in Resources */,
+				1D530FC5212120E6006A5029 /* VacationViewController.xib in Resources */,
 				1D8DF66C211D3FF10006D2CB /* Roboto-CondensedItalic.ttf in Resources */,
 				1D8DF672211D3FF10006D2CB /* Roboto-Black.ttf in Resources */,
 				1D8DF626211D370A0006D2CB /* Main.storyboard in Resources */,
@@ -285,6 +292,7 @@
 				1D8DF621211D370A0006D2CB /* AppDelegate.swift in Sources */,
 				1D8DF647211D37CA0006D2CB /* MenuTableViewCell.swift in Sources */,
 				1D8DF677211D7D390006D2CB /* WeekTableViewCell.swift in Sources */,
+				1D530FC4212120E6006A5029 /* VacationViewController.swift in Sources */,
 				1D8DF636211D37610006D2CB /* ForgotPasswordViewController.swift in Sources */,
 				1D8DF64B211D38CC0006D2CB /* ProfileViewController.swift in Sources */,
 				1D8DF63A211D37720006D2CB /* HomeViewController.swift in Sources */,
