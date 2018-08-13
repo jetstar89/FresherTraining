@@ -25,6 +25,7 @@ class PersonnelViewController: UIViewController {
     }
     //MARK: initView
     func initView() {
+        tabBarController?.tabBar.isHidden = true
         positionLabel.text = "Developer"
         navigationController?.navigationBar.isHidden = false
         navigationItem.title = "NHÂN SỰ"
@@ -56,6 +57,7 @@ class PersonnelViewController: UIViewController {
     
     @objc func selectedMenu() {
         print("Chọn chức năng menu")
+        navigationController?.popViewController(animated: true)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

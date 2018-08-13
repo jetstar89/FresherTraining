@@ -10,6 +10,9 @@ import UIKit
 
 class DaysTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var requestButton: UIButton!
+    @IBOutlet weak var dayWarningLabel: UILabel!
+    @IBOutlet weak var warningRequestLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var timeDayLabel: UILabel!
     @IBOutlet weak var timeCheckOutLabel: UILabel!
