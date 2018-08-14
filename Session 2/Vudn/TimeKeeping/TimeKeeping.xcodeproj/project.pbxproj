@@ -51,6 +51,8 @@
 		1D8DF67C211D82100006D2CB /* DayTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D8DF67A211D82100006D2CB /* DayTableViewCell.xib */; };
 		1DD30929212187E200217E3F /* TimeKeepingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD30928212187E200217E3F /* TimeKeepingHeaderView.swift */; };
 		1DD3092B2121880B00217E3F /* TimeKeepingHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DD3092A2121880B00217E3F /* TimeKeepingHeaderView.xib */; };
+		42DAC90F2122C8BE00E70FBF /* RootTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DAC90E2122C8BE00E70FBF /* RootTabbarViewController.swift */; };
+		967958C03288800FC411BB67 /* Pods_TimeKeeping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EFD96CDAEF7A51BEA0D14CC /* Pods_TimeKeeping.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +102,10 @@
 		1D8DF67A211D82100006D2CB /* DayTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayTableViewCell.xib; sourceTree = "<group>"; };
 		1DD30928212187E200217E3F /* TimeKeepingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeKeepingHeaderView.swift; sourceTree = "<group>"; };
 		1DD3092A2121880B00217E3F /* TimeKeepingHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeKeepingHeaderView.xib; sourceTree = "<group>"; };
+		27DD7F8E4E8F34B70923031F /* Pods-TimeKeeping.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeKeeping.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimeKeeping/Pods-TimeKeeping.release.xcconfig"; sourceTree = "<group>"; };
+		42DAC90E2122C8BE00E70FBF /* RootTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabbarViewController.swift; sourceTree = "<group>"; };
+		6EFD96CDAEF7A51BEA0D14CC /* Pods_TimeKeeping.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeKeeping.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAE8C3F60226C7B6DD98BA55 /* Pods-TimeKeeping.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeKeeping.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TimeKeeping/Pods-TimeKeeping.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				967958C03288800FC411BB67 /* Pods_TimeKeeping.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +133,8 @@
 			children = (
 				1D8DF61F211D370A0006D2CB /* TimeKeeping */,
 				1D8DF61E211D370A0006D2CB /* Products */,
+				C8611ED851C54C9DE52E11AC /* Pods */,
+				E5023E2AC7485D20BFD6BFF3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +149,7 @@
 		1D8DF61F211D370A0006D2CB /* TimeKeeping */ = {
 			isa = PBXGroup;
 			children = (
+				42DAC9102122CDAB00E70FBF /* Helper */,
 				1D530FC62121661D006A5029 /* Extension */,
 				1D8DF632211D37360006D2CB /* Resource */,
 				1D8DF620211D370A0006D2CB /* AppDelegate.swift */,
@@ -168,6 +178,7 @@
 				1D530FC3212120E6006A5029 /* VacationViewController.xib */,
 				1DD30928212187E200217E3F /* TimeKeepingHeaderView.swift */,
 				1DD3092A2121880B00217E3F /* TimeKeepingHeaderView.xib */,
+				42DAC90E2122C8BE00E70FBF /* RootTabbarViewController.swift */,
 			);
 			path = TimeKeeping;
 			sourceTree = "<group>";
@@ -205,6 +216,38 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		42DAC9102122CDAB00E70FBF /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				42DAC9112122CDB300E70FBF /* Libaries */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		42DAC9112122CDB300E70FBF /* Libaries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Libaries;
+			sourceTree = "<group>";
+		};
+		C8611ED851C54C9DE52E11AC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DAE8C3F60226C7B6DD98BA55 /* Pods-TimeKeeping.debug.xcconfig */,
+				27DD7F8E4E8F34B70923031F /* Pods-TimeKeeping.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E5023E2AC7485D20BFD6BFF3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6EFD96CDAEF7A51BEA0D14CC /* Pods_TimeKeeping.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -212,9 +255,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D8DF62F211D370B0006D2CB /* Build configuration list for PBXNativeTarget "TimeKeeping" */;
 			buildPhases = (
+				96425D16B51E241F3F29B1A3 /* [CP] Check Pods Manifest.lock */,
 				1D8DF619211D370A0006D2CB /* Sources */,
 				1D8DF61A211D370A0006D2CB /* Frameworks */,
 				1D8DF61B211D370A0006D2CB /* Resources */,
+				A126069E19DE1CEF168362D9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -299,6 +344,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		96425D16B51E241F3F29B1A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TimeKeeping-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A126069E19DE1CEF168362D9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TimeKeeping/Pods-TimeKeeping-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TimeKeeping/Pods-TimeKeeping-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1D8DF619211D370A0006D2CB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -308,6 +392,7 @@
 				1D8DF64F211D3F5A0006D2CB /* ChangePasswordViewController.swift in Sources */,
 				1D8DF67B211D82100006D2CB /* DayTableViewCell.swift in Sources */,
 				1D8DF621211D370A0006D2CB /* AppDelegate.swift in Sources */,
+				42DAC90F2122C8BE00E70FBF /* RootTabbarViewController.swift in Sources */,
 				1DD30929212187E200217E3F /* TimeKeepingHeaderView.swift in Sources */,
 				1D530FC821216640006A5029 /* Extention.swift in Sources */,
 				1D8DF647211D37CA0006D2CB /* MenuTableViewCell.swift in Sources */,
@@ -458,10 +543,11 @@
 		};
 		1D8DF630211D370B0006D2CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAE8C3F60226C7B6DD98BA55 /* Pods-TimeKeeping.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 432LPA47M8;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TimeKeeping/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -469,6 +555,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = GEM.TimeKeeping;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -476,10 +563,11 @@
 		};
 		1D8DF631211D370B0006D2CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27DD7F8E4E8F34B70923031F /* Pods-TimeKeeping.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 432LPA47M8;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TimeKeeping/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -487,6 +575,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = GEM.TimeKeeping;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
