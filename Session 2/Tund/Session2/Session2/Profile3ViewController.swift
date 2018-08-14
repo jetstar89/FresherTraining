@@ -107,6 +107,9 @@ extension Profile3ViewController: UITableViewDelegate{
             let personController = PersonViewController(nibName: "PersonViewController", bundle: nil)
                 navigationController?.pushViewController(personController, animated: true)
             break
+        case 2:
+           
+            break
         case 3:
             let changePasswordController = ChangePasswordViewController(nibName: "ChangePasswordViewController", bundle: nil)
             navigationController?.pushViewController(changePasswordController, animated: true)
