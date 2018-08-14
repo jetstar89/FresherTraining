@@ -9,6 +9,12 @@
 import UIKit
 
 class TimeKeepingViewController: UIViewController {
+    @IBAction func prevMonthButton(_ sender: UIButton) {
+        print("prevMonthButton")
+    }
+    @IBAction func nextMonthButton(_ sender: UIButton) {
+        print("nextMonthButton")
+    }
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var yearLabel: UILabel!
     @IBOutlet weak var totalNumberDayLabel: UILabel!
@@ -57,6 +63,7 @@ class TimeKeepingViewController: UIViewController {
              DayOfWeek("T5", "13", "08:30 SA", "12:00 SA", "1", "Làm ngoài giờ"),
              DayOfWeek("T6", "14", "-", "-", "1", "Làm ngoài giờ"),
              DayOfWeek("T7", "15", "08:30 SA", "Quên chấm công?", "1", "Làm ngoài giờ"),
+             DayOfWeek("CN", "16", "08:30 SA", "12:00 SA", "1", "Làm ngoài giờ")
             ],
             [DayOfWeek("T2", "10", "08:30 SA", "05:30 CH", "1", "Làm ngoài giờ"),
              DayOfWeek("T3", "11", "08:30 SA", "05:30 CH", "1", "Công ty"),
@@ -93,6 +100,14 @@ extension TimeKeepingViewController: UITableViewDataSource {
         }
         cell.dayLabel.text = childHeaderTableView[indexPath.section][indexPath.row].day
         cell.dayOfWeekLabel.text = childHeaderTableView[indexPath.section][indexPath.row].weekday
+        let day = childHeaderTableView[indexPath.section][indexPath.row].weekday
+        if day.isEqual("T7") || day.isEqual("CN") {
+            cell.dayLabel.backgroundColor = UIColor(red: 242/255, green: 81/255, blue: 95/255, alpha: 1)
+            cell.dayOfWeekLabel.textColor = UIColor(red: 242/255, green: 81/255, blue: 95/255, alpha: 1)
+        } else {
+            cell.dayLabel.backgroundColor = UIColor(red: 56/255, green: 102/255, blue: 201/255, alpha: 1)
+            cell.dayOfWeekLabel.textColor = UIColor(red: 56/255, green: 102/255, blue: 201/255, alpha: 1)
+        }
         cell.timeCheckInLabel.text = childHeaderTableView[indexPath.section][indexPath.row].checkIn
         let timeCheckOut = childHeaderTableView[indexPath.section][indexPath.row].checkOut
         if timeCheckOut.isEqual("Quên chấm công?") {
@@ -158,8 +173,10 @@ extension TimeKeepingViewController: UITableViewDataSource {
         return headerTableView.count
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("Chirlen: \(childHeaderTableView[section].count)")
-        return childHeaderTableView[section].count
+        if headerTableView[section].isEpand {
+            return childHeaderTableView[section].count
+        }
+        return 0
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -168,13 +185,23 @@ extension TimeKeepingViewController: UITableViewDataSource {
         }
         header.weekLabel.text = headerTableView[section].weekNumber
         header.numberDayLabel.text = headerTableView[section].totalDay
+        header.section = section
+        header.delegate = self
+        header.isExpand(headerTableView[section].isEpand)
         return header
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 40
+        return 42
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+    }
+}
+extension TimeKeepingViewController: WeeksTableViewCellDelegate {
+    func touchHeader(_ header: WeeksTableViewCell, _ section: Int) {
+        let isEpand = !headerTableView[section].isEpand
+        headerTableView[section].isEpand = isEpand
+        timeKeepingTableView.reloadData()
     }
 }
 extension TimeKeepingViewController: UITableViewDelegate {

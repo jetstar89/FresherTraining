@@ -22,6 +22,7 @@ class FogotPasswordController: UIViewController {
     }
     //MARK: initView
     func initView() {
+        tabBarController?.tabBar.isHidden = true
         emailTextField.delegate = self
         setBorderTextField(emailTextField, UIColor.gray)
         navigationItem.title = "QUÊN MẬT KHẨU"
