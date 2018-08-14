@@ -81,10 +81,11 @@
                         <constraint firstItem="cte-Qa-OPz" firstAttribute="top" secondItem="Nqr-SD-h3p" secondAttribute="bottom" constant="2" id="xwd-Vp-FJK"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleAspectFit" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TBS-oc-8Wr">
+                <tableView clipsSubviews="YES" contentMode="scaleAspectFit" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TBS-oc-8Wr">
                     <rect key="frame" x="0.0" y="105" width="375" height="513"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     <color key="separatorColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="owt-5U-iVh"/>
                         <outlet property="delegate" destination="-1" id="2rG-Vb-UxQ"/>

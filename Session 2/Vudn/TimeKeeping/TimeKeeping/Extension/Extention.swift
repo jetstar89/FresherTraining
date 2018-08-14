@@ -55,6 +55,18 @@ extension UIColor {
     @nonobjc class var darkSlateBlue: UIColor {
         return UIColor(red: 35.0 / 255.0, green: 61.0 / 255.0, blue: 117.0 / 255.0, alpha: 1.0)
     }
+    
+    @nonobjc class var watermelon: UIColor {
+        return UIColor(red: 242.0 / 255.0, green: 81.0 / 255.0, blue: 95.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var windowsBlue: UIColor {
+        return UIColor(red: 56.0 / 255.0, green: 102.0 / 255.0, blue: 201.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var squash: UIColor {
+        return UIColor(red: 245.0 / 255.0, green: 166.0 / 255.0, blue: 35.0 / 255.0, alpha: 1.0)
+    }
 }
 
 extension UIView {
