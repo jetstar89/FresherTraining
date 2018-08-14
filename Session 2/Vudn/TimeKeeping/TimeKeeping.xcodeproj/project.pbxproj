@@ -51,6 +51,7 @@
 		1D8DF67C211D82100006D2CB /* TimeKeepingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D8DF67A211D82100006D2CB /* TimeKeepingTableViewCell.xib */; };
 		1DD30929212187E200217E3F /* TimeKeepingTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD30928212187E200217E3F /* TimeKeepingTableViewHeader.swift */; };
 		1DD3092B2121880B00217E3F /* TimeKeepingTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DD3092A2121880B00217E3F /* TimeKeepingTableViewHeader.xib */; };
+		53AB7A28425758C651DC581C /* Pods_TimeKeeping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEEAF214E6341CC08F20009E /* Pods_TimeKeeping.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +101,9 @@
 		1D8DF67A211D82100006D2CB /* TimeKeepingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeKeepingTableViewCell.xib; sourceTree = "<group>"; };
 		1DD30928212187E200217E3F /* TimeKeepingTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeKeepingTableViewHeader.swift; sourceTree = "<group>"; };
 		1DD3092A2121880B00217E3F /* TimeKeepingTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeKeepingTableViewHeader.xib; sourceTree = "<group>"; };
+		31873B2EC9738901886D15E2 /* Pods-TimeKeeping.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeKeeping.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimeKeeping/Pods-TimeKeeping.release.xcconfig"; sourceTree = "<group>"; };
+		DEEAF214E6341CC08F20009E /* Pods_TimeKeeping.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeKeeping.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA6135480CCBA29E20AB06E7 /* Pods-TimeKeeping.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeKeeping.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TimeKeeping/Pods-TimeKeeping.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53AB7A28425758C651DC581C /* Pods_TimeKeeping.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +131,8 @@
 			children = (
 				1D8DF61F211D370A0006D2CB /* TimeKeeping */,
 				1D8DF61E211D370A0006D2CB /* Products */,
+				9403B7A0AF166097F871AE52 /* Pods */,
+				A5421989E6A876BE42CB597A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -205,6 +212,23 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		9403B7A0AF166097F871AE52 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FA6135480CCBA29E20AB06E7 /* Pods-TimeKeeping.debug.xcconfig */,
+				31873B2EC9738901886D15E2 /* Pods-TimeKeeping.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A5421989E6A876BE42CB597A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DEEAF214E6341CC08F20009E /* Pods_TimeKeeping.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -212,9 +236,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D8DF62F211D370B0006D2CB /* Build configuration list for PBXNativeTarget "TimeKeeping" */;
 			buildPhases = (
+				D503DCDA7D11D2A580663C51 /* [CP] Check Pods Manifest.lock */,
 				1D8DF619211D370A0006D2CB /* Sources */,
 				1D8DF61A211D370A0006D2CB /* Frameworks */,
 				1D8DF61B211D370A0006D2CB /* Resources */,
+				CD326933EB524922F65A297E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -298,6 +324,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CD326933EB524922F65A297E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TimeKeeping/Pods-TimeKeeping-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TimeKeeping/Pods-TimeKeeping-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D503DCDA7D11D2A580663C51 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TimeKeeping-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1D8DF619211D370A0006D2CB /* Sources */ = {
@@ -458,6 +523,7 @@
 		};
 		1D8DF630211D370B0006D2CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA6135480CCBA29E20AB06E7 /* Pods-TimeKeeping.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -476,6 +542,7 @@
 		};
 		1D8DF631211D370B0006D2CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31873B2EC9738901886D15E2 /* Pods-TimeKeeping.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

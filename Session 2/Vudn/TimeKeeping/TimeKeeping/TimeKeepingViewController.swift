@@ -27,13 +27,14 @@ class TimeKeepingViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        guard let navigationBar = navigationController?.navigationBar else {return}
+        if let navigationBar = navigationController?.navigationBar {
+            navigationBar.isHidden = false
+            navigationBar.barTintColor = UIColor.frenchBlue
+            navigationBar.tintColor = UIColor.white
+            navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+            navigationItem.title = "CHẤM CÔNG"
+        }
         
-        navigationBar.isHidden = false
-        navigationBar.barTintColor = UIColor.frenchBlue
-        navigationBar.tintColor = UIColor.white
-        navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
-        navigationItem.title = "CHẤM CÔNG"
     }
 
     override func didReceiveMemoryWarning() {
