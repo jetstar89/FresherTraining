@@ -151,7 +151,7 @@
                 <outlet property="timeDayLabel" destination="V88-5M-DDa" id="4ET-wN-i3c"/>
                 <outlet property="warningRequestLabel" destination="AEW-uF-ANH" id="83N-vV-jya"/>
             </connections>
-            <point key="canvasLocation" x="25" y="57"/>
+            <point key="canvasLocation" x="-55" y="-28"/>
         </tableViewCell>
     </objects>
 </document>

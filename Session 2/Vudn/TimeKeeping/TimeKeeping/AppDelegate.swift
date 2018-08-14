@@ -15,10 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        setupDefaultAppearance()
         window = UIWindow(frame: UIScreen.main.bounds)
         setUpRootViewIsLoginViewController()
         window?.makeKeyAndVisible()
+        
         return true
+    }
+    
+    func setupDefaultAppearance() {
+        UINavigationBar.appearance().barTintColor = UIColor.frenchBlue
     }
     
     func setUpRootViewIsLoginViewController() {

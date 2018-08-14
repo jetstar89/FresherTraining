@@ -82,7 +82,14 @@ class Profile3ViewController: UIViewController {
         logoutButton.layer.masksToBounds = true
        
         // add list Method for tableView
-        listOption = [(#imageLiteral(resourceName: "icChamCong"),"Chấm công"),(#imageLiteral(resourceName: "icPhep"),"Nghỉ phép"),(#imageLiteral(resourceName: "icChamCong"),"Chấm công ngoài công ty"),(#imageLiteral(resourceName: "icPassword"),"Đổi mật khẩu")]
+        listOption = [(#imageLiteral(resourceName: "icChamCong"),"Chấm công"),
+                      (#imageLiteral(resourceName: "icPhep"),"Nghỉ phép"),
+                      (#imageLiteral(resourceName: "icChamCongNgoaiCongTy"),"Chấm công ngoài công ty"),
+                      (#imageLiteral(resourceName: "icNhanSu"),"Nhân sự"),
+                      (#imageLiteral(resourceName: "icDuyetRequest"),"Duyệt request"),
+                      (#imageLiteral(resourceName: "icDuyetChamCongNgoaiCongTy"),"Duyệt chấm công ngoài công ty"),
+                      (#imageLiteral(resourceName: "icPassword"),"Đổi mật khẩu"),
+                       ]
         menuTableView.register(UINib(nibName: "MenuTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         
         
@@ -104,16 +111,25 @@ extension Profile3ViewController: UITableViewDelegate{
             print(listOption[0].name)
             break
         case 1:
-            let personController = PersonViewController(nibName: "PersonViewController", bundle: nil)
-                navigationController?.pushViewController(personController, animated: true)
+           
             break
         case 2:
            
             break
         case 3:
+            let personController = PersonViewController(nibName: "PersonViewController", bundle: nil)
+            navigationController?.pushViewController(personController, animated: true)
+            break
+        case 4:
+            break
+        
+        case 5:
+            break
+        case 6:
             let changePasswordController = ChangePasswordViewController(nibName: "ChangePasswordViewController", bundle: nil)
             navigationController?.pushViewController(changePasswordController, animated: true)
             break
+    
          
         default:
             break
