@@ -43,5 +43,8 @@ class DaysTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    func setAttributesDaysTableViewCell(_ cell: DaysTableViewCell, childHeaderTableView: [[DayOfWeek]], section: Int, row: Int) {
+        
+    }
     
 }
