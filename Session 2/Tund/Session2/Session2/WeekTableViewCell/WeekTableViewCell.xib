@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -50,6 +50,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="rXU-M7-lx5" secondAttribute="bottom" constant="11" id="8jt-we-N2A"/>
                             <constraint firstItem="QJ6-sa-kyw" firstAttribute="leading" secondItem="Bj3-vn-ZvW" secondAttribute="trailing" constant="18.5" id="Eck-GR-DQy"/>
                             <constraint firstAttribute="bottom" secondItem="Bj3-vn-ZvW" secondAttribute="bottom" constant="13" id="EgY-mF-3hd"/>
                             <constraint firstItem="KES-Lc-yya" firstAttribute="leading" secondItem="rXU-M7-lx5" secondAttribute="trailing" constant="152.5" id="Laf-Hd-uD5"/>
@@ -76,6 +77,7 @@
                 <outlet property="countDayLabel" destination="Bj3-vn-ZvW" id="Idk-NX-J95"/>
                 <outlet property="dayLabel" destination="KES-Lc-yya" id="Q5g-NN-Hl4"/>
                 <outlet property="expandImageView" destination="QJ6-sa-kyw" id="KIV-72-x0O"/>
+                <outlet property="headerView2" destination="FzC-yI-gCq" id="1vK-EP-14s"/>
                 <outlet property="weekLabel" destination="rXU-M7-lx5" id="0mm-Pz-Eyn"/>
             </connections>
             <point key="canvasLocation" x="26" y="56"/>
