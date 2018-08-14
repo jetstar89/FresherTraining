@@ -10,15 +10,12 @@ import UIKit
 
 class TimeKeepingViewController: UIViewController, WeekTableDelegate {
     
-  
-    
     var listTimeKeeping: [TimeKeepingSection] = []
     
     @IBOutlet weak var weekTableView: UITableView!
     
     var selectIndexPath: IndexPath!
     
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,12 +64,12 @@ class TimeKeepingViewController: UIViewController, WeekTableDelegate {
     @objc func onBack() {
         navigationController?.popViewController(animated: true)
     }
+  
     func touchSelection(header: WeekTableViewCell, section: Int) {
         listTimeKeeping[section].isExpand = !listTimeKeeping[section].isExpand
         weekTableView.beginUpdates()
         weekTableView.reloadSections([section], with: .automatic)
         weekTableView.endUpdates()
-        
     }
    
 
@@ -84,17 +81,20 @@ extension TimeKeepingViewController: UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if (listTimeKeeping[indexPath.section].isExpand == true) {
-            return 44
+            return UITableViewAutomaticDimension
         } else {
             return 0
         }
     }
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> CGFloat? {
+        return 2
+    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.selectIndexPath = indexPath
+//        self.selectIndexPath = indexPath
         listTimeKeeping[indexPath.section].isExpand = !listTimeKeeping[indexPath.section].isExpand
         weekTableView.beginUpdates()
-        weekTableView.reloadSections([indexPath.section], with: .automatic)
+//        weekTableView.reloadSections([indexPath.section], with: .automatic)
         weekTableView.endUpdates()
     }
     
