@@ -30,7 +30,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQm-nv-LIc">
                                 <rect key="frame" x="12" y="11" width="27" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="27" id="jZ2-BZ-ymx"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="27" id="jZ2-BZ-ymx"/>
                                     <constraint firstAttribute="height" constant="25" id="sCb-kf-w4R"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="21"/>
