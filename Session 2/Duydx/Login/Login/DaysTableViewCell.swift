@@ -10,6 +10,20 @@ import UIKit
 
 class DaysTableViewCell: UITableViewCell {
 
+    @IBAction func onRequest(_ sender: Any) {
+        if let title = requestButton.titleLabel?.text {
+            switch title {
+            case "P":
+                print("Nghỉ phép")
+                break
+            case "!":
+                print("Đuổi việc")
+                break
+            default:
+                break
+            }
+        }
+    }
     @IBOutlet weak var requestButton: UIButton!
     @IBOutlet weak var dayWarningLabel: UILabel!
     @IBOutlet weak var warningRequestLabel: UILabel!
