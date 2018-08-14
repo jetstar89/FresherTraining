@@ -10,6 +10,9 @@ import UIKit
 
 class DayTableViewCell: UITableViewCell {
     @IBOutlet weak var weekDayLabel: UILabel!
+    @IBOutlet weak var warningLabel: UILabel!
+    
+    @IBOutlet weak var requestButton: UIButton!
     
     @IBOutlet weak var waitButton: UIButton!
     @IBOutlet weak var weekDayView: UIView!
@@ -55,6 +58,18 @@ class DayTableViewCell: UITableViewCell {
             self.waitButton.isHidden = true
         }
         
+        if checkOut.isEqual("12:00 SA"){
+            self.statusLabel.isHidden = true
+            self.warningLabel.isHidden = false
+            self.requestButton.isHidden = false
+            
+        } else {
+            
+            self.statusLabel.isHidden = false
+            self.warningLabel.isHidden = true
+            self.requestButton.isHidden = true
+            
+        }
         if weekDay.isEqual("T7") || weekDay.isEqual("CN") {
             self.weekDayView.layer.borderColor = UIColor(red: 242/255, green: 81/255, blue: 95/255, alpha: 1).cgColor
             self.weekDayLabel.textColor = UIColor(red: 242/255, green: 81/255, blue: 95/255, alpha: 1)
@@ -68,18 +83,6 @@ class DayTableViewCell: UITableViewCell {
     
         
     }
-    
-    func setupBorder(_ weekDayView: UIView,_ color: UIColor) {
-        
-        let border = CALayer()
-        let width = CGFloat(1.0)
-        let height = CGFloat(1.0)
-        border.borderColor = color.cgColor
-        border.frame = CGRect(x: 0, y: 0, width: width, height: height)
-      
-        self.layer.addSublayer(border)
-        self.layer.masksToBounds = true
-        
-    }
+  
     
 }

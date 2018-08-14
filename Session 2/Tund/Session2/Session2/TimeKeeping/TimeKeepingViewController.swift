@@ -22,7 +22,7 @@ class TimeKeepingViewController: UIViewController, WeekTableDelegate {
         var dayOfWeek = [DayOfWeek(weekday: "T2", day: "15", checkIn: "08:00 SA", checkOut: "Quên chấm công", workday:             "1", status: "Đang làm việc"),
                          DayOfWeek(weekday: "T3", day: "15", checkIn: "08:00 SA", checkOut: "08:00 SA", workday: "1", status: "Đang làm việc"),
                          DayOfWeek(weekday: "T4", day: "15", checkIn: "08:00 SA", checkOut: "05:00 CH", workday: "1", status: "Đang làm việc"),
-                         DayOfWeek(weekday: "T5", day: "15", checkIn: "08:00 SA", checkOut: "05:00 CH", workday: "1", status: "Đang làm việc"),
+                         DayOfWeek(weekday: "T5", day: "15", checkIn: "08:00 SA", checkOut: "12:00 SA", workday: "1", status: "Đang làm việc"),
                          DayOfWeek(weekday: "T6", day: "15", checkIn: "08:00 SA", checkOut: "05:00 CH", workday: "1", status: "Đang làm việc"),
                          DayOfWeek(weekday: "T7", day: "15", checkIn: "08:00 SA", checkOut: "05:00 CH", workday: "1", status: "Đang làm việc"),
                          DayOfWeek(weekday: "CN", day: "15", checkIn: "08:00 SA", checkOut: "05:00 CH", workday: "1", status: "Đang làm việc")]

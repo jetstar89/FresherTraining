@@ -17,16 +17,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
+     
         setupNavigation()
         window?.makeKeyAndVisible()
         return true
     }
+  
     func setupNavigation() {
         let viewcontroller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController")
         let rootNavigationController = UINavigationController(rootViewController: viewcontroller)
         window?.rootViewController = rootNavigationController
         
     }
+  
     func setUpNavigationTimeKeeping(){
         let viewcontroller = UIStoryboard(name: "TimeKeepingViewController", bundle: nil).instantiateViewController(withIdentifier: "TimeKeepingViewController")
         let rootNavigationController = UINavigationController(rootViewController: viewcontroller)

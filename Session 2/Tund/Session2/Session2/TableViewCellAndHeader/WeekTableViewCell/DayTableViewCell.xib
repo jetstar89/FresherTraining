@@ -47,7 +47,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="Nf9-R8-Gel" firstAttribute="centerX" secondItem="x3g-6V-uul" secondAttribute="centerX" id="3db-V8-PgD"/>
                                     <constraint firstItem="Nf9-R8-Gel" firstAttribute="centerY" secondItem="x3g-6V-uul" secondAttribute="centerY" id="ibp-GH-CRC"/>
@@ -82,7 +82,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Ngoài công ty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iz5-09-r3r">
-                        <rect key="frame" x="287" y="37" width="79" height="15"/>
+                        <rect key="frame" x="287" y="37" width="79" height="12"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.27757218095700797" green="1" blue="0.08959067971493484" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -104,17 +104,42 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amb-sg-jFY">
-                        <rect key="frame" x="169" y="38" width="53" height="13.5"/>
+                        <rect key="frame" x="168.5" y="38" width="53" height="14"/>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.65098039215686276" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                         <state key="normal" title="chờ duyệt">
                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
                     </button>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5av-vj-ybd">
+                        <rect key="frame" x="348" y="34" width="18" height="18"/>
+                        <color key="backgroundColor" red="0.23921568627450979" green="0.71372549019607845" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="Rk9-pK-1fk"/>
+                            <constraint firstAttribute="width" constant="18" id="fYy-9G-m7u"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                        <state key="normal" title="P">
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                    </button>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mi8-me-NXF">
+                        <rect key="frame" x="321" y="34" width="24" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="OTD-ka-X5N"/>
+                            <constraint firstAttribute="height" constant="19" id="dU3-0u-qc5"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="Mi8-me-NXF" firstAttribute="centerY" secondItem="iz5-09-r3r" secondAttribute="centerY" id="01o-6x-SC6"/>
+                    <constraint firstItem="5av-vj-ybd" firstAttribute="leading" secondItem="Mi8-me-NXF" secondAttribute="trailing" constant="6" id="07H-2z-mfg"/>
                     <constraint firstAttribute="trailing" secondItem="Zl9-bt-m8b" secondAttribute="trailing" constant="12.5" id="1eN-Ms-Xyz"/>
                     <constraint firstItem="iz5-09-r3r" firstAttribute="top" secondItem="vwP-L5-VJe" secondAttribute="bottom" constant="8" id="4Of-Qo-6cf"/>
+                    <constraint firstAttribute="trailing" secondItem="5av-vj-ybd" secondAttribute="trailing" constant="6" id="70J-9G-duM"/>
                     <constraint firstAttribute="bottom" secondItem="EXd-et-x0t" secondAttribute="bottom" constant="9.5" id="AGd-2J-NOP"/>
                     <constraint firstItem="Zl9-bt-m8b" firstAttribute="leading" secondItem="vwP-L5-VJe" secondAttribute="trailing" constant="6" id="EuE-kw-97F"/>
                     <constraint firstAttribute="bottom" secondItem="amb-sg-jFY" secondAttribute="bottom" constant="18" id="Fel-tW-JqO"/>
@@ -127,7 +152,9 @@
                     <constraint firstItem="TV1-ZI-ynD" firstAttribute="top" secondItem="EXd-et-x0t" secondAttribute="top" id="ddP-AJ-gga"/>
                     <constraint firstItem="EXd-et-x0t" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gD9-Wa-T2e"/>
                     <constraint firstItem="Zl9-bt-m8b" firstAttribute="bottom" secondItem="vwP-L5-VJe" secondAttribute="bottom" id="mfp-yT-Lhj"/>
+                    <constraint firstItem="5av-vj-ybd" firstAttribute="centerY" secondItem="iz5-09-r3r" secondAttribute="centerY" id="oid-nJ-2L2"/>
                     <constraint firstItem="amb-sg-jFY" firstAttribute="leading" secondItem="yka-aF-XMf" secondAttribute="trailing" constant="19.5" id="vYU-wm-zGr"/>
+                    <constraint firstItem="5av-vj-ybd" firstAttribute="top" secondItem="Zl9-bt-m8b" secondAttribute="bottom" constant="5" id="z9Q-j3-JKc"/>
                 </constraints>
             </tableViewCellContentView>
             <constraints>
@@ -139,8 +166,10 @@
                 <outlet property="checkInLabel" destination="TV1-ZI-ynD" id="wkf-Ms-dI4"/>
                 <outlet property="checkOutLabel" destination="yka-aF-XMf" id="3W3-hG-awc"/>
                 <outlet property="dayLabel" destination="OVr-W2-hNe" id="vXZ-P6-Fjb"/>
+                <outlet property="requestButton" destination="5av-vj-ybd" id="Kuk-6w-lCD"/>
                 <outlet property="statusLabel" destination="iz5-09-r3r" id="vCx-xH-qBR"/>
                 <outlet property="waitButton" destination="amb-sg-jFY" id="DGS-TS-g0b"/>
+                <outlet property="warningLabel" destination="Mi8-me-NXF" id="RjR-sg-hbX"/>
                 <outlet property="weekDayLabel" destination="Nf9-R8-Gel" id="4vd-rc-4jF"/>
                 <outlet property="weekDayView" destination="EXd-et-x0t" id="PFn-dz-EKL"/>
                 <outlet property="workDayLabel" destination="vwP-L5-VJe" id="dHT-C8-pt9"/>

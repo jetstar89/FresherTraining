@@ -7,13 +7,13 @@
 //
 
 import UIKit
-protocol WeekTableDelegate {
+protocol WeekTableDelegate: class {
     func touchSelection (header: WeekTableViewCell, section: Int)
     
 }
 
 class WeekTableViewCell: UITableViewHeaderFooterView {
-    var delegate: WeekTableDelegate?
+    weak var delegate: WeekTableDelegate?
     var section: Int!
     
   
@@ -48,6 +48,7 @@ class WeekTableViewCell: UITableViewHeaderFooterView {
         isOnExpandHeader(isOnExpand)
        
     }
+    
     func isOnExpandHeader(_ isOnExpand: Bool){
         self.headerView2.backgroundColor = isOnExpand ? UIColor.init(red: 63/255, green: 95/255, blue: 163/255, alpha: 1.0) : UIColor.white
        
