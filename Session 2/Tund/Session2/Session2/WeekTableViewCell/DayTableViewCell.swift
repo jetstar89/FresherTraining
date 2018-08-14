@@ -11,6 +11,8 @@ import UIKit
 class DayTableViewCell: UITableViewCell {
     @IBOutlet weak var weekDayLabel: UILabel!
     
+    @IBOutlet weak var waitButton: UIButton!
+    @IBOutlet weak var weekDayView: UIView!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var workDayLabel: UILabel!
     @IBOutlet weak var checkOutLabel: UILabel!
@@ -33,7 +35,50 @@ class DayTableViewCell: UITableViewCell {
         self.checkInLabel.text = checkIn
         self.checkOutLabel.text = checkOut
         self.dayLabel.text = day
+        self.weekDayView.layer.borderWidth = CGFloat(1.0)
         
+        if checkOut.isEqual("Quên chấm công") {
+            self.checkOutLabel.backgroundColor = UIColor(red: 207/255, green: 2/255, blue: 27/255, alpha: 1)
+            self.checkOutLabel.textColor = UIColor.white
+            self.checkOutLabel.font = self.checkOutLabel.font.withSize(12)
+        } else {
+            self.checkOutLabel.backgroundColor = UIColor.white
+            self.checkOutLabel.textColor = UIColor.black
+            self.checkOutLabel.font = self.checkOutLabel.font.withSize(16)
+        }
+        
+        if checkOut.isEqual("08:00 SA") {
+            self.checkOutLabel.textColor = UIColor(red: 245/255, green: 166/255, blue: 35/255, alpha: 1)
+            self.waitButton.isHidden = false
+        } else {
+            self.checkOutLabel.textColor = UIColor.black
+            self.waitButton.isHidden = true
+        }
+        
+        if weekDay.isEqual("T7") || weekDay.isEqual("CN") {
+            self.weekDayView.layer.borderColor = UIColor(red: 242/255, green: 81/255, blue: 95/255, alpha: 1).cgColor
+            self.weekDayLabel.textColor = UIColor(red: 242/255, green: 81/255, blue: 95/255, alpha: 1)
+            self.dayLabel.backgroundColor = UIColor(red: 242/255, green: 81/255, blue: 95/255, alpha: 1)
+           
+        } else {
+            self.weekDayView.layer.borderColor = UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1).cgColor
+            self.weekDayLabel.textColor = UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1)
+            self.dayLabel.backgroundColor = UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1)
+        }
+    
+        
+    }
+    
+    func setupBorder(_ weekDayView: UIView,_ color: UIColor) {
+        
+        let border = CALayer()
+        let width = CGFloat(1.0)
+        let height = CGFloat(1.0)
+        border.borderColor = color.cgColor
+        border.frame = CGRect(x: 0, y: 0, width: width, height: height)
+      
+        self.layer.addSublayer(border)
+        self.layer.masksToBounds = true
         
     }
     
