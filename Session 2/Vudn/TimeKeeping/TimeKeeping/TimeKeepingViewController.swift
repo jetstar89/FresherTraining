@@ -10,32 +10,31 @@ import UIKit
 
 class TimeKeepingViewController: UIViewController {
     
-    var dataTableView = [sectionData]()
+    var tableViewData = [SectionData]()
     
     // MARK: - IBOutlet
     
     @IBOutlet weak var timeKeepingTableView: UITableView!
+    
     // MARK: - LIFE CYCLE
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dataTableView = [sectionData(isExpand: false, cellData: ["a", "b", "c", "d", "e", "f", "g"]),
-                         sectionData(isExpand: false, cellData: ["h", "i", "j", "k", "l", "m", "n"]),
-                         sectionData(isExpand: false, cellData: ["1", "2", "3", "4", "5", "6", "7"]),
-                         sectionData(isExpand: false, cellData: ["8", "9", "10", "11", "12", "13", "14"])]
-        
-        timeKeepingTableView.register(UINib(nibName: "TimeKeepingHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "header")
-        timeKeepingTableView.register(UINib(nibName: "DayTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+        timeKeepingTableView.register(UINib(nibName: "TimeKeepingTableViewHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "header")
+        timeKeepingTableView.register(UINib(nibName: "TimeKeepingTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+        createData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         
-        guard let navigationBar = navigationController?.navigationBar else {return}
-        navigationBar.isHidden = false
-        navigationBar.barTintColor = UIColor.frenchBlue
-        navigationBar.tintColor = UIColor.white
-        navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
-        navigationItem.title = "CHẤM CÔNG"
+        if let navigationBar = navigationController?.navigationBar {
+            navigationBar.isHidden = false
+            navigationBar.barTintColor = UIColor.frenchBlue
+            navigationBar.tintColor = UIColor.white
+            navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+            navigationItem.title = "CHẤM CÔNG"
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,30 +44,55 @@ class TimeKeepingViewController: UIViewController {
     
     // MARK: - Selector
     
-    @objc func onExpandSection(_ sender: UITapGestureRecognizer) {
-        //print("did select row at \(indexPath.row) in section \(indexPath.section)")
-//        if dataTableView[section].isExpand {
-//            dataTableView[section].isExpand = false
-//        } else {
-//                dataTableView[section].isExpand = true
-//        }
-//        tableView.reloadData()
-        print("tap on header")
-    }
-    
     // MARK: - IBAction
+    
+    // MARK: - Func
+    
+    func createData() {
+        tableViewData = [
+            SectionData([
+                CellData(day: 1, checkIn: "08:00 SA", checkOut: "05:30 CH", requestStatus: 0, timeWorking: 1, timeVacation: 0, vacationType: 0, reasonComment: "", locationComment: ""),
+                CellData(day: 2, checkIn: "08:00 SA", checkOut: "05:30 CH", requestStatus: 0, timeWorking: 1, timeVacation: 0, vacationType: 0, reasonComment: "", locationComment: ""),
+                CellData(day: 3, checkIn: "08:00 SA", checkOut: "05:30 CH", requestStatus: 0, timeWorking: 1, timeVacation: 0, vacationType: 0, reasonComment: "", locationComment: ""),
+                CellData(day: 4, checkIn: "08:00 SA", checkOut: "05:30 CH", requestStatus: 0, timeWorking: 1, timeVacation: 0, vacationType: 0, reasonComment: "", locationComment: ""),
+                CellData(day: 5, checkIn: "08:00 SA", checkOut: "05:30 CH", requestStatus: 0, timeWorking: 1, timeVacation: 0, vacationType: 0, reasonComment: "", locationComment: ""),
+                CellData(day: 6, checkIn: "-", checkOut: "-", requestStatus: 0, timeWorking: 0, timeVacation: 0, vacationType: 0, reasonComment: "-", locationComment: ""),
+                CellData(day: 7, checkIn: "-", checkOut: "-", requestStatus: 0, timeWorking: 0, timeVacation: 0, vacationType: 0, reasonComment: "-", locationComment: "")
+                ]),
+            SectionData([
+                CellData(day: 8, checkIn: "08:00 SA", checkOut: "05:30 CH", requestStatus: 0, timeWorking: 1, timeVacation: 0, vacationType: 0, reasonComment: "", locationComment: ""),
+                CellData(day: 9, checkIn: "08:00 SA", checkOut: "05:30 CH", requestStatus: 0, timeWorking: 1, timeVacation: 0, vacationType: 0, reasonComment: "", locationComment: ""),
+                CellData(day: 10, checkIn: "08:00 SA", checkOut: "05:30 CH", requestStatus: 0, timeWorking: 1, timeVacation: 0, vacationType: 0, reasonComment: "", locationComment: ""),
+                CellData(day: 11, checkIn: "08:00 SA", checkOut: "05:30 CH", requestStatus: 0, timeWorking: 1, timeVacation: 0, vacationType: 0, reasonComment: "", locationComment: ""),
+                CellData(day: 12, checkIn: "08:00 SA", checkOut: "04:30 CH", requestStatus: 0, timeWorking: 1, timeVacation: 0, vacationType: 0, reasonComment: "", locationComment: ""),
+                CellData(day: 13, checkIn: "-", checkOut: "-", requestStatus: 0, timeWorking: 0, timeVacation: 0, vacationType: 0, reasonComment: "", locationComment: ""),
+                CellData(day: 14, checkIn: "-", checkOut: "-", requestStatus: 0, timeWorking: 0, timeVacation: 0, vacationType: 0, reasonComment: "", locationComment: "")
+                ]),
+            SectionData([
+                CellData(day: 15, checkIn: "08:00 SA", checkOut: "05:30 CH", requestStatus: 0, timeWorking: 1, timeVacation: 0, vacationType: 0, reasonComment: "", locationComment: "Ngoài công ty"),
+                CellData(day: 16, checkIn: "08:00 SA", checkOut: "-", requestStatus: 0, timeWorking: 0, timeVacation: 0, vacationType: 0, reasonComment: "", locationComment: ""),
+                CellData(day: 17, checkIn: "08:00 SA", checkOut: "08:00 SA", requestStatus: 1, timeWorking: 0, timeVacation: 0, vacationType: 0, reasonComment: "", locationComment: ""),
+                CellData(day: 18, checkIn: "08:00 SA", checkOut: "12:00 SA", requestStatus: 0, timeWorking: 0.5, timeVacation: 0.5, vacationType: 0, reasonComment: "", locationComment: ""),
+                CellData(day: 19, checkIn: "08:00 SA", checkOut: "04:30", requestStatus: 0, timeWorking: 0.82, timeVacation: 0, vacationType: 0, reasonComment: "Làm bù", locationComment: "Ngoài công ty"),
+                CellData(day: 20, checkIn: "-", checkOut: "-", requestStatus: 0, timeWorking: 0, timeVacation: 0, vacationType: 0, reasonComment: "", locationComment: ""),
+                CellData(day: 21, checkIn: "-", checkOut: "-", requestStatus: 0, timeWorking: 0, timeVacation: 0, vacationType: 0, reasonComment: "", locationComment: "")
+                ]),
+            SectionData([
+                ])
+        ]
+    }
 }
 
 // MARK: - Extention
 
 extension TimeKeepingViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return dataTableView.count
+        return tableViewData.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let numberRow = dataTableView[section].cellData.count
-        if dataTableView[section].isExpand {
+        let numberRow = tableViewData[section].cellData.count
+        if tableViewData[section].isExpand {
             print("number of row in section \(section) = \(numberRow)")
             return numberRow
         } else {
@@ -78,19 +102,10 @@ extension TimeKeepingViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell: DayTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? DayTableViewCell else {return UITableViewCell()}
-            
-        cell.afternoonChekingTimeLabel.text = dataTableView[indexPath.section].cellData[indexPath.row]
-            
-        let day = indexPath.row + 2
-        if day <= 7 {
-            cell.weekdayLabel.text = "T" + (day).description
-        } else {
-            cell.weekdayLabel.text = "CN"
-        }
+        guard let cell: TimeKeepingTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? TimeKeepingTableViewCell else {return UITableViewCell()}
         
+        cell.setData(tableViewData[indexPath.section].cellData[indexPath.row], cellForRowAt: indexPath)
         return cell
-        
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -106,27 +121,28 @@ extension TimeKeepingViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "header") as? TimeKeepingHeaderView else { return UIView() }
+        guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "header") as? TimeKeepingTableViewHeader else { return UIView() }
         
         header.section = section
         header.delegate = self
+        header.setIsOnExpand(tableViewData[section].isExpand)
+        
+        let week = section + 1
+        header.weekLabel.text = "Tuần \(week)"
+        
+        var sumTimeWorking: Float = 0
+        for item in tableViewData[section].cellData {
+            sumTimeWorking = sumTimeWorking + item.timeWorking
+        }
+        header.countDayLabel.text = "\(sumTimeWorking)/5"
+        
         return header
     }
 }
 
 extension TimeKeepingViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        print("did select row at \(indexPath.row) in section \(indexPath.section)")
-//        if indexPath.row == 0 {
-//            if dataTableView[indexPath.section].isExpand {
-//                dataTableView[indexPath.section].isExpand = false
-//            } else {
-//                dataTableView[indexPath.section].isExpand = true
-//            }
-//            tableView.reloadData()
-//        } else {
-//
-//        }
+
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
@@ -135,13 +151,13 @@ extension TimeKeepingViewController: UITableViewDelegate {
 }
 
 extension TimeKeepingViewController: ExpandTableViewHeaderDelegate {
-    func toggleSection(header: TimeKeepingHeaderView, section: Int) {
-        let expand = !dataTableView[section].isExpand
+    func toggleSection(header: TimeKeepingTableViewHeader, section: Int) {
+        let expand = !tableViewData[section].isExpand
         
         print("toggleSection \(section)")
         
         // Toggle expand
-        dataTableView[section].isExpand = expand
+        tableViewData[section].isExpand = expand
         
         // Reload the whole section
        
@@ -149,8 +165,38 @@ extension TimeKeepingViewController: ExpandTableViewHeaderDelegate {
     }
 }
 
-struct sectionData {
-    var isExpand = Bool()
-    var cellData = [String]()
+struct SectionData {
+    var isExpand: Bool
+    var cellData: [CellData]
     
+    init(_ cellData: [CellData]) {
+        self.cellData = cellData
+        isExpand = false
+    }
 }
+
+struct CellData {
+    var day: Int
+    var checkIn: String
+    var checkOut: String
+    var requestStatus: Int
+    var timeWorking: Float
+    var timeVacation: Float
+    var vacationType: Int
+    var reasonComment: String
+    var locationComment: String
+    
+    init(day: Int, checkIn: String, checkOut: String, requestStatus: Int, timeWorking: Float, timeVacation: Float, vacationType: Int, reasonComment: String, locationComment: String) {
+        self.day = day
+        self.checkIn = checkIn
+        self.checkOut = checkOut
+        self.requestStatus = requestStatus
+        self.timeWorking = timeWorking
+        self.timeVacation = timeVacation
+        self.vacationType = vacationType
+        self.reasonComment = reasonComment
+        self.locationComment = locationComment
+    }
+}
+
+
