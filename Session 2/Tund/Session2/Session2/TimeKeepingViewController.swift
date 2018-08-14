@@ -10,30 +10,27 @@ import UIKit
 
 class TimeKeepingViewController: UIViewController, WeekTableDelegate {
     
-  
-    
     var listTimeKeeping: [TimeKeepingSection] = []
     
     @IBOutlet weak var weekTableView: UITableView!
     
     var selectIndexPath: IndexPath!
     
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var dayOfWeek = [DayOfWeek(weekday: "T2", day: "15", checkIn: "08:00 SA", checkOut: "05:00 CH", workday:             "1", status: "Đang làm việc"),
-                         DayOfWeek(weekday: "T3", day: "15", checkIn: "08:00 SA", checkOut: "05:00 CH", workday: "1", status: "Đang làm việc"),
+        var dayOfWeek = [DayOfWeek(weekday: "T2", day: "15", checkIn: "08:00 SA", checkOut: "Quên chấm công", workday:             "1", status: "Đang làm việc"),
+                         DayOfWeek(weekday: "T3", day: "15", checkIn: "08:00 SA", checkOut: "08:00 SA", workday: "1", status: "Đang làm việc"),
                          DayOfWeek(weekday: "T4", day: "15", checkIn: "08:00 SA", checkOut: "05:00 CH", workday: "1", status: "Đang làm việc"),
                          DayOfWeek(weekday: "T5", day: "15", checkIn: "08:00 SA", checkOut: "05:00 CH", workday: "1", status: "Đang làm việc"),
                          DayOfWeek(weekday: "T6", day: "15", checkIn: "08:00 SA", checkOut: "05:00 CH", workday: "1", status: "Đang làm việc"),
                          DayOfWeek(weekday: "T7", day: "15", checkIn: "08:00 SA", checkOut: "05:00 CH", workday: "1", status: "Đang làm việc"),
                          DayOfWeek(weekday: "CN", day: "15", checkIn: "08:00 SA", checkOut: "05:00 CH", workday: "1", status: "Đang làm việc")]
     
-        listTimeKeeping = [TimeKeepingSection(isExpand: true, week: "Tuần 1", day: "1/5", dayOfWeek: dayOfWeek),
-                            TimeKeepingSection(isExpand: true, week: "Tuần 2", day: "2/5", dayOfWeek: dayOfWeek),
-                            TimeKeepingSection(isExpand: true, week: "Tuần 3", day: "3/5", dayOfWeek: dayOfWeek),
-                            TimeKeepingSection(isExpand: true, week: "Tuần 4", day: "4/5", dayOfWeek: dayOfWeek)]
+        listTimeKeeping = [TimeKeepingSection(isExpand: false, week: "Tuần 1", day: "1/5", dayOfWeek: dayOfWeek),
+                            TimeKeepingSection(isExpand: false, week: "Tuần 2", day: "2/5", dayOfWeek: dayOfWeek),
+                            TimeKeepingSection(isExpand: false, week: "Tuần 3", day: "3/5", dayOfWeek: dayOfWeek),
+                            TimeKeepingSection(isExpand: false, week: "Tuần 4", day: "4/5", dayOfWeek: dayOfWeek)]
       
         selectIndexPath = IndexPath(row: -1, section: -1)
         
@@ -67,12 +64,12 @@ class TimeKeepingViewController: UIViewController, WeekTableDelegate {
     @objc func onBack() {
         navigationController?.popViewController(animated: true)
     }
+  
     func touchSelection(header: WeekTableViewCell, section: Int) {
         listTimeKeeping[section].isExpand = !listTimeKeeping[section].isExpand
         weekTableView.beginUpdates()
         weekTableView.reloadSections([section], with: .automatic)
         weekTableView.endUpdates()
-        
     }
    
 
@@ -84,17 +81,20 @@ extension TimeKeepingViewController: UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if (listTimeKeeping[indexPath.section].isExpand == true) {
-            return 44
+            return UITableViewAutomaticDimension
         } else {
             return 0
         }
     }
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> CGFloat? {
+        return 2
+    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.selectIndexPath = indexPath
+//        self.selectIndexPath = indexPath
         listTimeKeeping[indexPath.section].isExpand = !listTimeKeeping[indexPath.section].isExpand
         weekTableView.beginUpdates()
-        weekTableView.reloadSections([indexPath.section], with: .automatic)
+//        weekTableView.reloadSections([indexPath.section], with: .automatic)
         weekTableView.endUpdates()
     }
     

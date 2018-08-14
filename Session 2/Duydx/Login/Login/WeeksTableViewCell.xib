@@ -30,7 +30,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DKC-Bd-ANn">
-                        <rect key="frame" x="274" y="11" width="85" height="19"/>
+                        <rect key="frame" x="274" y="11" width="85" height="20"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sho-4J-R9V">
                                 <rect key="frame" x="0.0" y="0.0" width="39.5" height="19"/>
@@ -60,6 +60,7 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="GZD-ox-INV" firstAttribute="centerY" secondItem="DKC-Bd-ANn" secondAttribute="centerY" id="3dY-Gl-UdR"/>
+                            <constraint firstAttribute="height" constant="20" id="Anj-77-OpP"/>
                             <constraint firstItem="GZD-ox-INV" firstAttribute="leading" secondItem="hjF-xK-15U" secondAttribute="trailing" constant="7" id="Ax6-Cu-IU2"/>
                             <constraint firstItem="hjF-xK-15U" firstAttribute="centerY" secondItem="sho-4J-R9V" secondAttribute="centerY" id="RCK-28-sOD"/>
                             <constraint firstItem="hjF-xK-15U" firstAttribute="leading" secondItem="sho-4J-R9V" secondAttribute="trailing" constant="4" id="UrR-yS-fav"/>
@@ -75,6 +76,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="backgroundColorView" destination="8kz-6D-1lV" id="lhx-CH-gGu"/>
                 <outlet property="isExpandImage" destination="GZD-ox-INV" id="92g-NO-uEa"/>
                 <outlet property="numberDayLabel" destination="sho-4J-R9V" id="Dyv-cg-GcW"/>
                 <outlet property="weekLabel" destination="Nrz-Cb-YZs" id="aq8-Ai-QaK"/>

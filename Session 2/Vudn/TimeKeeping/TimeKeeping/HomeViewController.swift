@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class HomeViewController: UIViewController {
     let tag = "HomeViewController"
@@ -17,11 +18,19 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         print(tag + " did load")
         // Do any additional setup after loading the view.
+        
+        let userDefault = UserDefaults.standard
+        userDefault.set("VU", forKey: "username")
+        userDefault.synchronize()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         navigationItem.title = "Home"
         print(tag + " will appear")
+        
+        let userDefault = UserDefaults.standard
+        userDefault.value(forKey: "username")                
     }
     
     override func viewDidAppear(_ animated: Bool) {

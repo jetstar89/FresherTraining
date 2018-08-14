@@ -9,7 +9,6 @@
 import UIKit
 
 extension UITextField {
-    
     func setIsOnFocus(_ isOnFocus: Bool) {
         self.borderStyle = .none
         let border = CALayer()
