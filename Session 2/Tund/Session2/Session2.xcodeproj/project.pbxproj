@@ -452,6 +452,7 @@
 			buildConfigurationList = 84EC30B121142E61000F5AC9 /* Build configuration list for PBXNativeTarget "Session2" */;
 			buildPhases = (
 				B9C6CF46AE66B97867038983 /* [CP] Check Pods Manifest.lock */,
+				849AD6A821242C4500C48A75 /* ShellScript */,
 				84EC308521142E5F000F5AC9 /* Sources */,
 				84EC308621142E5F000F5AC9 /* Frameworks */,
 				84EC308721142E5F000F5AC9 /* Resources */,
@@ -623,6 +624,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Session2/Pods-Session2-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		849AD6A821242C4500C48A75 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
 		};
 		A80B73ACFEB07474EAA218AD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

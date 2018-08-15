@@ -8,7 +8,7 @@
 
 import UIKit
 
-class _ViewController: UIViewController {
+class TrashViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +20,6 @@ class _ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
     /*
     // MARK: - Navigation
 

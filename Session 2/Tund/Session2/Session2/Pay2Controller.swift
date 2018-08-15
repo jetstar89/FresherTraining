@@ -12,7 +12,6 @@ class Pay2Controller: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.navigationItem.title = "Pay2Controller"
 
         // Do any additional setup after loading the view.
@@ -22,8 +21,6 @@ class Pay2Controller: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
     /*
     // MARK: - Navigation
 

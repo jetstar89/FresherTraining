@@ -9,21 +9,19 @@
 import UIKit
 
 class Person: NSObject {
-    var id: String
+    var idUser: String
     var avatar: UIImage
     var name: String
     var phone: String
     var position: String
     var status: String
-    
-    init(id: String, avatar: UIImage, name: String, phone: String, position: String, status: String) {
-         self.id = id
+    init(idUser: String, avatar: UIImage, name: String, phone: String, position: String, status: String) {
+         self.idUser = idUser
          self.avatar = avatar
          self.name = name
          self.phone = phone
          self.position = position
          self.status = status
-        
     }
 
 }

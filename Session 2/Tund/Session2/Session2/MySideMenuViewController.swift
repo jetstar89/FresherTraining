@@ -11,21 +11,13 @@ import SideMenu
 
 class MySideMenuViewController: UISideMenuNavigationController {
 
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         SideMenuManager.default.menuAddPanGestureToPresent(toView: self.navigationController!.navigationBar)
         SideMenuManager.default.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view)
-        
         let screenSize: CGRect = UIScreen.main.bounds
         SideMenuManager.default.menuWidth = max(round(min((screenSize.width), (screenSize.height)) * 0.75), 311)
-        
-        
     }
-    
-
     /*
     // MARK: - Navigation
 

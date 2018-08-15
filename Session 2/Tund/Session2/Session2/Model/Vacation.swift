@@ -15,7 +15,6 @@ class Vacation: NSObject {
     var timeBegin: String
     var resultNote: String
     var result: String
-    
     init(name: String, reason: String, timeDuration: String, timeBegin: String, resultNote: String, result: String) {
         self.name = name
         self.reason = reason
@@ -24,6 +23,4 @@ class Vacation: NSObject {
         self.resultNote = resultNote
         self.result = result
     }
-    
-
 }

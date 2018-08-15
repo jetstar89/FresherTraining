@@ -10,7 +10,6 @@ import UIKit
 
 class ChangePasswordViewController: UIViewController {
     @IBOutlet weak var showNewPasswordAgainImageView: UIImageView!
-    
     @IBOutlet weak var newPasswordAgainTextField: UITextField!
     @IBOutlet weak var newPasswordTextField: UITextField!
     @IBOutlet weak var oldPasswordTextField: UITextField!
@@ -28,7 +27,6 @@ class ChangePasswordViewController: UIViewController {
         oldPasswordTextField.setIsOnFocus(false)
         newPasswordAgainTextField.setIsOnFocus(false)
         newPasswordTextField.setIsOnFocus(false)
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,32 +36,27 @@ class ChangePasswordViewController: UIViewController {
     // MARK: init view
     func initView() {
         navigationItem.title = "ĐỔI MẬT KHẨU"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "left-arrow"), style: .plain, target: self, action: #selector(onBack))
-        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "left-arrow"),
+                                                           style: .plain, target: self, action: #selector(onBack))
         changePasswordButton.layer.cornerRadius = 2
         changePasswordButton.layer.masksToBounds = true
     }
-    func tapImageView(){
+    func tapImageView() {
         //tap icon show password
         let showPasswordGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(showPassword(_:)))
         showNewPasswordImageView.isUserInteractionEnabled = true
         showNewPasswordImageView.addGestureRecognizer(showPasswordGestureRecognizer)
-        
         let showPasswordAgain = UITapGestureRecognizer(target: self, action: #selector(showPasswordAgainFunc(_:)))
         showNewPasswordAgainImageView.isUserInteractionEnabled =  true
         showNewPasswordAgainImageView.addGestureRecognizer(showPasswordAgain)
-        
         //tap screen
-        let onTapViewGestureRecognizer = UITapGestureRecognizer(target: self,action: #selector(onTapView(_:)))
+        let onTapViewGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(onTapView(_:)))
         view.isUserInteractionEnabled = true
         view.addGestureRecognizer(onTapViewGestureRecognizer)
-        
     }
-    
     @objc func onBack() {
         navigationController?.popViewController(animated: true)
     }
-    
     @objc func showPasswordAgainFunc(_ sender: UITapGestureRecognizer) {
         if newPasswordAgainTextField.isSecureTextEntry {
             newPasswordAgainTextField.isSecureTextEntry = false
@@ -72,11 +65,7 @@ class ChangePasswordViewController: UIViewController {
             newPasswordAgainTextField.isSecureTextEntry = true
             showNewPasswordAgainImageView.image = UIImage(named: "icshowView")
         }
-        
-        
-        
     }
-    
     @objc func showPassword(_ sender: UITapGestureRecognizer) {
         if newPasswordTextField.isSecureTextEntry {
             newPasswordTextField.isSecureTextEntry = false
@@ -85,9 +74,6 @@ class ChangePasswordViewController: UIViewController {
             newPasswordTextField.isSecureTextEntry = true
             showNewPasswordImageView.image = UIImage(named: "icshowView")
         }
-       
-        
-        
     }
     @objc func onTapView(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
@@ -95,7 +81,6 @@ class ChangePasswordViewController: UIViewController {
 }
 // MARK: UITextFieldDelegate
 extension ChangePasswordViewController: UITextFieldDelegate {
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if  textField == oldPasswordTextField {
             newPasswordTextField.becomeFirstResponder()
@@ -125,14 +110,8 @@ extension ChangePasswordViewController: UITextFieldDelegate {
         } else if textField == newPasswordAgainTextField && newPasswordAgainTextField.text == ""{
             showNewPasswordAgainImageView.isHidden = true
         } else {
-            
+            //
         }
         textField.setIsOnFocus(false)
     }
-    
-    
-   
-    
 }
-
-
