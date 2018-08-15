@@ -22,8 +22,6 @@ class TimeKeepingTableViewCell: UITableViewCell {
     @IBOutlet weak var locationCommentLabel: UILabel!
     @IBOutlet weak var vacationTypeImageView: UIImageView!
     
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -73,11 +71,8 @@ class TimeKeepingTableViewCell: UITableViewCell {
         switch cellData.vacationType {
         case 0:
             vacationTypeImageView.image = #imageLiteral(resourceName: "icPhepCoLuong")
-            break
-            
         case 1:
             vacationTypeImageView.image = #imageLiteral(resourceName: "icPhepKoLuong")
-            break
         default:
             break
         }

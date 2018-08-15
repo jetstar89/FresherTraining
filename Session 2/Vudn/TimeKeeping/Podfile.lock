@@ -1,20 +1,20 @@
 PODS:
-  - GoogleMaps (2.7.0):
-    - GoogleMaps/Maps (= 2.7.0)
-  - GoogleMaps/Base (2.7.0)
-  - GoogleMaps/Maps (2.7.0):
-    - GoogleMaps/Base
+  - SideMenu (4.0.0)
+  - SwiftLint (0.27.0)
 
 DEPENDENCIES:
-  - GoogleMaps
+  - SideMenu
+  - SwiftLint
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - GoogleMaps
+    - SideMenu
+    - SwiftLint
 
 SPEC CHECKSUMS:
-  GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
+  SideMenu: 70ee5657df63ec3382660ec4ef470bf1cf5db07d
+  SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
 
-PODFILE CHECKSUM: 895cb1edc4b4945aede3f89681d38ed7ca61784e
+PODFILE CHECKSUM: 3794a493d51a77a52b85c296605ffd4179113beb
 
 COCOAPODS: 1.5.3

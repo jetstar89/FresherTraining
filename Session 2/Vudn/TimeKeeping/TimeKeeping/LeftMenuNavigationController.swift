@@ -1,14 +1,14 @@
-	//
-//  VacationViewController.swift
+//
+//  LeftMenuNavigationController.swift
 //  TimeKeeping
 //
-//  Created by Đinh Ngọc Vũ on 8/13/18.
+//  Created by Đinh Ngọc Vũ on 8/15/18.
 //  Copyright © 2018 GEM. All rights reserved.
 //
 
 import UIKit
 
-class VacationViewController: UIViewController {
+class LeftMenuNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,5 +30,4 @@ class VacationViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SideMenu
 
 class ViewController: UIViewController {
 
@@ -70,10 +71,10 @@ class ViewController: UIViewController {
         passwordTextField.text = ""
         hiddenPasswordImageView.isHidden = true
         view.endEditing(true)
-        (UIApplication.shared.delegate as? AppDelegate)?.setUpRootViewIsHomeTabbar()
+        //(UIApplication.shared.delegate as? AppDelegate)?.setUpRootViewIsHomeTabbar()
+        (UIApplication.shared.delegate as? AppDelegate)?.setUpRootViewIsTimeKeepingViewController()
     }
-    
-    
+
     @objc func onShowPassword(_ sender: UITapGestureRecognizer) {
         if passwordTextField.isSecureTextEntry {
             passwordTextField.isSecureTextEntry = false
@@ -86,7 +87,7 @@ class ViewController: UIViewController {
         }
     }
     
-    @objc func onShowForgotPasswordScreen(_ sender: UITapGestureRecognizer){
+    @objc func onShowForgotPasswordScreen(_ sender: UITapGestureRecognizer) {
         let forgotPasswordViewController = ForgotPasswordViewController(nibName: "ForgotPasswordViewController", bundle: nil)
         navigationController?.pushViewController(forgotPasswordViewController, animated: true)
     }

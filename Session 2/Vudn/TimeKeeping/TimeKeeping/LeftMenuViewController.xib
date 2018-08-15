@@ -15,10 +15,16 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="TimeKeeping" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LeftMenuViewController" customModule="TimeKeeping" customModuleProvider="target">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="leftSide" value="YES"/>
+                <userDefinedRuntimeAttribute type="number" keyPath="menuWidth">
+                    <real key="value" value="0.0"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <connections>
-                <outlet property="IdLabel" destination="8xp-UI-1h9" id="5Ib-fa-Q9p"/>
                 <outlet property="avatarImageView" destination="V6k-Mw-OW3" id="okV-kC-J1p"/>
+                <outlet property="idLabel" destination="8xp-UI-1h9" id="dPe-WR-mG6"/>
                 <outlet property="logOutButton" destination="beJ-8u-WfG" id="GtS-qo-xyl"/>
                 <outlet property="menuTableView" destination="70z-V2-usS" id="Tyd-xD-LdW"/>
                 <outlet property="nameLabel" destination="nVH-C1-G2R" id="Plg-wY-mex"/>
@@ -26,7 +32,7 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFill" restorationIdentifier="ProfileViewController" id="i5M-Pr-FkT">
+        <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFill" restorationIdentifier="LeftMenuViewController" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
