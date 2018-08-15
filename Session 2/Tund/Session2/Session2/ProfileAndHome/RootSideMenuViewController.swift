@@ -16,6 +16,12 @@ class RootSideMenuViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "iconMenu"), style: .plain, target: self, action: #selector(openMenu))
+        // setupSide menu
+        let menuleftRoot = Profile3ViewController(nibName: "Profile3ViewController", bundle: nil)
+        let menuLeftNavigationController = UISideMenuNavigationController(rootViewController: menuleftRoot)
+        SideMenuManager.default.menuLeftNavigationController = menuLeftNavigationController
+        
+        SideMenuManager.default.menuWidth = max(round(min((screenSize.width), (screenSize.height)) * 0.8), 311)
 
         
         // Do any additional setup after loading the view.
@@ -31,12 +37,10 @@ class RootSideMenuViewController: UIViewController {
     }
     
     @objc func openMenu() {
-        let menuleftRoot = Profile3ViewController(nibName: "Profile3ViewController", bundle: nil)
-        let menuLeftNavigationController = UISideMenuNavigationController(rootViewController: menuleftRoot)
-        SideMenuManager.default.menuLeftNavigationController = menuLeftNavigationController
         
-        SideMenuManager.default.menuWidth = max(round(min((screenSize.width), (screenSize.height)) * 0.8), 311)
-        self.present(menuLeftNavigationController, animated: true, completion: nil)
+        guard let sideMenu = SideMenuManager.default.menuLeftNavigationController else { return  }
+      
+        self.present(sideMenu, animated: true, completion: nil)
     }
     
 
