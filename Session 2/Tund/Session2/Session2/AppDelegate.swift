@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SideMenu
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,32 +18,47 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
+        setupDeaultStyleNavigationBar()
         setupNavigation()
         window?.makeKeyAndVisible()
         return true
     }
+    func setupDeaultStyleNavigationBar(){
+        let navigationBarAppearace = UINavigationBar.appearance()
+        navigationBarAppearace.tintColor = UIColor.white
+        navigationBarAppearace.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        navigationBarAppearace.barTintColor = UIColor.frenchBlue
+        
+        
+    }
+   
+ 
+    
     func setupNavigation() {
         let viewcontroller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController")
         let rootNavigationController = UINavigationController(rootViewController: viewcontroller)
         window?.rootViewController = rootNavigationController
-        
+        window?.makeKeyAndVisible()
     }
+  
     func setUpNavigationTimeKeeping(){
         let viewcontroller = UIStoryboard(name: "TimeKeepingViewController", bundle: nil).instantiateViewController(withIdentifier: "TimeKeepingViewController")
         let rootNavigationController = UINavigationController(rootViewController: viewcontroller)
         window?.rootViewController = rootNavigationController
+        window?.makeKeyAndVisible()
     }
+    
     func setupTabbar(){
-        let profileController = Profile3ViewController(nibName: "Profile3ViewController", bundle: nil)
+        let rootSideMenu = RootSideMenuViewController(nibName: "RootSideMenuViewController", bundle: nil)
         let homeController = HomeViewController(nibName: "HomeViewController", bundle: nil)
         
-        let navigationProfile = UINavigationController(rootViewController: profileController)
-        navigationProfile.navigationBar.isTranslucent = false
+        let navigationRootSideMenu = UINavigationController(rootViewController: rootSideMenu)
+      
         let navigationHome = UINavigationController(rootViewController: homeController)
         let tabbarController = UITabBarController()
         
         
-        tabbarController.viewControllers = [navigationHome, navigationProfile]
+        tabbarController.viewControllers = [navigationHome, navigationRootSideMenu]
         let homeTabbarItem = tabbarController.tabBar.items?[0]
         homeTabbarItem?.image = #imageLiteral(resourceName: "home-1").withRenderingMode(.alwaysOriginal)
         homeTabbarItem?.imageInsets = UIEdgeInsets(top: 10, left: 0, bottom: -10, right: 0)
@@ -51,9 +67,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         profileTabbarItem?.imageInsets = UIEdgeInsets(top: 10, left: 0, bottom: -10, right: 0)
         
         tabbarController.tabBar.barTintColor = UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1)
-     
+        
+       
         window?.rootViewController = tabbarController
-            
+        window?.makeKeyAndVisible()
         
     }
     

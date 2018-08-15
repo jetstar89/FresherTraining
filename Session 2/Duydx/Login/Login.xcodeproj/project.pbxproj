@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BF0B5B26EB4BF7BD8B44CBF /* Pods_Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87A4BFF0D5E5486FF701E0C5 /* Pods_Login.framework */; };
 		84196FA92121260C00553107 /* WeeksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84196FA82121260C00553107 /* WeeksTableViewCell.xib */; };
 		84196FAB2121778A00553107 /* WeeksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84196FAA2121778A00553107 /* WeeksTableViewCell.swift */; };
+		84B7CB902122B1F300B9CE99 /* BrowseRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7CB8E2122B1F300B9CE99 /* BrowseRequestViewController.swift */; };
+		84B7CB912122B1F300B9CE99 /* BrowseRequestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B7CB8F2122B1F300B9CE99 /* BrowseRequestViewController.xib */; };
+		84B7CB9D2122B91A00B9CE99 /* BrowseRequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7CB9B2122B91A00B9CE99 /* BrowseRequestTableViewCell.swift */; };
+		84B7CB9E2122B91A00B9CE99 /* BrowseRequestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B7CB9C2122B91A00B9CE99 /* BrowseRequestTableViewCell.xib */; };
+		84B7CBA12122B99300B9CE99 /* Vacation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7CBA02122B99300B9CE99 /* Vacation.swift */; };
 		84E5AB9C211D4D44003D1BF9 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5AB9A211D4D44003D1BF9 /* ChangePasswordViewController.swift */; };
 		84E5AB9D211D4D44003D1BF9 /* ChangePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E5AB9B211D4D44003D1BF9 /* ChangePasswordViewController.xib */; };
 		84E5ABA8211D87BA003D1BF9 /* DaysTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5ABA6211D87BA003D1BF9 /* DaysTableViewCell.swift */; };
@@ -55,8 +61,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0CCD682A34C70A6AFA0ED759 /* Pods-Login.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login.release.xcconfig"; path = "Pods/Target Support Files/Pods-Login/Pods-Login.release.xcconfig"; sourceTree = "<group>"; };
 		84196FA82121260C00553107 /* WeeksTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeeksTableViewCell.xib; sourceTree = "<group>"; };
 		84196FAA2121778A00553107 /* WeeksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeksTableViewCell.swift; sourceTree = "<group>"; };
+		84B7CB8E2122B1F300B9CE99 /* BrowseRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseRequestViewController.swift; sourceTree = "<group>"; };
+		84B7CB8F2122B1F300B9CE99 /* BrowseRequestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrowseRequestViewController.xib; sourceTree = "<group>"; };
+		84B7CB9B2122B91A00B9CE99 /* BrowseRequestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseRequestTableViewCell.swift; sourceTree = "<group>"; };
+		84B7CB9C2122B91A00B9CE99 /* BrowseRequestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrowseRequestTableViewCell.xib; sourceTree = "<group>"; };
+		84B7CBA02122B99300B9CE99 /* Vacation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vacation.swift; sourceTree = "<group>"; };
 		84E5AB9A211D4D44003D1BF9 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		84E5AB9B211D4D44003D1BF9 /* ChangePasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangePasswordViewController.xib; sourceTree = "<group>"; };
 		84E5ABA6211D87BA003D1BF9 /* DaysTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysTableViewCell.swift; sourceTree = "<group>"; };
@@ -102,6 +114,8 @@
 		84F454732118555800217F3D /* HomeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeController.xib; sourceTree = "<group>"; };
 		84F454762118570E00217F3D /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		84F454772118570E00217F3D /* ProfileController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileController.xib; sourceTree = "<group>"; };
+		87A4BFF0D5E5486FF701E0C5 /* Pods_Login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E02A2A7625232BF928AD48C4 /* Pods-Login.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Login/Pods-Login.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,18 +123,140 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BF0B5B26EB4BF7BD8B44CBF /* Pods_Login.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		845E43713E4552082F29BD8E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E02A2A7625232BF928AD48C4 /* Pods-Login.debug.xcconfig */,
+				0CCD682A34C70A6AFA0ED759 /* Pods-Login.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		84B7CB8D2122B1A500B9CE99 /* BrowseRequest */ = {
+			isa = PBXGroup;
+			children = (
+				84B7CB9F2122B92100B9CE99 /* Model */,
+				84B7CB8E2122B1F300B9CE99 /* BrowseRequestViewController.swift */,
+				84B7CB8F2122B1F300B9CE99 /* BrowseRequestViewController.xib */,
+				84B7CB9B2122B91A00B9CE99 /* BrowseRequestTableViewCell.swift */,
+				84B7CB9C2122B91A00B9CE99 /* BrowseRequestTableViewCell.xib */,
+			);
+			path = BrowseRequest;
+			sourceTree = "<group>";
+		};
+		84B7CB922122B4B800B9CE99 /* TimeKeeping */ = {
+			isa = PBXGroup;
+			children = (
+				84B7CB942122B53A00B9CE99 /* Model */,
+				84196FAA2121778A00553107 /* WeeksTableViewCell.swift */,
+				84E87E00211BE1D700C896B7 /* TimeKeepingViewController.swift */,
+				84E87E01211BE1D700C896B7 /* TimeKeepingViewController.xib */,
+				84196FA82121260C00553107 /* WeeksTableViewCell.xib */,
+				84E5ABA6211D87BA003D1BF9 /* DaysTableViewCell.swift */,
+				84E5ABA7211D87BA003D1BF9 /* DaysTableViewCell.xib */,
+			);
+			path = TimeKeeping;
+			sourceTree = "<group>";
+		};
+		84B7CB932122B51700B9CE99 /* FogotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				84F4546E211853CC00217F3D /* FogotPasswordController.swift */,
+				84F4546F211853CC00217F3D /* FogotPasswordController.xib */,
+			);
+			path = FogotPassword;
+			sourceTree = "<group>";
+		};
+		84B7CB942122B53A00B9CE99 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84E5ABAA211D97D5003D1BF9 /* DayOfWeek.swift */,
+				84E5ABAC211D98D5003D1BF9 /* Week.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84B7CB952122B55400B9CE99 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				84B7CB972122B5A600B9CE99 /* Model */,
+				84E87E08211C1AAB00C896B7 /* FunctionTableViewCell.swift */,
+				84E87E09211C1AAB00C896B7 /* FunctionTableViewCell.xib */,
+				84F454762118570E00217F3D /* ProfileController.swift */,
+				84F454772118570E00217F3D /* ProfileController.xib */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		84B7CB962122B57400B9CE99 /* ChangePassword */ = {
+			isa = PBXGroup;
+			children = (
+				84E5AB9A211D4D44003D1BF9 /* ChangePasswordViewController.swift */,
+				84E5AB9B211D4D44003D1BF9 /* ChangePasswordViewController.xib */,
+			);
+			path = ChangePassword;
+			sourceTree = "<group>";
+		};
+		84B7CB972122B5A600B9CE99 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84E87E0C211C1C3E00C896B7 /* Funciton.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84B7CB982122B5BC00B9CE99 /* Personnel */ = {
+			isa = PBXGroup;
+			children = (
+				84B7CB992122B5CD00B9CE99 /* Model */,
+				84E87E04211BE37C00C896B7 /* PersonnelViewController.swift */,
+				84E87E05211BE37C00C896B7 /* PersonnelViewController.xib */,
+				84E87E10211C462200C896B7 /* PersonTableViewCell.swift */,
+				84E87E11211C462200C896B7 /* PersonTableViewCell.xib */,
+			);
+			path = Personnel;
+			sourceTree = "<group>";
+		};
+		84B7CB992122B5CD00B9CE99 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84E87E0E211C44D200C896B7 /* Person.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84B7CB9A2122B5D900B9CE99 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				84F454722118555800217F3D /* HomeController.swift */,
+				84F454732118555800217F3D /* HomeController.xib */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		84B7CB9F2122B92100B9CE99 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84B7CBA02122B99300B9CE99 /* Vacation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		84ED89A821142E73005D2174 = {
 			isa = PBXGroup;
 			children = (
 				84ED89B321142E73005D2174 /* Login */,
 				84ED89B221142E73005D2174 /* Products */,
 				84F4546D211852F900217F3D /* Recovered References */,
+				845E43713E4552082F29BD8E /* Pods */,
+				9911C8C9EB2D03005D6733FD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +271,13 @@
 		84ED89B321142E73005D2174 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				84B7CB9A2122B5D900B9CE99 /* Home */,
+				84B7CB982122B5BC00B9CE99 /* Personnel */,
+				84B7CB962122B57400B9CE99 /* ChangePassword */,
+				84B7CB952122B55400B9CE99 /* Profile */,
+				84B7CB932122B51700B9CE99 /* FogotPassword */,
+				84B7CB922122B4B800B9CE99 /* TimeKeeping */,
+				84B7CB8D2122B1A500B9CE99 /* BrowseRequest */,
 				84F454182117EBA000217F3D /* Resource */,
 				84ED89B421142E73005D2174 /* AppDelegate.swift */,
 				84ED89B621142E73005D2174 /* ViewController.swift */,
@@ -142,30 +285,6 @@
 				84ED89BB21142E74005D2174 /* Assets.xcassets */,
 				84ED89BD21142E74005D2174 /* LaunchScreen.storyboard */,
 				84ED89C021142E74005D2174 /* Info.plist */,
-				84F4546E211853CC00217F3D /* FogotPasswordController.swift */,
-				84F4546F211853CC00217F3D /* FogotPasswordController.xib */,
-				84F454722118555800217F3D /* HomeController.swift */,
-				84F454732118555800217F3D /* HomeController.xib */,
-				84F454762118570E00217F3D /* ProfileController.swift */,
-				84F454772118570E00217F3D /* ProfileController.xib */,
-				84E87E00211BE1D700C896B7 /* TimeKeepingViewController.swift */,
-				84E87E01211BE1D700C896B7 /* TimeKeepingViewController.xib */,
-				84E87E04211BE37C00C896B7 /* PersonnelViewController.swift */,
-				84E87E05211BE37C00C896B7 /* PersonnelViewController.xib */,
-				84E87E08211C1AAB00C896B7 /* FunctionTableViewCell.swift */,
-				84E87E09211C1AAB00C896B7 /* FunctionTableViewCell.xib */,
-				84E87E0C211C1C3E00C896B7 /* Funciton.swift */,
-				84E87E0E211C44D200C896B7 /* Person.swift */,
-				84E87E10211C462200C896B7 /* PersonTableViewCell.swift */,
-				84E87E11211C462200C896B7 /* PersonTableViewCell.xib */,
-				84E5AB9A211D4D44003D1BF9 /* ChangePasswordViewController.swift */,
-				84E5AB9B211D4D44003D1BF9 /* ChangePasswordViewController.xib */,
-				84196FA82121260C00553107 /* WeeksTableViewCell.xib */,
-				84E5ABA6211D87BA003D1BF9 /* DaysTableViewCell.swift */,
-				84E5ABA7211D87BA003D1BF9 /* DaysTableViewCell.xib */,
-				84E5ABAA211D97D5003D1BF9 /* DayOfWeek.swift */,
-				84E5ABAC211D98D5003D1BF9 /* Week.swift */,
-				84196FAA2121778A00553107 /* WeeksTableViewCell.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -208,6 +327,14 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
+		9911C8C9EB2D03005D6733FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				87A4BFF0D5E5486FF701E0C5 /* Pods_Login.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -215,9 +342,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84ED89C321142E74005D2174 /* Build configuration list for PBXNativeTarget "Login" */;
 			buildPhases = (
+				0DB7E114F92CB94F9E54F20B /* [CP] Check Pods Manifest.lock */,
 				84ED89AD21142E73005D2174 /* Sources */,
 				84ED89AE21142E73005D2174 /* Frameworks */,
 				84ED89AF21142E73005D2174 /* Resources */,
+				A65BF1DE612B75166249FCDF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -281,6 +410,7 @@
 				84F4542B2117EBBB00217F3D /* Roboto-Black.ttf in Resources */,
 				84F454312117EBBB00217F3D /* Roboto-Thin.ttf in Resources */,
 				84F454382117EBBB00217F3D /* Roboto-BoldCondensedItalic.ttf in Resources */,
+				84B7CB9E2122B91A00B9CE99 /* BrowseRequestTableViewCell.xib in Resources */,
 				84F454322117EBBB00217F3D /* Roboto-Condensed.ttf in Resources */,
 				84F4542E2117EBBB00217F3D /* Roboto-ThinItalic.ttf in Resources */,
 				84F454792118570E00217F3D /* ProfileController.xib in Resources */,
@@ -290,6 +420,7 @@
 				84F454302117EBBB00217F3D /* Roboto-Italic.ttf in Resources */,
 				84196FA92121260C00553107 /* WeeksTableViewCell.xib in Resources */,
 				84F454332117EBBB00217F3D /* Roboto-Regular.ttf in Resources */,
+				84B7CB912122B1F300B9CE99 /* BrowseRequestViewController.xib in Resources */,
 				84E5ABA9211D87BA003D1BF9 /* DaysTableViewCell.xib in Resources */,
 				84F454392117EBBB00217F3D /* Roboto-LightItalic.ttf in Resources */,
 				84F4542F2117EBBB00217F3D /* Roboto-BoldCondensed.ttf in Resources */,
@@ -299,6 +430,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0DB7E114F92CB94F9E54F20B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Login-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A65BF1DE612B75166249FCDF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Login/Pods-Login-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SideNavigation/SideNavigation.framework",
+				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideNavigation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Login/Pods-Login-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		84ED89AD21142E73005D2174 /* Sources */ = {
@@ -311,13 +483,16 @@
 				84E87E0D211C1C3E00C896B7 /* Funciton.swift in Sources */,
 				84ED89B721142E73005D2174 /* ViewController.swift in Sources */,
 				84196FAB2121778A00553107 /* WeeksTableViewCell.swift in Sources */,
+				84B7CBA12122B99300B9CE99 /* Vacation.swift in Sources */,
 				84E5ABA8211D87BA003D1BF9 /* DaysTableViewCell.swift in Sources */,
 				84E87E12211C462200C896B7 /* PersonTableViewCell.swift in Sources */,
 				84E5ABAB211D97D5003D1BF9 /* DayOfWeek.swift in Sources */,
 				84ED89B521142E73005D2174 /* AppDelegate.swift in Sources */,
+				84B7CB902122B1F300B9CE99 /* BrowseRequestViewController.swift in Sources */,
 				84F45470211853CC00217F3D /* FogotPasswordController.swift in Sources */,
 				84F454742118555800217F3D /* HomeController.swift in Sources */,
 				84E87E06211BE37C00C896B7 /* PersonnelViewController.swift in Sources */,
+				84B7CB9D2122B91A00B9CE99 /* BrowseRequestTableViewCell.swift in Sources */,
 				84E5AB9C211D4D44003D1BF9 /* ChangePasswordViewController.swift in Sources */,
 				84E87E02211BE1D700C896B7 /* TimeKeepingViewController.swift in Sources */,
 				84E87E0A211C1AAB00C896B7 /* FunctionTableViewCell.swift in Sources */,
@@ -462,6 +637,7 @@
 		};
 		84ED89C421142E74005D2174 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E02A2A7625232BF928AD48C4 /* Pods-Login.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -479,6 +655,7 @@
 		};
 		84ED89C521142E74005D2174 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CCD682A34C70A6AFA0ED759 /* Pods-Login.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
