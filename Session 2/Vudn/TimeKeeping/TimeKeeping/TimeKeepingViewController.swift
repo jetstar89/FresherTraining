@@ -7,14 +7,17 @@
 //
 
 import UIKit
+import SideMenu
 
 class TimeKeepingViewController: UIViewController {
-    
-    var tableViewData = [SectionData]()
     
     // MARK: - IBOutlet
     
     @IBOutlet weak var timeKeepingTableView: UITableView!
+    
+    // MARK: - Variable
+    var tableViewData = [SectionData]()
+    let tag = "TimeKeepingViewController"
     
     // MARK: - LIFE CYCLE
     
@@ -23,17 +26,18 @@ class TimeKeepingViewController: UIViewController {
         timeKeepingTableView.register(UINib(nibName: "TimeKeepingTableViewHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "header")
         timeKeepingTableView.register(UINib(nibName: "TimeKeepingTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         createData()
+        setupLeftMenu()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
         if let navigationBar = navigationController?.navigationBar {
             navigationBar.isHidden = false
-            navigationBar.barTintColor = UIColor.frenchBlue
-            navigationBar.tintColor = UIColor.white
-            navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
-            navigationItem.title = "CHẤM CÔNG"
+            //SideMenuManager.default.menuAddPanGestureToPresent(toView: navigationBar)
+            //SideMenuManager.default.menuAddScreenEdgePanGesturesToPresent(toView: navigationBar)
         }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
         
     }
 
@@ -42,7 +46,16 @@ class TimeKeepingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    deinit {
+        
+    }
+    
     // MARK: - Selector
+    
+    @objc func onShowLeftMenu(_ sender: MainNavigationController) {
+        guard let sideMenu = SideMenuManager.default.menuLeftNavigationController else { return }
+        present(sideMenu, animated: true, completion: nil)
+    }
     
     // MARK: - IBAction
     
@@ -80,6 +93,21 @@ class TimeKeepingViewController: UIViewController {
             SectionData([
                 ])
         ]
+    }
+    
+    func setupLeftMenu() {
+        navigationItem.title = "CHẤM CÔNG"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ic_menu_three_line"), style: .plain, target: self, action: #selector(onShowLeftMenu(_:)))
+        let homeViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
+        let leftMenuViewController = LeftMenuViewController(nibName: "LeftMenuViewController", bundle: nil)
+        let menuLeftNavigationController = UISideMenuNavigationController(rootViewController: leftMenuViewController)
+        let menuRightNavigationController = UISideMenuNavigationController(rootViewController: homeViewController)
+        SideMenuManager.default.menuLeftNavigationController = menuLeftNavigationController
+        SideMenuManager.default.menuRightNavigationController = menuRightNavigationController
+        SideMenuManager.default.menuPushStyle = .preserve
+        SideMenuManager.default.menuPresentMode = .menuSlideIn
+        let uiScreen = UIScreen.main.bounds
+        SideMenuManager.default.menuWidth = max(round(min((uiScreen.width), (uiScreen.height)) * 0.8), 310)
     }
 }
 
@@ -132,7 +160,7 @@ extension TimeKeepingViewController: UITableViewDataSource {
         
         var sumTimeWorking: Float = 0
         for item in tableViewData[section].cellData {
-            sumTimeWorking = sumTimeWorking + item.timeWorking
+            sumTimeWorking += item.timeWorking
         }
         header.countDayLabel.text = "\(sumTimeWorking)/5"
         
@@ -198,5 +226,3 @@ struct CellData {
         self.locationComment = locationComment
     }
 }
-
-

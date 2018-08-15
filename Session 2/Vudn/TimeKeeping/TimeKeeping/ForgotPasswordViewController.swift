@@ -29,10 +29,6 @@ class ForgotPasswordViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = false
-        navigationController?.navigationBar.barTintColor = UIColor.frenchBlue
-        navigationController?.navigationBar.tintColor = UIColor.white
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
-        
         navigationItem.title = "QUÊN MẬT KHẨU"
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ic_back"), style: .plain, target: self, action: #selector(onBack(_:)))
         emailTextField.setIsOnFocus(false)

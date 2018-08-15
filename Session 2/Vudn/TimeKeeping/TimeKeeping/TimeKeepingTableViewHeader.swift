@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ExpandTableViewHeaderDelegate {
+protocol ExpandTableViewHeaderDelegate: class {
     func toggleSection(header: TimeKeepingTableViewHeader, section: Int)
 }
 
@@ -22,8 +22,7 @@ class TimeKeepingTableViewHeader: UITableViewHeaderFooterView {
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var arrowImageView: UIImageView!
     
-    
-    var delegate: ExpandTableViewHeaderDelegate?
+    weak var delegate: ExpandTableViewHeaderDelegate?
     var section: Int = 0
     
     // MARK: - Selector

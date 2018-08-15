@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SideMenu
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,13 +19,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupDefaultAppearance()
         window = UIWindow(frame: UIScreen.main.bounds)
         setUpRootViewIsLoginViewController()
+        setUpLeftMenu()
         window?.makeKeyAndVisible()
-        
         return true
     }
     
     func setupDefaultAppearance() {
         UINavigationBar.appearance().barTintColor = UIColor.frenchBlue
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
     }
     
     func setUpRootViewIsLoginViewController() {
@@ -33,22 +36,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = rootNavigationViewController
     }
     
-    func setUpRootViewIsHomeTabbar() {
-        let homeViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
-        let profileViewController = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
-        let homeViewNavigationController = UINavigationController(rootViewController: homeViewController)
-        let profileViewNavigationController = UINavigationController(rootViewController: profileViewController)
-        let tabbarController = UITabBarController()
-        //tabbarController.viewControllers = [homeViewNavigationController, profileViewNavigationController]
-        tabbarController.setViewControllers([homeViewNavigationController, profileViewNavigationController], animated: true)
+    func setUpRootViewIsTimeKeepingViewController() {
+        let timeKeepingViewController = TimeKeepingViewController(nibName: "TimeKeepingViewController", bundle: nil)
         
-        let homeTabbarItem = tabbarController.tabBar.items?[0]
-        homeTabbarItem?.image = #imageLiteral(resourceName: "ic_home").withRenderingMode(.automatic)
-        homeTabbarItem?.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
-        let profileTabbarItem = tabbarController.tabBar.items?[1]
-        profileTabbarItem?.image = #imageLiteral(resourceName: "ic_user").withRenderingMode(.automatic)
-        profileTabbarItem?.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
+        let rootNavigationController = UINavigationController(rootViewController: timeKeepingViewController)
+    
+        window?.rootViewController = rootNavigationController
+    }
+    
+    func setUpRootViewIsHomeTabbar() {
+        let tabbarController = MainTabbarController()
         window?.rootViewController = tabbarController
+    }
+    
+    func setUpLeftMenu() {
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

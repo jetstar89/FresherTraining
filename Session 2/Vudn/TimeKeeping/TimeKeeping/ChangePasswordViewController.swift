@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import SideMenu
 
 class ChangePasswordViewController: UIViewController {
-
+    let tag = "ChangePasswordViewController"
     // MARK: - IBOutlet
     
     @IBOutlet weak var oldPasswordTextField: UITextField!
@@ -19,7 +20,7 @@ class ChangePasswordViewController: UIViewController {
     @IBOutlet weak var confirmNewPasswordHiddenButton: UIButton!
     @IBOutlet weak var agreeButton: UIButton!
     
-    //MARK: - LIFE CYCLE
+    // MARK: - LIFE CYCLE
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,7 @@ class ChangePasswordViewController: UIViewController {
         newPasswordTextField.delegate = self
         confirmNewPasswordTextField.delegate = self
         agreeButton.layer.cornerRadius = 4
+        print(tag + " did load")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,17 +38,27 @@ class ChangePasswordViewController: UIViewController {
         
         if let navigationBar = navigationController?.navigationBar {
             navigationBar.isHidden = false
-            navigationBar.barTintColor = UIColor.frenchBlue
-            navigationBar.tintColor = UIColor.white
-            navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
             navigationItem.title = "ĐỔI MẬT KHẨU"
-            
         }
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ic_back"), style: .done, target: self, action: #selector(onBack(_:)))
+        print(tag + " did appear")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
     }
 
+    override func viewDidDisappear(_ animated: Bool) {
+        print(tag + " did disappear")
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    deinit {
+        print(tag + " deinit")
     }
     
     // IBAction
@@ -65,11 +77,13 @@ class ChangePasswordViewController: UIViewController {
     @IBAction func onConfirmNewPasswordHidden(_ sender: UIButton) {
         if confirmNewPasswordTextField.isSecureTextEntry {
             confirmNewPasswordTextField.isSecureTextEntry = false
-            confirmNewPasswordHiddenButton.frame = CGRect(x: confirmNewPasswordHiddenButton.frame.minX, y: confirmNewPasswordHiddenButton.frame.minY - 2, width: confirmNewPasswordHiddenButton.frame.width, height: 18)
+            let cgRect = CGRect(x: confirmNewPasswordHiddenButton.frame.minX, y: confirmNewPasswordHiddenButton.frame.minY - 2, width: confirmNewPasswordHiddenButton.frame.width, height: 18)
+            confirmNewPasswordHiddenButton.frame = cgRect
             confirmNewPasswordHiddenButton.setImage(#imageLiteral(resourceName: "icNotView"), for: .normal)
         } else {
             confirmNewPasswordTextField.isSecureTextEntry = true
-            confirmNewPasswordHiddenButton.frame = CGRect(x: confirmNewPasswordHiddenButton.frame.minX, y: confirmNewPasswordHiddenButton.frame.minY + 2, width: confirmNewPasswordHiddenButton.frame.width, height: 14)
+            let cgRect = CGRect(x: confirmNewPasswordHiddenButton.frame.minX, y: confirmNewPasswordHiddenButton.frame.minY + 2, width: confirmNewPasswordHiddenButton.frame.width, height: 14)
+            confirmNewPasswordHiddenButton.frame = cgRect
             confirmNewPasswordHiddenButton.setImage(#imageLiteral(resourceName: "icView"), for: .normal)
         }
     }
@@ -77,6 +91,12 @@ class ChangePasswordViewController: UIViewController {
     @IBAction func onAgree(_ sender: UIButton) {
         // Do something
         print("Agree change password")
+    }
+    
+    // MARK: = Selector
+    
+    @objc func onBack(_ sender: MainNavigationController) {
+        navigationController?.popViewController(animated: true)
     }
     
 }
@@ -88,15 +108,15 @@ extension ChangePasswordViewController: UITextFieldDelegate {
         switch textField {
         case oldPasswordTextField:
             oldPasswordTextField.setIsOnFocus(true)
-            break
+
         case newPasswordTextField:
             newPasswordTextField.setIsOnFocus(true)
             newPasswordHiddenButton.isHidden = false
-            break
+
         case confirmNewPasswordTextField:
             confirmNewPasswordTextField.setIsOnFocus(true)
             confirmNewPasswordHiddenButton.isHidden = false
-            break
+
         default:
             break
         }
@@ -106,17 +126,14 @@ extension ChangePasswordViewController: UITextFieldDelegate {
         switch textField {
         case oldPasswordTextField:
             oldPasswordTextField.setIsOnFocus(false)
-            break
             
         case newPasswordTextField:
             newPasswordTextField.setIsOnFocus(false)
             newPasswordHiddenButton.isHidden = true
-            break
             
         case confirmNewPasswordTextField:
             confirmNewPasswordTextField.setIsOnFocus(false)
             confirmNewPasswordHiddenButton.isHidden = true
-            break
             
         default:
             break
