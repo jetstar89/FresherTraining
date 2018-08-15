@@ -41,15 +41,21 @@ class Profile3ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     override func viewWillDisappear(_ animated: Bool) {
-        
+        super.viewWillDisappear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     // MARK: init and func
     @IBAction func logout(_ sender: Any) {
+        self.dismiss(animated: false, completion: nil)
         (UIApplication.shared.delegate as? AppDelegate)?.setupNavigation()
         
     }
@@ -124,6 +130,8 @@ extension Profile3ViewController: UITableViewDelegate{
             break
         
         case 5:
+            let rootSideMenuController = RootSideMenuViewController(nibName: "RootSideMenuViewController", bundle: nil)
+            navigationController?.pushViewController(rootSideMenuController, animated: true)
             break
         case 6:
             let changePasswordController = ChangePasswordViewController(nibName: "ChangePasswordViewController", bundle: nil)
@@ -165,7 +173,7 @@ extension UIView {
     func iSelected(_ isSelected: Bool){
         self.backgroundColor = isSelected ? UIColor(red: 35/255, green: 61/255, blue: 117/255, alpha: 1): UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1)
         let border = CALayer()
-        let width = CGFloat(5.0)
+        
         border.borderColor = isSelected ? UIColor.red.cgColor: UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1).cgColor
         border.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
         self.layer.addSublayer(border)

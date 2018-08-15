@@ -38,11 +38,6 @@ class ChangePasswordViewController: UIViewController {
     // MARK: init view
     func initView() {
         navigationItem.title = "ĐỔI MẬT KHẨU"
-        var navigationBarAppearace = UINavigationBar.appearance()
-        navigationBarAppearace.tintColor = UIColor.white
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
-        navigationController?.navigationBar.barTintColor = UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1)
-        
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "left-arrow"), style: .plain, target: self, action: #selector(onBack))
         
         changePasswordButton.layer.cornerRadius = 2

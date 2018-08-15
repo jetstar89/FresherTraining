@@ -20,8 +20,7 @@ extension UITextField {
         
         border.frame = CGRect(x: 0, y: self.frame.size.height - width, width: self.frame.size.width, height: self.frame.size.height)
         border.borderWidth = width
-        
-        
+    
         self.layer.addSublayer(border)
         self.layer.masksToBounds = true
         
@@ -32,7 +31,29 @@ extension UITextField {
     
     
 }
+extension UIColor {
+    @nonobjc class var pumpkinOrange: UIColor {
+        return UIColor(red: 242.0 / 255.0, green: 139.0 / 255.0, blue: 15.0 / 255.0, alpha: 1.0)
+    }
+    
+    
+    @nonobjc class var frenchBlue: UIColor {
+        return UIColor(red: 63.0 / 255.0, green: 95.0 / 255.0, blue: 163.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var steelGrey: UIColor {
+        return UIColor(red: 120.0 / 255.0, green: 131.0 / 255.0, blue: 140.0 / 255.0, alpha: 1.0)
+    }
+    
+    
+    @nonobjc class var darkSlateBlue: UIColor {
+        return UIColor(red: 35.0 / 255.0, green: 61.0 / 255.0, blue: 117.0 / 255.0, alpha: 1.0)
+    }
+    
+  
+}
 extension UIView {
+   
     func setIsOnSelect(_ isOnSelect: Bool) {
         self.backgroundColor = isOnSelect ? UIColor.darkGray : UIColor.init(red: 63/255, green: 95/255, blue: 163/255, alpha: 1.0)
         
@@ -48,20 +69,6 @@ extension UIView {
     func setIsOnExpand(_ isOnExpand: Bool) {
         self.backgroundColor = isOnExpand ? UIColor.init(red: 63/255, green: 95/255, blue: 163/255, alpha: 1.0) : UIColor.white
         
-        
-        
-    }
-}
-extension UITableViewCell {
-    func setIsTableViewExpand(_ isOnExpand: Bool) {
-        self.backgroundColor = isOnExpand ? UIColor.init(red: 63/255, green: 95/255, blue: 163/255, alpha: 1.0) : UIColor.white
-        guard let view: WeekTableViewCell = self as? WeekTableViewCell else {
-            return
-        }
-        view.countDayLabel.textColor = isOnExpand ? UIColor.white : UIColor.black
-        view.weekLabel.textColor = isOnExpand ? UIColor.white : UIColor.black
-        view.dayLabel.textColor = isOnExpand ? UIColor.white : UIColor.black
-        view.expandImageView.image = isOnExpand ? #imageLiteral(resourceName: "expand-close"): #imageLiteral(resourceName: "expand-open")
         
         
     }

@@ -28,7 +28,7 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" restorationIdentifier="SideMenuProfile" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -69,7 +69,8 @@
                     <rect key="frame" x="49" y="478" width="222" height="42"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="42" id="HxL-2l-L4Y"/>
+                        <constraint firstAttribute="width" constant="222" id="DW6-hh-LGe"/>
+                        <constraint firstAttribute="height" constant="42" id="GLF-cr-ljQ"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                     <state key="normal" title="ĐĂNG XUẤT">
@@ -90,18 +91,16 @@
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2EN-x1-odK" secondAttribute="trailing" constant="24" id="2hI-ai-8Ar"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JV0-Qs-tUa" secondAttribute="trailing" id="3aW-JU-JU6"/>
-                <constraint firstItem="61P-sU-0Ev" firstAttribute="top" relation="lessThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="557" id="5k5-st-kKF"/>
                 <constraint firstItem="6Wr-5I-rLS" firstAttribute="leading" secondItem="2EN-x1-odK" secondAttribute="leading" id="6kR-CS-rss"/>
                 <constraint firstItem="2EN-x1-odK" firstAttribute="top" secondItem="e1S-ig-KHI" secondAttribute="top" id="Ll1-by-EhP"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="61P-sU-0Ev" secondAttribute="trailing" constant="49" id="NVN-E0-Ddv"/>
                 <constraint firstItem="e1S-ig-KHI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="37" id="PJD-i2-oHD"/>
                 <constraint firstItem="e1S-ig-KHI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="UUt-5I-ckF"/>
                 <constraint firstItem="6Wr-5I-rLS" firstAttribute="top" secondItem="2EN-x1-odK" secondAttribute="bottom" constant="3" id="W0B-EJ-3Lq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="61P-sU-0Ev" secondAttribute="bottom" constant="48" id="WRA-Gj-xAw"/>
                 <constraint firstItem="61P-sU-0Ev" firstAttribute="top" secondItem="dWh-gD-aMC" secondAttribute="bottom" constant="5" id="XN5-PM-8yX"/>
                 <constraint firstItem="6Wr-5I-rLS" firstAttribute="trailing" secondItem="2EN-x1-odK" secondAttribute="trailing" id="b28-F4-xF4"/>
-                <constraint firstItem="61P-sU-0Ev" firstAttribute="height" secondItem="JV0-Qs-tUa" secondAttribute="height" id="bE9-rb-gRB"/>
                 <constraint firstItem="dWh-gD-aMC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="lC4-ox-5YM"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="61P-sU-0Ev" secondAttribute="bottom" constant="48" id="lml-1V-AOC"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dWh-gD-aMC" secondAttribute="trailing" id="lpx-4W-Vu8"/>
                 <constraint firstItem="JV0-Qs-tUa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="nv5-F9-53K"/>
                 <constraint firstItem="JV0-Qs-tUa" firstAttribute="top" secondItem="e1S-ig-KHI" secondAttribute="bottom" constant="37" id="oBf-Id-jq9"/>
@@ -110,7 +109,7 @@
                 <constraint firstItem="dWh-gD-aMC" firstAttribute="top" secondItem="e1S-ig-KHI" secondAttribute="bottom" constant="37" id="zle-ge-MgX"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="48" y="101"/>
+            <point key="canvasLocation" x="-176" y="56"/>
         </view>
     </objects>
     <resources>

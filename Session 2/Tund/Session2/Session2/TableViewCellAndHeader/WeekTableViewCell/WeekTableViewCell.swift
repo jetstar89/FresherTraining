@@ -14,7 +14,7 @@ protocol WeekTableDelegate: class {
 
 class WeekTableViewCell: UITableViewHeaderFooterView {
     weak var delegate: WeekTableDelegate?
-    var section: Int!
+    var section: Int = 0
     
   
     @IBOutlet weak var headerView2: UIView!
@@ -46,6 +46,7 @@ class WeekTableViewCell: UITableViewHeaderFooterView {
         self.section = section
         self.delegate = delegate
         isOnExpandHeader(isOnExpand)
+      
        
     }
     

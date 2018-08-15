@@ -35,19 +35,12 @@ class PersonViewController: UIViewController {
     
     // MARK: initView
     func initView() {
-       
-        
         // navigation control
-        navigationItem.title = "Personel"
-        var navigationBarAppearace = UINavigationBar.appearance()
-        navigationBarAppearace.tintColor = UIColor.white
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
-        navigationController?.navigationBar.barTintColor = UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1)
-        
+        navigationItem.title = "NHÂN SỰ"
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "iconMenu"), style: .plain, target: self, action: #selector(onBack))
         
         // add listPerson
-        var person = Person(id: "00156", avatar: #imageLiteral(resourceName: "jangmi5"), name: "Nguyen Dinh Tu", phone: "01643246989", position: "Nhan vien chinh thuc", status: "Dang lam")
+        let person = Person(id: "00156", avatar: #imageLiteral(resourceName: "jangmi5"), name: "Nguyen Dinh Tu", phone: "01643246989", position: "Nhan vien chinh thuc", status: "Dang lam")
         listPerson.append(person)
         listPerson.append(person)
         listPerson.append(person)

@@ -19,7 +19,7 @@ class TimeKeepingViewController: UIViewController, WeekTableDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var dayOfWeek = [DayOfWeek(weekday: "T2", day: "15", checkIn: "08:00 SA", checkOut: "Quên chấm công", workday:             "1", status: "Đang làm việc"),
+        let dayOfWeek = [DayOfWeek(weekday: "T2", day: "15", checkIn: "08:00 SA", checkOut: "Quên chấm công", workday:             "1", status: "Đang làm việc"),
                          DayOfWeek(weekday: "T3", day: "15", checkIn: "08:00 SA", checkOut: "08:00 SA", workday: "1", status: "Đang làm việc"),
                          DayOfWeek(weekday: "T4", day: "15", checkIn: "08:00 SA", checkOut: "05:00 CH", workday: "1", status: "Đang làm việc"),
                          DayOfWeek(weekday: "T5", day: "15", checkIn: "08:00 SA", checkOut: "12:00 SA", workday: "1", status: "Đang làm việc"),
@@ -54,11 +54,6 @@ class TimeKeepingViewController: UIViewController, WeekTableDelegate {
     // MARK: Navigation
     func initNav(){
         navigationItem.title = "CHẤM CÔNG"
-        let navigationBarAppearace = UINavigationBar.appearance()
-        navigationBarAppearace.tintColor = UIColor.white
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
-        navigationController?.navigationBar.barTintColor = UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1)
-        
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "iconMenu"), style: .plain, target: self, action: #selector(onBack))
     }
     @objc func onBack() {
@@ -86,9 +81,7 @@ extension TimeKeepingViewController: UITableViewDelegate {
             return 0
         }
     }
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> CGFloat? {
-        return 2
-    }
+   
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        self.selectIndexPath = indexPath

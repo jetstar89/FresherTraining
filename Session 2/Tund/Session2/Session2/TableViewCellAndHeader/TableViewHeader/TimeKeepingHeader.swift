@@ -22,7 +22,7 @@ class TimeKeepingHeader: UITableViewHeaderFooterView {
     @IBOutlet weak var dayLabel: UILabel!
     
     var delegate: TimeKeepingHeaderDelegate?
-    var section: Int!
+    var section: Int = 0
     
     
 
