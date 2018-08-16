@@ -37,11 +37,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setUpRootViewIsTimeKeepingViewController() {
-        let timeKeepingViewController = TimeKeepingViewController(nibName: "TimeKeepingViewController", bundle: nil)
-        
-        let rootNavigationController = UINavigationController(rootViewController: timeKeepingViewController)
-    
-        window?.rootViewController = rootNavigationController
+        let viewcontroller = TimeKeepingViewController(nibName: "TimeKeepingViewController", bundle: nil)
+        let nav = UINavigationController(rootViewController: viewcontroller)
+//        let rootSideMenuViewController = SideMenuViewController(rootViewController: timeKeepingViewController)
+        window?.rootViewController = nav
     }
     
     func setUpRootViewIsHomeTabbar() {
@@ -50,7 +49,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setUpLeftMenu() {
-        
+        let leftMenuViewController = LeftMenuViewController(nibName: "LeftMenuViewController", bundle: nil)
+        let menuLeftNavigationController = UISideMenuNavigationController(rootViewController: leftMenuViewController)
+        SideMenuManager.default.menuLeftNavigationController = menuLeftNavigationController        
+        SideMenuManager.default.menuPushStyle = .preserve
+        SideMenuManager.default.menuPresentMode = .menuSlideIn
+        let uiScreen = UIScreen.main.bounds
+        SideMenuManager.default.menuWidth = max(round(min((uiScreen.width), (uiScreen.height)) * 0.8), 310)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

@@ -39,7 +39,8 @@ class LeftMenuViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = true
-        menuTableView.register(UINib(nibName: "MenuTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+        menuTableView.register(UINib(nibName: "MenuTableViewCell", bundle: nil),
+                               forCellReuseIdentifier: "cell")
         print(tag + " will appear")
     }
     
@@ -75,6 +76,11 @@ class LeftMenuViewController: UIViewController {
         navigationController?.pushViewController(timeKeepingViewController, animated: true)
     }
     
+    func pushPersonnelViewController() {
+        let personnelViewController = PersonnelViewController(nibName: "PersonnelViewController", bundle: nil)
+        navigationController?.pushViewController(personnelViewController, animated: true)
+    }
+    
     func pushChangePasswordViewController() {
         let changePasswordViewController = ChangePasswordViewController(nibName: "ChangePasswordViewController", bundle: nil)
         navigationController?.pushViewController(changePasswordViewController, animated: true)
@@ -87,9 +93,11 @@ extension LeftMenuViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
         return 1
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listOption.count
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? MenuTableViewCell else {
             return UITableViewCell()
@@ -102,7 +110,8 @@ extension LeftMenuViewController: UITableViewDataSource {
 }
 
 extension LeftMenuViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView,
+                   didSelectRowAt indexPath: IndexPath) {
         if let item = tableView.cellForRow(at: indexPath)?.contentView {
             item.setIsOnSelect(true)
         }
@@ -110,13 +119,16 @@ extension LeftMenuViewController: UITableViewDelegate {
         case 0:
             selectItemIndex = 0
             pushTimeKeepingViewController()
+        case 3:
+            pushPersonnelViewController()
         case 6:
             pushChangePasswordViewController()
         default:
             break
         }
     }
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView,
+                   didDeselectRowAt indexPath: IndexPath) {
         tableView.cellForRow(at: indexPath)?.contentView.backgroundColor = UIColor.frenchBlue
         if let item = tableView.cellForRow(at: indexPath)?.contentView {
             item.setIsOnSelect(false)
