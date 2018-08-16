@@ -9,8 +9,6 @@
 import UIKit
 
 class ProfileView1Controller: UIViewController {
-
-   
     @IBOutlet weak var restButton: UIButton!
     @IBOutlet weak var timeKeepingOutButton: UIButton!
     @IBOutlet weak var changePasswordButton: UIButton!
@@ -22,15 +20,12 @@ class ProfileView1Controller: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
-    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -39,19 +34,13 @@ class ProfileView1Controller: UIViewController {
         print("back to login")
         (UIApplication.shared.delegate as? AppDelegate)?.setupNavigation()
     }
-    func initView(){
+    func initView() {
         avatarImageView.layer.cornerRadius = avatarImageView.frame.size.height / 2.0
         avatarImageView.layer.masksToBounds = true
-        
         logoutOutletButton.layer.cornerRadius = 4
         logoutOutletButton.layer.masksToBounds = true
-        
         // tap cham cong
     }
-   
-   
-    
-
     /*
     // MARK: - Navigation
 

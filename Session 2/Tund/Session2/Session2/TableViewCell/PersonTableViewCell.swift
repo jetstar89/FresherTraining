@@ -10,7 +10,6 @@ import UIKit
 
 class PersonTableViewCell: UITableViewCell {
     @IBOutlet weak var avatarImageView: UIImageView!
-    
     @IBAction func actionButton(_ sender: Any) {
         print("button Actiomn")
     }
@@ -29,5 +28,4 @@ class PersonTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }

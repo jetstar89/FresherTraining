@@ -13,17 +13,12 @@ class MainTabbarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let profileController = Profile3ViewController(nibName: "Profile3ViewController", bundle: nil)
         let homeController = HomeViewController(nibName: "HomeViewController", bundle: nil)
-        
-        
         let navigationProfile = UINavigationController(rootViewController: profileController)
         navigationProfile.navigationBar.isTranslucent = false
         let navigationHome = UINavigationController(rootViewController: homeController)
         let tabbarController = UITabBarController()
-        
-        
         tabbarController.viewControllers = [navigationHome, navigationProfile]
         let homeTabbarItem = tabbarController.tabBar.items?[0]
         homeTabbarItem?.image = #imageLiteral(resourceName: "home-1").withRenderingMode(.alwaysOriginal)
@@ -31,17 +26,11 @@ class MainTabbarController: UITabBarController {
         let profileTabbarItem = tabbarController.tabBar.items?[1]
         profileTabbarItem?.image = #imageLiteral(resourceName: "man-user").withRenderingMode(.alwaysOriginal)
         profileTabbarItem?.imageInsets = UIEdgeInsets(top: 10, left: 0, bottom: -10, right: 0)
-        
         tabbarController.tabBar.barTintColor = UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1)
-
-        
-
     func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
     /*
     // MARK: - Navigation
 

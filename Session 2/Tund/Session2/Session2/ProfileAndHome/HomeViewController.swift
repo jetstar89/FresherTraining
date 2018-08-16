@@ -9,13 +9,11 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    
+
     // MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
-        
-        
         // Do any additional setup after loading the view.
     }
 
@@ -27,14 +25,5 @@ class HomeViewController: UIViewController {
     func initView() {
         //set up navigationBar
         navigationItem.title = "Home"
-     
-        
-       
-    
-        
     }
-    
-
-    
-
 }

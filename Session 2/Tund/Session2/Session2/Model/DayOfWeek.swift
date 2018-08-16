@@ -15,7 +15,6 @@ class DayOfWeek: NSObject {
     var checkOut: String
     var workday: String
     var status: String
-    
     init(weekday: String, day: String, checkIn: String, checkOut: String, workday: String, status: String) {
         self.weekday = weekday
         self.day = day
