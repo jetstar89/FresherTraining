@@ -96,7 +96,9 @@ extension Profile3ViewController: UITableViewDelegate {
                 navigationController?.pushViewController(timekeepingController, animated: true)
             print(listOption[0].name)
         case 1:
-            break
+            print("a")
+            let vacationController = VacationViewController(nibName: "VacationViewController", bundle: nil)
+            navigationController?.pushViewController(vacationController, animated: true)
         case 2:
             break
         case 3:

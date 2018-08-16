@@ -78,7 +78,9 @@ class ViewController: UIViewController {
             //
         }
         self.view.endEditing(true)
-        (UIApplication.shared.delegate as? AppDelegate)?.setupTabbar()
+        let rootSideMenuController = RootSideMenuViewController(nibName: "RootSideMenuViewController", bundle: nil)
+       navigationController?.pushViewController(rootSideMenuController, animated: true)
+//        (UIApplication.shared.delegate as? AppDelegate)?.setupTabbar()
     }
     @objc func showPassword(_ sender: UITapGestureRecognizer) {
         if nameTextField.isSecureTextEntry {

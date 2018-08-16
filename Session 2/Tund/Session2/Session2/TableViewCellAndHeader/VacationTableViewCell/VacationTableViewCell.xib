@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -24,8 +23,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xin nghỉ ốm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mi8-i8-86p">
-                        <rect key="frame" x="15" y="13" width="317" height="19"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xin nghỉ ốm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mi8-i8-86p">
+                        <rect key="frame" x="15" y="13" width="86" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19" id="aDc-hm-aPl"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -33,84 +35,101 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="wUN-f0-6Nh">
                         <rect key="frame" x="15" y="42" width="15" height="15"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="15" id="8Bm-lq-Jmf"/>
-                            <constraint firstAttribute="width" constant="15" id="m6g-X8-31P"/>
+                            <constraint firstAttribute="width" constant="15" id="ikn-Gv-RHp"/>
+                            <constraint firstAttribute="height" constant="15" id="rVy-J1-Ve7"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2F-ZO-n72">
-                        <rect key="frame" x="33" y="42" width="299" height="16.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2F-ZO-n72">
+                        <rect key="frame" x="33" y="42" width="84" height="16.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16.5" id="eTM-OF-IZ4"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
-                        <color key="textColor" red="0.71372549019607845" green="0.74509803921568629" blue="0.77254901960784317" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="dX9-Vi-btm">
-                        <rect key="frame" x="15" y="62" width="15" height="15"/>
+                        <rect key="frame" x="15" y="65" width="15" height="15"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="15" id="1eX-Q3-zLo"/>
-                            <constraint firstAttribute="width" constant="15" id="He5-Ms-fGX"/>
+                            <constraint firstAttribute="width" constant="15" id="aoQ-qA-ZQq"/>
+                            <constraint firstAttribute="height" constant="15" id="s7G-r3-tGH"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kS-i7-kPG">
-                        <rect key="frame" x="33" y="62" width="34.5" height="16.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Tund" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kS-i7-kPG">
+                        <rect key="frame" x="33" y="64" width="32" height="16.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16.5" id="xO4-Gl-d8a"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="RRV-ss-T9G">
+                        <rect key="frame" x="68" y="65" width="15" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="15" id="Lyq-T2-eFr"/>
+                            <constraint firstAttribute="height" constant="15" id="zqV-7Y-C06"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time begin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8M-IV-ie0">
+                        <rect key="frame" x="85" y="64" width="66" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="qJt-hd-9En"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                         <color key="textColor" red="0.71372549019999998" green="0.74509803919999995" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="RRV-ss-T9G">
-                        <rect key="frame" x="72.5" y="62" width="15" height="15"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Khong dong y" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bh-RO-TAR">
+                        <rect key="frame" x="15" y="89" width="87" height="16.5"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="15" id="43W-l0-0Wd"/>
-                            <constraint firstAttribute="width" constant="15" id="dZE-sm-g2j"/>
+                            <constraint firstAttribute="height" constant="16.5" id="a2h-XT-PE3"/>
                         </constraints>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bh-RO-TAR">
-                        <rect key="frame" x="15" y="86" width="317" height="16.5"/>
                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                         <color key="textColor" red="0.81447798013687134" green="0.073018619719862635" blue="0.036668935326542286" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UmU-mg-CZC">
-                        <rect key="frame" x="342" y="13" width="18" height="18"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3ni-VK-h2g">
+                        <rect key="frame" x="348" y="9" width="18" height="18"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="18" id="qDk-vI-ViU"/>
-                            <constraint firstAttribute="width" constant="18" id="ugT-37-d8f"/>
+                            <constraint firstAttribute="height" constant="18" id="SEF-vo-goV"/>
+                            <constraint firstAttribute="width" constant="18" id="mr1-vz-waf"/>
                         </constraints>
-                        <state key="normal" title="P"/>
-                    </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8M-IV-ie0">
-                        <rect key="frame" x="92.5" y="62" width="239.5" height="17"/>
-                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
-                        <color key="textColor" red="0.71372549019999998" green="0.74509803919999995" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="dX9-Vi-btm" firstAttribute="leading" secondItem="Mi8-i8-86p" secondAttribute="leading" id="2WX-zK-Mdd"/>
-                    <constraint firstItem="9bh-RO-TAR" firstAttribute="top" secondItem="dX9-Vi-btm" secondAttribute="bottom" constant="9" id="3uS-ny-Smg"/>
-                    <constraint firstItem="d8M-IV-ie0" firstAttribute="leading" secondItem="RRV-ss-T9G" secondAttribute="trailing" constant="5" id="6Z9-9q-xQs"/>
-                    <constraint firstItem="8kS-i7-kPG" firstAttribute="top" secondItem="dX9-Vi-btm" secondAttribute="top" id="6iy-oz-mRz"/>
-                    <constraint firstItem="UmU-mg-CZC" firstAttribute="top" secondItem="Mi8-i8-86p" secondAttribute="top" id="7ch-6f-xC0"/>
-                    <constraint firstItem="wUN-f0-6Nh" firstAttribute="leading" secondItem="Mi8-i8-86p" secondAttribute="leading" id="9MF-Hp-p8T"/>
-                    <constraint firstItem="Mi8-i8-86p" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="A2o-UM-xcY"/>
-                    <constraint firstItem="f2F-ZO-n72" firstAttribute="trailing" secondItem="Mi8-i8-86p" secondAttribute="trailing" id="ABW-fq-cSA"/>
-                    <constraint firstItem="RRV-ss-T9G" firstAttribute="leading" secondItem="8kS-i7-kPG" secondAttribute="trailing" constant="5" id="BvV-IC-OXf"/>
-                    <constraint firstItem="f2F-ZO-n72" firstAttribute="leading" secondItem="wUN-f0-6Nh" secondAttribute="trailing" constant="3" id="I1Z-0X-8q6"/>
-                    <constraint firstItem="9bh-RO-TAR" firstAttribute="trailing" secondItem="Mi8-i8-86p" secondAttribute="trailing" id="LcX-1Y-WZg"/>
-                    <constraint firstItem="Mi8-i8-86p" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="Rem-3E-z0l"/>
-                    <constraint firstItem="8kS-i7-kPG" firstAttribute="leading" secondItem="dX9-Vi-btm" secondAttribute="trailing" constant="3" id="WWT-SR-YC8"/>
-                    <constraint firstAttribute="trailing" secondItem="UmU-mg-CZC" secondAttribute="trailing" constant="15" id="XpB-Mx-y5M"/>
-                    <constraint firstItem="RRV-ss-T9G" firstAttribute="centerY" secondItem="dX9-Vi-btm" secondAttribute="centerY" id="czJ-C0-hny"/>
-                    <constraint firstItem="UmU-mg-CZC" firstAttribute="leading" secondItem="Mi8-i8-86p" secondAttribute="trailing" constant="10" id="e3p-6R-LD3"/>
-                    <constraint firstItem="f2F-ZO-n72" firstAttribute="top" secondItem="wUN-f0-6Nh" secondAttribute="top" id="ePx-ye-hCF"/>
-                    <constraint firstItem="wUN-f0-6Nh" firstAttribute="top" secondItem="Mi8-i8-86p" secondAttribute="bottom" constant="10" id="fLo-kc-PF7"/>
-                    <constraint firstItem="d8M-IV-ie0" firstAttribute="top" secondItem="RRV-ss-T9G" secondAttribute="top" id="fO5-gf-F43"/>
-                    <constraint firstItem="d8M-IV-ie0" firstAttribute="trailing" secondItem="Mi8-i8-86p" secondAttribute="trailing" id="vOa-Re-WMy"/>
-                    <constraint firstItem="9bh-RO-TAR" firstAttribute="leading" secondItem="Mi8-i8-86p" secondAttribute="leading" id="z0J-5B-rpG"/>
-                    <constraint firstItem="dX9-Vi-btm" firstAttribute="top" secondItem="wUN-f0-6Nh" secondAttribute="bottom" constant="5" id="zQG-0y-S7n"/>
+                    <constraint firstItem="d8M-IV-ie0" firstAttribute="leading" secondItem="RRV-ss-T9G" secondAttribute="trailing" constant="2" id="1rr-bL-FuH"/>
+                    <constraint firstItem="f2F-ZO-n72" firstAttribute="centerY" secondItem="wUN-f0-6Nh" secondAttribute="centerY" id="4Nk-m1-tfk"/>
+                    <constraint firstItem="wUN-f0-6Nh" firstAttribute="leading" secondItem="Mi8-i8-86p" secondAttribute="leading" id="5qd-zW-HxP"/>
+                    <constraint firstAttribute="trailing" secondItem="3ni-VK-h2g" secondAttribute="trailing" constant="9" id="79j-Mg-q2H"/>
+                    <constraint firstItem="dX9-Vi-btm" firstAttribute="leading" secondItem="Mi8-i8-86p" secondAttribute="leading" id="8vf-YV-KBA"/>
+                    <constraint firstItem="9bh-RO-TAR" firstAttribute="top" secondItem="dX9-Vi-btm" secondAttribute="bottom" constant="9" id="9WC-dR-Zeh"/>
+                    <constraint firstItem="RRV-ss-T9G" firstAttribute="centerY" secondItem="dX9-Vi-btm" secondAttribute="centerY" id="CM4-X3-upg"/>
+                    <constraint firstItem="3ni-VK-h2g" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="IvV-TL-gDy"/>
+                    <constraint firstItem="Mi8-i8-86p" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="Kpt-Mn-0qQ"/>
+                    <constraint firstAttribute="bottom" secondItem="9bh-RO-TAR" secondAttribute="bottom" constant="14" id="MXw-Tu-sJz"/>
+                    <constraint firstItem="d8M-IV-ie0" firstAttribute="centerY" secondItem="dX9-Vi-btm" secondAttribute="centerY" id="Un4-mi-Bof"/>
+                    <constraint firstItem="8kS-i7-kPG" firstAttribute="leading" secondItem="dX9-Vi-btm" secondAttribute="trailing" constant="3" id="V6m-E3-2IF"/>
+                    <constraint firstItem="f2F-ZO-n72" firstAttribute="leading" secondItem="wUN-f0-6Nh" secondAttribute="trailing" constant="3" id="WjB-yF-lPS"/>
+                    <constraint firstItem="8kS-i7-kPG" firstAttribute="centerY" secondItem="dX9-Vi-btm" secondAttribute="centerY" id="aVf-ZC-j0V"/>
+                    <constraint firstItem="dX9-Vi-btm" firstAttribute="top" secondItem="wUN-f0-6Nh" secondAttribute="bottom" constant="8" id="hqB-KF-Ase"/>
+                    <constraint firstItem="wUN-f0-6Nh" firstAttribute="top" secondItem="Mi8-i8-86p" secondAttribute="bottom" constant="10" id="sfW-5g-I9Y"/>
+                    <constraint firstItem="RRV-ss-T9G" firstAttribute="leading" secondItem="8kS-i7-kPG" secondAttribute="trailing" constant="3" id="tKb-WU-w06"/>
+                    <constraint firstItem="9bh-RO-TAR" firstAttribute="leading" secondItem="Mi8-i8-86p" secondAttribute="leading" id="y6k-xW-Fgq"/>
                 </constraints>
             </tableViewCellContentView>
-            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="24.5" y="52"/>
+            <constraints>
+                <constraint firstItem="Mi8-i8-86p" firstAttribute="leading" secondItem="KGk-i7-Jjw" secondAttribute="leading" constant="15" id="iPk-CR-fid"/>
+            </constraints>
+            <connections>
+                <outlet property="imageResult" destination="3ni-VK-h2g" id="JYT-6J-Sgt"/>
+                <outlet property="nameLabel" destination="8kS-i7-kPG" id="uvc-YM-8yZ"/>
+                <outlet property="reasonLabel" destination="Mi8-i8-86p" id="A3t-Fz-aFs"/>
+                <outlet property="resultNoteLabel" destination="9bh-RO-TAR" id="Uu9-3U-BYp"/>
+                <outlet property="timeBeginLabel" destination="d8M-IV-ie0" id="0D0-Dw-cdF"/>
+                <outlet property="timeDurationLabel" destination="f2F-ZO-n72" id="IXZ-Kr-8oJ"/>
+            </connections>
+            <point key="canvasLocation" x="-113.5" y="-83"/>
         </tableViewCell>
     </objects>
     <resources>

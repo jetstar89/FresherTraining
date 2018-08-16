@@ -49,5 +49,4 @@ class WeekTableViewCell: UITableViewHeaderFooterView {
         self.dayLabel.textColor = isOnExpand ? UIColor.white : UIColor.black
         self.expandImageView.image = isOnExpand ? #imageLiteral(resourceName: "expand-close"): #imageLiteral(resourceName: "expand-open")
     }
-        
 }

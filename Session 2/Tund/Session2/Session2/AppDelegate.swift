@@ -43,23 +43,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = rootNavigationController
         window?.makeKeyAndVisible()
     }
-    func setupTabbar() {
-        let rootSideMenu = RootSideMenuViewController(nibName: "RootSideMenuViewController", bundle: nil)
-        let homeController = HomeViewController(nibName: "HomeViewController", bundle: nil)
-        let navigationRootSideMenu = UINavigationController(rootViewController: rootSideMenu)
-        let navigationHome = UINavigationController(rootViewController: homeController)
-        let tabbarController = UITabBarController()
-        tabbarController.viewControllers = [navigationHome, navigationRootSideMenu]
-        let homeTabbarItem = tabbarController.tabBar.items?[0]
-        homeTabbarItem?.image = #imageLiteral(resourceName: "home-1").withRenderingMode(.alwaysOriginal)
-        homeTabbarItem?.imageInsets = UIEdgeInsets(top: 10, left: 0, bottom: -10, right: 0)
-        let profileTabbarItem = tabbarController.tabBar.items?[1]
-        profileTabbarItem?.image = #imageLiteral(resourceName: "man-user").withRenderingMode(.alwaysOriginal)
-        profileTabbarItem?.imageInsets = UIEdgeInsets(top: 10, left: 0, bottom: -10, right: 0)
-        tabbarController.tabBar.barTintColor = UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1)
-        window?.rootViewController = tabbarController
-        window?.makeKeyAndVisible()
-    }
+//    func setupTabbar() {
+//        let rootSideMenu = RootSideMenuViewController(nibName: "RootSideMenuViewController", bundle: nil)
+//        let homeController = HomeViewController(nibName: "HomeViewController", bundle: nil)
+//        let navigationRootSideMenu = UINavigationController(rootViewController: rootSideMenu)
+//        let navigationHome = UINavigationController(rootViewController: homeController)
+//        let tabbarController = UITabBarController()
+//        tabbarController.viewControllers = [navigationHome, navigationRootSideMenu]
+//        let homeTabbarItem = tabbarController.tabBar.items?[0]
+//        homeTabbarItem?.image = #imageLiteral(resourceName: "home-1").withRenderingMode(.alwaysOriginal)
+//        homeTabbarItem?.imageInsets = UIEdgeInsets(top: 10, left: 0, bottom: -10, right: 0)
+//        let profileTabbarItem = tabbarController.tabBar.items?[1]
+//        profileTabbarItem?.image = #imageLiteral(resourceName: "man-user").withRenderingMode(.alwaysOriginal)
+//        profileTabbarItem?.imageInsets = UIEdgeInsets(top: 10, left: 0, bottom: -10, right: 0)
+//        tabbarController.tabBar.barTintColor = UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1)
+//        window?.rootViewController = tabbarController
+//        window?.makeKeyAndVisible()
+//    }
     func applicationWillResignActive(_ application: UIApplication) {
     }
 

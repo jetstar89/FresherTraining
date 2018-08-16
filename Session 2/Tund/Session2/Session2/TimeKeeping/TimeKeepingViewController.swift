@@ -14,52 +14,7 @@ class TimeKeepingViewController: UIViewController, WeekTableDelegate {
     var selectIndexPath: IndexPath!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let dayOfWeek = [DayOfWeek(weekday: "T2",
-                                   day: "15",
-                                   checkIn: "08:00 SA",
-                                   checkOut: "Quên chấm công",
-                                   workday: "1",
-                                   status: "Đang làm việc"),
-                         DayOfWeek(weekday: "T3",
-                                   day: "15",
-                                   checkIn: "08:00 SA",
-                                   checkOut: "08:00 SA",
-                                   workday: "1",
-                                   status: "Đang làm việc"),
-                         DayOfWeek(weekday: "T4",
-                                   day: "15",
-                                   checkIn: "08:00 SA",
-                                   checkOut: "05:00 CH",
-                                   workday: "1",
-                                   status: "Đang làm việc"),
-                         DayOfWeek(weekday: "T5",
-                                   day: "15",
-                                   checkIn: "08:00 SA",
-                                   checkOut: "12:00 SA",
-                                   workday: "1",
-                                   status: "Đang làm việc"),
-                         DayOfWeek(weekday: "T6",
-                                   day: "15",
-                                   checkIn: "08:00 SA",
-                                   checkOut: "05:00 CH",
-                                   workday: "1",
-                                   status: "Đang làm việc"),
-                         DayOfWeek(weekday: "T7",
-                                   day: "15",
-                                   checkIn: "08:00 SA",
-                                   checkOut: "05:00 CH",
-                                   workday: "1",
-                                   status: "Đang làm việc"),
-                         DayOfWeek(weekday: "CN",
-                                   day: "15",
-                                   checkIn: "08:00 SA",
-                                   checkOut: "05:00 CH",
-                                   workday: "1",
-                                   status: "Đang làm việc")]
-        listTimeKeeping = [TimeKeepingSection(isExpand: false, week: "Tuần 1", day: "1/5", dayOfWeek: dayOfWeek),
-                            TimeKeepingSection(isExpand: false, week: "Tuần 2", day: "2/5", dayOfWeek: dayOfWeek),
-                            TimeKeepingSection(isExpand: false, week: "Tuần 3", day: "3/5", dayOfWeek: dayOfWeek),
-                            TimeKeepingSection(isExpand: false, week: "Tuần 4", day: "4/5", dayOfWeek: dayOfWeek)]
+        initData()
         selectIndexPath = IndexPath(row: -1, section: -1)
         weekTableView.dataSource = self
         weekTableView.delegate = self
@@ -76,7 +31,7 @@ class TimeKeepingViewController: UIViewController, WeekTableDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    // MARK: Navigation
+    // MARK: Navigation and function
     func initNav() {
         navigationItem.title = "CHẤM CÔNG"
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "iconMenu"),
@@ -86,12 +41,33 @@ class TimeKeepingViewController: UIViewController, WeekTableDelegate {
     }
     @objc func onBack() {
         navigationController?.popViewController(animated: true)
-    }  
+    }
     func touchSelection(header: WeekTableViewCell, section: Int) {
         listTimeKeeping[section].isExpand = !listTimeKeeping[section].isExpand
         weekTableView.beginUpdates()
         weekTableView.reloadSections([section], with: .automatic)
         weekTableView.endUpdates()
+    }
+    func initData() {
+        let dayOfWeek = [DayOfWeek(weekday: "T2", day: "15", checkIn: "08:00 SA",
+                                   checkOut: "Quên chấm công", workday: "1", status: "Đang làm việc"),
+                         DayOfWeek(weekday: "T3", day: "15", checkIn: "08:00 SA",
+                                   checkOut: "08:00 SA", workday: "1", status: "Đang làm việc"),
+                         DayOfWeek(weekday: "T4", day: "15", checkIn: "08:00 SA",
+                                   checkOut: "05:00 CH", workday: "1", status: "Đang làm việc"),
+                         DayOfWeek(weekday: "T5", day: "15", checkIn: "08:00 SA",
+                                   checkOut: "12:00 SA", workday: "1",
+                                   status: "Đang làm việc"),
+                         DayOfWeek(weekday: "T6", day: "15", checkIn: "08:00 SA",
+                                   checkOut: "05:00 CH", workday: "1", status: "Đang làm việc"),
+                         DayOfWeek(weekday: "T7", day: "15", checkIn: "08:00 SA",
+                                   checkOut: "05:00 CH", workday: "1", status: "Đang làm việc"),
+                         DayOfWeek(weekday: "CN", day: "15", checkIn: "08:00 SA",
+                                   checkOut: "05:00 CH", workday: "1", status: "Đang làm việc")]
+        listTimeKeeping = [TimeKeepingSection(isExpand: false, week: "Tuần 1", day: "1/5", dayOfWeek: dayOfWeek),
+                           TimeKeepingSection(isExpand: false, week: "Tuần 2", day: "2/5", dayOfWeek: dayOfWeek),
+                           TimeKeepingSection(isExpand: false, week: "Tuần 3", day: "3/5", dayOfWeek: dayOfWeek),
+                           TimeKeepingSection(isExpand: false, week: "Tuần 4", day: "4/5", dayOfWeek: dayOfWeek)]
     }
 }
 extension TimeKeepingViewController: UITableViewDelegate {
@@ -138,7 +114,8 @@ extension TimeKeepingViewController: UITableViewDataSource {
             return cell
     }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let headerView: WeekTableViewCell = tableView.dequeueReusableHeaderFooterView(withIdentifier: "WeekTableViewCell") as? WeekTableViewCell else {
+        guard let headerView: WeekTableViewCell = tableView.dequeueReusableHeaderFooterView(withIdentifier: "WeekTableViewCell")
+            as? WeekTableViewCell else {
             return UITableViewHeaderFooterView()
         }
         headerView.customInit(week: listTimeKeeping[section].week,
@@ -149,4 +126,3 @@ extension TimeKeepingViewController: UITableViewDataSource {
         return headerView
     }
 }
-
