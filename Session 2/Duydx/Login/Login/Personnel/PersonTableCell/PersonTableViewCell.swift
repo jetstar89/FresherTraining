@@ -15,7 +15,6 @@ class PersonTableViewCell: UITableViewCell {
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var positionLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,5 +25,4 @@ class PersonTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }

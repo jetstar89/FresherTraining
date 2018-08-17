@@ -6,6 +6,7 @@ target 'Login' do
   use_frameworks!
 
   # Pods for Login
-pod 'XLPagerTabStrip', :git => 'https://github.com/KelvinJin/XLPagerTabStrip', :branch => 'swift3'
-pod "SideNavigation"
+pod "SideMenu"
+pod "SwiftLint"
+pod "RealmSwift"
 end

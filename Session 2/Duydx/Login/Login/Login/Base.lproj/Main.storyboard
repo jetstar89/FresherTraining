@@ -87,10 +87,10 @@
                             <constraint firstItem="IA3-9m-srM" firstAttribute="leading" secondItem="k5G-OW-awM" secondAttribute="leading" id="CEi-UZ-9fe"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="UP9-yH-EyL" secondAttribute="trailing" constant="20" symbolic="YES" id="EGj-EP-zYB"/>
                             <constraint firstItem="4Rq-lh-kiw" firstAttribute="leading" secondItem="IA3-9m-srM" secondAttribute="leading" id="Eur-v2-z3D"/>
+                            <constraint firstItem="b3F-Bx-bnI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="G1L-Oo-UnT"/>
                             <constraint firstItem="4Rq-lh-kiw" firstAttribute="width" secondItem="k5G-OW-awM" secondAttribute="width" id="L88-7K-AK2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oih-cf-a1H" secondAttribute="bottom" constant="15" id="MhY-tB-IFz"/>
                             <constraint firstItem="UP9-yH-EyL" firstAttribute="top" secondItem="ZRy-7k-yxA" secondAttribute="bottom" constant="97" id="Nm9-XP-U41"/>
-                            <constraint firstItem="4Rq-lh-kiw" firstAttribute="trailing" secondItem="k5G-OW-awM" secondAttribute="trailing" id="PHz-5F-MsZ"/>
                             <constraint firstItem="IA3-9m-srM" firstAttribute="top" secondItem="4Rq-lh-kiw" secondAttribute="bottom" constant="15" id="Pd5-Oj-Fkf"/>
                             <constraint firstItem="4Rq-lh-kiw" firstAttribute="top" secondItem="UP9-yH-EyL" secondAttribute="bottom" constant="9" id="Taz-xV-ARH"/>
                             <constraint firstItem="b3F-Bx-bnI" firstAttribute="top" secondItem="k5G-OW-awM" secondAttribute="bottom" constant="30" id="Tjr-wE-nsw"/>

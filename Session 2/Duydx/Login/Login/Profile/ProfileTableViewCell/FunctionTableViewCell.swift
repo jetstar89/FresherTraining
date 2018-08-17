@@ -15,7 +15,6 @@ class FunctionTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -23,5 +22,4 @@ class FunctionTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }

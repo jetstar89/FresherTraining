@@ -7,16 +7,15 @@
 //
 
 import UIKit
-protocol WeeksTableViewCellDelegate {
+protocol WeeksTableViewCellDelegate: class {
     func touchHeader(_ header: WeeksTableViewCell, _ section: Int)
 }
 class WeeksTableViewCell: UITableViewHeaderFooterView {
-    
     @IBOutlet weak var backgroundColorView: UIView!
     @IBOutlet weak var isExpandImage: UIImageView!
     @IBOutlet weak var numberDayLabel: UILabel!
     @IBOutlet weak var weekLabel: UILabel!
-    var delegate: WeeksTableViewCellDelegate?
+    weak var delegate: WeeksTableViewCellDelegate?
     var section: Int = 0
     @objc func tapHeader(_ gesture: UITapGestureRecognizer) {
         guard  let header = gesture.view as? WeeksTableViewCell else {
@@ -29,7 +28,8 @@ class WeeksTableViewCell: UITableViewHeaderFooterView {
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapHeader(_:))))
     }
     func isExpand(_ isExpand: Bool) {
-        backgroundColorView.backgroundColor = isExpand ? UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1.0) :
+        backgroundColorView.backgroundColor = isExpand ?
+            UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1.0) :
                                         UIColor.white
         weekLabel.textColor = isExpand ? UIColor.white : UIColor.black
         numberDayLabel.textColor = isExpand ? UIColor.white : UIColor.black

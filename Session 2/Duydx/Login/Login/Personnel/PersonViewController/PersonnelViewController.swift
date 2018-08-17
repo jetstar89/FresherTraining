@@ -7,32 +7,30 @@
 //
 
 import UIKit
-
+import SideMenu
 class PersonnelViewController: UIViewController {
     var listPerson = [Person]()
     @IBOutlet weak var personTableView: UITableView!
     @IBOutlet weak var positionLabel: UILabel!
-    @IBOutlet var choosePositionButton: [UIButton]!
     @IBOutlet weak var searchTextField: UITextField!
-    //MARK: LIFECYCLE
+    // MARK: LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
-        // Do any additional setup after loading the view.
     }
-    override func viewDidDisappear(_ animated: Bool) {
-        navigationController?.popViewController(animated: true)
-    }
-    //MARK: initView
+
+    // MARK: initView
     func initView() {
         tabBarController?.tabBar.isHidden = true
         positionLabel.text = "Developer"
         navigationController?.navigationBar.isHidden = false
         navigationItem.title = "NHÂN SỰ"
         navigationController?.navigationBar.tintColor = UIColor.white
-        navigationController?.navigationBar.barTintColor = UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1.0)
+        navigationController?.navigationBar.barTintColor =
+            UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1.0)
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "iconMenu"), style: .plain, target: self, action: #selector(selectedMenu))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "iconMenu"),
+                                                           style: .plain, target: self, action: #selector(selectedMenu))
         personTableView.dataSource = self
         personTableView.register(UINib(nibName: "PersonTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         listPerson = [Person("Đặng Xuân Duy", "ID: 00156", "0967505425", "Developer", true, "gaixinh"),
@@ -46,62 +44,24 @@ class PersonnelViewController: UIViewController {
         searchTextField.layer.borderWidth = 1
         searchTextField.layer.borderColor = UIColor.white.cgColor
         searchTextField.layer.backgroundColor = UIColor.white.cgColor
-        let searchImage = UIImageView();
-        let image = UIImage(named: "search");
-        searchImage.image = image;
+        let searchImage = UIImageView()
+        let image = UIImage(named: "search")
+        searchImage.image = image
         searchImage.frame = CGRect(x: 0, y: 0, width: 14, height: 14)
         searchTextField.leftViewMode = .always
-        searchTextField.leftView = searchImage;
-        
+        searchTextField.leftView = searchImage
     }
-    
     @objc func selectedMenu() {
-        print("Chọn chức năng menu")
-        navigationController?.popViewController(animated: true)
+        guard let sideMenu = SideMenuManager.default.menuLeftNavigationController else {
+            return
+        }
+        present(sideMenu, animated: true, completion: nil)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    func showPosition() {
-        
-        choosePositionButton.forEach { (buttonPosition) in
-            UIView.animate(withDuration: 0.3, animations: {
-                buttonPosition.isHidden = !buttonPosition.isHidden
-                self.view.layoutIfNeeded()
-                if buttonPosition.currentTitle == self.positionLabel.text {
-                    buttonPosition.titleLabel?.textColor = UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1)
-                }
-            })
-        }
-    }
-    //MARK: IBAction
-    @IBAction func choosePosition(_ sender: UIButton) {
-        showPosition()
-    }
-    @IBAction func onTapChoosePostition(_ sender: UIButton) {
-        if let title = sender.currentTitle {
-            switch title {
-            case "Developer":
-                positionLabel.text = "Developer"
-                showPosition()
-            case "Hành Chính nhân sự":
-                positionLabel.text = "Hành Chính nhân sự"
-                showPosition()
-            case "Kế toán":
-                positionLabel.text = "Kế toán"
-                showPosition()
-            case "Tester":
-                positionLabel.text = "Tester"
-                showPosition()
-            default:
-                break
-            }
-        }
-    }
-    
 }
-//MARK: extension UITableViewDataSource
+// MARK: extension UITableViewDataSource
 extension PersonnelViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -110,7 +70,11 @@ extension PersonnelViewController: UITableViewDataSource {
         return listPerson.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: PersonTableViewCell = personTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! PersonTableViewCell
+        guard let cell: PersonTableViewCell =
+            personTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+                as? PersonTableViewCell else {
+            return UITableViewCell()
+        }
         cell.logoImage.image = UIImage(named: listPerson[indexPath.row].imagePerson)
         cell.nameLabel.text = listPerson[indexPath.row].namePersion
         cell.idLabel.text = listPerson[indexPath.row].idPersion
@@ -127,7 +91,7 @@ extension PersonnelViewController: UITableViewDataSource {
         return cell
     }
 }
-//MARK: extension UITableViewDelegate
+// MARK: extension UITableViewDelegate
 extension PersonnelViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
@@ -144,5 +108,3 @@ extension PersonnelViewController: UITableViewDelegate {
         }
     }
 }
-
-
