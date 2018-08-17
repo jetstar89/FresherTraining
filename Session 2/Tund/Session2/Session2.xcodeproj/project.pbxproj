@@ -55,6 +55,7 @@
 		84611A092123D14F00D78606 /* RootSideMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84611A072123D14F00D78606 /* RootSideMenuViewController.xib */; };
 		84611A0F21240E0900D78606 /* MySideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84611A0E21240E0900D78606 /* MySideMenuViewController.swift */; };
 		8494E3E32121B935004C5F13 /* TimeKeepingSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8494E3E22121B935004C5F13 /* TimeKeepingSection.swift */; };
+		84A8AC8A212668BA00945B90 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A8AC89212668BA00945B90 /* MainNavigationController.swift */; };
 		84E51EA72122D3B000D37F16 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E51EA62122D3B000D37F16 /* Extension.swift */; };
 		84E51EA92122D98D00D37F16 /* Vacation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E51EA82122D98D00D37F16 /* Vacation.swift */; };
 		84E51EB52122DB8900D37F16 /* VacationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E51EB32122DB8900D37F16 /* VacationTableViewCell.swift */; };
@@ -140,6 +141,7 @@
 		84611A072123D14F00D78606 /* RootSideMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootSideMenuViewController.xib; sourceTree = "<group>"; };
 		84611A0E21240E0900D78606 /* MySideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySideMenuViewController.swift; sourceTree = "<group>"; };
 		8494E3E22121B935004C5F13 /* TimeKeepingSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeKeepingSection.swift; sourceTree = "<group>"; };
+		84A8AC89212668BA00945B90 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		84E51EA62122D3B000D37F16 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		84E51EA82122D98D00D37F16 /* Vacation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vacation.swift; sourceTree = "<group>"; };
 		84E51EB32122DB8900D37F16 /* VacationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationTableViewCell.swift; sourceTree = "<group>"; };
@@ -393,6 +395,7 @@
 				84EC309821142E61000F5AC9 /* Info.plist */,
 				846119FC2123CD2100D78606 /* MainTabbarController.swift */,
 				84611A0E21240E0900D78606 /* MySideMenuViewController.swift */,
+				84A8AC89212668BA00945B90 /* MainNavigationController.swift */,
 			);
 			path = Session2;
 			sourceTree = "<group>";
@@ -595,10 +598,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Session2/Pods-Session2-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -698,6 +705,7 @@
 				84611A0F21240E0900D78606 /* MySideMenuViewController.swift in Sources */,
 				84EC308F21142E5F000F5AC9 /* ViewController.swift in Sources */,
 				8441E5A4211D9748000FC10B /* TimeKeeping.swift in Sources */,
+				84A8AC8A212668BA00945B90 /* MainNavigationController.swift in Sources */,
 				84EC308D21142E5F000F5AC9 /* AppDelegate.swift in Sources */,
 				840C0D322118658B00737072 /* HomeViewController.swift in Sources */,
 				8441E58D211D2921000FC10B /* PersonTableViewCell.swift in Sources */,

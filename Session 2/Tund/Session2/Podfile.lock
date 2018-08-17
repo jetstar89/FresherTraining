@@ -1,20 +1,30 @@
 PODS:
+  - Realm (3.7.6):
+    - Realm/Headers (= 3.7.6)
+  - Realm/Headers (3.7.6)
+  - RealmSwift (3.7.6):
+    - Realm (= 3.7.6)
   - SideMenu (4.0.0)
   - SwiftLint (0.27.0)
 
 DEPENDENCIES:
+  - RealmSwift
   - SideMenu
   - SwiftLint
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Realm
+    - RealmSwift
     - SideMenu
     - SwiftLint
 
 SPEC CHECKSUMS:
+  Realm: 9eaecad54712d6246d08ba34c10f354e4715d7d3
+  RealmSwift: 1fe08b4ebaeeaacf17f9ba0343f7b25c9fc31fa6
   SideMenu: 70ee5657df63ec3382660ec4ef470bf1cf5db07d
   SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
 
-PODFILE CHECKSUM: 5c54f4714f9945efe1bf009be25ebaa80014efb5
+PODFILE CHECKSUM: ec7e1c062dd94bc8676fb06ca13ac95fb083097f
 
 COCOAPODS: 1.5.3

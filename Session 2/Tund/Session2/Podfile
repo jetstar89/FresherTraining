@@ -7,6 +7,8 @@ target 'Session2' do
   use_frameworks!
 	pod 'SideMenu'
 	pod 'SwiftLint'
+	pod 'RealmSwift'
+
   # Pods for Session2
 
   target 'Session2Tests' do

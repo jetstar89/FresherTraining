@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SideMenu
 
 class TimeKeepingViewController: UIViewController, WeekTableDelegate {
     var listTimeKeeping: [TimeKeepingSection] = []
@@ -31,13 +32,18 @@ class TimeKeepingViewController: UIViewController, WeekTableDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    // MARK: Select menu
+    @objc func onShowLeftMenu(_ sender: MainNavigationController) {
+        guard let sideMenu = SideMenuManager.default.menuLeftNavigationController else { return }
+        present(sideMenu, animated: true, completion: nil)
+    }
     // MARK: Navigation and function
     func initNav() {
         navigationItem.title = "CHẤM CÔNG"
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "iconMenu"),
                                                            style: .plain,
                                                            target: self,
-                                                           action: #selector(onBack))
+                                                           action: #selector(onShowLeftMenu(_:)))
     }
     @objc func onBack() {
         navigationController?.popViewController(animated: true)

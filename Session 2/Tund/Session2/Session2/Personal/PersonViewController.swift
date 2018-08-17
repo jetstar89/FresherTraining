@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class PersonViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
@@ -33,10 +34,6 @@ class PersonViewController: UIViewController {
     func initView() {
         // navigation control
         navigationItem.title = "NHÂN SỰ"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "iconMenu"),
-                                                           style: .plain,
-                                                           target: self,
-                                                           action: #selector(onBack))
         // add listPerson
         let person = Person(idUser: "00156",
                             avatar: #imageLiteral(resourceName: "jangmi5"),

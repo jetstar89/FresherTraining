@@ -24,7 +24,7 @@ class HeaderViewController: UIViewController {
         listTimeKeeping.append(timeKeeping)
         listTimeKeeping.append(timeKeeping)
         listTimeKeeping.append(timeKeeping)
-        listTimeKeeping.append(timeKeeping)        
+        listTimeKeeping.append(timeKeeping)
         initNavigation()
 
         // Do any additional setup after loading the view.
