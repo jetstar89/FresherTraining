@@ -17,8 +17,6 @@
 		84379E85211BECA0006E1CDC /* TimeKeepingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84379E83211BECA0006E1CDC /* TimeKeepingViewController.xib */; };
 		84379EC2211C1CCA006E1CDC /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84379EC0211C1CCA006E1CDC /* MenuTableViewCell.swift */; };
 		84379EC3211C1CCA006E1CDC /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84379EC1211C1CCA006E1CDC /* MenuTableViewCell.xib */; };
-		8437F2EA21226FD600F61572 /* TimeKeepingHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8437F2E921226FD600F61572 /* TimeKeepingHeader.swift */; };
-		8437F2EC21226FEA00F61572 /* TimeKeepingHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8437F2EB21226FEA00F61572 /* TimeKeepingHeader.xib */; };
 		8441E58D211D2921000FC10B /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8441E58B211D2921000FC10B /* PersonTableViewCell.swift */; };
 		8441E58E211D2921000FC10B /* PersonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8441E58C211D2921000FC10B /* PersonTableViewCell.xib */; };
 		8441E591211D2996000FC10B /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8441E58F211D2996000FC10B /* PersonViewController.swift */; };
@@ -104,8 +102,6 @@
 		84379E83211BECA0006E1CDC /* TimeKeepingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeKeepingViewController.xib; sourceTree = "<group>"; };
 		84379EC0211C1CCA006E1CDC /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		84379EC1211C1CCA006E1CDC /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
-		8437F2E921226FD600F61572 /* TimeKeepingHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeKeepingHeader.swift; sourceTree = "<group>"; };
-		8437F2EB21226FEA00F61572 /* TimeKeepingHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeKeepingHeader.xib; sourceTree = "<group>"; };
 		8441E58B211D2921000FC10B /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		8441E58C211D2921000FC10B /* PersonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonTableViewCell.xib; sourceTree = "<group>"; };
 		8441E58F211D2996000FC10B /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
@@ -210,18 +206,10 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		842A7512212174F7007E1124 /* TableViewHeader */ = {
-			isa = PBXGroup;
-			children = (
-				8437F2E921226FD600F61572 /* TimeKeepingHeader.swift */,
-				8437F2EB21226FEA00F61572 /* TimeKeepingHeader.xib */,
-			);
-			path = TableViewHeader;
-			sourceTree = "<group>";
-		};
 		8441E589211D2886000FC10B /* Personal */ = {
 			isa = PBXGroup;
 			children = (
+				8441E58A211D28FE000FC10B /* PersonTableViewCell */,
 				8441E58F211D2996000FC10B /* PersonViewController.swift */,
 				8441E590211D2996000FC10B /* PersonViewController.xib */,
 			);
@@ -312,6 +300,7 @@
 		84E51EB02122DB1800D37F16 /* Vacation */ = {
 			isa = PBXGroup;
 			children = (
+				84E51EAA2122DACD00D37F16 /* VacationTableViewCell */,
 				8447ECBC212514F600468169 /* VacationViewController.swift */,
 				8447ECBD212514F600468169 /* VacationViewController.xib */,
 			);
@@ -356,21 +345,11 @@
 		84E6F6B82122BC2700CCB8F2 /* TimeKeeping */ = {
 			isa = PBXGroup;
 			children = (
+				8441E59C211D8F07000FC10B /* WeekTableViewCell */,
 				84379E82211BECA0006E1CDC /* TimeKeepingViewController.swift */,
 				84379E83211BECA0006E1CDC /* TimeKeepingViewController.xib */,
 			);
 			path = TimeKeeping;
-			sourceTree = "<group>";
-		};
-		84E6F6B92122BC5700CCB8F2 /* TableViewCellAndHeader */ = {
-			isa = PBXGroup;
-			children = (
-				84E51EAA2122DACD00D37F16 /* VacationTableViewCell */,
-				842A7512212174F7007E1124 /* TableViewHeader */,
-				8441E59C211D8F07000FC10B /* WeekTableViewCell */,
-				8441E58A211D28FE000FC10B /* PersonTableViewCell */,
-			);
-			path = TableViewCellAndHeader;
 			sourceTree = "<group>";
 		};
 		84EC308021142E5F000F5AC9 = {
@@ -398,10 +377,9 @@
 		84EC308B21142E5F000F5AC9 /* Session2 */ = {
 			isa = PBXGroup;
 			children = (
-				84E51EB02122DB1800D37F16 /* Vacation */,
 				84EC308C21142E5F000F5AC9 /* AppDelegate.swift */,
+				84E51EB02122DB1800D37F16 /* Vacation */,
 				84E51EA52122D39E00D37F16 /* Extension */,
-				84E6F6B92122BC5700CCB8F2 /* TableViewCellAndHeader */,
 				84E6F6B82122BC2700CCB8F2 /* TimeKeeping */,
 				84E6F6B72122BC0700CCB8F2 /* ProfileAndHome */,
 				84E6F6B52122BBCD00CCB8F2 /* ChangePassword */,
@@ -557,7 +535,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8460A69E2117EC0700B51FB6 /* Roboto-BoldItalic.ttf in Resources */,
-				8437F2EC21226FEA00F61572 /* TimeKeepingHeader.xib in Resources */,
 				84611A092123D14F00D78606 /* RootSideMenuViewController.xib in Resources */,
 				8460A6972117EC0700B51FB6 /* Roboto-ThinItalic.ttf in Resources */,
 				840C0D172118443A00737072 /* ForgotPassWordController.xib in Resources */,
@@ -715,7 +692,6 @@
 				84E51EA92122D98D00D37F16 /* Vacation.swift in Sources */,
 				840C0D162118443A00737072 /* ForgotPassWordController.swift in Sources */,
 				8447ECBE212514F600468169 /* VacationViewController.swift in Sources */,
-				8437F2EA21226FD600F61572 /* TimeKeepingHeader.swift in Sources */,
 				8441E5AC211DA38F000FC10B /* DayOfWeek.swift in Sources */,
 				84E51EA72122D3B000D37F16 /* Extension.swift in Sources */,
 				84379EC2211C1CCA006E1CDC /* MenuTableViewCell.swift in Sources */,
