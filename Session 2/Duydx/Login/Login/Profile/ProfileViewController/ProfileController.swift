@@ -13,7 +13,7 @@ class ProfileController: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var logOutButton: UIButton!
     @IBOutlet weak var functionTableView: UITableView!
-    var listFunction = [Funciton]()
+    var listFunction = [Menu]()
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,13 +38,13 @@ class ProfileController: UIViewController {
         profileImage.clipsToBounds = true
         navigationController?.navigationBar.isHidden = true
         logOutButton.layer.cornerRadius = 4
-        listFunction = [Funciton("icChamCong", "Chấm công"),
-                        Funciton("icPhepCopy", "Nghỉ phép"),
-                        Funciton("icChamXongNgoaiCongTy", "Chấm công ngoài công ty"),
-                        Funciton("icNhanSu", "Nhân sự") ,
-                        Funciton("icDuyetRequest", "Duyệt Request"),
-                        Funciton("icDuyetChamCongNgoaiCongTy", "Duyệt chấm công ngoài công ty"),
-                        Funciton("icPassword", "Đổi mật khẩu")]
+        listFunction = [Menu("icChamCong", "Chấm công"),
+                        Menu("icPhepCopy", "Nghỉ phép"),
+                        Menu("icChamXongNgoaiCongTy", "Chấm công ngoài công ty"),
+                        Menu("icNhanSu", "Nhân sự") ,
+                        Menu("icDuyetRequest", "Duyệt Request"),
+                        Menu("icDuyetChamCongNgoaiCongTy", "Duyệt chấm công ngoài công ty"),
+                        Menu("icPassword", "Đổi mật khẩu")]
         functionTableView.register(UINib(nibName: "FunctionTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
     }
     // MARK: Background Button when Click and Default
@@ -63,9 +63,9 @@ extension ProfileController: UITableViewDataSource {
         return listFunction.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell: FunctionTableViewCell =
+        guard let cell: MenuTableViewCell =
             functionTableView.dequeueReusableCell(withIdentifier: "cell",
-                                                  for: indexPath) as? FunctionTableViewCell else {
+                                                  for: indexPath) as? MenuTableViewCell else {
             return UITableViewCell()
         }
         cell.logoImage.image = UIImage(named: listFunction[indexPath.row].logoImage)
