@@ -9,6 +9,7 @@
 import UIKit
 import SideMenu
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -35,6 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = rootNavigationController
         window?.makeKeyAndVisible()
     }
+    
     func setUpNavigationTimeKeeping() {
         let viewcontroller = UIStoryboard(
             name: "TimeKeepingViewController", bundle: nil)
