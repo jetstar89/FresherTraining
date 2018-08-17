@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SideMenu
 
 extension UITextField {
     func setIsOnFocus(_ isOnFocus: Bool) {
@@ -33,10 +34,6 @@ extension UIColor {
     
     @nonobjc class var black50: UIColor {
         return UIColor(white: 0.0, alpha: 0.5)
-    }
-    
-    @nonobjc class var white: UIColor {
-        return UIColor(white: 1.0, alpha: 1.0)
     }
     
     @nonobjc class var frenchBlue: UIColor {
@@ -82,8 +79,24 @@ extension UIView {
     }
 }
 
-//extension UITableViewCell {
-//    func setIsOnExpand(_ isOnExpand: Bool) {
-//
-//    }
-//}
+extension UIViewController {
+    func setUpNavigationBar(title: String, leftBarButton: UIBarButtonItem?, rightBarButton: UIBarButtonItem?) {
+        navigationItem.title = title.uppercased()
+        if let leftBarButton = leftBarButton {
+            navigationItem.leftBarButtonItem = leftBarButton
+        }
+        if let rightBarButton = rightBarButton {
+            navigationItem.rightBarButtonItem = rightBarButton
+        }
+    }
+    
+    @objc func onShowLeftMenu(_ sender: UIBarButtonItem) {
+        // show left menu
+        guard let sideMenu = SideMenuManager.default.menuLeftNavigationController else { return }
+        present(sideMenu, animated: true, completion: nil)
+    }
+    
+    @objc func onHiddenLeftMenu(_ sender: UIBarButtonItem) {
+        // Do something when hidden left menu
+    }
+}

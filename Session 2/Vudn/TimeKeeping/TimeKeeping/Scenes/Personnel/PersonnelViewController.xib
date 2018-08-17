@@ -20,6 +20,7 @@
                 <outlet property="departmentLabel" destination="EiT-FI-ZDc" id="Bj8-2R-231"/>
                 <outlet property="filterDerpartmentButton" destination="ufe-jP-zcs" id="bfM-r9-yGj"/>
                 <outlet property="personnelTableView" destination="GtC-rf-WQp" id="4Jl-xD-lqg"/>
+                <outlet property="searchImageView" destination="k7x-S4-vxH" id="TQv-QE-hup"/>
                 <outlet property="searchTextField" destination="a6U-7W-lCE" id="Xdi-MV-Ug4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -29,23 +30,33 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jOV-O0-EUm">
+                <view contentMode="scaleToFill" semanticContentAttribute="playback" translatesAutoresizingMaskIntoConstraints="NO" id="jOV-O0-EUm">
                     <rect key="frame" x="0.0" y="64" width="375" height="47"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="🔍 Tìm kiếm" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="a6U-7W-lCE">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tìm kiếm" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="a6U-7W-lCE">
                             <rect key="frame" x="16" y="2" width="343" height="32"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="16" bottom="8" trailing="8"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
                             <textInputTraits key="textInputTraits" returnKeyType="done"/>
                         </textField>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="k7x-S4-vxH">
+                            <rect key="frame" x="23" y="11" width="14" height="14"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="14" id="P9a-6p-ZHl"/>
+                                <constraint firstAttribute="height" constant="14" id="oYi-HT-ldL"/>
+                            </constraints>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" red="0.2470588235" green="0.37254901959999998" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="a6U-7W-lCE" secondAttribute="trailing" constant="16" id="BlF-mj-gVV"/>
                         <constraint firstAttribute="bottom" secondItem="a6U-7W-lCE" secondAttribute="bottom" constant="13" id="L64-QC-RUL"/>
+                        <constraint firstItem="k7x-S4-vxH" firstAttribute="leading" secondItem="a6U-7W-lCE" secondAttribute="leading" constant="7" id="WbD-AC-mrB"/>
                         <constraint firstItem="a6U-7W-lCE" firstAttribute="leading" secondItem="jOV-O0-EUm" secondAttribute="leading" constant="16" id="X8u-ue-wYt"/>
                         <constraint firstAttribute="height" constant="47" id="hQe-Gs-qzZ"/>
+                        <constraint firstItem="k7x-S4-vxH" firstAttribute="centerY" secondItem="a6U-7W-lCE" secondAttribute="centerY" id="jXf-5S-WQi"/>
                         <constraint firstItem="a6U-7W-lCE" firstAttribute="top" secondItem="jOV-O0-EUm" secondAttribute="top" constant="2" id="sVd-ND-u0o"/>
                     </constraints>
                 </view>
@@ -93,6 +104,7 @@
         </view>
     </objects>
     <resources>
+        <image name="search" width="14" height="14"/>
         <image name="triangleCopy" width="9" height="5"/>
     </resources>
 </document>

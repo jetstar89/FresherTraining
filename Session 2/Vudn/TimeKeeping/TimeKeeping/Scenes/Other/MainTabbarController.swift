@@ -11,9 +11,9 @@ import UIKit
 class MainTabbarController: UITabBarController {
     override func viewDidLoad() {
         // do something
-        let homeViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
+        let timeKeepingDetailViewController = TimeKeepingDetailViewController(nibName: "HomeViewController", bundle: nil)
         let profileViewController = LeftMenuViewController(nibName: "ProfileViewController", bundle: nil)
-        let homeViewNavigationController = UINavigationController(rootViewController: homeViewController)
+        let homeViewNavigationController = UINavigationController(rootViewController: timeKeepingDetailViewController)
         let profileViewNavigationController = UINavigationController(rootViewController: profileViewController)
         
         //tabbarController.viewControllers = [homeViewNavigationController, profileViewNavigationController]

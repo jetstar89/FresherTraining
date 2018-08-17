@@ -85,15 +85,22 @@ class LeftMenuViewController: UIViewController {
         let changePasswordViewController = ChangePasswordViewController(nibName: "ChangePasswordViewController", bundle: nil)
         navigationController?.pushViewController(changePasswordViewController, animated: true)
     }
+    
+    func pushTimeKeepingDetailViewController() {
+        //let transition = CATransition()
+        //transition.duration = 0.5
+        //transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        //transition.type = kCATransitionFromBottom
+        //navigationController?.view.layer.add(transition, forKey: nil)
+        let timeKeepingDetail = TimeKeepingDetailViewController(nibName: "TimeKeepingDetailViewController", bundle: nil)
+        //timeKeepingDetail.view.layer.add(transition, forKey: nil)
+        navigationController?.pushViewController(timeKeepingDetail, animated: true)
+    }
 }
 
 // MARK: - Extension
 
 extension LeftMenuViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
-        return 1
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listOption.count
     }
@@ -109,6 +116,16 @@ extension LeftMenuViewController: UITableViewDataSource {
     }
 }
 
+enum MenuOption: Int {
+    case timeKeeping = 0
+    case vacation
+    case keepingOnSite
+    case personnel
+    case browseRequest
+    case browseRequestOnsite
+    case changePassword
+}
+
 extension LeftMenuViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
@@ -116,12 +133,13 @@ extension LeftMenuViewController: UITableViewDelegate {
             item.setIsOnSelect(true)
         }
         switch indexPath.row {
-        case 0:
-            selectItemIndex = 0
+        case MenuOption.timeKeeping.rawValue:
             pushTimeKeepingViewController()
-        case 3:
+        case MenuOption.keepingOnSite.rawValue:
+            pushTimeKeepingDetailViewController()
+        case MenuOption.personnel.rawValue:
             pushPersonnelViewController()
-        case 6:
+        case MenuOption.changePassword.rawValue:
             pushChangePasswordViewController()
         default:
             break

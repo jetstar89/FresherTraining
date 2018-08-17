@@ -16,16 +16,16 @@ class MainNavigationController: UINavigationController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        let homeViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
+        let homeViewController = TimeKeepingDetailViewController(nibName: "HomeViewController", bundle: nil)
         let timeKeepingViewController = TimeKeepingViewController(nibName: "TimeKeepingViewController", bundle: nil)
         setViewControllers([timeKeepingViewController, homeViewController], animated: true)
-        timeKeepingViewController.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ic_menu_three_line"), style: .plain, target: timeKeepingViewController, action: #selector(onShowLeftMenu(_:)))
-        homeViewController.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ic_menu_three_line"), style: .plain, target: self, action: #selector(onShowLeftMenu(_:)))
+//        timeKeepingViewController.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ic_menu_three_line"), style: .plain, target: timeKeepingViewController, action: #selector(onShowLeftMenu(_:)))
+//        homeViewController.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ic_menu_three_line"), style: .plain, target: self, action: #selector(onShowLeftMenu(_:)))
     }
     
-    @objc func onShowLeftMenu(_ sender: MainNavigationController) {
-        
-        //let profileVieController = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
-        pushViewController(viewControllers[1], animated: true)
-    }
+//    @objc func onShowLeftMenu(_ sender: MainNavigationController) {
+//
+//        //let profileVieController = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
+//        pushViewController(viewControllers[1], animated: true)
+//    }
 }
