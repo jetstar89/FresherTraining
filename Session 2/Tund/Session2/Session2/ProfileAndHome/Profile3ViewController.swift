@@ -118,6 +118,11 @@ extension Profile3ViewController: UITableViewDelegate {
             break
         }
     }
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        if let item = tableView.cellForRow(at: indexPath)?.contentView {
+            item.iSelected(false)
+        }
+    }
 }
 // MARK: UITableViewDataSource
 extension Profile3ViewController: UITableViewDataSource {
@@ -141,18 +146,4 @@ extension Profile3ViewController: UITableViewDataSource {
     }
 }
 
-extension UIView {
-    func iSelected(_ isSelected: Bool) {
-        self.backgroundColor = isSelected ? UIColor(red: 35/255,
-                    green: 61/255,
-                    blue: 117/255,
-                    alpha: 1):
-            UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1)
-        let border = CALayer()
-        border.borderColor = isSelected ? UIColor.red.cgColor:
-            UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1).cgColor
-        border.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
-        self.layer.addSublayer(border)
-        self.layer.masksToBounds = true
-    }
-}
+

@@ -102,7 +102,7 @@
                 <outlet property="positionLabel" destination="cWW-gQ-TJW" id="GJm-Lf-M1v"/>
                 <outlet property="statusButton" destination="qNn-ag-gNs" id="IzP-bB-jWb"/>
             </connections>
-            <point key="canvasLocation" x="-133" y="109"/>
+            <point key="canvasLocation" x="-278" y="76"/>
         </tableViewCell>
     </objects>
 </document>
