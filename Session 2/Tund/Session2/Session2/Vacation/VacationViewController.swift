@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SideMenu
 
 class VacationViewController: UIViewController {
     @IBOutlet weak var noMoneyLabel: UILabel!
@@ -22,7 +23,7 @@ class VacationViewController: UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "iconMenu"),
                                                            style: .plain,
                                                            target: self,
-                                                           action: #selector(onBack))
+                                                           action: #selector(onShowLeftMenu(_:)))
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "iconAdd"),
                                                             style: .plain,
                                                             target: self,
@@ -38,6 +39,10 @@ class VacationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     // MARK: init and functions
+    @objc func onShowLeftMenu(_ sender: MainNavigationController) {
+        guard let sideMenu = SideMenuManager.default.menuLeftNavigationController else { return }
+        present(sideMenu, animated: true, completion: nil)
+    }
     @objc func onAdd() {
         print("add")
     }
