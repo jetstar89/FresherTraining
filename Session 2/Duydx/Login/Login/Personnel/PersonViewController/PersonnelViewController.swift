@@ -152,11 +152,12 @@ extension PersonnelViewController: UITableViewDelegate {
             let view = HAActionSheet(fromView: self.view, sourceData: data)
             view.cancelButtonTitleColor = UIColor(red: 0/255, green: 122/255, blue: 163/255, alpha: 1)
             view.buttonTitleColor = UIColor(red: 0/255, green: 122/255, blue: 163/255, alpha: 1)
-            view.titleFont.withSize(CGFloat(20))
+            view.titleFont.withSize(20)
             view.show { (canceled, index) in
                 if !canceled {
                     print(self.data[index!])
                 }
+                item.isSelected(false, "PersonnelViewController")
             }
         }
     }
