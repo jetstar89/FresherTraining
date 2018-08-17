@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Funciton: NSObject {
+class Menu: NSObject {
     var logoImage: String
     var content: String
     init(_ logoImage: String, _ content: String) {

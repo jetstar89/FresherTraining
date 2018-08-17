@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FunctionTableViewCell: UITableViewCell {
+class MenuTableViewCell: UITableViewCell {
 
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var logoImage: UIImageView!
