@@ -16,6 +16,7 @@ class Profile3ViewController: UIViewController {
     @IBOutlet weak var menuTableView: UITableView!
     @IBOutlet weak var timeKeepingButton: UIButton!
     @IBOutlet weak var logoutButton: UIButton!
+    var selectItemIndex = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
@@ -42,9 +43,25 @@ class Profile3ViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     // MARK: init and func
+    func initView() {
+        avatarImageView.layer.cornerRadius = avatarImageView.frame.size.width/2
+        avatarImageView.layer.masksToBounds = true
+        timeKeepingButton.isHidden = true
+        logoutButton.layer.cornerRadius = 4
+        logoutButton.layer.masksToBounds = true
+        // add list Method for tableView
+        listOption = [(#imageLiteral(resourceName: "icChamCong"), "Chấm công"),
+                      (#imageLiteral(resourceName: "icPhep"), "Nghỉ phép"),
+                      (#imageLiteral(resourceName: "icChamCongNgoaiCongTy"), "Chấm công ngoài công ty"),
+                      (#imageLiteral(resourceName: "icNhanSu"), "Nhân sự"),
+                      (#imageLiteral(resourceName: "icDuyetRequest"), "Duyệt request"),
+                      (#imageLiteral(resourceName: "icDuyetChamCongNgoaiCongTy"), "Duyệt chấm công ngoài công ty"),
+                      (#imageLiteral(resourceName: "icPassword"), "Đổi mật khẩu")]
+        menuTableView.register(UINib(nibName: "MenuTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+    }
     @IBAction func logout(_ sender: Any) {
         self.dismiss(animated: false, completion: nil)
-        (UIApplication.shared.delegate as? AppDelegate)?.setupNavigation()
+        (UIApplication.shared.delegate as? AppDelegate)?.setUpRootViewIsLoginViewController()
     }
     @IBAction func actionTimeKeep(_ sender: Any) {
         setButtonColor(timeKeepingButton)
@@ -66,23 +83,6 @@ class Profile3ViewController: UIViewController {
     func setBackgroundDefault(_ button: UIButton) {
         button.backgroundColor = UIColor.init(red: 63/255, green: 95/255, blue: 163/255, alpha: 1)
     }
-    func initView() {
-        avatarImageView.layer.cornerRadius = avatarImageView.frame.size.width/2
-        avatarImageView.layer.masksToBounds = true
-        timeKeepingButton.isHidden = true
-        logoutButton.layer.cornerRadius = 4
-        logoutButton.layer.masksToBounds = true
-        // add list Method for tableView
-        listOption = [(#imageLiteral(resourceName: "icChamCong"), "Chấm công"),
-                      (#imageLiteral(resourceName: "icPhep"), "Nghỉ phép"),
-                      (#imageLiteral(resourceName: "icChamCongNgoaiCongTy"), "Chấm công ngoài công ty"),
-                      (#imageLiteral(resourceName: "icNhanSu"), "Nhân sự"),
-                      (#imageLiteral(resourceName: "icDuyetRequest"), "Duyệt request"),
-                      (#imageLiteral(resourceName: "icDuyetChamCongNgoaiCongTy"), "Duyệt chấm công ngoài công ty"),
-                      (#imageLiteral(resourceName: "icPassword"), "Đổi mật khẩu")]
-        menuTableView.register(UINib(nibName: "MenuTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
-    }
-
 }
 // MARK: UITableViewDataSource
 extension Profile3ViewController: UITableViewDelegate {
@@ -92,6 +92,7 @@ extension Profile3ViewController: UITableViewDelegate {
         }
         switch indexPath.row {
         case 0:
+            selectItemIndex = 0
             let timekeepingController = TimeKeepingViewController(nibName: "TimeKeepingViewController", bundle: nil)
                 navigationController?.pushViewController(timekeepingController, animated: true)
             print(listOption[0].name)
@@ -107,8 +108,7 @@ extension Profile3ViewController: UITableViewDelegate {
         case 4:
             break
         case 5:
-            let rootSideMenuController = RootSideMenuViewController(nibName: "RootSideMenuViewController", bundle: nil)
-            navigationController?.pushViewController(rootSideMenuController, animated: true)
+            break
         case 6:
             let changePasswordController =
                 ChangePasswordViewController(nibName: "ChangePasswordViewController",
@@ -116,6 +116,11 @@ extension Profile3ViewController: UITableViewDelegate {
             navigationController?.pushViewController(changePasswordController, animated: true)
         default:
             break
+        }
+    }
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        if let item = tableView.cellForRow(at: indexPath)?.contentView {
+            item.iSelected(false)
         }
     }
 }
@@ -141,18 +146,4 @@ extension Profile3ViewController: UITableViewDataSource {
     }
 }
 
-extension UIView {
-    func iSelected(_ isSelected: Bool) {
-        self.backgroundColor = isSelected ? UIColor(red: 35/255,
-                    green: 61/255,
-                    blue: 117/255,
-                    alpha: 1):
-            UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1)
-        let border = CALayer()
-        border.borderColor = isSelected ? UIColor.red.cgColor:
-            UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1).cgColor
-        border.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
-        self.layer.addSublayer(border)
-        self.layer.masksToBounds = true
-    }
-}
+

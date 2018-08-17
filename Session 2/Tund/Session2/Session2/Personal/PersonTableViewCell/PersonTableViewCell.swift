@@ -17,6 +17,11 @@ class PersonTableViewCell: UITableViewCell {
     @IBOutlet weak var avatarImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
+        let separatorHeight = CGFloat(1)
+        let screenSize = UIScreen.main.bounds
+        let separator = UIView(frame: CGRect(x: 0, y: frame.height - separatorHeight, width: screenSize.width, height: separatorHeight))
+        separator.backgroundColor = UIColor.steelGrey
+        self.addSubview(separator)
         // Initialization code
     }
     override func setSelected(_ selected: Bool, animated: Bool) {

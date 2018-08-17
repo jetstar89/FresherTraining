@@ -1,29 +1,38 @@
 PODS:
-  - SideNavigation (1.1.3)
-  - XLPagerTabStrip (5.0.0)
+  - HAActionSheet (0.1.9)
+  - Kingfisher (4.8.1)
+  - Realm (3.7.6):
+    - Realm/Headers (= 3.7.6)
+  - Realm/Headers (3.7.6)
+  - RealmSwift (3.7.6):
+    - Realm (= 3.7.6)
+  - SideMenu (4.0.0)
+  - SwiftLint (0.27.0)
 
 DEPENDENCIES:
-  - SideNavigation
-  - XLPagerTabStrip (from `https://github.com/KelvinJin/XLPagerTabStrip`, branch `swift3`)
+  - HAActionSheet
+  - Kingfisher (~> 4.0)
+  - RealmSwift
+  - SideMenu
+  - SwiftLint
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - SideNavigation
-
-EXTERNAL SOURCES:
-  XLPagerTabStrip:
-    :branch: swift3
-    :git: https://github.com/KelvinJin/XLPagerTabStrip
-
-CHECKOUT OPTIONS:
-  XLPagerTabStrip:
-    :commit: 99e3cbd5e6b99bb6b1fdf25f4af58fe2e38ad308
-    :git: https://github.com/KelvinJin/XLPagerTabStrip
+    - HAActionSheet
+    - Kingfisher
+    - Realm
+    - RealmSwift
+    - SideMenu
+    - SwiftLint
 
 SPEC CHECKSUMS:
-  SideNavigation: b9a36b7a8c2d2a1a24b99d6786cd519267dff272
-  XLPagerTabStrip: 87b8b705f9a7178e76a063ffaa2d70045944a965
+  HAActionSheet: e34b07351e302c1c91a77f709bbcd9ec918a378f
+  Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
+  Realm: 9eaecad54712d6246d08ba34c10f354e4715d7d3
+  RealmSwift: 1fe08b4ebaeeaacf17f9ba0343f7b25c9fc31fa6
+  SideMenu: 70ee5657df63ec3382660ec4ef470bf1cf5db07d
+  SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
 
-PODFILE CHECKSUM: 61d052a1b24e959f3f06d6efdb35a178fc7bb157
+PODFILE CHECKSUM: 2827fd61048e9c19fed3330b43342a85da6df0e8
 
 COCOAPODS: 1.5.3

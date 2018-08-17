@@ -33,7 +33,8 @@ class ScreenTimekeeping: UIViewController {
     }
     func initView() {
         navigationItem.title = "Home"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "left"), style: .plain, target: self, action: #selector(onBack))
+        navigationItem.leftBarButtonItem =
+            UIBarButtonItem(image: UIImage(named: "left"), style: .plain, target: self, action: #selector(onBack))
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
     }
     @objc func onBack() {

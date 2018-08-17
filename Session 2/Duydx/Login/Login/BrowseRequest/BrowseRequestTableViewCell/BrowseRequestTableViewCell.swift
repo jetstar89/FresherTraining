@@ -11,7 +11,6 @@ import UIKit
 class BrowseRequestTableViewCell: UITableViewCell {
 
     @IBOutlet weak var noteLabel: UILabel!
-    
     @IBOutlet weak var statusImage: UIImageView!
     @IBOutlet weak var timeRequestLabel: UILabel!
     @IBOutlet weak var namePersonLabel: UILabel!
@@ -27,5 +26,4 @@ class BrowseRequestTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }

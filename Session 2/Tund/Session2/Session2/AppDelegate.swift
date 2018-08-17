@@ -18,7 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
         setupDeaultStyleNavigationBar()
-        setupNavigation()
+        setUpRootViewIsLoginViewController()
+        setUpLeftMenu()
         window?.makeKeyAndVisible()
         return true
     }
@@ -28,12 +29,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationBarAppearace.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         navigationBarAppearace.barTintColor = UIColor.frenchBlue
     }
-    func setupNavigation() {
+    func setUpRootViewIsLoginViewController() {
         let viewcontroller = UIStoryboard(name: "Main",
                                         bundle: nil).instantiateViewController(withIdentifier: "ViewController")
         let rootNavigationController = UINavigationController(rootViewController: viewcontroller)
         window?.rootViewController = rootNavigationController
         window?.makeKeyAndVisible()
+    }
+    func setUpRootViewIsTimeKeepingViewController() {
+        let viewcontroller = TimeKeepingViewController(nibName: "TimeKeepingViewController", bundle: nil)
+        let nav = UINavigationController(rootViewController: viewcontroller)
+        //        let rootSideMenuViewController = SideMenuViewController(rootViewController: timeKeepingViewController)
+        window?.rootViewController = nav
+    }
+
+    func setUpLeftMenu() {
+        let leftMenuViewController = Profile3ViewController(nibName: "Profile3ViewController", bundle: nil)
+        let menuLeftNavigationController = UISideMenuNavigationController(rootViewController: leftMenuViewController)
+        SideMenuManager.default.menuLeftNavigationController = menuLeftNavigationController
+        SideMenuManager.default.menuPushStyle = .preserve
+        SideMenuManager.default.menuPresentMode = .menuSlideIn
+        let uiScreen = UIScreen.main.bounds
+        SideMenuManager.default.menuWidth = max(round(min((uiScreen.width), (uiScreen.height)) * 0.8), 310)
     }
     func setUpNavigationTimeKeeping() {
         let viewcontroller = UIStoryboard(

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PersonnelViewController" customModule="Login" customModuleProvider="target">
+            <connections>
+                <outlet property="personTableView" destination="6FU-DZ-u7k" id="1KM-Es-fqA"/>
+                <outlet property="positionLabel" destination="QeG-OF-rhV" id="mol-RN-xAa"/>
+                <outlet property="searchTextField" destination="dwd-fJ-W5J" id="lFK-lQ-S4a"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6FU-DZ-u7k">
+                    <rect key="frame" x="0.0" y="87" width="375" height="516"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="mKh-eb-Mhf"/>
+                        <outlet property="delegate" destination="-1" id="o1e-di-YaO"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uks-rZ-mGF">
+                    <rect key="frame" x="350" y="60" width="10" height="10"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="10" id="OsV-Hk-YVI"/>
+                        <constraint firstAttribute="height" constant="10" id="WGk-AF-Ss4"/>
+                    </constraints>
+                    <state key="normal" image="triangleCopy"/>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NOC-NU-dlu">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="47"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tìm kiếm" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dwd-fJ-W5J">
+                            <rect key="frame" x="16" y="2" width="343" height="32"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" red="0.24705882352941178" green="0.37254901960784315" blue="0.63921568627450975" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="dwd-fJ-W5J" secondAttribute="bottom" constant="13" id="Eee-Uy-SnC"/>
+                        <constraint firstAttribute="height" constant="47" id="dJK-1c-e6Z"/>
+                        <constraint firstAttribute="trailing" secondItem="dwd-fJ-W5J" secondAttribute="trailing" constant="16" id="gDY-7h-fmv"/>
+                        <constraint firstItem="dwd-fJ-W5J" firstAttribute="top" secondItem="NOC-NU-dlu" secondAttribute="top" constant="2" id="hkc-Ft-Kix"/>
+                        <constraint firstItem="dwd-fJ-W5J" firstAttribute="leading" secondItem="NOC-NU-dlu" secondAttribute="leading" constant="16" id="l3b-hg-IV1"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QeG-OF-rhV">
+                    <rect key="frame" x="15" y="57" width="235" height="19"/>
+                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                    <color key="textColor" red="0.24705882352941178" green="0.37254901960784315" blue="0.63921568627450975" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Uks-rZ-mGF" secondAttribute="trailing" constant="15" id="0OF-LG-l9o"/>
+                <constraint firstItem="NOC-NU-dlu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="3RV-cI-KnL"/>
+                <constraint firstItem="NOC-NU-dlu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4gR-iW-9kU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6FU-DZ-u7k" secondAttribute="trailing" id="GgV-Nt-gbw"/>
+                <constraint firstItem="6FU-DZ-u7k" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="QAE-sN-DDR"/>
+                <constraint firstItem="QeG-OF-rhV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="UgD-x7-bcx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6FU-DZ-u7k" secondAttribute="bottom" id="VxO-XI-qto"/>
+                <constraint firstItem="QeG-OF-rhV" firstAttribute="top" secondItem="NOC-NU-dlu" secondAttribute="bottom" constant="10" id="aHc-cX-LjN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NOC-NU-dlu" secondAttribute="trailing" id="aKT-hD-std"/>
+                <constraint firstItem="Uks-rZ-mGF" firstAttribute="leading" secondItem="QeG-OF-rhV" secondAttribute="trailing" constant="100" id="dcW-zc-EDK"/>
+                <constraint firstItem="Uks-rZ-mGF" firstAttribute="top" secondItem="NOC-NU-dlu" secondAttribute="bottom" constant="13" id="nwi-Fe-DGf"/>
+                <constraint firstItem="6FU-DZ-u7k" firstAttribute="top" secondItem="QeG-OF-rhV" secondAttribute="bottom" constant="11" id="sza-Ie-i3X"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="32.5" y="76.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="triangleCopy" width="27" height="15"/>
+    </resources>
+</document>

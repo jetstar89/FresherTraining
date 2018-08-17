@@ -1,5 +1,5 @@
 //
-//  PersonTableViewCell.swift
+//  FunctionTableViewCell.swift
 //  Login
 //
 //  Created by admin on 8/9/18.
@@ -8,14 +8,10 @@
 
 import UIKit
 
-class PersonTableViewCell: UITableViewCell {
+class MenuTableViewCell: UITableViewCell {
+
+    @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var logoImage: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var idLabel: UILabel!
-    @IBOutlet weak var phoneLabel: UILabel!
-    @IBOutlet weak var positionLabel: UILabel!
-    @IBOutlet weak var statusLabel: UILabel!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,5 +22,4 @@ class PersonTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }

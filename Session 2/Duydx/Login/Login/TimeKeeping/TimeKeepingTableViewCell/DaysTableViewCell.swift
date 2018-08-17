@@ -15,10 +15,8 @@ class DaysTableViewCell: UITableViewCell {
             switch title {
             case "P":
                 print("Nghỉ phép")
-                break
             case "!":
                 print("Đuổi việc")
-                break
             default:
                 break
             }
@@ -43,8 +41,7 @@ class DaysTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    func setAttributesDaysTableViewCell(_ cell: DaysTableViewCell, childHeaderTableView: [[DayOfWeek]], section: Int, row: Int) {
-        
+    func setAttributesDaysTableViewCell(_ cell: DaysTableViewCell,
+                                        childHeaderTableView: [[DayOfWeek]], section: Int, row: Int) {
     }
-    
 }

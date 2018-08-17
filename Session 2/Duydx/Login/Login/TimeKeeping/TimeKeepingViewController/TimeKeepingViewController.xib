@@ -17,6 +17,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TimeKeepingViewController" customModule="Login" customModuleProvider="target">
             <connections>
+                <outlet property="mainView" destination="i5M-Pr-FkT" id="WtK-ER-hbW"/>
                 <outlet property="monthLabel" destination="9T8-f4-Dvo" id="9rW-Or-FGa"/>
                 <outlet property="timeKeepingTableView" destination="OP2-nT-Jcz" id="X6X-2T-Aoe"/>
                 <outlet property="totalNumberDayLabel" destination="3uB-xo-isP" id="2LF-7r-3x8"/>

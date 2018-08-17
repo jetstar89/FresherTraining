@@ -7,20 +7,20 @@
 //
 
 import UIKit
-
-class Person: NSObject {
-    var namePersion: String
-    var idPersion: String
-    var phonePerson: String
-    var positionPerson: String
-    var isStatus: Bool
-    var imagePerson: String
-    init(_ name: String, _ id: String, _ phone: String, _ position: String, _ isStatus: Bool, _ image: String) {
-        self.namePersion = name
-        self.idPersion = id
-        self.phonePerson = phone
-        self.positionPerson = position
-        self.isStatus = isStatus
-        self.imagePerson = image
-    }
+import RealmSwift
+class Person: Object {
+    @objc dynamic var namePerson: String = ""
+    @objc dynamic var idPerson: String = ""
+    @objc dynamic var phonePerson: String = ""
+    @objc dynamic var positionPerson: String = ""
+    @objc dynamic var isStatus: Bool = false
+    @objc dynamic var imagePerson: String = ""
+//    init(_ name: String, _ idPerson: String, _ phone: String, _ position: String, _ isStatus: Bool, _ image: String) {
+//        self.namePersion = name
+//        self.idPersion = idPerson
+//        self.phonePerson = phone
+//        self.positionPerson = position
+//        self.isStatus = isStatus
+//        self.imagePerson = image
+//    }
 }

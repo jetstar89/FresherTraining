@@ -7,14 +7,15 @@
 //
 
 import UIKit
+import RealmSwift
 
-class Person: NSObject {
-    var idUser: String
-    var avatar: UIImage
-    var name: String
-    var phone: String
-    var position: String
-    var status: String
+public class Person: NSObject {
+    @objc dynamic var idUser: String
+    @objc dynamic var avatar: UIImage
+    @objc dynamic var name: String
+    @objc dynamic var phone: String
+    @objc dynamic var position: String
+    @objc dynamic var status: String
     init(idUser: String, avatar: UIImage, name: String, phone: String, position: String, status: String) {
          self.idUser = idUser
          self.avatar = avatar
@@ -23,5 +24,4 @@ class Person: NSObject {
          self.position = position
          self.status = status
     }
-
 }
