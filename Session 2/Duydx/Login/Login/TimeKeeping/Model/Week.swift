@@ -12,7 +12,7 @@ class Week: NSObject {
     var isEpand: Bool
     var weekNumber: String
     var totalDay: String
-    init(_ isEpand: Bool, _ weekNumber: String,_ totalDay: String) {
+    init(_ isEpand: Bool, _ weekNumber: String, _ totalDay: String) {
         self.isEpand = isEpand
         self.weekNumber = weekNumber
         self.totalDay = totalDay

@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    //MARK: IBOutlet
+    // MARK: IBOutlet
     var borderTextField: CALayer!
     var showPasswordButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var passWordTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var logoImageView: UIImageView!
-    //MARK: Lifecycle
+    // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
@@ -27,7 +27,6 @@ class ViewController: UIViewController {
         addGestureView()
         registerDelegate()
         showIconPassword()
-        
         self.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 1)
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -40,28 +39,30 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    //MARK: IBAction
+    // MARK: IBAction
     @IBAction func login(_ sender: Any) {
         let userName = nameTextField.text!
         let passWord = passWordTextField.text!
         if userName.isEqual("") && passWord.isEqual("") {
-            let screenLogin = HomeController(nibName: "HomeController", bundle: nil)
-            navigationController?.pushViewController(screenLogin, animated: true)
-            (UIApplication.shared.delegate as? AppDelegate)?.setupTabbarController()
+            let screenTimeKeeping = TimeKeepingViewController(nibName: "TimeKeepingViewController", bundle: nil)
+            navigationController?.pushViewController(screenTimeKeeping, animated: true)
+            (UIApplication.shared.delegate as? AppDelegate)?.rootTimeKeepingViewController()
         } else {
-            let alert: UIAlertController = UIAlertController(title: "Thông báo", message: "Đăng nhập không thành công", preferredStyle: .alert);
+            let alert: UIAlertController =
+                UIAlertController(title: "Thông báo", message: "Đăng nhập không thành công", preferredStyle: .alert)
             let btnOK = UIAlertAction(title: "Đồng ý", style: .cancel, handler: nil)
             alert.addAction(btnOK)
             present(alert, animated: true, completion: nil)
         }
     }
-    //MARK: innitView
+    // MARK: innitView
     func initView() {
         self.logoImageView.image = UIImage(named: "gem2017")
         self.logoImageView.contentMode = .scaleAspectFit
         nameTextField.textColor = UIColor(red: 120/255, green: 131/255, blue: 140/255, alpha: 1.0)
         passWordTextField.textColor = UIColor(red: 120/255, green: 131/255, blue: 140/255, alpha: 1.0)
-        navigationController?.navigationBar.barTintColor = UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1.0)
+        navigationController?.navigationBar.barTintColor =
+            UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1.0)
             navigationController?.navigationBar.tintColor = UIColor.white
     }
     func registerDelegate() {
@@ -70,7 +71,7 @@ class ViewController: UIViewController {
     }
     func showIconPassword() {
         showPasswordButton  = UIButton(type: .custom)
-        showPasswordButton.frame = CGRect(x:0, y:0, width:22, height:18)
+        showPasswordButton.frame = CGRect(x: 0, y: 0, width: 22, height: 18)
         showPasswordButton.setImage(UIImage(named: "icView.png"), for: .normal)
         passWordTextField.rightViewMode = .always
         passWordTextField.rightView = showPasswordButton
@@ -91,35 +92,32 @@ class ViewController: UIViewController {
         let tapGestureFogotLabel = UITapGestureRecognizer(target: self, action: #selector(onTapFogotLabel(_:)))
         fogotLabel.addGestureRecognizer(tapGestureFogotLabel)
     }
-    
     @objc func addGestureView() {
         view.isUserInteractionEnabled = true
         let tapGestureView = UITapGestureRecognizer(target: self, action: #selector(onTapView(_:)))
         view.addGestureRecognizer(tapGestureView)
     }
-    
     @objc func onTapView(_ getture: UITapGestureRecognizer) {
         view.endEditing(true)
     }
-    
     @objc func onTapFogotLabel(_ getture: UITapGestureRecognizer) {
         let fogotPasswordController = FogotPasswordController(nibName: "FogotPasswordController", bundle: nil)
         navigationController?.pushViewController(fogotPasswordController, animated: true)
-        
     }
     func setBorderTextField(_ textField: UITextField, _ uiColor: UIColor) {
         borderTextField = CALayer()
         let width = CGFloat(2.0)
         let color = uiColor
         borderTextField.borderColor = color.cgColor
-        borderTextField.frame = CGRect(x: 0, y: textField.frame.size.height - width, width: textField.frame.size.width, height: textField.frame.size.height)
-        
+        borderTextField.frame = CGRect(x: 0, y:
+            textField.frame.size.height - width,
+            width: textField.frame.size.width, height: textField.frame.size.height)
         borderTextField.borderWidth = width
         textField.layer.addSublayer(borderTextField)
         textField.layer.masksToBounds = true
     }
 }
-//MARK: extension UITextField Delegate
+// MARK: extension UITextField Delegate
 extension ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == nameTextField {
@@ -130,10 +128,10 @@ extension ViewController: UITextFieldDelegate {
         return true
     }
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        if (textField == nameTextField) {
+        if textField == nameTextField {
             nameTextField.textColor = UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1.0)
             setBorderTextField(nameTextField, UIColor.init(red: 239/255, green: 137/255, blue: 15/255, alpha: 1.0))
-        } else if (textField == passWordTextField) {
+        } else if textField == passWordTextField {
             passWordTextField.textColor = UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1.0)
             setBorderTextField(passWordTextField, UIColor.init(red: 239/255, green: 137/255, blue: 15/255, alpha: 1.0))
         }
@@ -162,4 +160,3 @@ extension ViewController: UITextFieldDelegate {
         return true
     }
 }
-

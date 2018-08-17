@@ -9,24 +9,24 @@
 import UIKit
 
 class FogotPasswordController: UIViewController {
-    
-    //MARK: IBOutlet
+    // MARK: IBOutlet
     @IBOutlet weak var emailTextField: UITextField!
-    //MARK: Lifecycle
+    // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        initView();
+        initView()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    //MARK: initView
+    // MARK: initView
     func initView() {
         tabBarController?.tabBar.isHidden = true
         emailTextField.delegate = self
         setBorderTextField(emailTextField, UIColor.gray)
         navigationItem.title = "QUÊN MẬT KHẨU"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "left"), style: .plain, target: self, action: #selector(onBack))
+        navigationItem.leftBarButtonItem =
+            UIBarButtonItem(image: UIImage(named: "left"), style: .plain, target: self, action: #selector(onBack))
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
     }
     @objc func onBack() {
@@ -37,13 +37,13 @@ class FogotPasswordController: UIViewController {
         let width = CGFloat(2.0)
         let color = uiColor
         borderTextField.borderColor = color.cgColor
-        borderTextField.frame = CGRect(x: 0, y: textField.frame.size.height - width, width: textField.frame.size.width, height: textField.frame.size.height)
-        
+        borderTextField.frame = CGRect(x: 0, y: textField.frame.size.height - width,
+                                       width: textField.frame.size.width, height: textField.frame.size.height)
         borderTextField.borderWidth = width
         textField.layer.addSublayer(borderTextField)
         textField.layer.masksToBounds = true
     }
-    //MARK: IBAction
+    // MARK: IBAction
     @IBAction func sendRequest(_ sender: Any) {
         let alert = UIAlertController(title: "Thông báo", message: "Bạn đã gửi thành công", preferredStyle: .alert)
         let btnOk  = UIAlertAction(title: "Đồng ý", style: .default, handler: nil)
@@ -51,7 +51,7 @@ class FogotPasswordController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
 }
-//MARK: extension UITextFieldDelegate
+// MARK: extension UITextFieldDelegate
 extension FogotPasswordController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == emailTextField {
@@ -60,7 +60,7 @@ extension FogotPasswordController: UITextFieldDelegate {
         return true
     }
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        if (textField == emailTextField) {
+        if textField == emailTextField {
             emailTextField.textColor = UIColor(red: 63/255, green: 95/255, blue: 163/255, alpha: 1.0)
             setBorderTextField(emailTextField, UIColor.init(red: 239/255, green: 137/255, blue: 15/255, alpha: 1.0))
         }
@@ -76,7 +76,4 @@ extension FogotPasswordController: UITextFieldDelegate {
         emailTextField.resignFirstResponder()
         return true
     }
-    
-
-
 }

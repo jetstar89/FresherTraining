@@ -10,6 +10,7 @@
 		3BF0B5B26EB4BF7BD8B44CBF /* Pods_Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87A4BFF0D5E5486FF701E0C5 /* Pods_Login.framework */; };
 		84196FA92121260C00553107 /* WeeksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84196FA82121260C00553107 /* WeeksTableViewCell.xib */; };
 		84196FAB2121778A00553107 /* WeeksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84196FAA2121778A00553107 /* WeeksTableViewCell.swift */; };
+		84580ABB2126766E005407EE /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 84580ABA2126766E005407EE /* .swiftlint.yml */; };
 		84B7CB902122B1F300B9CE99 /* BrowseRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7CB8E2122B1F300B9CE99 /* BrowseRequestViewController.swift */; };
 		84B7CB912122B1F300B9CE99 /* BrowseRequestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B7CB8F2122B1F300B9CE99 /* BrowseRequestViewController.xib */; };
 		84B7CB9D2122B91A00B9CE99 /* BrowseRequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7CB9B2122B91A00B9CE99 /* BrowseRequestTableViewCell.swift */; };
@@ -64,6 +65,7 @@
 		0CCD682A34C70A6AFA0ED759 /* Pods-Login.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login.release.xcconfig"; path = "Pods/Target Support Files/Pods-Login/Pods-Login.release.xcconfig"; sourceTree = "<group>"; };
 		84196FA82121260C00553107 /* WeeksTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeeksTableViewCell.xib; sourceTree = "<group>"; };
 		84196FAA2121778A00553107 /* WeeksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeksTableViewCell.swift; sourceTree = "<group>"; };
+		84580ABA2126766E005407EE /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		84B7CB8E2122B1F300B9CE99 /* BrowseRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseRequestViewController.swift; sourceTree = "<group>"; };
 		84B7CB8F2122B1F300B9CE99 /* BrowseRequestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrowseRequestViewController.xib; sourceTree = "<group>"; };
 		84B7CB9B2122B91A00B9CE99 /* BrowseRequestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseRequestTableViewCell.swift; sourceTree = "<group>"; };
@@ -130,6 +132,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84580ABC21268801005407EE /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				84ED89BB21142E74005D2174 /* Assets.xcassets */,
+				84ED89B421142E73005D2174 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		84580ABD21268819005407EE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				84ED89B621142E73005D2174 /* ViewController.swift */,
+				84ED89B821142E73005D2174 /* Main.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		845E43713E4552082F29BD8E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,14 +159,104 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8462200621265D2F0018D765 /* PersonTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				84E87E10211C462200C896B7 /* PersonTableViewCell.swift */,
+				84E87E11211C462200C896B7 /* PersonTableViewCell.xib */,
+			);
+			path = PersonTableCell;
+			sourceTree = "<group>";
+		};
+		8462200721265D500018D765 /* PersonViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84E87E04211BE37C00C896B7 /* PersonnelViewController.swift */,
+				84E87E05211BE37C00C896B7 /* PersonnelViewController.xib */,
+			);
+			path = PersonViewController;
+			sourceTree = "<group>";
+		};
+		8462200821265D730018D765 /* ChangePasswordViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84E5AB9A211D4D44003D1BF9 /* ChangePasswordViewController.swift */,
+				84E5AB9B211D4D44003D1BF9 /* ChangePasswordViewController.xib */,
+			);
+			path = ChangePasswordViewController;
+			sourceTree = "<group>";
+		};
+		8462200921265D880018D765 /* ProfileTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				84E87E08211C1AAB00C896B7 /* FunctionTableViewCell.swift */,
+				84E87E09211C1AAB00C896B7 /* FunctionTableViewCell.xib */,
+			);
+			path = ProfileTableViewCell;
+			sourceTree = "<group>";
+		};
+		8462200A21265DA70018D765 /* ProfileViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84F454762118570E00217F3D /* ProfileController.swift */,
+				84F454772118570E00217F3D /* ProfileController.xib */,
+			);
+			path = ProfileViewController;
+			sourceTree = "<group>";
+		};
+		8462200B21265DC20018D765 /* FogotPasswordViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84F4546E211853CC00217F3D /* FogotPasswordController.swift */,
+				84F4546F211853CC00217F3D /* FogotPasswordController.xib */,
+			);
+			path = FogotPasswordViewController;
+			sourceTree = "<group>";
+		};
+		8462200C21265DD70018D765 /* TimeKeepingTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				84196FAA2121778A00553107 /* WeeksTableViewCell.swift */,
+				84196FA82121260C00553107 /* WeeksTableViewCell.xib */,
+				84E5ABA6211D87BA003D1BF9 /* DaysTableViewCell.swift */,
+				84E5ABA7211D87BA003D1BF9 /* DaysTableViewCell.xib */,
+			);
+			path = TimeKeepingTableViewCell;
+			sourceTree = "<group>";
+		};
+		8462200D21265DF70018D765 /* TimeKeepingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84E87E00211BE1D700C896B7 /* TimeKeepingViewController.swift */,
+				84E87E01211BE1D700C896B7 /* TimeKeepingViewController.xib */,
+			);
+			path = TimeKeepingViewController;
+			sourceTree = "<group>";
+		};
+		8462200E21265E0D0018D765 /* BrowseRequestTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				84B7CB9B2122B91A00B9CE99 /* BrowseRequestTableViewCell.swift */,
+				84B7CB9C2122B91A00B9CE99 /* BrowseRequestTableViewCell.xib */,
+			);
+			path = BrowseRequestTableViewCell;
+			sourceTree = "<group>";
+		};
+		8462200F21265E210018D765 /* BrowseRequestViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84B7CB8E2122B1F300B9CE99 /* BrowseRequestViewController.swift */,
+				84B7CB8F2122B1F300B9CE99 /* BrowseRequestViewController.xib */,
+			);
+			path = BrowseRequestViewController;
+			sourceTree = "<group>";
+		};
 		84B7CB8D2122B1A500B9CE99 /* BrowseRequest */ = {
 			isa = PBXGroup;
 			children = (
+				8462200F21265E210018D765 /* BrowseRequestViewController */,
+				8462200E21265E0D0018D765 /* BrowseRequestTableViewCell */,
 				84B7CB9F2122B92100B9CE99 /* Model */,
-				84B7CB8E2122B1F300B9CE99 /* BrowseRequestViewController.swift */,
-				84B7CB8F2122B1F300B9CE99 /* BrowseRequestViewController.xib */,
-				84B7CB9B2122B91A00B9CE99 /* BrowseRequestTableViewCell.swift */,
-				84B7CB9C2122B91A00B9CE99 /* BrowseRequestTableViewCell.xib */,
 			);
 			path = BrowseRequest;
 			sourceTree = "<group>";
@@ -154,13 +264,9 @@
 		84B7CB922122B4B800B9CE99 /* TimeKeeping */ = {
 			isa = PBXGroup;
 			children = (
+				8462200D21265DF70018D765 /* TimeKeepingViewController */,
+				8462200C21265DD70018D765 /* TimeKeepingTableViewCell */,
 				84B7CB942122B53A00B9CE99 /* Model */,
-				84196FAA2121778A00553107 /* WeeksTableViewCell.swift */,
-				84E87E00211BE1D700C896B7 /* TimeKeepingViewController.swift */,
-				84E87E01211BE1D700C896B7 /* TimeKeepingViewController.xib */,
-				84196FA82121260C00553107 /* WeeksTableViewCell.xib */,
-				84E5ABA6211D87BA003D1BF9 /* DaysTableViewCell.swift */,
-				84E5ABA7211D87BA003D1BF9 /* DaysTableViewCell.xib */,
 			);
 			path = TimeKeeping;
 			sourceTree = "<group>";
@@ -168,8 +274,7 @@
 		84B7CB932122B51700B9CE99 /* FogotPassword */ = {
 			isa = PBXGroup;
 			children = (
-				84F4546E211853CC00217F3D /* FogotPasswordController.swift */,
-				84F4546F211853CC00217F3D /* FogotPasswordController.xib */,
+				8462200B21265DC20018D765 /* FogotPasswordViewController */,
 			);
 			path = FogotPassword;
 			sourceTree = "<group>";
@@ -186,11 +291,9 @@
 		84B7CB952122B55400B9CE99 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				8462200A21265DA70018D765 /* ProfileViewController */,
+				8462200921265D880018D765 /* ProfileTableViewCell */,
 				84B7CB972122B5A600B9CE99 /* Model */,
-				84E87E08211C1AAB00C896B7 /* FunctionTableViewCell.swift */,
-				84E87E09211C1AAB00C896B7 /* FunctionTableViewCell.xib */,
-				84F454762118570E00217F3D /* ProfileController.swift */,
-				84F454772118570E00217F3D /* ProfileController.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -198,8 +301,7 @@
 		84B7CB962122B57400B9CE99 /* ChangePassword */ = {
 			isa = PBXGroup;
 			children = (
-				84E5AB9A211D4D44003D1BF9 /* ChangePasswordViewController.swift */,
-				84E5AB9B211D4D44003D1BF9 /* ChangePasswordViewController.xib */,
+				8462200821265D730018D765 /* ChangePasswordViewController */,
 			);
 			path = ChangePassword;
 			sourceTree = "<group>";
@@ -215,11 +317,9 @@
 		84B7CB982122B5BC00B9CE99 /* Personnel */ = {
 			isa = PBXGroup;
 			children = (
+				8462200721265D500018D765 /* PersonViewController */,
+				8462200621265D2F0018D765 /* PersonTableCell */,
 				84B7CB992122B5CD00B9CE99 /* Model */,
-				84E87E04211BE37C00C896B7 /* PersonnelViewController.swift */,
-				84E87E05211BE37C00C896B7 /* PersonnelViewController.xib */,
-				84E87E10211C462200C896B7 /* PersonTableViewCell.swift */,
-				84E87E11211C462200C896B7 /* PersonTableViewCell.xib */,
 			);
 			path = Personnel;
 			sourceTree = "<group>";
@@ -252,6 +352,7 @@
 		84ED89A821142E73005D2174 = {
 			isa = PBXGroup;
 			children = (
+				84580ABA2126766E005407EE /* .swiftlint.yml */,
 				84ED89B321142E73005D2174 /* Login */,
 				84ED89B221142E73005D2174 /* Products */,
 				84F4546D211852F900217F3D /* Recovered References */,
@@ -271,6 +372,8 @@
 		84ED89B321142E73005D2174 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				84580ABD21268819005407EE /* Login */,
+				84580ABC21268801005407EE /* Application */,
 				84B7CB9A2122B5D900B9CE99 /* Home */,
 				84B7CB982122B5BC00B9CE99 /* Personnel */,
 				84B7CB962122B57400B9CE99 /* ChangePassword */,
@@ -279,10 +382,6 @@
 				84B7CB922122B4B800B9CE99 /* TimeKeeping */,
 				84B7CB8D2122B1A500B9CE99 /* BrowseRequest */,
 				84F454182117EBA000217F3D /* Resource */,
-				84ED89B421142E73005D2174 /* AppDelegate.swift */,
-				84ED89B621142E73005D2174 /* ViewController.swift */,
-				84ED89B821142E73005D2174 /* Main.storyboard */,
-				84ED89BB21142E74005D2174 /* Assets.xcassets */,
 				84ED89BD21142E74005D2174 /* LaunchScreen.storyboard */,
 				84ED89C021142E74005D2174 /* Info.plist */,
 			);
@@ -347,6 +446,7 @@
 				84ED89AE21142E73005D2174 /* Frameworks */,
 				84ED89AF21142E73005D2174 /* Resources */,
 				A65BF1DE612B75166249FCDF /* [CP] Embed Pods Frameworks */,
+				84580AB921266C89005407EE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -395,6 +495,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84580ABB2126766E005407EE /* .swiftlint.yml in Resources */,
 				84F454362117EBBB00217F3D /* Roboto-Medium.ttf in Resources */,
 				84E87E07211BE37C00C896B7 /* PersonnelViewController.xib in Resources */,
 				84E87E13211C462200C896B7 /* PersonTableViewCell.xib in Resources */,
@@ -450,6 +551,19 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		84580AB921266C89005407EE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
+		};
 		A65BF1DE612B75166249FCDF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -457,13 +571,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Login/Pods-Login-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SideNavigation/SideNavigation.framework",
-				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideNavigation.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
