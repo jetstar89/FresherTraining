@@ -8,5 +8,5 @@ use_frameworks!
   # Pods for TimeKeeping
 	pod 'SwiftLint'
 	pod 'SideMenu'
-	
+	pod 'RealmSwift'
 end

@@ -26,14 +26,14 @@ class TimeKeepingViewController: UIViewController {
         timeKeepingTableView.register(UINib(nibName: "TimeKeepingTableViewHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "header")
         timeKeepingTableView.register(UINib(nibName: "TimeKeepingTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         createData()
-        setupLeftMenu()
+        setupNavigationBar()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         if let navigationBar = navigationController?.navigationBar {
             navigationBar.isHidden = false
-            //SideMenuManager.default.menuAddPanGestureToPresent(toView: navigationBar)
-            //SideMenuManager.default.menuAddScreenEdgePanGesturesToPresent(toView: navigationBar)
+            SideMenuManager.default.menuAddPanGestureToPresent(toView: navigationBar)
+            SideMenuManager.default.menuAddScreenEdgePanGesturesToPresent(toView: navigationBar)
         }
     }
     
@@ -95,19 +95,9 @@ class TimeKeepingViewController: UIViewController {
         ]
     }
     
-    func setupLeftMenu() {
+    func setupNavigationBar() {
         navigationItem.title = "CHẤM CÔNG"
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ic_menu_three_line"), style: .plain, target: self, action: #selector(onShowLeftMenu(_:)))
-        let homeViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
-        let leftMenuViewController = LeftMenuViewController(nibName: "LeftMenuViewController", bundle: nil)
-        let menuLeftNavigationController = UISideMenuNavigationController(rootViewController: leftMenuViewController)
-        let menuRightNavigationController = UISideMenuNavigationController(rootViewController: homeViewController)
-        SideMenuManager.default.menuLeftNavigationController = menuLeftNavigationController
-        SideMenuManager.default.menuRightNavigationController = menuRightNavigationController
-        SideMenuManager.default.menuPushStyle = .preserve
-        SideMenuManager.default.menuPresentMode = .menuSlideIn
-        let uiScreen = UIScreen.main.bounds
-        SideMenuManager.default.menuWidth = max(round(min((uiScreen.width), (uiScreen.height)) * 0.8), 310)
     }
 }
 
