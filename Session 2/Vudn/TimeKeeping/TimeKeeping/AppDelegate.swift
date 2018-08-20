@@ -8,6 +8,7 @@
 
 import UIKit
 import SideMenu
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+//        Realm.Configuration.defaultConfiguration.migrationBlock = ({(_ migration: Migration, _ oldSchemaVersion: UInt64) in
+//
+//        })
         setupDefaultAppearance()
         window = UIWindow(frame: UIScreen.main.bounds)
         setUpRootViewIsLoginViewController()
@@ -49,9 +53,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setUpLeftMenu() {
-        let leftMenuViewController = LeftMenuViewController(nibName: "LeftMenuViewController", bundle: nil)
-        let menuLeftNavigationController = UISideMenuNavigationController(rootViewController: leftMenuViewController)
-        SideMenuManager.default.menuLeftNavigationController = menuLeftNavigationController        
+        let leftMenuView = LeftMenuViewController(nibName: "LeftMenuViewController", bundle: nil)
+        let leftMenuNavigation = UISideMenuNavigationController(rootViewController: leftMenuView)
+        SideMenuManager.default.menuLeftNavigationController = leftMenuNavigation
         SideMenuManager.default.menuPushStyle = .preserve
         SideMenuManager.default.menuPresentMode = .menuSlideIn
         let uiScreen = UIScreen.main.bounds
@@ -79,7 +83,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
 
+extension AppDelegate {
+    
+}

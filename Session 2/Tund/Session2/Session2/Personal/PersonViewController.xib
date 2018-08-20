@@ -70,13 +70,13 @@
                         <constraint firstAttribute="trailing" secondItem="kLr-qL-LDO" secondAttribute="trailing" constant="15" id="XGN-t0-r08"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zL4-cv-8bQ">
-                    <rect key="frame" x="0.0" y="114" width="375" height="553"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </tableView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="LeZ-3E-4FW">
                     <rect key="frame" x="24" y="31" width="14" height="14"/>
                 </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zL4-cv-8bQ">
+                    <rect key="frame" x="0.0" y="114" width="375" height="553"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -94,7 +94,7 @@
                 <constraint firstItem="BCO-eG-CHX" firstAttribute="trailing" secondItem="qUY-2m-8IB" secondAttribute="trailing" id="qO0-So-9JN"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="-327.5" y="139.5"/>
+            <point key="canvasLocation" x="-184" y="138"/>
         </view>
     </objects>
     <resources>

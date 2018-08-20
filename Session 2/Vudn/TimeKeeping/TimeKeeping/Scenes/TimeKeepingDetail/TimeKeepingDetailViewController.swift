@@ -8,15 +8,21 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
-    let tag = "HomeViewController"
+class TimeKeepingDetailViewController: UIViewController {
+    let tag = "TimeKeepingDetailViewController"
     
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print(tag + " did load")
-        // Do any additional setup after loading the view.
+        setUpNavigationBar(title: "Chi tiết chấm công",
+                           leftBarButton: UIBarButtonItem(image: #imageLiteral(resourceName: "ic_menu_three_line"),
+                                                          style: .done,
+                                                          target: self,
+                                                          action: #selector(
+                                                            onShowLeftMenu(_:))),
+                           rightBarButton: nil)
         
 //        let userDefault = UserDefaults.standard
 //        userDefault.set("VU", forKey: "username")
@@ -25,9 +31,6 @@ class HomeViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        navigationItem.title = "Home"
-        print(tag + " will appear")
-        
 //        let userDefault = UserDefaults.standard
 //        userDefault.value(forKey: "username")
     }
@@ -37,7 +40,6 @@ class HomeViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        print(tag + " will disappear")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -56,15 +58,4 @@ class HomeViewController: UIViewController {
     @IBAction func onChangerTabIndex(_ sender: UIButton) {
         
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
