@@ -37,6 +37,7 @@
 		84ED89BA21142E73005D2174 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84ED89B821142E73005D2174 /* Main.storyboard */; };
 		84ED89BC21142E74005D2174 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84ED89BB21142E74005D2174 /* Assets.xcassets */; };
 		84ED89BF21142E74005D2174 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84ED89BD21142E74005D2174 /* LaunchScreen.storyboard */; };
+		84F03667212A645800A663C5 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F03666212A645800A663C5 /* RealmManager.swift */; };
 		84F4542A2117EBBB00217F3D /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84F4541A2117EBBA00217F3D /* Roboto-BlackItalic.ttf */; };
 		84F4542B2117EBBB00217F3D /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84F4541B2117EBBA00217F3D /* Roboto-Black.ttf */; };
 		84F4542C2117EBBB00217F3D /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84F4541C2117EBBA00217F3D /* Roboto-Bold.ttf */; };
@@ -94,6 +95,7 @@
 		84ED89BB21142E74005D2174 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84ED89BE21142E74005D2174 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84ED89C021142E74005D2174 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84F03666212A645800A663C5 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		84F4541A2117EBBA00217F3D /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
 		84F4541B2117EBBA00217F3D /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		84F4541C2117EBBA00217F3D /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 		84D621832126DDE900D5BA35 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				84F03666212A645800A663C5 /* RealmManager.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -622,6 +625,7 @@
 				84E87E06211BE37C00C896B7 /* PersonnelViewController.swift in Sources */,
 				84B7CB9D2122B91A00B9CE99 /* BrowseRequestTableViewCell.swift in Sources */,
 				84E5AB9C211D4D44003D1BF9 /* ChangePasswordViewController.swift in Sources */,
+				84F03667212A645800A663C5 /* RealmManager.swift in Sources */,
 				84E87E02211BE1D700C896B7 /* TimeKeepingViewController.swift in Sources */,
 				84E87E0A211C1AAB00C896B7 /* MenuTableViewCell.swift in Sources */,
 			);
