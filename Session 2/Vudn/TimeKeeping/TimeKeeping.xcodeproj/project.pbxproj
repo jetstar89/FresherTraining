@@ -60,6 +60,7 @@
 		1DD30929212187E200217E3F /* TimeKeepingTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD30928212187E200217E3F /* TimeKeepingTableViewHeader.swift */; };
 		1DD3092B2121880B00217E3F /* TimeKeepingTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DD3092A2121880B00217E3F /* TimeKeepingTableViewHeader.xib */; };
 		53AB7A28425758C651DC581C /* Pods_TimeKeeping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEEAF214E6341CC08F20009E /* Pods_TimeKeeping.framework */; };
+		84174960212A57D0001BAA16 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8417495F212A57CF001BAA16 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -131,6 +132,7 @@
 		1DD30928212187E200217E3F /* TimeKeepingTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeKeepingTableViewHeader.swift; sourceTree = "<group>"; };
 		1DD3092A2121880B00217E3F /* TimeKeepingTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeKeepingTableViewHeader.xib; sourceTree = "<group>"; };
 		31873B2EC9738901886D15E2 /* Pods-TimeKeeping.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeKeeping.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimeKeeping/Pods-TimeKeeping.release.xcconfig"; sourceTree = "<group>"; };
+		8417495F212A57CF001BAA16 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		DEEAF214E6341CC08F20009E /* Pods_TimeKeeping.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeKeeping.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA6135480CCBA29E20AB06E7 /* Pods-TimeKeeping.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeKeeping.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TimeKeeping/Pods-TimeKeeping.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -220,6 +222,7 @@
 		1D8DF614211D370A0006D2CB = {
 			isa = PBXGroup;
 			children = (
+				8417495F212A57CF001BAA16 /* .swiftlint.yml */,
 				1D8DF61F211D370A0006D2CB /* TimeKeeping */,
 				1D8DF61E211D370A0006D2CB /* Products */,
 				9403B7A0AF166097F871AE52 /* Pods */,
@@ -297,7 +300,8 @@
 				1DA7FCCD2126D1D200F687BA /* DataManager */,
 				1D530FC62121661D006A5029 /* Extension */,
 			);
-			path = Helper;
+			name = Helper;
+			path = ../../../Tund/Session2/Session2/Helper;
 			sourceTree = "<group>";
 		};
 		1DEB4A5B212590EB003E055F /* Models */ = {
@@ -453,6 +457,7 @@
 				1D8DF63B211D37720006D2CB /* TimeKeepingDetailViewController.xib in Resources */,
 				1DD3092B2121880B00217E3F /* TimeKeepingTableViewHeader.xib in Resources */,
 				1D8DF628211D370B0006D2CB /* Assets.xcassets in Resources */,
+				84174960212A57D0001BAA16 /* .swiftlint.yml in Resources */,
 				1D8DF669211D3FF10006D2CB /* Roboto-BoldItalic.ttf in Resources */,
 				1D8DF648211D37CA0006D2CB /* MenuTableViewCell.xib in Resources */,
 				1D8DF66B211D3FF10006D2CB /* Roboto-BlackItalic.ttf in Resources */,

@@ -18,10 +18,19 @@ class PersonViewController: UIViewController {
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var searchImageView: UIImageView!
     @IBOutlet weak var personTableView: UITableView!
-    var staffs: Results<Staff>?
+    var staffs = [Staff]()
+    let realmManager = RealmManager.shared
     // MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+//        do {
+//            let realm = try Realm()
+//            try realm.write {
+//                realm.deleteAll()
+//            }
+//        } catch let error as NSError {
+//            print(error.description)
+//        }
         initView()
         personTableView.dataSource = self
         personTableView.delegate = self
@@ -33,6 +42,15 @@ class PersonViewController: UIViewController {
     }
     // MARK: initView
     func initView() {
+        //setup navigation
+        navigationItem.title = "NHÂN SỰ"
+        //register TableView
+        personTableView.register(UINib(nibName: "PersonTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+        // getData
+        createData()
+        getData()
+        personTableView.reloadData()
+        updateTitlePerson()
         // setup search TextField
         searchTextField.layer.cornerRadius = 18
         searchTextField.layer.masksToBounds = true
@@ -43,77 +61,63 @@ class PersonViewController: UIViewController {
         view.isUserInteractionEnabled = true
         view.addGestureRecognizer(onTapViewGestureRecognizer)
         searchTextField.delegate = self
-        // get data
-        do {
-            let realm = try Realm()
-            try realm.write {
-                staffs = realm.objects(Staff.self)
-            }
-        } catch let error as NSError {
-            print("\(error.description)")
-        }
-        // navigation control
-        navigationItem.title = "NHÂN SỰ"
-        // add listPerson
-
-        //register TableView
-        personTableView.register(UINib(nibName: "PersonTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
-        //controlview
-        if let count = staffs?.count {
-            titleLabel.text = "Hành chính nhân sự (\(count))"
-        } else {
-            //
-        }
-        createData()
+    }
+    func updateTitlePerson() {
+        let count = staffs.count
+        titleLabel.text = "Hành chính nhân sự (\(count))"
     }
     @objc func onTapView(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
         searchImageView.isHidden = false
         searchTextField.placeholder = "Tìm kiếm"
     }
-    func createData() {
+    @objc func createData() {
+        realmManager.deleteDabase()
         // staff number one
-        let staffOne = Staff()
-        staffOne.userID = "00156"
-        staffOne.name = "Nguyễn Đình Tú"
-        staffOne.avatar = "https://i.ytimg.com/vi/xAY4_lF822w/maxresdefault.jpg"
-        staffOne.phone = "01643246989"
-        staffOne.position = "Nhân viên chính thức"
-        staffOne.status = "Đang làm việc"
+        let firstStaff = Staff()
+        firstStaff.userID = "00156"
+        firstStaff.name = "Nguyễn Đình Tú"
+        firstStaff.avatar = "https://i.ytimg.com/vi/xAY4_lF822w/maxresdefault.jpg"
+        firstStaff.phone = "01643246989"
+        firstStaff.position = "Nhân viên chính thức"
+        firstStaff.status = "Đang làm việc"
         //staff number two
-        let staffTwo = Staff()
-        staffTwo.userID = "00156"
-        staffTwo.name = "Nguyễn Tùng lâm"
-        staffTwo.avatar = "https://i.ytimg.com/vi/xAY4_lF822w/maxresdefault.jpg"
-        staffTwo.phone = "0987625124"
-        staffTwo.position = "Nhân viên chính thức"
-        staffTwo.status = "Đang làm việc"
-        //stafff number three
-        let staffThree = Staff()
-        staffThree.userID = "00156"
-        staffThree.name = "Đặng Xuân Duy"
-        staffThree.avatar = "https://i.ytimg.com/vi/xAY4_lF822w/maxresdefault.jpg"
-        staffThree.phone = "0987625124"
-        staffThree.position = "Nhân viên chính thức"
-        staffThree.status = "Đang làm việc"
+        let secondStaff = Staff()
+        secondStaff.userID = "00157"
+        secondStaff.name = "Nguyễn Tùng lâm"
+        secondStaff.avatar = "https://i.ytimg.com/vi/xAY4_lF822w/maxresdefault.jpg"
+        secondStaff.phone = "0987625124"
+        secondStaff.position = "Nhân viên chính thức"
+        secondStaff.status = "Đang làm việc"
+        //staff number three
+        let thirdStaff = Staff()
+        thirdStaff.userID = "00158"
+        thirdStaff.name = "Đặng Xuân Duy"
+        thirdStaff.avatar = "https://i.ytimg.com/vi/xAY4_lF822w/maxresdefault.jpg"
+        thirdStaff.phone = "0987625124"
+        thirdStaff.position = "Nhân viên chính thức"
+        thirdStaff.status = "Đang làm việc"
         //stafff number four
-        let staffFour = Staff()
-        staffFour.userID = "00156"
-        staffFour.name = "Đinh Ngọc Vũ"
-        staffFour.avatar = "https://i.ytimg.com/vi/xAY4_lF822w/maxresdefault.jpg"
-        staffFour.phone = "0987625124"
-        staffFour.position = "Nhân viên chính thức"
-        staffFour.status = "Đang làm việc"
-        do {
-            let realm = try Realm()
-            try realm.write {
-                let staff = realm.objects(Staff.self)
-                realm.delete(staff)
-                realm.add([staffOne, staffTwo, staffThree, staffFour])
-                staffs = realm.objects(Staff.self)
+        let fourthStaff = Staff()
+        fourthStaff.userID = "00159"
+        fourthStaff.name = "Đinh Ngọc Vũ"
+        fourthStaff.avatar = "https://i.ytimg.com/vi/xAY4_lF822w/maxresdefault.jpg"
+        fourthStaff.phone = "0987625124"
+        fourthStaff.position = "Nhân viên chính thức"
+        fourthStaff.status = "Đang làm việc"
+        realmManager.addObject(obj: firstStaff)
+        realmManager.addObject(obj: secondStaff)
+        realmManager.addObject(obj: thirdStaff)
+        realmManager.addObject(obj: fourthStaff)
+        // get data from realm
+    }
+    func getData() {
+        if let objs = realmManager.getObjects(type: Staff.self) {
+            for element in objs {
+                if let staff = element as? Staff {
+                    staffs.append(staff)
+                }
             }
-        } catch let error as NSError {
-            print("\(error.description)")
         }
     }
     @objc func onBack() {
@@ -131,10 +135,7 @@ extension PersonViewController: UITableViewDelegate {
 }
 extension PersonViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let count = staffs?.count else {
-            return 0
-        }
-       return count
+       return staffs.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let idenfier = "cell"
@@ -143,7 +144,6 @@ extension PersonViewController: UITableViewDataSource {
                 as? PersonTableViewCell else {
             return UITableViewCell()
         }
-        if let staffs = staffs {
             let urlImage = URL(string: staffs[indexPath.row].avatar)
             cell.avatarImageView.kf.setImage(with: urlImage)
             cell.idLabel.text = staffs[indexPath.row].userID
@@ -151,10 +151,17 @@ extension PersonViewController: UITableViewDataSource {
             cell.phoneLabel.text = staffs[indexPath.row].phone
             cell.positionLabel.text = staffs[indexPath.row].position
             cell.statusButton.setTitle(staffs[indexPath.row].status, for: .normal)
-        } else {
-            // empty data
-        }
         return cell
+    }
+    func tableView(_ tableView: UITableView,
+                   commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+//            let item = staffs[indexPath.row]
+//            realmManager.deleteObject(obj: item)
+//            updateTitlePerson()
+//            personTableView.reloadData()
+//            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
     }
 }
 extension PersonViewController: UITextFieldDelegate {

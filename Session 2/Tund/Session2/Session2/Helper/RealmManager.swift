@@ -1,9 +1,9 @@
 //
 //  RealmManager.swift
-//  TimeKeeping
+//  Session2
 //
-//  Created by Đinh Ngọc Vũ on 8/17/18.
-//  Copyright © 2018 GEM. All rights reserved.
+//  Created by admin on 8/20/18.
+//  Copyright © 2018 admin. All rights reserved.
 //
 
 import Foundation
@@ -11,11 +11,9 @@ import RealmSwift
 
 class RealmManager: NSObject {
     public static let shared = RealmManager()
-    
-    override private init() {
+    override init() {
         //
     }
-    
     func getObjects(type: Object.Type) -> Results<Object>? {
         do {
             let realm = try Realm()
@@ -25,7 +23,6 @@ class RealmManager: NSObject {
         }
         return nil
     }
-    
     func addObject(obj: Object) {
         do {
             let realm = try Realm()
@@ -36,40 +33,6 @@ class RealmManager: NSObject {
             print(error.description)
         }
     }
-    
-//    func addObjects(objs: [Object]) {
-//        do {
-//            let realm = try Realm()
-//            try realm.write {
-//                realm.add(objs)
-//            }
-//        } catch let error as NSError {
-//            print(error.description)
-//        }
-//    }
-    
-    func editObject(obj: Object) {
-        do {
-            let realm = try Realm()
-            try realm.write {
-                realm.add(obj, update: true)
-            }
-        } catch let error as NSError {
-            print(error.description)
-        }
-    }
-    
-    func editObjects(objs: [Object]) {
-        do {
-            let realm = try Realm()
-            try realm.write {
-                realm.add(objs, update: true)
-            }
-        } catch let error as NSError {
-            print(error.description)
-        }
-    }
-    
     func deleteObject(obj: Object) {
         do {
             let realm = try Realm()
@@ -80,7 +43,6 @@ class RealmManager: NSObject {
             print(error.description)
         }
     }
-    
     func deleteObjects(objs: [Object]) {
         do {
             let realm = try Realm()
@@ -91,8 +53,7 @@ class RealmManager: NSObject {
             print(error.description)
         }
     }
-    
-    func deleteDatabase() {
+    func deleteDabase() {
         do {
             let realm = try Realm()
             try realm.write {
@@ -102,14 +63,14 @@ class RealmManager: NSObject {
             print(error.description)
         }
     }
-    
-    func incrementID(type: Object.Type) -> Int {
+    func editObject(obj: Object) {
         do {
             let realm = try Realm()
-            return (realm.objects(type).max(ofProperty: "id") as Int? ?? 0) + 1
+            try realm.write {
+                realm.add(obj, update: true)
+            }
         } catch let error as NSError {
             print(error.description)
         }
-        return 0
     }
 }

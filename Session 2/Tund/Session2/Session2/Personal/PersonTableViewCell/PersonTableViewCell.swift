@@ -19,7 +19,10 @@ class PersonTableViewCell: UITableViewCell {
         super.awakeFromNib()
         let separatorHeight = CGFloat(1)
         let screenSize = UIScreen.main.bounds
-        let separator = UIView(frame: CGRect(x: 0, y: frame.height - separatorHeight, width: screenSize.width, height: separatorHeight))
+        let separator = UIView(frame: CGRect(x: 0,
+                                             y: frame.height - separatorHeight,
+                                             width: screenSize.width,
+                                             height: separatorHeight))
         separator.backgroundColor = UIColor.steelGrey
         self.addSubview(separator)
         // Initialization code
