@@ -13,6 +13,7 @@
 		840C0D1B2118482600737072 /* paper-plane.png in Resources */ = {isa = PBXBuildFile; fileRef = 840C0D1A2118482500737072 /* paper-plane.png */; };
 		840C0D322118658B00737072 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C0D302118658B00737072 /* HomeViewController.swift */; };
 		840C0D332118658B00737072 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840C0D312118658B00737072 /* HomeViewController.xib */; };
+		8417496B212A6D83001BAA16 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417496A212A6D83001BAA16 /* RealmManager.swift */; };
 		84379E84211BECA0006E1CDC /* TimeKeepingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84379E82211BECA0006E1CDC /* TimeKeepingViewController.swift */; };
 		84379E85211BECA0006E1CDC /* TimeKeepingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84379E83211BECA0006E1CDC /* TimeKeepingViewController.xib */; };
 		84379EC2211C1CCA006E1CDC /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84379EC0211C1CCA006E1CDC /* MenuTableViewCell.swift */; };
@@ -100,6 +101,7 @@
 		840C0D1A2118482500737072 /* paper-plane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper-plane.png"; sourceTree = "<group>"; };
 		840C0D302118658B00737072 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		840C0D312118658B00737072 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		8417496A212A6D83001BAA16 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		84379E82211BECA0006E1CDC /* TimeKeepingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeKeepingViewController.swift; sourceTree = "<group>"; };
 		84379E83211BECA0006E1CDC /* TimeKeepingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeKeepingViewController.xib; sourceTree = "<group>"; };
 		84379EC0211C1CCA006E1CDC /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
@@ -208,6 +210,14 @@
 				2736EE8F5B62231FEF6D6E6A /* Pods-Session2UITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		84174965212A6A5B001BAA16 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				8417496A212A6D83001BAA16 /* RealmManager.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		8441E589211D2886000FC10B /* Personal */ = {
@@ -382,6 +392,7 @@
 		84EC308B21142E5F000F5AC9 /* Session2 */ = {
 			isa = PBXGroup;
 			children = (
+				84174965212A6A5B001BAA16 /* Helper */,
 				84EC308C21142E5F000F5AC9 /* AppDelegate.swift */,
 				84E51EB02122DB1800D37F16 /* Vacation */,
 				84E51EA52122D39E00D37F16 /* Extension */,
@@ -707,6 +718,7 @@
 				84E51EA92122D98D00D37F16 /* Vacation.swift in Sources */,
 				840C0D162118443A00737072 /* ForgotPassWordController.swift in Sources */,
 				8447ECBE212514F600468169 /* VacationViewController.swift in Sources */,
+				8417496B212A6D83001BAA16 /* RealmManager.swift in Sources */,
 				8441E5AC211DA38F000FC10B /* DayOfWeek.swift in Sources */,
 				84E51EA72122D3B000D37F16 /* Extension.swift in Sources */,
 				84379EC2211C1CCA006E1CDC /* MenuTableViewCell.swift in Sources */,

@@ -16,4 +16,7 @@ public class Staff: Object {
     @objc dynamic var phone: String = ""
     @objc dynamic var position: String = ""
     @objc dynamic var status: String = ""
+    override public static func primaryKey() -> String? {
+        return "userID"
+    }
 }
