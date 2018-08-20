@@ -179,8 +179,6 @@ extension TimeKeepingViewController: UITableViewDataSource {
             cell.timeCheckOutLabel.textColor = UIColor.black
         }
     }
-    func setUILabel() {
-    }
     func numberOfSections(in tableView: UITableView) -> Int {
         return headerTableView.count
     }

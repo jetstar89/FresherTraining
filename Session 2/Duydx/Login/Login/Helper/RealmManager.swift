@@ -13,7 +13,7 @@ class RealmManager: NSObject {
     override private init() {
         //
     }
-    func addPerson(person: Person) {
+    func addPerson(_ person: Person) {
         do {
             let realm = try Realm()
             try realm.write {
@@ -23,7 +23,7 @@ class RealmManager: NSObject {
             print("\(error)")
         }
     }
-    func updatePerson(person: Person) {
+    func updatePerson(_ person: Person) {
         do {
             let realm = try Realm()
             try realm.write {
@@ -45,7 +45,7 @@ class RealmManager: NSObject {
         }
         return listPerson
     }
-    func deletePerson(person: Person) {
+    func deletePerson(_ person: Person) {
         do {
             let realm = try Realm()
             try realm.write {

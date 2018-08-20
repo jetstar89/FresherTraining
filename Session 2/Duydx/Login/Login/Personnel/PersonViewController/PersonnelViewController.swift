@@ -68,10 +68,15 @@ class PersonnelViewController: UIViewController {
         person.idPerson = idPerson.description
         person.phonePerson = "0967505425"
         person.positionPerson = "Developer"
-        person.isStatus = true
-        person.imagePerson = "https://4.bp.blogspot.com/-O7MeRoCAXNI/"
-            + "VtOyBZBwHQI/AAAAAAABQtw/D4EiKq73_Lo/s1600/gai-dep-1.jpg"
-        realmManager.addPerson(person: person)
+        if idPerson % 2 == 0 {
+            person.isStatus = true
+            person.imagePerson = "https://4.bp.blogspot.com/-O7MeRoCAXNI/"
+                + "VtOyBZBwHQI/AAAAAAABQtw/D4EiKq73_Lo/s1600/gai-dep-1.jpg"
+        } else {
+            person.isStatus = false
+            person.imagePerson = "https://baomoi-photo-1-td.zadn.vn/w1000_r1/17/12/15/23/24302239/1_313006.jpg"
+        }
+        realmManager.addPerson(person)
         listPerson = realmManager.getAllPerson()
         personTableView.reloadData()
         UserDefaults.standard.set(idPerson, forKey: "idPerson")
@@ -126,7 +131,7 @@ extension PersonnelViewController: UITableViewDataSource {
                    commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             if let person = listPerson?[indexPath.row] {
-                realmManager.deletePerson(person: person)
+                realmManager.deletePerson(person)
             }
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
