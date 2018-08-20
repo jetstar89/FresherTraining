@@ -349,6 +349,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		84D621832126DDE900D5BA35 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		84ED89A821142E73005D2174 = {
 			isa = PBXGroup;
 			children = (
@@ -372,6 +379,7 @@
 		84ED89B321142E73005D2174 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				84D621832126DDE900D5BA35 /* Helper */,
 				84580ABD21268819005407EE /* Login */,
 				84580ABC21268801005407EE /* Application */,
 				84B7CB9A2122B5D900B9CE99 /* Home */,
