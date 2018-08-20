@@ -28,6 +28,10 @@ class RealmManager: NSObject {
             let realm = try Realm()
             try realm.write {
                 realm.add(obj)
+                if let staff = obj as? Staff {
+                    realm.add(staff)
+                    staff.userID = incrementID(type: Staff.self)
+                }
             }
         } catch let error as NSError {
             print(error.description)
@@ -72,5 +76,14 @@ class RealmManager: NSObject {
         } catch let error as NSError {
             print(error.description)
         }
+    }
+    func incrementID(type: Object.Type) -> Int {
+        do {
+            let realm = try Realm()
+            return (realm.objects(type).max(ofProperty: "userID") as Int? ?? 0) + 1
+        } catch let error as NSError {
+            print(error.description)
+        }
+        return 0
     }
 }

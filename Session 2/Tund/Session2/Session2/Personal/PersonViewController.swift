@@ -18,19 +18,11 @@ class PersonViewController: UIViewController {
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var searchImageView: UIImageView!
     @IBOutlet weak var personTableView: UITableView!
-    var staffs = [Staff]()
+    var staffs: Results<Staff>?
     let realmManager = RealmManager.shared
     // MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-//        do {
-//            let realm = try Realm()
-//            try realm.write {
-//                realm.deleteAll()
-//            }
-//        } catch let error as NSError {
-//            print(error.description)
-//        }
         initView()
         personTableView.dataSource = self
         personTableView.delegate = self
@@ -44,10 +36,14 @@ class PersonViewController: UIViewController {
     func initView() {
         //setup navigation
         navigationItem.title = "NHÂN SỰ"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "iconAdd"),
+                                                            style: .plain,
+                                                            target: self,
+                                                            action: #selector(addStaff))
         //register TableView
         personTableView.register(UINib(nibName: "PersonTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         // getData
-        createData()
+//        createData()
         getData()
         personTableView.reloadData()
         updateTitlePerson()
@@ -62,9 +58,23 @@ class PersonViewController: UIViewController {
         view.addGestureRecognizer(onTapViewGestureRecognizer)
         searchTextField.delegate = self
     }
+    @objc func addStaff() {
+        let firstStaff = Staff()
+        firstStaff.name = "Nguyễn Đình Tú"
+        firstStaff.avatar = "https://i.ytimg.com/vi/xAY4_lF822w/maxresdefault.jpg"
+        firstStaff.phone = "01643246989"
+        firstStaff.position = "Nhân viên chính thức"
+        firstStaff.status = "Đang làm việc"
+        realmManager.addObject(obj: firstStaff)
+        getData()
+        personTableView.reloadData()
+        updateTitlePerson()
+    }
     func updateTitlePerson() {
-        let count = staffs.count
-        titleLabel.text = "Hành chính nhân sự (\(count))"
+        if let count = staffs?.count {
+              titleLabel.text = "Hành chính nhân sự (\(count))"
+        }
+
     }
     @objc func onTapView(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
@@ -75,7 +85,6 @@ class PersonViewController: UIViewController {
         realmManager.deleteDabase()
         // staff number one
         let firstStaff = Staff()
-        firstStaff.userID = "00156"
         firstStaff.name = "Nguyễn Đình Tú"
         firstStaff.avatar = "https://i.ytimg.com/vi/xAY4_lF822w/maxresdefault.jpg"
         firstStaff.phone = "01643246989"
@@ -83,7 +92,6 @@ class PersonViewController: UIViewController {
         firstStaff.status = "Đang làm việc"
         //staff number two
         let secondStaff = Staff()
-        secondStaff.userID = "00157"
         secondStaff.name = "Nguyễn Tùng lâm"
         secondStaff.avatar = "https://i.ytimg.com/vi/xAY4_lF822w/maxresdefault.jpg"
         secondStaff.phone = "0987625124"
@@ -91,7 +99,6 @@ class PersonViewController: UIViewController {
         secondStaff.status = "Đang làm việc"
         //staff number three
         let thirdStaff = Staff()
-        thirdStaff.userID = "00158"
         thirdStaff.name = "Đặng Xuân Duy"
         thirdStaff.avatar = "https://i.ytimg.com/vi/xAY4_lF822w/maxresdefault.jpg"
         thirdStaff.phone = "0987625124"
@@ -99,7 +106,6 @@ class PersonViewController: UIViewController {
         thirdStaff.status = "Đang làm việc"
         //stafff number four
         let fourthStaff = Staff()
-        fourthStaff.userID = "00159"
         fourthStaff.name = "Đinh Ngọc Vũ"
         fourthStaff.avatar = "https://i.ytimg.com/vi/xAY4_lF822w/maxresdefault.jpg"
         fourthStaff.phone = "0987625124"
@@ -112,13 +118,13 @@ class PersonViewController: UIViewController {
         // get data from realm
     }
     func getData() {
-        if let objs = realmManager.getObjects(type: Staff.self) {
-            for element in objs {
-                if let staff = element as? Staff {
-                    staffs.append(staff)
-                }
-            }
+        do {
+            let realm = try Realm()
+            staffs = realm.objects(Staff.self)
+        } catch let error as NSError {
+            print(error.description)
         }
+
     }
     @objc func onBack() {
         navigationController?.popViewController(animated: true)
@@ -135,7 +141,10 @@ extension PersonViewController: UITableViewDelegate {
 }
 extension PersonViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return staffs.count
+        guard let count = staffs?.count else {
+            return 0
+        }
+        return count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let idenfier = "cell"
@@ -144,23 +153,25 @@ extension PersonViewController: UITableViewDataSource {
                 as? PersonTableViewCell else {
             return UITableViewCell()
         }
+        if let staffs = staffs {
             let urlImage = URL(string: staffs[indexPath.row].avatar)
             cell.avatarImageView.kf.setImage(with: urlImage)
-            cell.idLabel.text = staffs[indexPath.row].userID
+            cell.idLabel.text = "ID" + staffs[indexPath.row].userID.description
             cell.nameLabel.text = staffs[indexPath.row].name
             cell.phoneLabel.text = staffs[indexPath.row].phone
             cell.positionLabel.text = staffs[indexPath.row].position
             cell.statusButton.setTitle(staffs[indexPath.row].status, for: .normal)
+        }
         return cell
     }
     func tableView(_ tableView: UITableView,
                    commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-//            let item = staffs[indexPath.row]
-//            realmManager.deleteObject(obj: item)
-//            updateTitlePerson()
-//            personTableView.reloadData()
-//            tableView.deleteRows(at: [indexPath], with: .automatic)
+            if let item = staffs?[indexPath.row] {
+                realmManager.deleteObject(obj: item)
+                updateTitlePerson()
+            }
+            tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
 }
