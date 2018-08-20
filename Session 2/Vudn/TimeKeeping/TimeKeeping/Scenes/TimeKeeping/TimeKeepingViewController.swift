@@ -14,6 +14,7 @@ class TimeKeepingViewController: UIViewController {
     // MARK: - IBOutlet
     
     @IBOutlet weak var timeKeepingTableView: UITableView!
+    @IBOutlet var mainView: UIView!
     
     // MARK: - Variable
     var tableViewData = [SectionData]()
@@ -26,14 +27,14 @@ class TimeKeepingViewController: UIViewController {
         timeKeepingTableView.register(UINib(nibName: "TimeKeepingTableViewHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "header")
         timeKeepingTableView.register(UINib(nibName: "TimeKeepingTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         createData()
-        setupNavigationBar()
+        setUpNavigationBar(title: "Chấm công", leftBarButton: UIBarButtonItem(image: #imageLiteral(resourceName: "ic_menu_three_line"), style: .done, target: self, action: #selector(onShowLeftMenu(_:))), rightBarButton: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         if let navigationBar = navigationController?.navigationBar {
             navigationBar.isHidden = false
-            SideMenuManager.default.menuAddPanGestureToPresent(toView: navigationBar)
-            SideMenuManager.default.menuAddScreenEdgePanGesturesToPresent(toView: navigationBar)
+            SideMenuManager.default.menuAddPanGestureToPresent(toView: mainView)
+            SideMenuManager.default.menuAddScreenEdgePanGesturesToPresent(toView: mainView)
         }
     }
     
@@ -52,14 +53,19 @@ class TimeKeepingViewController: UIViewController {
     
     // MARK: - Selector
     
-    @objc func onShowLeftMenu(_ sender: MainNavigationController) {
-        guard let sideMenu = SideMenuManager.default.menuLeftNavigationController else { return }
-        present(sideMenu, animated: true, completion: nil)
-    }
+//    @objc func onShowLeftMenu(_ sender: UIBarButtonItem) {
+//        guard let sideMenu = SideMenuManager.default.menuLeftNavigationController else { return }
+//        present(sideMenu, animated: true, completion: nil)
+//    }
     
     // MARK: - IBAction
     
     // MARK: - Func
+    
+//    func setupNavigationBar() {
+//        navigationItem.title = "CHẤM CÔNG"
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ic_menu_three_line"), style: .plain, target: self, action: #selector(onShowLeftMenu(_:)))
+//    }
     
     func createData() {
         tableViewData = [
@@ -94,15 +100,9 @@ class TimeKeepingViewController: UIViewController {
                 ])
         ]
     }
-    
-    func setupNavigationBar() {
-        navigationItem.title = "CHẤM CÔNG"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ic_menu_three_line"), style: .plain, target: self, action: #selector(onShowLeftMenu(_:)))
-    }
 }
 
 // MARK: - Extention
-
 extension TimeKeepingViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return tableViewData.count

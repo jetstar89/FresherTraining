@@ -8,6 +8,8 @@ target 'Session2' do
 	pod 'SideMenu'
 	pod 'SwiftLint'
 	pod 'RealmSwift'
+    	pod 'Kingfisher', '~> 4.0'
+	pod 'HAActionSheet'
 
   # Pods for Session2
 

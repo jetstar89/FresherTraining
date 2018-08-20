@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		1D0463B12123C1FB00CAE04B /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0463B02123C1FB00CAE04B /* MainTabbarController.swift */; };
 		1D0463B32123CED300CAE04B /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0463B22123CED300CAE04B /* MainNavigationController.swift */; };
-		1D3CC4A621257B97009D5569 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CC4A421257B97009D5569 /* SideMenuViewController.swift */; };
-		1D3CC4A721257B97009D5569 /* SideMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D3CC4A521257B97009D5569 /* SideMenuViewController.xib */; };
 		1D3D8B2221250FBB00F6383C /* PersonnelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D8B2021250FBB00F6383C /* PersonnelViewController.swift */; };
 		1D3D8B2321250FBB00F6383C /* PersonnelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D3D8B2121250FBB00F6383C /* PersonnelViewController.xib */; };
 		1D3D8B28212510D300F6383C /* PersonnelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D8B26212510D300F6383C /* PersonnelTableViewCell.swift */; };
@@ -25,8 +23,8 @@
 		1D8DF62B211D370B0006D2CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D8DF629211D370B0006D2CB /* LaunchScreen.storyboard */; };
 		1D8DF636211D37610006D2CB /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DF634211D37610006D2CB /* ForgotPasswordViewController.swift */; };
 		1D8DF637211D37610006D2CB /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D8DF635211D37610006D2CB /* ForgotPasswordViewController.xib */; };
-		1D8DF63A211D37720006D2CB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DF638211D37720006D2CB /* HomeViewController.swift */; };
-		1D8DF63B211D37720006D2CB /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D8DF639211D37720006D2CB /* HomeViewController.xib */; };
+		1D8DF63A211D37720006D2CB /* TimeKeepingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DF638211D37720006D2CB /* TimeKeepingDetailViewController.swift */; };
+		1D8DF63B211D37720006D2CB /* TimeKeepingDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D8DF639211D37720006D2CB /* TimeKeepingDetailViewController.xib */; };
 		1D8DF643211D37AD0006D2CB /* TimeKeepingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DF641211D37AD0006D2CB /* TimeKeepingViewController.swift */; };
 		1D8DF644211D37AD0006D2CB /* TimeKeepingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D8DF642211D37AD0006D2CB /* TimeKeepingViewController.xib */; };
 		1D8DF647211D37CA0006D2CB /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DF645211D37CA0006D2CB /* MenuTableViewCell.swift */; };
@@ -55,6 +53,10 @@
 		1D8DF674211D3FF10006D2CB /* Roboto-BoldCondensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D8DF662211D3FF10006D2CB /* Roboto-BoldCondensed.ttf */; };
 		1D8DF67B211D82100006D2CB /* TimeKeepingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DF679211D82100006D2CB /* TimeKeepingTableViewCell.swift */; };
 		1D8DF67C211D82100006D2CB /* TimeKeepingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D8DF67A211D82100006D2CB /* TimeKeepingTableViewCell.xib */; };
+		1DA7FCC52126A82D00F687BA /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA7FCC42126A82D00F687BA /* Person.swift */; };
+		1DA7FCC72126AB0F00F687BA /* Staff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA7FCC62126AB0F00F687BA /* Staff.swift */; };
+		1DA7FCCA2126AC0800F687BA /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA7FCC92126AC0800F687BA /* Department.swift */; };
+		1DA7FCCF2126D1F000F687BA /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA7FCCE2126D1F000F687BA /* RealmManager.swift */; };
 		1DD30929212187E200217E3F /* TimeKeepingTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD30928212187E200217E3F /* TimeKeepingTableViewHeader.swift */; };
 		1DD3092B2121880B00217E3F /* TimeKeepingTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DD3092A2121880B00217E3F /* TimeKeepingTableViewHeader.xib */; };
 		53AB7A28425758C651DC581C /* Pods_TimeKeeping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEEAF214E6341CC08F20009E /* Pods_TimeKeeping.framework */; };
@@ -76,8 +78,6 @@
 /* Begin PBXFileReference section */
 		1D0463B02123C1FB00CAE04B /* MainTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarController.swift; sourceTree = "<group>"; };
 		1D0463B22123CED300CAE04B /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
-		1D3CC4A421257B97009D5569 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
-		1D3CC4A521257B97009D5569 /* SideMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuViewController.xib; sourceTree = "<group>"; };
 		1D3D8B2021250FBB00F6383C /* PersonnelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonnelViewController.swift; sourceTree = "<group>"; };
 		1D3D8B2121250FBB00F6383C /* PersonnelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonnelViewController.xib; sourceTree = "<group>"; };
 		1D3D8B26212510D300F6383C /* PersonnelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonnelTableViewCell.swift; sourceTree = "<group>"; };
@@ -94,8 +94,8 @@
 		1D8DF62C211D370B0006D2CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D8DF634211D37610006D2CB /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		1D8DF635211D37610006D2CB /* ForgotPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordViewController.xib; sourceTree = "<group>"; };
-		1D8DF638211D37720006D2CB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		1D8DF639211D37720006D2CB /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		1D8DF638211D37720006D2CB /* TimeKeepingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeKeepingDetailViewController.swift; sourceTree = "<group>"; };
+		1D8DF639211D37720006D2CB /* TimeKeepingDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeKeepingDetailViewController.xib; sourceTree = "<group>"; };
 		1D8DF641211D37AD0006D2CB /* TimeKeepingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeKeepingViewController.swift; sourceTree = "<group>"; };
 		1D8DF642211D37AD0006D2CB /* TimeKeepingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeKeepingViewController.xib; sourceTree = "<group>"; };
 		1D8DF645211D37CA0006D2CB /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
@@ -124,6 +124,10 @@
 		1D8DF662211D3FF10006D2CB /* Roboto-BoldCondensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldCondensed.ttf"; sourceTree = "<group>"; };
 		1D8DF679211D82100006D2CB /* TimeKeepingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeKeepingTableViewCell.swift; sourceTree = "<group>"; };
 		1D8DF67A211D82100006D2CB /* TimeKeepingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeKeepingTableViewCell.xib; sourceTree = "<group>"; };
+		1DA7FCC42126A82D00F687BA /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		1DA7FCC62126AB0F00F687BA /* Staff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Staff.swift; sourceTree = "<group>"; };
+		1DA7FCC92126AC0800F687BA /* Department.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Department.swift; sourceTree = "<group>"; };
+		1DA7FCCE2126D1F000F687BA /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		1DD30928212187E200217E3F /* TimeKeepingTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeKeepingTableViewHeader.swift; sourceTree = "<group>"; };
 		1DD3092A2121880B00217E3F /* TimeKeepingTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeKeepingTableViewHeader.xib; sourceTree = "<group>"; };
 		31873B2EC9738901886D15E2 /* Pods-TimeKeeping.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeKeeping.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimeKeeping/Pods-TimeKeeping.release.xcconfig"; sourceTree = "<group>"; };
@@ -143,6 +147,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D2204DE212661BC007664B6 /* LeftMenu */ = {
+			isa = PBXGroup;
+			children = (
+				1D8DF64A211D38CC0006D2CB /* LeftMenuViewController.xib */,
+				1D8DF649211D38CC0006D2CB /* LeftMenuViewController.swift */,
+				1D8DF646211D37CA0006D2CB /* MenuTableViewCell.xib */,
+				1D8DF645211D37CA0006D2CB /* MenuTableViewCell.swift */,
+			);
+			path = LeftMenu;
+			sourceTree = "<group>";
+		};
+		1D2204DF212661D9007664B6 /* Vacation */ = {
+			isa = PBXGroup;
+			children = (
+				1D530FC3212120E6006A5029 /* VacationViewController.xib */,
+				1D530FC2212120E6006A5029 /* VacationViewController.swift */,
+			);
+			path = Vacation;
+			sourceTree = "<group>";
+		};
+		1D2204E021266270007664B6 /* TimeKeepingDetail */ = {
+			isa = PBXGroup;
+			children = (
+				1D8DF639211D37720006D2CB /* TimeKeepingDetailViewController.xib */,
+				1D8DF638211D37720006D2CB /* TimeKeepingDetailViewController.swift */,
+			);
+			path = TimeKeepingDetail;
+			sourceTree = "<group>";
+		};
+		1D2204E421267039007664B6 /* Authencation */ = {
+			isa = PBXGroup;
+			children = (
+				1D8DF622211D370A0006D2CB /* ViewController.swift */,
+				1D8DF624211D370A0006D2CB /* Main.storyboard */,
+			);
+			path = Authencation;
+			sourceTree = "<group>";
+		};
 		1D3D8B2421250FCD00F6383C /* TimeKeeping */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,9 +283,18 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		1DA7FCCD2126D1D200F687BA /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				1DA7FCCE2126D1F000F687BA /* RealmManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
 		1DEB4A5A212590D3003E055F /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				1DA7FCCD2126D1D200F687BA /* DataManager */,
 				1D530FC62121661D006A5029 /* Extension */,
 			);
 			path = Helper;
@@ -252,6 +303,9 @@
 		1DEB4A5B212590EB003E055F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1DA7FCC42126A82D00F687BA /* Person.swift */,
+				1DA7FCC62126AB0F00F687BA /* Staff.swift */,
+				1DA7FCC92126AC0800F687BA /* Department.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -259,23 +313,17 @@
 		1DEB4A5C21259105003E055F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				1D2204E421267039007664B6 /* Authencation */,
+				1D2204E021266270007664B6 /* TimeKeepingDetail */,
+				1D2204DF212661D9007664B6 /* Vacation */,
+				1D2204DE212661BC007664B6 /* LeftMenu */,
 				1DEB4A60212593BC003E055F /* Other */,
 				1DEB4A5F212591F6003E055F /* ChagePassword */,
 				1DEB4A5E212591E9003E055F /* ForgotPassword */,
-				1DEB4A5D2125919F003E055F /* Login */,
 				1D3D8B2421250FCD00F6383C /* TimeKeeping */,
 				1D3D8B2521250FF900F6383C /* Personnel */,
 			);
 			path = Scenes;
-			sourceTree = "<group>";
-		};
-		1DEB4A5D2125919F003E055F /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				1D8DF624211D370A0006D2CB /* Main.storyboard */,
-				1D8DF622211D370A0006D2CB /* ViewController.swift */,
-			);
-			path = Login;
 			sourceTree = "<group>";
 		};
 		1DEB4A5E212591E9003E055F /* ForgotPassword */ = {
@@ -299,18 +347,8 @@
 		1DEB4A60212593BC003E055F /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				1D8DF638211D37720006D2CB /* HomeViewController.swift */,
-				1D8DF639211D37720006D2CB /* HomeViewController.xib */,
-				1D8DF645211D37CA0006D2CB /* MenuTableViewCell.swift */,
-				1D8DF646211D37CA0006D2CB /* MenuTableViewCell.xib */,
-				1D8DF649211D38CC0006D2CB /* LeftMenuViewController.swift */,
-				1D8DF64A211D38CC0006D2CB /* LeftMenuViewController.xib */,
-				1D530FC2212120E6006A5029 /* VacationViewController.swift */,
-				1D530FC3212120E6006A5029 /* VacationViewController.xib */,
 				1D0463B02123C1FB00CAE04B /* MainTabbarController.swift */,
 				1D0463B22123CED300CAE04B /* MainNavigationController.swift */,
-				1D3CC4A421257B97009D5569 /* SideMenuViewController.swift */,
-				1D3CC4A521257B97009D5569 /* SideMenuViewController.xib */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -412,7 +450,7 @@
 				1D8DF670211D3FF10006D2CB /* Roboto-LightItalic.ttf in Resources */,
 				1D3D8B2321250FBB00F6383C /* PersonnelViewController.xib in Resources */,
 				1D8DF671211D3FF10006D2CB /* Roboto-ThinItalic.ttf in Resources */,
-				1D8DF63B211D37720006D2CB /* HomeViewController.xib in Resources */,
+				1D8DF63B211D37720006D2CB /* TimeKeepingDetailViewController.xib in Resources */,
 				1DD3092B2121880B00217E3F /* TimeKeepingTableViewHeader.xib in Resources */,
 				1D8DF628211D370B0006D2CB /* Assets.xcassets in Resources */,
 				1D8DF669211D3FF10006D2CB /* Roboto-BoldItalic.ttf in Resources */,
@@ -420,7 +458,6 @@
 				1D8DF66B211D3FF10006D2CB /* Roboto-BlackItalic.ttf in Resources */,
 				1D8DF667211D3FF10006D2CB /* Roboto-Italic.ttf in Resources */,
 				1D8DF668211D3FF10006D2CB /* Roboto-Regular.ttf in Resources */,
-				1D3CC4A721257B97009D5569 /* SideMenuViewController.xib in Resources */,
 				1D8DF650211D3F5A0006D2CB /* ChangePasswordViewController.xib in Resources */,
 				1D530FC5212120E6006A5029 /* VacationViewController.xib in Resources */,
 				1D8DF66C211D3FF10006D2CB /* Roboto-CondensedItalic.ttf in Resources */,
@@ -454,12 +491,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TimeKeeping/Pods-TimeKeeping-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
@@ -494,6 +533,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DA7FCC72126AB0F00F687BA /* Staff.swift in Sources */,
 				1D3D8B28212510D300F6383C /* PersonnelTableViewCell.swift in Sources */,
 				1D0463B32123CED300CAE04B /* MainNavigationController.swift in Sources */,
 				1D8DF623211D370A0006D2CB /* ViewController.swift in Sources */,
@@ -504,13 +544,15 @@
 				1D8DF621211D370A0006D2CB /* AppDelegate.swift in Sources */,
 				1DD30929212187E200217E3F /* TimeKeepingTableViewHeader.swift in Sources */,
 				1D530FC821216640006A5029 /* Extention.swift in Sources */,
-				1D3CC4A621257B97009D5569 /* SideMenuViewController.swift in Sources */,
 				1D8DF647211D37CA0006D2CB /* MenuTableViewCell.swift in Sources */,
 				1D530FC4212120E6006A5029 /* VacationViewController.swift in Sources */,
 				1D8DF636211D37610006D2CB /* ForgotPasswordViewController.swift in Sources */,
 				1D8DF64B211D38CC0006D2CB /* LeftMenuViewController.swift in Sources */,
-				1D8DF63A211D37720006D2CB /* HomeViewController.swift in Sources */,
+				1DA7FCC52126A82D00F687BA /* Person.swift in Sources */,
+				1D8DF63A211D37720006D2CB /* TimeKeepingDetailViewController.swift in Sources */,
+				1DA7FCCF2126D1F000F687BA /* RealmManager.swift in Sources */,
 				1D8DF643211D37AD0006D2CB /* TimeKeepingViewController.swift in Sources */,
+				1DA7FCCA2126AC0800F687BA /* Department.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
