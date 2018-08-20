@@ -42,6 +42,21 @@ class SearchViewController: UIViewController {
         self.tableView.reloadData()
         self.tableView.setContentOffset(CGPoint.zero, animated: false)
     }
+    
+    func getData(_ term: String) {
+        let services = TrackServices()
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        services.getSearchResults(term) { (result) in
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            switch result {
+            case .success(let tracks):
+                self.searchResults = tracks
+                self.reloadData()
+            case .failure(let error):
+                self.alertWith("Error", error.localizedDescription)
+            }
+        }
+    }
 }
 
 extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
@@ -81,16 +96,17 @@ extension SearchViewController: UISearchBarDelegate {
         if term.isEmpty {
             return
         } else {
-            UIApplication.shared.isNetworkActivityIndicatorVisible = true
-            service.getSearchResults(searchTerm: term, completion: { (tracks, errorMessage) in
-                UIApplication.shared.isNetworkActivityIndicatorVisible = false
-                if let tracks = tracks {
-                    self.searchResults = tracks
-                    self.reloadData()
-                } else {
-                    self.alertWith("Error", errorMessage)
-                }
-            })
+            getData(term)
+//            UIApplication.shared.isNetworkActivityIndicatorVisible = true
+//            service.getSearchResults(searchTerm: term, completion: { (tracks, errorMessage) in
+//                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+//                if let tracks = tracks {
+//                    self.searchResults = tracks
+//                    self.reloadData()
+//                } else {
+//                    self.alertWith("Error", errorMessage)
+//                }
+//            })
         }
     }
 }
