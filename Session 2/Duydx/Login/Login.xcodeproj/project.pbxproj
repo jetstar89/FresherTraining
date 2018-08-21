@@ -16,6 +16,7 @@
 		84B7CB9D2122B91A00B9CE99 /* BrowseRequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7CB9B2122B91A00B9CE99 /* BrowseRequestTableViewCell.swift */; };
 		84B7CB9E2122B91A00B9CE99 /* BrowseRequestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B7CB9C2122B91A00B9CE99 /* BrowseRequestTableViewCell.xib */; };
 		84B7CBA12122B99300B9CE99 /* Vacation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7CBA02122B99300B9CE99 /* Vacation.swift */; };
+		84CEB672212BAE4A000890C6 /* QueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CEB671212BAE4A000890C6 /* QueryService.swift */; };
 		84E5AB9C211D4D44003D1BF9 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5AB9A211D4D44003D1BF9 /* ChangePasswordViewController.swift */; };
 		84E5AB9D211D4D44003D1BF9 /* ChangePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E5AB9B211D4D44003D1BF9 /* ChangePasswordViewController.xib */; };
 		84E5ABA8211D87BA003D1BF9 /* DaysTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5ABA6211D87BA003D1BF9 /* DaysTableViewCell.swift */; };
@@ -72,6 +73,7 @@
 		84B7CB9B2122B91A00B9CE99 /* BrowseRequestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseRequestTableViewCell.swift; sourceTree = "<group>"; };
 		84B7CB9C2122B91A00B9CE99 /* BrowseRequestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrowseRequestTableViewCell.xib; sourceTree = "<group>"; };
 		84B7CBA02122B99300B9CE99 /* Vacation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vacation.swift; sourceTree = "<group>"; };
+		84CEB671212BAE4A000890C6 /* QueryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryService.swift; sourceTree = "<group>"; };
 		84E5AB9A211D4D44003D1BF9 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		84E5AB9B211D4D44003D1BF9 /* ChangePasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangePasswordViewController.xib; sourceTree = "<group>"; };
 		84E5ABA6211D87BA003D1BF9 /* DaysTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysTableViewCell.swift; sourceTree = "<group>"; };
@@ -351,9 +353,18 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		84CEB670212BAE14000890C6 /* NetWorking */ = {
+			isa = PBXGroup;
+			children = (
+				84CEB671212BAE4A000890C6 /* QueryService.swift */,
+			);
+			path = NetWorking;
+			sourceTree = "<group>";
+		};
 		84D621832126DDE900D5BA35 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				84CEB670212BAE14000890C6 /* NetWorking */,
 				84F03666212A645800A663C5 /* RealmManager.swift */,
 			);
 			path = Helper;
@@ -612,6 +623,7 @@
 				84E5ABAD211D98D5003D1BF9 /* Week.swift in Sources */,
 				84F454782118570E00217F3D /* ProfileController.swift in Sources */,
 				84E87E0D211C1C3E00C896B7 /* Menu.swift in Sources */,
+				84CEB672212BAE4A000890C6 /* QueryService.swift in Sources */,
 				84ED89B721142E73005D2174 /* ViewController.swift in Sources */,
 				84196FAB2121778A00553107 /* WeeksTableViewCell.swift in Sources */,
 				84B7CBA12122B99300B9CE99 /* Vacation.swift in Sources */,

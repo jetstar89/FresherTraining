@@ -34,7 +34,6 @@ class PersonnelViewController: UIViewController {
     // MARK: initView
     func initView() {
         idPerson = UserDefaults.standard.integer(forKey: "idPerson")
-//        UserDefaults.standard.set(idPerson, forKey: "idPerson")
         tabBarController?.tabBar.isHidden = true
         positionLabel.text = "Developer"
         navigationController?.navigationBar.isHidden = false
