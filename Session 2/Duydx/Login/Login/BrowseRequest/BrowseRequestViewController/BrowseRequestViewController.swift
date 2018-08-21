@@ -12,6 +12,7 @@ class BrowseRequestViewController: UIViewController {
 
     @IBOutlet weak var browseRequestTableView: UITableView!
     var dataBrowseRequest = [Vacation]()
+    let service = QuerySerive()
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
@@ -65,7 +66,31 @@ class BrowseRequestViewController: UIViewController {
         ]
     }
     @objc func addRequest() {
+//        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+//        service.getDataResult { (data, error) in
+//            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+//            if let data: String = data {
+//                print(data)
+//                print("Lấy dữ liệu thành công")
+//            } else {
+//                print("\(error)")
+//            }
+//        }
         print("Add Request")
+    }
+    func getData() {
+        let service = PostService()
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        service.getPersonResult { (result) in
+            switch result {
+            case .success(let post):
+                for item in post {
+                    print(item.title)
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     @objc func selectedMenu() {
         guard let sideMenu = SideMenuManager.default.menuLeftNavigationController else {

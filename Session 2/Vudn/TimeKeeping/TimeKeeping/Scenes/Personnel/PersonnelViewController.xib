@@ -30,7 +30,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" semanticContentAttribute="playback" translatesAutoresizingMaskIntoConstraints="NO" id="jOV-O0-EUm">
+                <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="jOV-O0-EUm">
                     <rect key="frame" x="0.0" y="64" width="375" height="47"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tìm kiếm" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="a6U-7W-lCE">
@@ -50,6 +50,7 @@
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" red="0.2470588235" green="0.37254901959999998" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="a6U-7W-lCE" secondAttribute="trailing" constant="16" id="BlF-mj-gVV"/>
                         <constraint firstAttribute="bottom" secondItem="a6U-7W-lCE" secondAttribute="bottom" constant="13" id="L64-QC-RUL"/>

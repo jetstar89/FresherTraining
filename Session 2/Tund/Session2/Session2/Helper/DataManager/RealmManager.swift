@@ -10,14 +10,15 @@ import Foundation
 import RealmSwift
 
 class RealmManager: NSObject {
-    public static let shared = RealmManager()
+    static let shared = RealmManager()
     override private init() {
-        //
+        // unable init
     }
-    func getObjects(type: Object.Type) -> Results<Object>? {
+
+    func getObjects<Element: Object>(type: Element.Type) -> Results<Element>? {
         do {
             let realm = try Realm()
-            return realm.objects(type)
+            return realm.objects(type).sorted(byKeyPath: "id")
         } catch let error as NSError {
             print(error.description)
         }
@@ -27,13 +28,23 @@ class RealmManager: NSObject {
         do {
             let realm = try Realm()
             try realm.write {
-                realm.add(obj)
+                if let staff = obj as? Staff {
+                    staff.id = incrementID(type: Staff.self)
+                    realm.add(staff)
+                }
             }
         } catch let error as NSError {
             print(error.description)
         }
     }
-    func editObject(obj: Object) {
+    
+    func addObjects(objs: [Object]) {
+        for item in objs {
+            addObject(obj: item)
+        }
+    }
+    
+    func updateObject(obj: Object) {
         do {
             let realm = try Realm()
             try realm.write {
@@ -43,7 +54,7 @@ class RealmManager: NSObject {
             print(error.description)
         }
     }
-    func editObjects(objs: [Object]) {
+    func updateObjects(objs: [Object]) {
         do {
             let realm = try Realm()
             try realm.write {
@@ -53,6 +64,7 @@ class RealmManager: NSObject {
             print(error.description)
         }
     }
+
     func deleteObject(obj: Object) {
         do {
             let realm = try Realm()
@@ -86,7 +98,7 @@ class RealmManager: NSObject {
     }
     func incrementID(type: Object.Type) -> Int {
         do {
-            let realm = try Realm()
+            let realm = try Realm()    
             return (realm.objects(type).max(ofProperty: "id") as Int? ?? 0) + 1
         } catch let error as NSError {
             print(error.description)
