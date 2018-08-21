@@ -13,7 +13,7 @@ class QuerySerive {
     var dataTask: URLSessionDataTask?
     var person: [Person] = []
     var errorMessage = ""
-    var data = ""
+    var data: String = ""
     func getDataResult(completion: @escaping QueryResult ) {
         dataTask?.cancel()
         if var urlComponent = URLComponents(string: "https://vnexpress.net/rss/tin-moi-nhat.rss") {

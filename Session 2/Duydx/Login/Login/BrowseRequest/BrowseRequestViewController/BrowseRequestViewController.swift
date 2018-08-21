@@ -66,14 +66,29 @@ class BrowseRequestViewController: UIViewController {
         ]
     }
     @objc func addRequest() {
+//        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+//        service.getDataResult { (data, error) in
+//            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+//            if let data: String = data {
+//                print(data)
+//                print("Lấy dữ liệu thành công")
+//            } else {
+//                print("\(error)")
+//            }
+//        }
+        print("Add Request")
+    }
+    func getData() {
+        let service = PostService()
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        service.getDataResult { (data, error) in
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
-            if let data: String = data {
-                print(data)
-                print("Lấy dữ liệu thành công")
-            } else {
-                print("\(error)")
+        service.getPersonResult { (result) in
+            switch result {
+            case .success(let post):
+                for item in post {
+                    print(item.title)
+                }
+            case .failure(let error):
+                print(error)
             }
         }
     }

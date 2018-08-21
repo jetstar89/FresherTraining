@@ -17,6 +17,15 @@
 		84B7CB9E2122B91A00B9CE99 /* BrowseRequestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B7CB9C2122B91A00B9CE99 /* BrowseRequestTableViewCell.xib */; };
 		84B7CBA12122B99300B9CE99 /* Vacation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7CBA02122B99300B9CE99 /* Vacation.swift */; };
 		84CEB672212BAE4A000890C6 /* QueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CEB671212BAE4A000890C6 /* QueryService.swift */; };
+		84CEB674212BE994000890C6 /* PostSerivce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CEB673212BE994000890C6 /* PostSerivce.swift */; };
+		84CEB676212BE9E8000890C6 /* APIServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CEB675212BE9E8000890C6 /* APIServiceProvider.swift */; };
+		84CEB678212BE9FA000890C6 /* APIServiceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CEB677212BE9FA000890C6 /* APIServiceObject.swift */; };
+		84CEB67A212BEA0D000890C6 /* APIServiceAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CEB679212BEA0D000890C6 /* APIServiceAgent.swift */; };
+		84CEB67C212BF117000890C6 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CEB67B212BF117000890C6 /* Post.swift */; };
+		84CEB684212BFA3C000890C6 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CEB682212BFA3C000890C6 /* PostViewController.swift */; };
+		84CEB685212BFA3C000890C6 /* PostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CEB683212BFA3C000890C6 /* PostViewController.xib */; };
+		84CEB688212BFAB4000890C6 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CEB686212BFAB4000890C6 /* PostTableViewCell.swift */; };
+		84CEB689212BFAB5000890C6 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CEB687212BFAB4000890C6 /* PostTableViewCell.xib */; };
 		84E5AB9C211D4D44003D1BF9 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5AB9A211D4D44003D1BF9 /* ChangePasswordViewController.swift */; };
 		84E5AB9D211D4D44003D1BF9 /* ChangePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E5AB9B211D4D44003D1BF9 /* ChangePasswordViewController.xib */; };
 		84E5ABA8211D87BA003D1BF9 /* DaysTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5ABA6211D87BA003D1BF9 /* DaysTableViewCell.swift */; };
@@ -74,6 +83,15 @@
 		84B7CB9C2122B91A00B9CE99 /* BrowseRequestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrowseRequestTableViewCell.xib; sourceTree = "<group>"; };
 		84B7CBA02122B99300B9CE99 /* Vacation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vacation.swift; sourceTree = "<group>"; };
 		84CEB671212BAE4A000890C6 /* QueryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryService.swift; sourceTree = "<group>"; };
+		84CEB673212BE994000890C6 /* PostSerivce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostSerivce.swift; sourceTree = "<group>"; };
+		84CEB675212BE9E8000890C6 /* APIServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceProvider.swift; sourceTree = "<group>"; };
+		84CEB677212BE9FA000890C6 /* APIServiceObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceObject.swift; sourceTree = "<group>"; };
+		84CEB679212BEA0D000890C6 /* APIServiceAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceAgent.swift; sourceTree = "<group>"; };
+		84CEB67B212BF117000890C6 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		84CEB682212BFA3C000890C6 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		84CEB683212BFA3C000890C6 /* PostViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostViewController.xib; sourceTree = "<group>"; };
+		84CEB686212BFAB4000890C6 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		84CEB687212BFAB4000890C6 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		84E5AB9A211D4D44003D1BF9 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		84E5AB9B211D4D44003D1BF9 /* ChangePasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangePasswordViewController.xib; sourceTree = "<group>"; };
 		84E5ABA6211D87BA003D1BF9 /* DaysTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysTableViewCell.swift; sourceTree = "<group>"; };
@@ -357,8 +375,48 @@
 			isa = PBXGroup;
 			children = (
 				84CEB671212BAE4A000890C6 /* QueryService.swift */,
+				84CEB673212BE994000890C6 /* PostSerivce.swift */,
+				84CEB675212BE9E8000890C6 /* APIServiceProvider.swift */,
+				84CEB677212BE9FA000890C6 /* APIServiceObject.swift */,
+				84CEB679212BEA0D000890C6 /* APIServiceAgent.swift */,
 			);
 			path = NetWorking;
+			sourceTree = "<group>";
+		};
+		84CEB67D212BF9DF000890C6 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				84CEB681212BFA19000890C6 /* Model */,
+				84CEB680212BFA0B000890C6 /* PostCell */,
+				84CEB67E212BF9F2000890C6 /* PostViewController */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		84CEB67E212BF9F2000890C6 /* PostViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84CEB682212BFA3C000890C6 /* PostViewController.swift */,
+				84CEB683212BFA3C000890C6 /* PostViewController.xib */,
+			);
+			path = PostViewController;
+			sourceTree = "<group>";
+		};
+		84CEB680212BFA0B000890C6 /* PostCell */ = {
+			isa = PBXGroup;
+			children = (
+				84CEB686212BFAB4000890C6 /* PostTableViewCell.swift */,
+				84CEB687212BFAB4000890C6 /* PostTableViewCell.xib */,
+			);
+			path = PostCell;
+			sourceTree = "<group>";
+		};
+		84CEB681212BFA19000890C6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84CEB67B212BF117000890C6 /* Post.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		84D621832126DDE900D5BA35 /* Helper */ = {
@@ -393,6 +451,7 @@
 		84ED89B321142E73005D2174 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				84CEB67D212BF9DF000890C6 /* Post */,
 				84D621832126DDE900D5BA35 /* Helper */,
 				84580ABD21268819005407EE /* Login */,
 				84580ABC21268801005407EE /* Application */,
@@ -546,6 +605,8 @@
 				84B7CB912122B1F300B9CE99 /* BrowseRequestViewController.xib in Resources */,
 				84E5ABA9211D87BA003D1BF9 /* DaysTableViewCell.xib in Resources */,
 				84F454392117EBBB00217F3D /* Roboto-LightItalic.ttf in Resources */,
+				84CEB689212BFAB5000890C6 /* PostTableViewCell.xib in Resources */,
+				84CEB685212BFA3C000890C6 /* PostViewController.xib in Resources */,
 				84F4542F2117EBBB00217F3D /* Roboto-BoldCondensed.ttf in Resources */,
 				84F454342117EBBB00217F3D /* Roboto-BoldItalic.ttf in Resources */,
 				84F4542A2117EBBB00217F3D /* Roboto-BlackItalic.ttf in Resources */,
@@ -593,19 +654,23 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Login/Pods-Login-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/HAActionSheet/HAActionSheet.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HAActionSheet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -625,18 +690,25 @@
 				84E87E0D211C1C3E00C896B7 /* Menu.swift in Sources */,
 				84CEB672212BAE4A000890C6 /* QueryService.swift in Sources */,
 				84ED89B721142E73005D2174 /* ViewController.swift in Sources */,
+				84CEB674212BE994000890C6 /* PostSerivce.swift in Sources */,
+				84CEB688212BFAB4000890C6 /* PostTableViewCell.swift in Sources */,
 				84196FAB2121778A00553107 /* WeeksTableViewCell.swift in Sources */,
 				84B7CBA12122B99300B9CE99 /* Vacation.swift in Sources */,
 				84E5ABA8211D87BA003D1BF9 /* DaysTableViewCell.swift in Sources */,
 				84E87E12211C462200C896B7 /* PersonTableViewCell.swift in Sources */,
+				84CEB67A212BEA0D000890C6 /* APIServiceAgent.swift in Sources */,
+				84CEB678212BE9FA000890C6 /* APIServiceObject.swift in Sources */,
 				84E5ABAB211D97D5003D1BF9 /* DayOfWeek.swift in Sources */,
 				84ED89B521142E73005D2174 /* AppDelegate.swift in Sources */,
 				84B7CB902122B1F300B9CE99 /* BrowseRequestViewController.swift in Sources */,
 				84F45470211853CC00217F3D /* FogotPasswordController.swift in Sources */,
+				84CEB67C212BF117000890C6 /* Post.swift in Sources */,
+				84CEB684212BFA3C000890C6 /* PostViewController.swift in Sources */,
 				84F454742118555800217F3D /* HomeController.swift in Sources */,
 				84E87E06211BE37C00C896B7 /* PersonnelViewController.swift in Sources */,
 				84B7CB9D2122B91A00B9CE99 /* BrowseRequestTableViewCell.swift in Sources */,
 				84E5AB9C211D4D44003D1BF9 /* ChangePasswordViewController.swift in Sources */,
+				84CEB676212BE9E8000890C6 /* APIServiceProvider.swift in Sources */,
 				84F03667212A645800A663C5 /* RealmManager.swift in Sources */,
 				84E87E02211BE1D700C896B7 /* TimeKeepingViewController.swift in Sources */,
 				84E87E0A211C1AAB00C896B7 /* MenuTableViewCell.swift in Sources */,
