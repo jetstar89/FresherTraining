@@ -14,7 +14,7 @@ class RealmManager: NSObject {
     override init() {
         //
     }
-    func getObjects(type: Object.Type) -> Results<Object>? {
+    func getObjects<Element: Object>(_ type: Element.Type) -> Results<Element>? {
         do {
             let realm = try Realm()
             return realm.objects(type)
@@ -30,7 +30,8 @@ class RealmManager: NSObject {
                 realm.add(obj)
                 if let staff = obj as? Staff {
                     realm.add(staff)
-                    staff.userID = incrementID(type: Staff.self)
+//                    staff.userID = incrementID(type: Staff.self)
+                    print("Complete add Staff")
                 }
             }
         } catch let error as NSError {

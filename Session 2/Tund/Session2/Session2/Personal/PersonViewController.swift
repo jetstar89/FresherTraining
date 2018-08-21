@@ -43,7 +43,7 @@ class PersonViewController: UIViewController {
         //register TableView
         personTableView.register(UINib(nibName: "PersonTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         // getData
-//        createData()
+        createData()
         getData()
         personTableView.reloadData()
         updateTitlePerson()
@@ -61,12 +61,12 @@ class PersonViewController: UIViewController {
     @objc func addStaff() {
         let firstStaff = Staff()
         firstStaff.name = "Nguyễn Đình Tú"
+        firstStaff.userID = "1996"
         firstStaff.avatar = "https://i.ytimg.com/vi/xAY4_lF822w/maxresdefault.jpg"
         firstStaff.phone = "01643246989"
         firstStaff.position = "Nhân viên chính thức"
         firstStaff.status = "Đang làm việc"
         realmManager.addObject(obj: firstStaff)
-        getData()
         personTableView.reloadData()
         updateTitlePerson()
     }
@@ -86,6 +86,7 @@ class PersonViewController: UIViewController {
         // staff number one
         let firstStaff = Staff()
         firstStaff.name = "Nguyễn Đình Tú"
+        firstStaff.userID = "1992"
         firstStaff.avatar = "https://i.ytimg.com/vi/xAY4_lF822w/maxresdefault.jpg"
         firstStaff.phone = "01643246989"
         firstStaff.position = "Nhân viên chính thức"
@@ -93,6 +94,7 @@ class PersonViewController: UIViewController {
         //staff number two
         let secondStaff = Staff()
         secondStaff.name = "Nguyễn Tùng lâm"
+        secondStaff.userID = "1993"
         secondStaff.avatar = "https://i.ytimg.com/vi/xAY4_lF822w/maxresdefault.jpg"
         secondStaff.phone = "0987625124"
         secondStaff.position = "Nhân viên chính thức"
@@ -100,6 +102,7 @@ class PersonViewController: UIViewController {
         //staff number three
         let thirdStaff = Staff()
         thirdStaff.name = "Đặng Xuân Duy"
+        thirdStaff.userID = "1994"
         thirdStaff.avatar = "https://i.ytimg.com/vi/xAY4_lF822w/maxresdefault.jpg"
         thirdStaff.phone = "0987625124"
         thirdStaff.position = "Nhân viên chính thức"
@@ -107,6 +110,7 @@ class PersonViewController: UIViewController {
         //stafff number four
         let fourthStaff = Staff()
         fourthStaff.name = "Đinh Ngọc Vũ"
+        fourthStaff.userID = "1995"
         fourthStaff.avatar = "https://i.ytimg.com/vi/xAY4_lF822w/maxresdefault.jpg"
         fourthStaff.phone = "0987625124"
         fourthStaff.position = "Nhân viên chính thức"
@@ -118,12 +122,14 @@ class PersonViewController: UIViewController {
         // get data from realm
     }
     func getData() {
-        do {
-            let realm = try Realm()
-            staffs = realm.objects(Staff.self)
-        } catch let error as NSError {
-            print(error.description)
-        }
+//        do {
+//            let realm = try Realm()
+//            staffs = realm.objects(Staff.self)
+//        } catch let error as NSError {
+//            print(error.description)
+//            print("Cant get data")
+//        }
+        staffs = realmManager.getObjects(Staff.self)
 
     }
     @objc func onBack() {
@@ -156,7 +162,7 @@ extension PersonViewController: UITableViewDataSource {
         if let staffs = staffs {
             let urlImage = URL(string: staffs[indexPath.row].avatar)
             cell.avatarImageView.kf.setImage(with: urlImage)
-            cell.idLabel.text = "ID" + staffs[indexPath.row].userID.description
+            cell.idLabel.text = staffs[indexPath.row].userID.description
             cell.nameLabel.text = staffs[indexPath.row].name
             cell.phoneLabel.text = staffs[indexPath.row].phone
             cell.positionLabel.text = staffs[indexPath.row].position
