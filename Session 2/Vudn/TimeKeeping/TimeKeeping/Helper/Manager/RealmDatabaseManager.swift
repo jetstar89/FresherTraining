@@ -1,5 +1,5 @@
 //
-//  RealmManager.swift
+//  RealmDatabaseManager.swift
 //  TimeKeeping
 //
 //  Created by Đinh Ngọc Vũ on 8/17/18.
@@ -9,8 +9,8 @@
 import Foundation
 import RealmSwift
 
-class RealmManager: NSObject {
-    public static let shared = RealmManager()
+class RealmDatabaseManager: NSObject {
+    public static let shared = RealmDatabaseManager()
     override private init() {
         // unable init
     }

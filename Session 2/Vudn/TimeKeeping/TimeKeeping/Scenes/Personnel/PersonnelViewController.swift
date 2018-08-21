@@ -23,7 +23,7 @@ class PersonnelViewController: UIViewController {
     
     // MARK: - Variable
     var staffs: Results<Staff>?
-    let realmManager = RealmManager.shared
+    let realmManager = RealmDatabaseManager.shared
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -91,28 +91,12 @@ class PersonnelViewController: UIViewController {
     // MARK: - Func
 
     func getData() {
-//        do {
-//            let realm = try Realm()
-//            staffs = realm.objects(Staff.self)
-//        } catch let error as NSError {
-//            print(error.description)
-//        }
-        
-//        if let objs = realmManager.getObjects(type: Staff.self) {
-//            for element in objs {
-//                if let staff = element as? Staff {
-//                    staffs.append(staff)
-//                }
-//            }
-//        }
-        
         staffs = realmManager.getObjects(type: Staff.self)
     }
 }
 
 extension PersonnelViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("staffs = \(String(describing: staffs?.count))")
         guard let count = staffs?.count else {
             return 0
         }

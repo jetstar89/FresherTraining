@@ -24,7 +24,6 @@ class Staff: Person {
                      status: Bool, department: Derpartment, birthDay: Double,
                      phone: String, address: String, gender: Int) {
         self.init()
-        self.id = 0
         self.name = name
         self.type = type
         self.avatar = avatar

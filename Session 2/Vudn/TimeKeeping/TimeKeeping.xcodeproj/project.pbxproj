@@ -15,7 +15,22 @@
 		1D3D8B29212510D300F6383C /* PersonnelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D3D8B27212510D300F6383C /* PersonnelTableViewCell.xib */; };
 		1D530FC4212120E6006A5029 /* VacationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D530FC2212120E6006A5029 /* VacationViewController.swift */; };
 		1D530FC5212120E6006A5029 /* VacationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D530FC3212120E6006A5029 /* VacationViewController.xib */; };
-		1D530FC821216640006A5029 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D530FC721216640006A5029 /* Extension.swift */; };
+		1D5C8F08212BA7CF009DD0A4 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5C8F07212BA7CF009DD0A4 /* UITextFieldExtension.swift */; };
+		1D5C8F0C212BAB79009DD0A4 /* RealmDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5C8F0B212BAB79009DD0A4 /* RealmDatabaseManager.swift */; };
+		1D5C8F0F212BAE68009DD0A4 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5C8F0E212BAE68009DD0A4 /* UITableViewExtension.swift */; };
+		1D5C8F11212BAE7B009DD0A4 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5C8F10212BAE7B009DD0A4 /* UIColorExtension.swift */; };
+		1D5C8F13212BAE9A009DD0A4 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5C8F12212BAE9A009DD0A4 /* UIViewControllerExtension.swift */; };
+		1D5C8F15212BAEA6009DD0A4 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5C8F14212BAEA6009DD0A4 /* UIViewExtension.swift */; };
+		1D5C8F18212BAFED009DD0A4 /* PostServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5C8F17212BAFED009DD0A4 /* PostServices.swift */; };
+		1D5C8F1D212BB1E3009DD0A4 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5C8F1B212BB1E3009DD0A4 /* PostViewController.swift */; };
+		1D5C8F1E212BB1E3009DD0A4 /* PostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D5C8F1C212BB1E3009DD0A4 /* PostViewController.xib */; };
+		1D5C8F21212BB1EF009DD0A4 /* TrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5C8F1F212BB1EF009DD0A4 /* TrackViewController.swift */; };
+		1D5C8F22212BB1EF009DD0A4 /* TrackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D5C8F20212BB1EF009DD0A4 /* TrackViewController.xib */; };
+		1D5C8F25212BB31E009DD0A4 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5C8F23212BB31E009DD0A4 /* PostTableViewCell.swift */; };
+		1D5C8F26212BB31E009DD0A4 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D5C8F24212BB31E009DD0A4 /* PostTableViewCell.xib */; };
+		1D5C8F28212BF213009DD0A4 /* APIRequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5C8F27212BF213009DD0A4 /* APIRequestProvider.swift */; };
+		1D5C8F2A212BF242009DD0A4 /* APIServiceAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5C8F29212BF242009DD0A4 /* APIServiceAgent.swift */; };
+		1D5C8F2C212BF254009DD0A4 /* APIServiceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5C8F2B212BF254009DD0A4 /* APIServiceObject.swift */; };
 		1D8DF621211D370A0006D2CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DF620211D370A0006D2CB /* AppDelegate.swift */; };
 		1D8DF623211D370A0006D2CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DF622211D370A0006D2CB /* ViewController.swift */; };
 		1D8DF626211D370A0006D2CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D8DF624211D370A0006D2CB /* Main.storyboard */; };
@@ -61,8 +76,6 @@
 		1DF866A4212A6B2000EC47D3 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF866A3212A6B2000EC47D3 /* Post.swift */; };
 		53AB7A28425758C651DC581C /* Pods_TimeKeeping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEEAF214E6341CC08F20009E /* Pods_TimeKeeping.framework */; };
 		84174960212A57D0001BAA16 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8417495F212A57CF001BAA16 /* .swiftlint.yml */; };
-		84174970212A9AD7001BAA16 /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417496F212A9AD7001BAA16 /* Extention.swift */; };
-		84174974212A9AFD001BAA16 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84174973212A9AFD001BAA16 /* RealmManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -87,7 +100,22 @@
 		1D3D8B27212510D300F6383C /* PersonnelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonnelTableViewCell.xib; sourceTree = "<group>"; };
 		1D530FC2212120E6006A5029 /* VacationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationViewController.swift; sourceTree = "<group>"; };
 		1D530FC3212120E6006A5029 /* VacationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VacationViewController.xib; sourceTree = "<group>"; };
-		1D530FC721216640006A5029 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		1D5C8F07212BA7CF009DD0A4 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
+		1D5C8F0B212BAB79009DD0A4 /* RealmDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDatabaseManager.swift; sourceTree = "<group>"; };
+		1D5C8F0E212BAE68009DD0A4 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		1D5C8F10212BAE7B009DD0A4 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		1D5C8F12212BAE9A009DD0A4 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		1D5C8F14212BAEA6009DD0A4 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		1D5C8F17212BAFED009DD0A4 /* PostServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostServices.swift; sourceTree = "<group>"; };
+		1D5C8F1B212BB1E3009DD0A4 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		1D5C8F1C212BB1E3009DD0A4 /* PostViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostViewController.xib; sourceTree = "<group>"; };
+		1D5C8F1F212BB1EF009DD0A4 /* TrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewController.swift; sourceTree = "<group>"; };
+		1D5C8F20212BB1EF009DD0A4 /* TrackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackViewController.xib; sourceTree = "<group>"; };
+		1D5C8F23212BB31E009DD0A4 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		1D5C8F24212BB31E009DD0A4 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		1D5C8F27212BF213009DD0A4 /* APIRequestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestProvider.swift; sourceTree = "<group>"; };
+		1D5C8F29212BF242009DD0A4 /* APIServiceAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceAgent.swift; sourceTree = "<group>"; };
+		1D5C8F2B212BF254009DD0A4 /* APIServiceObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceObject.swift; sourceTree = "<group>"; };
 		1D8DF61D211D370A0006D2CB /* TimeKeeping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeKeeping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8DF620211D370A0006D2CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D8DF622211D370A0006D2CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -135,10 +163,6 @@
 		1DF866A3212A6B2000EC47D3 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		31873B2EC9738901886D15E2 /* Pods-TimeKeeping.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeKeeping.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimeKeeping/Pods-TimeKeeping.release.xcconfig"; sourceTree = "<group>"; };
 		8417495F212A57CF001BAA16 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
-		8417496F212A9AD7001BAA16 /* Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extention.swift; path = ../../../../../../../.Trash/Extention.swift; sourceTree = "<group>"; };
-		84174973212A9AFD001BAA16 /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RealmManager.swift; path = ../../../../../../../.Trash/RealmManager.swift; sourceTree = "<group>"; };
-		84174975212A9B01001BAA16 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
-		84174976212A9B17001BAA16 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RealmManager.swift; path = ../../../../../../../.Trash/RealmManager.swift; sourceTree = "<group>"; };
 		DEEAF214E6341CC08F20009E /* Pods_TimeKeeping.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeKeeping.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA6135480CCBA29E20AB06E7 /* Pods-TimeKeeping.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeKeeping.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TimeKeeping/Pods-TimeKeeping.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -217,15 +241,62 @@
 			path = Personnel;
 			sourceTree = "<group>";
 		};
-		1D530FC62121661D006A5029 /* Extension */ = {
+		1D5C8F05212BA710009DD0A4 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-
-				1D530FC721216640006A5029 /* Extension.swift */,
-				84174973212A9AFD001BAA16 /* RealmManager.swift */,
-				
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		1D5C8F06212BA7BE009DD0A4 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1D5C8F07212BA7CF009DD0A4 /* UITextFieldExtension.swift */,
+				1D5C8F0E212BAE68009DD0A4 /* UITableViewExtension.swift */,
+				1D5C8F10212BAE7B009DD0A4 /* UIColorExtension.swift */,
+				1D5C8F12212BAE9A009DD0A4 /* UIViewControllerExtension.swift */,
+				1D5C8F14212BAEA6009DD0A4 /* UIViewExtension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		1D5C8F0D212BAB94009DD0A4 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				1D5C8F0B212BAB79009DD0A4 /* RealmDatabaseManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		1D5C8F16212BAF6D009DD0A4 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				1D5C8F17212BAFED009DD0A4 /* PostServices.swift */,
+				1D5C8F27212BF213009DD0A4 /* APIRequestProvider.swift */,
+				1D5C8F29212BF242009DD0A4 /* APIServiceAgent.swift */,
+				1D5C8F2B212BF254009DD0A4 /* APIServiceObject.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		1D5C8F19212BB1C4009DD0A4 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				1D5C8F1B212BB1E3009DD0A4 /* PostViewController.swift */,
+				1D5C8F1C212BB1E3009DD0A4 /* PostViewController.xib */,
+				1D5C8F23212BB31E009DD0A4 /* PostTableViewCell.swift */,
+				1D5C8F24212BB31E009DD0A4 /* PostTableViewCell.xib */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		1D5C8F1A212BB1CC009DD0A4 /* Track */ = {
+			isa = PBXGroup;
+			children = (
+				1D5C8F1F212BB1EF009DD0A4 /* TrackViewController.swift */,
+				1D5C8F20212BB1EF009DD0A4 /* TrackViewController.xib */,
+			);
+			path = Track;
 			sourceTree = "<group>";
 		};
 		1D8DF614211D370A0006D2CB = {
@@ -236,6 +307,7 @@
 				1D8DF61E211D370A0006D2CB /* Products */,
 				9403B7A0AF166097F871AE52 /* Pods */,
 				A5421989E6A876BE42CB597A /* Frameworks */,
+				1D5C8F05212BA710009DD0A4 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -295,20 +367,12 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		1DA7FCCD2126D1D200F687BA /* DataManager */ = {
-			isa = PBXGroup;
-			children = (
-				84174975212A9B01001BAA16 /* RealmManager.swift */,
-			);
-			path = DataManager;
-			sourceTree = "<group>";
-		};
 		1DEB4A5A212590D3003E055F /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				1D530FC62121661D006A5029 /* Extension */,
-				8417496E212A9AC0001BAA16 /* DataManager */,
-				1DA7FCCD2126D1D200F687BA /* DataManager */,
+				1D5C8F16212BAF6D009DD0A4 /* Networking */,
+				1D5C8F0D212BAB94009DD0A4 /* Manager */,
+				1D5C8F06212BA7BE009DD0A4 /* Extension */,
 			);
 			name = Helper;
 			path = ../../../Tund/Session2/Session2/Helper;
@@ -328,6 +392,8 @@
 		1DEB4A5C21259105003E055F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				1D5C8F1A212BB1CC009DD0A4 /* Track */,
+				1D5C8F19212BB1C4009DD0A4 /* Post */,
 				1D2204E421267039007664B6 /* Authencation */,
 				1D2204E021266270007664B6 /* TimeKeepingDetail */,
 				1D2204DF212661D9007664B6 /* Vacation */,
@@ -366,14 +432,6 @@
 				1D0463B22123CED300CAE04B /* MainNavigationController.swift */,
 			);
 			path = Other;
-			sourceTree = "<group>";
-		};
-		8417496E212A9AC0001BAA16 /* DataManager */ = {
-			isa = PBXGroup;
-			children = (
-				84174976212A9B17001BAA16 /* RealmManager.swift */,
-			);
-			path = DataManager;
 			sourceTree = "<group>";
 		};
 		9403B7A0AF166097F871AE52 /* Pods */ = {
@@ -458,6 +516,7 @@
 				1D8DF673211D3FF10006D2CB /* NOTICE.txt in Resources */,
 				1D8DF66A211D3FF10006D2CB /* Roboto-MediumItalic.ttf in Resources */,
 				1D8DF67C211D82100006D2CB /* TimeKeepingTableViewCell.xib in Resources */,
+				1D5C8F26212BB31E009DD0A4 /* PostTableViewCell.xib in Resources */,
 				1D8DF666211D3FF10006D2CB /* Roboto_Specimen_Book.pdf in Resources */,
 				1D3D8B29212510D300F6383C /* PersonnelTableViewCell.xib in Resources */,
 				1D8DF66D211D3FF10006D2CB /* Roboto-Light.ttf in Resources */,
@@ -475,10 +534,12 @@
 				1D8DF671211D3FF10006D2CB /* Roboto-ThinItalic.ttf in Resources */,
 				1D8DF63B211D37720006D2CB /* TimeKeepingDetailViewController.xib in Resources */,
 				1DD3092B2121880B00217E3F /* TimeKeepingTableViewHeader.xib in Resources */,
+				1D5C8F1E212BB1E3009DD0A4 /* PostViewController.xib in Resources */,
 				1D8DF628211D370B0006D2CB /* Assets.xcassets in Resources */,
 				84174960212A57D0001BAA16 /* .swiftlint.yml in Resources */,
 				1D8DF669211D3FF10006D2CB /* Roboto-BoldItalic.ttf in Resources */,
 				1D8DF648211D37CA0006D2CB /* MenuTableViewCell.xib in Resources */,
+				1D5C8F22212BB1EF009DD0A4 /* TrackViewController.xib in Resources */,
 				1D8DF66B211D3FF10006D2CB /* Roboto-BlackItalic.ttf in Resources */,
 				1D8DF667211D3FF10006D2CB /* Roboto-Italic.ttf in Resources */,
 				1D8DF668211D3FF10006D2CB /* Roboto-Regular.ttf in Resources */,
@@ -565,23 +626,33 @@
 			files = (
 				1DA7FCC72126AB0F00F687BA /* Staff.swift in Sources */,
 				1D3D8B28212510D300F6383C /* PersonnelTableViewCell.swift in Sources */,
+				1D5C8F0C212BAB79009DD0A4 /* RealmDatabaseManager.swift in Sources */,
 				1D0463B32123CED300CAE04B /* MainNavigationController.swift in Sources */,
+				1D5C8F11212BAE7B009DD0A4 /* UIColorExtension.swift in Sources */,
+				1D5C8F25212BB31E009DD0A4 /* PostTableViewCell.swift in Sources */,
 				1D8DF623211D370A0006D2CB /* ViewController.swift in Sources */,
+				1D5C8F0F212BAE68009DD0A4 /* UITableViewExtension.swift in Sources */,
 				1D3D8B2221250FBB00F6383C /* PersonnelViewController.swift in Sources */,
-				84174974212A9AFD001BAA16 /* RealmManager.swift in Sources */,
+				1D5C8F28212BF213009DD0A4 /* APIRequestProvider.swift in Sources */,
 				1D8DF64F211D3F5A0006D2CB /* ChangePasswordViewController.swift in Sources */,
+				1D5C8F2A212BF242009DD0A4 /* APIServiceAgent.swift in Sources */,
 				1D8DF67B211D82100006D2CB /* TimeKeepingTableViewCell.swift in Sources */,
 				1D0463B12123C1FB00CAE04B /* MainTabbarController.swift in Sources */,
+				1D5C8F18212BAFED009DD0A4 /* PostServices.swift in Sources */,
 				1D8DF621211D370A0006D2CB /* AppDelegate.swift in Sources */,
+				1D5C8F08212BA7CF009DD0A4 /* UITextFieldExtension.swift in Sources */,
 				1DD30929212187E200217E3F /* TimeKeepingTableViewHeader.swift in Sources */,
-				1D530FC821216640006A5029 /* Extension.swift in Sources */,
 				1D8DF647211D37CA0006D2CB /* MenuTableViewCell.swift in Sources */,
+				1D5C8F2C212BF254009DD0A4 /* APIServiceObject.swift in Sources */,
+				1D5C8F21212BB1EF009DD0A4 /* TrackViewController.swift in Sources */,
 				1DF866A4212A6B2000EC47D3 /* Post.swift in Sources */,
 				1D530FC4212120E6006A5029 /* VacationViewController.swift in Sources */,
-				84174970212A9AD7001BAA16 /* Extention.swift in Sources */,
+				1D5C8F1D212BB1E3009DD0A4 /* PostViewController.swift in Sources */,
 				1D8DF636211D37610006D2CB /* ForgotPasswordViewController.swift in Sources */,
 				1D8DF64B211D38CC0006D2CB /* LeftMenuViewController.swift in Sources */,
 				1DA7FCC52126A82D00F687BA /* Person.swift in Sources */,
+				1D5C8F15212BAEA6009DD0A4 /* UIViewExtension.swift in Sources */,
+				1D5C8F13212BAE9A009DD0A4 /* UIViewControllerExtension.swift in Sources */,
 				1D8DF63A211D37720006D2CB /* TimeKeepingDetailViewController.swift in Sources */,
 				1D8DF643211D37AD0006D2CB /* TimeKeepingViewController.swift in Sources */,
 				1DA7FCCA2126AC0800F687BA /* Department.swift in Sources */,
