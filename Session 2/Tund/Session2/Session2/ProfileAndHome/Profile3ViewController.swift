@@ -145,5 +145,3 @@ extension Profile3ViewController: UITableViewDataSource {
         return cell
     }
 }
-
-

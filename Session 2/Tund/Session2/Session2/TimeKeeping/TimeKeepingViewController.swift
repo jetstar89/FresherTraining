@@ -120,7 +120,8 @@ extension TimeKeepingViewController: UITableViewDataSource {
             return cell
     }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let headerView: WeekTableViewCell = tableView.dequeueReusableHeaderFooterView(withIdentifier: "WeekTableViewCell")
+        guard let headerView: WeekTableViewCell = tableView.dequeueReusableHeaderFooterView(
+            withIdentifier: "WeekTableViewCell")
             as? WeekTableViewCell else {
             return UITableViewHeaderFooterView()
         }

@@ -24,7 +24,6 @@ extension UITextField {
         self.textColor = isOnFocus ? UIColor.init(
             red: 63/255, green: 95/255, blue: 163/255, alpha: 1.0) :
             UIColor.init(red: 120/255, green: 131/255, blue: 140/255, alpha: 1.0)
-        
     }
 }
 extension UIColor {

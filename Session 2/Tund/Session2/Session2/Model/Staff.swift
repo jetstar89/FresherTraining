@@ -10,10 +10,14 @@ import Foundation
 import RealmSwift
 
 public class Staff: Object {
-    @objc dynamic var userID: String = ""
+    @objc dynamic var userID: Int = 0
     @objc dynamic var avatar: String = ""
     @objc dynamic var name: String = ""
     @objc dynamic var phone: String = ""
     @objc dynamic var position: String = ""
     @objc dynamic var status: String = ""
+    
+    override public static func primaryKey() -> String? {
+        return "userID"
+    }
 }

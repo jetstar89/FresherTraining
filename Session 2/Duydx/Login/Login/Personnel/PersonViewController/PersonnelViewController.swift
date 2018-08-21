@@ -15,25 +15,26 @@ class PersonnelViewController: UIViewController {
     @IBOutlet weak var personTableView: UITableView!
     @IBOutlet weak var positionLabel: UILabel!
     @IBOutlet weak var searchTextField: UITextField!
+    let realmManager = RealmManager.shared
+    var idPerson: Int = 0
     var listPerson: Results<Person>?
     let data = ["Gọi", "Gửi Email"]
     // MARK: LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
+        getDataDatabase()
         initView()
     }
-
+    func getDataDatabase() {
+        guard let listPerson = realmManager.getAllPerson() else {
+            return
+        }
+        self.listPerson = listPerson
+    }
     // MARK: initView
     func initView() {
-        do {
-            let realm = try Realm()
-            try realm.write {
-                realm.deleteAll()
-                listPerson = realm.objects(Person.self)
-            }
-        } catch let error as NSError {
-            print("\(error)")
-        }
+        idPerson = UserDefaults.standard.integer(forKey: "idPerson")
+//        UserDefaults.standard.set(idPerson, forKey: "idPerson")
         tabBarController?.tabBar.isHidden = true
         positionLabel.text = "Developer"
         navigationController?.navigationBar.isHidden = false
@@ -61,22 +62,24 @@ class PersonnelViewController: UIViewController {
     }
     @objc func addPerson() {
         let person = Person()
+        idPerson = UserDefaults.standard.integer(forKey: "idPerson")
+        idPerson += 1
         person.namePerson = "Đặng Xuân Duy"
-        person.idPerson = "ID: 00156"
+        person.idPerson = idPerson.description
         person.phonePerson = "0967505425"
         person.positionPerson = "Developer"
-        person.isStatus = true
-        person.imagePerson = "https://3.bp.blogspot.com/--BFeUQxXAgs/WhuL35YtNlI/AAAAAAAADbY/opwlU69xFekZS3po0FwYd3eedrcy3rLsgCLcBGAs/s1600/anh-gai-xinh%2B%25289%2529.jpg"
-        do {
-            let realm = try Realm()
-            try realm.write {
-                realm.add(person)
-                listPerson = realm.objects(Person.self)
-                personTableView.reloadData()
-            }
-        } catch let error as NSError {
-            print("\(error)")
+        if idPerson % 2 == 0 {
+            person.isStatus = true
+            person.imagePerson = "https://4.bp.blogspot.com/-O7MeRoCAXNI/"
+                + "VtOyBZBwHQI/AAAAAAABQtw/D4EiKq73_Lo/s1600/gai-dep-1.jpg"
+        } else {
+            person.isStatus = false
+            person.imagePerson = "https://baomoi-photo-1-td.zadn.vn/w1000_r1/17/12/15/23/24302239/1_313006.jpg"
         }
+        realmManager.addPerson(person)
+        listPerson = realmManager.getAllPerson()
+        personTableView.reloadData()
+        UserDefaults.standard.set(idPerson, forKey: "idPerson")
     }
     @objc func selectedMenu() {
         guard let sideMenu = SideMenuManager.default.menuLeftNavigationController else {
@@ -110,7 +113,7 @@ extension PersonnelViewController: UITableViewDataSource {
             let url = URL(string: listPerson[indexPath.row].imagePerson)
             cell.logoImage.kf.setImage(with: url)
             cell.nameLabel.text = listPerson[indexPath.row].namePerson
-            cell.idLabel.text = listPerson[indexPath.row].idPerson
+            cell.idLabel.text = "ID: " + listPerson[indexPath.row].idPerson
             cell.phoneLabel.text = listPerson[indexPath.row].phonePerson
             cell.positionLabel.text = listPerson[indexPath.row].positionPerson
             if listPerson[indexPath.row].isStatus {
@@ -127,15 +130,8 @@ extension PersonnelViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                    commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            if let item = listPerson?[indexPath.row] {
-                do {
-                    let realm = try Realm()
-                    try realm.write {
-                        realm.delete(item)
-                    }
-                } catch let error as NSError {
-                    print("\(error)")
-                }
+            if let person = listPerson?[indexPath.row] {
+                realmManager.deletePerson(person)
             }
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }

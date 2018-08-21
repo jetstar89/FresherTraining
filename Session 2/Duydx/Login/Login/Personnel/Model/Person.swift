@@ -15,9 +15,12 @@ class Person: Object {
     @objc dynamic var positionPerson: String = ""
     @objc dynamic var isStatus: Bool = false
     @objc dynamic var imagePerson: String = ""
+    override static func primaryKey() -> String? {
+        return "idPerson"
+    }
 //    init(_ name: String, _ idPerson: String, _ phone: String, _ position: String, _ isStatus: Bool, _ image: String) {
-//        self.namePersion = name
-//        self.idPersion = idPerson
+//        self.namePerson = name
+//        self.idPerson = idPerson
 //        self.phonePerson = phone
 //        self.positionPerson = position
 //        self.isStatus = isStatus
