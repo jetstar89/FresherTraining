@@ -9,8 +9,8 @@
 import Foundation
 import Alamofire
 class PostService: APIServiceObject {
-    func getPersonResult(completion: @escaping (Result<[Post]>) -> Void) {
-        let request = APIRequestProvider.share.getDataResult()
+    func getPersonResult(_ postID: String, completion: @escaping (Result<[Post]>) -> Void) {
+        let request = APIRequestProvider.share.getDataResult(postID)
         serviceAgent.startRequest(request) { (json, error) in
             if let error = error {
                 completion(Result.failure(error))

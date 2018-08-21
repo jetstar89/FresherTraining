@@ -8,13 +8,13 @@
 
 import Foundation
 class QuerySerive {
-    typealias QueryResult = (String, String) -> ()
+//    typealias QueryResult = (String, String) -> ()
     let defautlSesson = URLSession(configuration: .default)
     var dataTask: URLSessionDataTask?
     var person: [Person] = []
     var errorMessage = ""
     var data: String = ""
-    func getDataResult(completion: @escaping QueryResult ) {
+    func getDataResult(completion: @escaping (String, String) -> Void ) {
         dataTask?.cancel()
         if var urlComponent = URLComponents(string: "https://vnexpress.net/rss/tin-moi-nhat.rss") {
             guard let url = urlComponent.url else {
