@@ -13,6 +13,7 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     
     let service = QueryService()
+    let apiServices = TrackServices()
     var searchResults = [Track]()
     
     override func viewDidLoad() {
@@ -44,9 +45,9 @@ class SearchViewController: UIViewController {
     }
     
     func getData(_ term: String) {
-        let services = TrackServices()
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        services.getSearchResults(term) { (result) in
+        apiServices.cancelAllRequests()
+        apiServices.getSearchResults(term) { (result) in
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
             switch result {
             case .success(let tracks):

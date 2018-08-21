@@ -1,9 +1,9 @@
 //
 //  RealmManager.swift
-//  TimeKeeping
+//  Session2
 //
-//  Created by Đinh Ngọc Vũ on 8/17/18.
-//  Copyright © 2018 GEM. All rights reserved.
+//  Created by admin on 8/20/18.
+//  Copyright © 2018 admin. All rights reserved.
 //
 
 import Foundation
@@ -11,14 +11,13 @@ import RealmSwift
 
 class RealmManager: NSObject {
     public static let shared = RealmManager()
-    override private init() {
-        // unable init
+    override init() {
+        //
     }
-    
-    func getObjects<Element: Object>(type: Element.Type) -> Results<Element>? {
+    func getObjects<Element: Object>(_ type: Element.Type) -> Results<Element>? {
         do {
             let realm = try Realm()
-            return realm.objects(type).sorted(byKeyPath: "id")
+            return realm.objects(type)
         } catch let error as NSError {
             print(error.description)
         }
@@ -28,43 +27,17 @@ class RealmManager: NSObject {
         do {
             let realm = try Realm()
             try realm.write {
+                realm.add(obj)
                 if let staff = obj as? Staff {
-                    staff.id = incrementID(type: Staff.self)
                     realm.add(staff)
+//                    staff.userID = incrementID(type: Staff.self)
+                    print("Complete add Staff")
                 }
             }
         } catch let error as NSError {
             print(error.description)
         }
     }
-    
-    func addObjects(objs: [Object]) {
-        for item in objs {
-            addObject(obj: item)
-        }
-    }
-    
-    func updateObject(obj: Object) {
-        do {
-            let realm = try Realm()
-            try realm.write {
-                realm.add(obj, update: true)
-            }
-        } catch let error as NSError {
-            print(error.description)
-        }
-    }
-    func updateObjects(objs: [Object]) {
-        do {
-            let realm = try Realm()
-            try realm.write {
-                realm.add(objs, update: true)
-            }
-        } catch let error as NSError {
-            print(error.description)
-        }
-    }
-    
     func deleteObject(obj: Object) {
         do {
             let realm = try Realm()
@@ -75,7 +48,6 @@ class RealmManager: NSObject {
             print(error.description)
         }
     }
-    
     func deleteObjects(objs: [Object]) {
         do {
             let realm = try Realm()
@@ -86,7 +58,7 @@ class RealmManager: NSObject {
             print(error.description)
         }
     }
-    func deleteDatabase() {
+    func deleteDabase() {
         do {
             let realm = try Realm()
             try realm.write {
@@ -96,10 +68,20 @@ class RealmManager: NSObject {
             print(error.description)
         }
     }
+    func editObject(obj: Object) {
+        do {
+            let realm = try Realm()
+            try realm.write {
+                realm.add(obj, update: true)
+            }
+        } catch let error as NSError {
+            print(error.description)
+        }
+    }
     func incrementID(type: Object.Type) -> Int {
         do {
             let realm = try Realm()
-            return (realm.objects(type).max(ofProperty: "id") as Int? ?? 0) + 1
+            return (realm.objects(type).max(ofProperty: "userID") as Int? ?? 0) + 1
         } catch let error as NSError {
             print(error.description)
         }

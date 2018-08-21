@@ -88,6 +88,9 @@ extension ProfileController: UITableViewDataSource {
             let browseRequestViewController =
                 BrowseRequestViewController(nibName: "BrowseRequestViewController", bundle: nil)
             navigationController?.pushViewController(browseRequestViewController, animated: true)
+        case 5:
+            let postViewController = PostViewController(nibName: "PostViewController", bundle: nil)
+            navigationController?.pushViewController(postViewController, animated: true)
         case 6:
             let changePasswordController = ChangePasswordViewController(
                 nibName: "ChangePasswordViewController", bundle: nil)

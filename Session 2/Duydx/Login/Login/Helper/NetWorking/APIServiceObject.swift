@@ -1,17 +1,21 @@
 //
 //  APIServiceObject.swift
-//  Session2
+//  Login
 //
 //  Created by admin on 8/21/18.
 //  Copyright © 2018 admin. All rights reserved.
 //
 
-import UIKit
+import Foundation
+import SwiftyJSON
 import Alamofire
-
 class APIServiceObject: NSObject {
     var requests = [DataRequest]()
     var serviceAgent = APIServiceAgent()
+    /*
+     * cancel all request for the certain service object
+     * and remove all request from requests
+     */
     func cancelAllRequests() {
         let sessionManager = Alamofire.SessionManager.default
         if #available(iOS 9.0, *) {

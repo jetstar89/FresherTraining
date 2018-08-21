@@ -108,6 +108,8 @@ extension Profile3ViewController: UITableViewDelegate {
         case 4:
             break
         case 5:
+            let postViewController = PostViewController(nibName: "PostViewController", bundle: nil)
+            navigationController?.pushViewController(postViewController, animated: true)
             break
         case 6:
             let changePasswordController =

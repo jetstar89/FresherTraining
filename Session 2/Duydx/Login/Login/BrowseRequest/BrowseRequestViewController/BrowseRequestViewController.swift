@@ -12,6 +12,7 @@ class BrowseRequestViewController: UIViewController {
 
     @IBOutlet weak var browseRequestTableView: UITableView!
     var dataBrowseRequest = [Vacation]()
+    let service = QuerySerive()
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()

@@ -14,8 +14,39 @@ class VacationViewController: UIViewController {
     @IBOutlet weak var dayVacationLabel: UILabel!
     @IBOutlet weak var vacationTableView: UITableView!
     var listVacation: [Vacation] = []
+    let service = QueryService()
+    var arrPosts = [Posts]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let services = AllDataServices()
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        services.getDataResults() { (result) in
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            switch result {
+            case .success(let posts):
+                for item in posts {
+                    print(item.body)
+                }
+            case .failure(let error):
+                print("Fail get data")
+                print(error)
+            }
+        }
+    
+//        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+//        service.getDataResults(completion: {(posts, error) in
+//        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+//            if let posts = posts {
+//                self.arrPosts = posts
+//                for item in self.arrPosts {
+//                    print(item.id)
+//                }
+//                } else {
+//                    print(error)
+//                }
+//        })
         vacationTableView.delegate = self
         vacationTableView.dataSource = self
         initData()

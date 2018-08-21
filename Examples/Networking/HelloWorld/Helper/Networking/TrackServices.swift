@@ -23,5 +23,6 @@ class TrackServices: APIServiceObject {
                 completion(Result.success(tracks))
             }
         }
+        addToQueue(request)
     }
 }
