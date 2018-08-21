@@ -12,6 +12,7 @@ class BrowseRequestViewController: UIViewController {
 
     @IBOutlet weak var browseRequestTableView: UITableView!
     var dataBrowseRequest = [Vacation]()
+    let service = QuerySerive()
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
@@ -109,7 +110,17 @@ extension BrowseRequestViewController: UITableViewDataSource {
             cell.noteLabel.isHidden = false
             cell.noteLabel.text = dataBrowseRequest[indexPath.row].note
         }
+        addGestureImageView(cell.statusImage)
+        self.view.layoutIfNeeded()
         return cell
+    }
+    @objc func addGestureImageView(_ uiImage: UIImageView) {
+        uiImage.isUserInteractionEnabled = true
+        let tapGestureView = UITapGestureRecognizer(target: self, action: #selector(onTapImageView(_:)))
+        uiImage.addGestureRecognizer(tapGestureView)
+    }
+    @objc func onTapImageView(_ getture: UITapGestureRecognizer) {
+        print("Đang click")
     }
 }
 extension BrowseRequestTableViewCell: UITableViewDelegate {

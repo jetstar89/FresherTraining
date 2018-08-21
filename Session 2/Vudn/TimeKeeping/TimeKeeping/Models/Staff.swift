@@ -20,12 +20,12 @@ class Staff: Person {
         return "id"
     }
     
-    convenience init(name: String, id: Int, type: Int, avatar: String,
+    convenience init(name: String, type: Int, avatar: String,
                      status: Bool, department: Derpartment, birthDay: Double,
                      phone: String, address: String, gender: Int) {
         self.init()
+        self.id = 0
         self.name = name
-        self.id = id
         self.type = type
         self.avatar = avatar
         self.status = status

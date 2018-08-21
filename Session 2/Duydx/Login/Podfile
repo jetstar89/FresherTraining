@@ -12,4 +12,6 @@ pod 'SwiftLint'
 pod 'RealmSwift'
 pod 'Kingfisher', '~> 4.0'
 pod 'HAActionSheet'
+pod 'Alamofire', '~> 4.7'
+pod 'SwiftyJSON', '~> 3.1.4'
 end

@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.7.3)
   - HAActionSheet (0.1.9)
   - Kingfisher (4.8.1)
   - Realm (3.7.6):
@@ -8,31 +9,38 @@ PODS:
     - Realm (= 3.7.6)
   - SideMenu (4.0.0)
   - SwiftLint (0.27.0)
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.7)
   - HAActionSheet
   - Kingfisher (~> 4.0)
   - RealmSwift
   - SideMenu
   - SwiftLint
+  - SwiftyJSON (~> 3.1.4)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - HAActionSheet
     - Kingfisher
     - Realm
     - RealmSwift
     - SideMenu
     - SwiftLint
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   HAActionSheet: e34b07351e302c1c91a77f709bbcd9ec918a378f
   Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
   Realm: 9eaecad54712d6246d08ba34c10f354e4715d7d3
   RealmSwift: 1fe08b4ebaeeaacf17f9ba0343f7b25c9fc31fa6
   SideMenu: 70ee5657df63ec3382660ec4ef470bf1cf5db07d
   SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 2827fd61048e9c19fed3330b43342a85da6df0e8
+PODFILE CHECKSUM: 73d602465791558201a55a66c402bc2d1188f966
 
 COCOAPODS: 1.5.3
