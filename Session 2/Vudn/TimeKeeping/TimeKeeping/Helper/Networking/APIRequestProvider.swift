@@ -20,7 +20,6 @@ class APIRequestProvider: NSObject {
     
     // MARK: - DEFUALT HEADER AND REQUEST URL
     
-    
     // MARK: - INIT
     var alamoFireManager: SessionManager
     private override init() {

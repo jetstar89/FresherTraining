@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-class PostServices: APIServiceObject{
+class PostServices: APIServiceObject {
     func getPosts(_ term: String, completion: @escaping (Result<[Post]>) -> Void) {
         let request = APIRequestProvider.sharedInstand.getSearchResult(term)
         serviceAgent.startRequest(request) { (json, error) in

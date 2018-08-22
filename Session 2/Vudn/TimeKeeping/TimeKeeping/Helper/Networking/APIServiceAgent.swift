@@ -21,7 +21,6 @@ class APIServiceAgent: NSObject {
                     completion(json, nil)
                 case .failure(let error as NSError):
                     completion(JSON.null, error)
-                    break
                 }
         }
     }
