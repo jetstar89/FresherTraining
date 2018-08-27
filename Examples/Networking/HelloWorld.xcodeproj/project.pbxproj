@@ -12,6 +12,7 @@
 		AE0EBBB5212A709D00E8A563 /* APIRequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0EBBB1212A709D00E8A563 /* APIRequestProvider.swift */; };
 		AE0EBBB7212A709D00E8A563 /* APIServiceAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0EBBB3212A709D00E8A563 /* APIServiceAgent.swift */; };
 		AE0EBBBE212A7FEC00E8A563 /* TrackServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0EBBBD212A7FEC00E8A563 /* TrackServices.swift */; };
+		AE630E7E21301B14002508E6 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE630E7D21301B14002508E6 /* SideMenuViewController.swift */; };
 		AE94BD2520FDEFDE00AE93D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE94BD2420FDEFDE00AE93D5 /* AppDelegate.swift */; };
 		AE94BD2720FDEFDE00AE93D5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE94BD2620FDEFDE00AE93D5 /* SearchViewController.swift */; };
 		AE94BD2A20FDEFDE00AE93D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE94BD2820FDEFDE00AE93D5 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 		AE0EBBB1212A709D00E8A563 /* APIRequestProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequestProvider.swift; sourceTree = "<group>"; };
 		AE0EBBB3212A709D00E8A563 /* APIServiceAgent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIServiceAgent.swift; sourceTree = "<group>"; };
 		AE0EBBBD212A7FEC00E8A563 /* TrackServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackServices.swift; sourceTree = "<group>"; };
+		AE630E7D21301B14002508E6 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		AE94BD2120FDEFDE00AE93D5 /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE94BD2420FDEFDE00AE93D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE94BD2620FDEFDE00AE93D5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				AE94BD2B20FDEFDE00AE93D5 /* Assets.xcassets */,
 				AE94BD2D20FDEFDE00AE93D5 /* LaunchScreen.storyboard */,
 				AE94BD3020FDEFDE00AE93D5 /* Info.plist */,
+				AE630E7D21301B14002508E6 /* SideMenuViewController.swift */,
 			);
 			path = HelloWorld;
 			sourceTree = "<group>";
@@ -248,11 +251,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HelloWorld/Pods-HelloWorld-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/LGSideMenuController/LGSideMenuController.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LGSideMenuController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,6 +276,7 @@
 				AE0EBBB5212A709D00E8A563 /* APIRequestProvider.swift in Sources */,
 				AEA31033212A57B800AE8BC5 /* QueryService.swift in Sources */,
 				AE0EBBBE212A7FEC00E8A563 /* TrackServices.swift in Sources */,
+				AE630E7E21301B14002508E6 /* SideMenuViewController.swift in Sources */,
 				AEA3103A212A608200AE8BC5 /* UIViewControllerExtension.swift in Sources */,
 				AE0EBBAF212A651E00E8A563 /* UITableViewExtension.swift in Sources */,
 				AE0EBBB7212A709D00E8A563 /* APIServiceAgent.swift in Sources */,
