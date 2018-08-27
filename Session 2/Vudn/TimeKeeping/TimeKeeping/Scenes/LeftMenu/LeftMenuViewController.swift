@@ -96,6 +96,11 @@ class LeftMenuViewController: UIViewController {
         //timeKeepingDetail.view.layer.add(transition, forKey: nil)
         navigationController?.pushViewController(timeKeepingDetail, animated: true)
     }
+    
+    func pushPostViewController() {
+        let viewController = PostViewController(nibName: "PostViewController", bundle: nil)
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }
 
 // MARK: - Extension
@@ -141,6 +146,8 @@ extension LeftMenuViewController: UITableViewDelegate {
             pushPersonnelViewController()
         case MenuOption.changePassword.rawValue:
             pushChangePasswordViewController()
+        case MenuOption.browseRequestOnsite.rawValue:
+            pushPostViewController()
         default:
             break
         }

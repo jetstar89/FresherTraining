@@ -14,6 +14,13 @@
 		840C0D322118658B00737072 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C0D302118658B00737072 /* HomeViewController.swift */; };
 		840C0D332118658B00737072 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840C0D312118658B00737072 /* HomeViewController.xib */; };
 		8417496B212A6D83001BAA16 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417496A212A6D83001BAA16 /* RealmManager.swift */; };
+		8429DACB212BAEC200737A46 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429DACA212BAEC200737A46 /* Track.swift */; };
+		8429DACE212BB19200737A46 /* QueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429DACD212BB19200737A46 /* QueryService.swift */; };
+		8429DAD0212BBF4B00737A46 /* APIRequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429DACF212BBF4B00737A46 /* APIRequestProvider.swift */; };
+		8429DAD2212BC07800737A46 /* APIServiceAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429DAD1212BC07800737A46 /* APIServiceAgent.swift */; };
+		8429DAD4212BC1A900737A46 /* APIServiceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429DAD3212BC1A900737A46 /* APIServiceObject.swift */; };
+		8429DAD6212BC21800737A46 /* AllDataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429DAD5212BC21800737A46 /* AllDataServices.swift */; };
+		8429DAD8212BF27800737A46 /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429DAD7212BF27800737A46 /* Posts.swift */; };
 		84379E84211BECA0006E1CDC /* TimeKeepingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84379E82211BECA0006E1CDC /* TimeKeepingViewController.swift */; };
 		84379E85211BECA0006E1CDC /* TimeKeepingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84379E83211BECA0006E1CDC /* TimeKeepingViewController.xib */; };
 		84379EC2211C1CCA006E1CDC /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84379EC0211C1CCA006E1CDC /* MenuTableViewCell.swift */; };
@@ -57,6 +64,11 @@
 		84611A092123D14F00D78606 /* RootSideMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84611A072123D14F00D78606 /* RootSideMenuViewController.xib */; };
 		84611A0F21240E0900D78606 /* MySideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84611A0E21240E0900D78606 /* MySideMenuViewController.swift */; };
 		8494E3E32121B935004C5F13 /* TimeKeepingSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8494E3E22121B935004C5F13 /* TimeKeepingSection.swift */; };
+		849A70B5212C1FD100D861B6 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A70B3212C1FD100D861B6 /* PostViewController.swift */; };
+		849A70B6212C1FD100D861B6 /* PostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849A70B4212C1FD100D861B6 /* PostViewController.xib */; };
+		849A70BA212C20FC00D861B6 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A70B9212C20FC00D861B6 /* UITableViewExtension.swift */; };
+		849A70BE212C216D00D861B6 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A70BC212C216D00D861B6 /* PostTableViewCell.swift */; };
+		849A70BF212C216D00D861B6 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849A70BD212C216D00D861B6 /* PostTableViewCell.xib */; };
 		84A8AC8A212668BA00945B90 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A8AC89212668BA00945B90 /* MainNavigationController.swift */; };
 		84E51EA72122D3B000D37F16 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E51EA62122D3B000D37F16 /* Extension.swift */; };
 		84E51EA92122D98D00D37F16 /* Vacation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E51EA82122D98D00D37F16 /* Vacation.swift */; };
@@ -102,6 +114,13 @@
 		840C0D302118658B00737072 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		840C0D312118658B00737072 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		8417496A212A6D83001BAA16 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		8429DACA212BAEC200737A46 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		8429DACD212BB19200737A46 /* QueryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryService.swift; sourceTree = "<group>"; };
+		8429DACF212BBF4B00737A46 /* APIRequestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestProvider.swift; sourceTree = "<group>"; };
+		8429DAD1212BC07800737A46 /* APIServiceAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceAgent.swift; sourceTree = "<group>"; };
+		8429DAD3212BC1A900737A46 /* APIServiceObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceObject.swift; sourceTree = "<group>"; };
+		8429DAD5212BC21800737A46 /* AllDataServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDataServices.swift; sourceTree = "<group>"; };
+		8429DAD7212BF27800737A46 /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
 		84379E82211BECA0006E1CDC /* TimeKeepingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeKeepingViewController.swift; sourceTree = "<group>"; };
 		84379E83211BECA0006E1CDC /* TimeKeepingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeKeepingViewController.xib; sourceTree = "<group>"; };
 		84379EC0211C1CCA006E1CDC /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
@@ -145,6 +164,11 @@
 		84611A072123D14F00D78606 /* RootSideMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootSideMenuViewController.xib; sourceTree = "<group>"; };
 		84611A0E21240E0900D78606 /* MySideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySideMenuViewController.swift; sourceTree = "<group>"; };
 		8494E3E22121B935004C5F13 /* TimeKeepingSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeKeepingSection.swift; sourceTree = "<group>"; };
+		849A70B3212C1FD100D861B6 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		849A70B4212C1FD100D861B6 /* PostViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostViewController.xib; sourceTree = "<group>"; };
+		849A70B9212C20FC00D861B6 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		849A70BC212C216D00D861B6 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		849A70BD212C216D00D861B6 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		84A8AC89212668BA00945B90 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		84E51EA62122D3B000D37F16 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		84E51EA82122D98D00D37F16 /* Vacation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vacation.swift; sourceTree = "<group>"; };
@@ -215,9 +239,23 @@
 		84174965212A6A5B001BAA16 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				8429DACC212BB15600737A46 /* NetWorking */,
+				84E51EA52122D39E00D37F16 /* Extension */,
 				8417496A212A6D83001BAA16 /* RealmManager.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		8429DACC212BB15600737A46 /* NetWorking */ = {
+			isa = PBXGroup;
+			children = (
+				8429DACD212BB19200737A46 /* QueryService.swift */,
+				8429DACF212BBF4B00737A46 /* APIRequestProvider.swift */,
+				8429DAD1212BC07800737A46 /* APIServiceAgent.swift */,
+				8429DAD3212BC1A900737A46 /* APIServiceObject.swift */,
+				8429DAD5212BC21800737A46 /* AllDataServices.swift */,
+			);
+			path = NetWorking;
 			sourceTree = "<group>";
 		};
 		8441E589211D2886000FC10B /* Personal */ = {
@@ -248,6 +286,8 @@
 				8494E3E22121B935004C5F13 /* TimeKeepingSection.swift */,
 				84E51EA82122D98D00D37F16 /* Vacation.swift */,
 				843ED7322126BBBA00A19BE5 /* Staff.swift */,
+				8429DACA212BAEC200737A46 /* Track.swift */,
+				8429DAD7212BF27800737A46 /* Posts.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -295,12 +335,41 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		849A70B1212C1FA300D861B6 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				849A70B2212C1FAC00D861B6 /* PostViewController */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		849A70B2212C1FAC00D861B6 /* PostViewController */ = {
+			isa = PBXGroup;
+			children = (
+				849A70BB212C214800D861B6 /* PostViewCell */,
+				849A70B3212C1FD100D861B6 /* PostViewController.swift */,
+				849A70B4212C1FD100D861B6 /* PostViewController.xib */,
+			);
+			path = PostViewController;
+			sourceTree = "<group>";
+		};
+		849A70BB212C214800D861B6 /* PostViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				849A70BC212C216D00D861B6 /* PostTableViewCell.swift */,
+				849A70BD212C216D00D861B6 /* PostTableViewCell.xib */,
+			);
+			path = PostViewCell;
+			sourceTree = "<group>";
+		};
 		84E51EA52122D39E00D37F16 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				84E51EA62122D3B000D37F16 /* Extension.swift */,
+				849A70B9212C20FC00D861B6 /* UITableViewExtension.swift */,
 			);
-			path = Extension;
+			name = Extension;
+			path = ../Extension;
 			sourceTree = "<group>";
 		};
 		84E51EAA2122DACD00D37F16 /* VacationTableViewCell */ = {
@@ -392,10 +461,10 @@
 		84EC308B21142E5F000F5AC9 /* Session2 */ = {
 			isa = PBXGroup;
 			children = (
+				849A70B1212C1FA300D861B6 /* Post */,
 				84174965212A6A5B001BAA16 /* Helper */,
 				84EC308C21142E5F000F5AC9 /* AppDelegate.swift */,
 				84E51EB02122DB1800D37F16 /* Vacation */,
-				84E51EA52122D39E00D37F16 /* Extension */,
 				84E6F6B82122BC2700CCB8F2 /* TimeKeeping */,
 				84E6F6B72122BC0700CCB8F2 /* ProfileAndHome */,
 				84E6F6B52122BBCD00CCB8F2 /* ChangePassword */,
@@ -554,6 +623,7 @@
 				8460A69E2117EC0700B51FB6 /* Roboto-BoldItalic.ttf in Resources */,
 				84611A092123D14F00D78606 /* RootSideMenuViewController.xib in Resources */,
 				8460A6972117EC0700B51FB6 /* Roboto-ThinItalic.ttf in Resources */,
+				849A70BF212C216D00D861B6 /* PostTableViewCell.xib in Resources */,
 				840C0D172118443A00737072 /* ForgotPassWordController.xib in Resources */,
 				8460A6992117EC0700B51FB6 /* Roboto-Italic.ttf in Resources */,
 				8460A69D2117EC0700B51FB6 /* Roboto_Specimen_Book.pdf in Resources */,
@@ -585,6 +655,7 @@
 				8441E5AA211D9B6F000FC10B /* DayTableViewCell.xib in Resources */,
 				8460A6A02117EC0700B51FB6 /* Roboto-MediumItalic.ttf in Resources */,
 				8460A69B2117EC0700B51FB6 /* Roboto-Condensed.ttf in Resources */,
+				849A70B6212C1FD100D861B6 /* PostViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,19 +683,23 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Session2/Pods-Session2-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/HAActionSheet/HAActionSheet.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HAActionSheet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -707,9 +782,13 @@
 			files = (
 				843ED7332126BBBA00A19BE5 /* Staff.swift in Sources */,
 				84E51EB52122DB8900D37F16 /* VacationTableViewCell.swift in Sources */,
+				8429DAD0212BBF4B00737A46 /* APIRequestProvider.swift in Sources */,
 				8441E5A9211D9B6F000FC10B /* DayTableViewCell.swift in Sources */,
 				8441E598211D4F7C000FC10B /* ChangePasswordViewController.swift in Sources */,
+				8429DACE212BB19200737A46 /* QueryService.swift in Sources */,
+				849A70BA212C20FC00D861B6 /* UITableViewExtension.swift in Sources */,
 				8441E59F211D8F5B000FC10B /* WeekTableViewCell.swift in Sources */,
+				8429DAD6212BC21800737A46 /* AllDataServices.swift in Sources */,
 				84611A082123D14F00D78606 /* RootSideMenuViewController.swift in Sources */,
 				8494E3E32121B935004C5F13 /* TimeKeepingSection.swift in Sources */,
 				846119FD2123CD2100D78606 /* MainTabbarController.swift in Sources */,
@@ -719,18 +798,24 @@
 				840C0D162118443A00737072 /* ForgotPassWordController.swift in Sources */,
 				8447ECBE212514F600468169 /* VacationViewController.swift in Sources */,
 				8417496B212A6D83001BAA16 /* RealmManager.swift in Sources */,
+				8429DAD2212BC07800737A46 /* APIServiceAgent.swift in Sources */,
+				8429DACB212BAEC200737A46 /* Track.swift in Sources */,
 				8441E5AC211DA38F000FC10B /* DayOfWeek.swift in Sources */,
+				849A70B5212C1FD100D861B6 /* PostViewController.swift in Sources */,
 				84E51EA72122D3B000D37F16 /* Extension.swift in Sources */,
 				84379EC2211C1CCA006E1CDC /* MenuTableViewCell.swift in Sources */,
+				8429DAD4212BC1A900737A46 /* APIServiceObject.swift in Sources */,
 				84611A0F21240E0900D78606 /* MySideMenuViewController.swift in Sources */,
 				84EC308F21142E5F000F5AC9 /* ViewController.swift in Sources */,
 				8441E5A4211D9748000FC10B /* TimeKeeping.swift in Sources */,
 				84A8AC8A212668BA00945B90 /* MainNavigationController.swift in Sources */,
 				84EC308D21142E5F000F5AC9 /* AppDelegate.swift in Sources */,
+				8429DAD8212BF27800737A46 /* Posts.swift in Sources */,
 				840C0D322118658B00737072 /* HomeViewController.swift in Sources */,
 				8441E58D211D2921000FC10B /* PersonTableViewCell.swift in Sources */,
 				8441E591211D2996000FC10B /* PersonViewController.swift in Sources */,
 				84379E84211BECA0006E1CDC /* TimeKeepingViewController.swift in Sources */,
+				849A70BE212C216D00D861B6 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -910,6 +995,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = gem.fresher.Session2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -928,6 +1014,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = gem.fresher.Session2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

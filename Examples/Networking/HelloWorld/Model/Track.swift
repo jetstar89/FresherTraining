@@ -25,6 +25,6 @@ class Track {
     init(_ json: JSON) {
         self.name = json["trackName"].stringValue
         self.artist = json["artistName"].stringValue
-        self.previewURL = URL(string: json["previewUrl"].stringValue)        
+        self.previewURL = URL(string: json["previewUrl"].stringValue)
     }
 }

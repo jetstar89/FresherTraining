@@ -14,6 +14,7 @@ import SwiftyJSON
  *  APIRequestProvider takes responsible for build and provide request for service objects
  *  default header for request will be defined here
  */
+
 class APIRequestProvider: NSObject {
     //mark: SINGLETON
     static var shareInstance: APIRequestProvider = {

@@ -23,7 +23,7 @@ class PersonnelTableViewCell: UITableViewCell {
         let separatorHeight = CGFloat(2)
         let screenSize = UIScreen.main.bounds
         let separator = UIView(frame: CGRect(x: 0, y: frame.height - separatorHeight, width: screenSize.width, height: separatorHeight))
-        separator.backgroundColor = UIColor.steelGrey
+        separator.backgroundColor = UIColor.paleGrey
         self.addSubview(separator)
         // Initialization code
     }

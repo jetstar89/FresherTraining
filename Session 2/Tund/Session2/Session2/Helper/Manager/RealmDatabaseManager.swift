@@ -1,5 +1,5 @@
 //
-//  RealmManager.swift
+//  RealmDatabaseManager.swift
 //  TimeKeeping
 //
 //  Created by Đinh Ngọc Vũ on 8/17/18.
@@ -9,12 +9,12 @@
 import Foundation
 import RealmSwift
 
-class RealmManager: NSObject {
-    static let shared = RealmManager()
+class RealmDatabaseManager: NSObject {
+    public static let shared = RealmDatabaseManager()
     override private init() {
         // unable init
     }
-
+    
     func getObjects<Element: Object>(type: Element.Type) -> Results<Element>? {
         do {
             let realm = try Realm()
@@ -64,7 +64,7 @@ class RealmManager: NSObject {
             print(error.description)
         }
     }
-
+    
     func deleteObject(obj: Object) {
         do {
             let realm = try Realm()
@@ -98,7 +98,7 @@ class RealmManager: NSObject {
     }
     func incrementID(type: Object.Type) -> Int {
         do {
-            let realm = try Realm()    
+            let realm = try Realm()
             return (realm.objects(type).max(ofProperty: "id") as Int? ?? 0) + 1
         } catch let error as NSError {
             print(error.description)

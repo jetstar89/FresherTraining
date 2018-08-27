@@ -16,9 +16,9 @@ class APIRequestProvider: NSObject {
     override init() {
         self.alamoFireManager = SessionManager.default
     }
-    func getDataResult() -> DataRequest {
+    func getDataResult(_ postID: String) -> DataRequest {
         var param = [String: String]()
-        param["userId"] = "2"
+        param["userId"] = postID
         return alamoFireManager.request(requestURL,
                                         method: .get,
                                         parameters: param,
