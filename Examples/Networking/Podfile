@@ -6,6 +6,7 @@ target 'HelloWorld' do
   use_frameworks!
 
   # Pods for HelloWorld
-pod 'Alamofire', '~> 4.7'
+pod 'Alamofire'
 pod 'SwiftyJSON', '~> 3.1.4'
+pod 'LGSideMenuController'
 end
