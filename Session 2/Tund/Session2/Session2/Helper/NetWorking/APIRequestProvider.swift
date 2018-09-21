@@ -25,7 +25,14 @@ class APIRequestProvider: NSObject {
         alamoFireManager = Alamofire.SessionManager(configuration: configuration)
     }
     // MARK: -- Authorization Requests
-    func getDataResult() -> DataRequest {
-       return alamoFireManager.request(requestURL)
+    func getDataResult(_ id: String) -> DataRequest {
+        var param = [String: String]()
+        param["id"] = id
+        return alamoFireManager.request(requestURL,
+                                        method: .get,
+                                        parameters: param,
+                                        encoding: URLEncoding.default,
+                                        headers: nil)
+//       return alamoFireManager.request(requestURL)
     }
 }

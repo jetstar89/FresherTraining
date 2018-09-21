@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import SideMenu
 
 class PostViewController: UIViewController {
     var postArr = [Posts]()
      let services = AllDataServices()
+    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var postTableView: UITableView!
     override func viewDidLoad() {
@@ -18,6 +20,10 @@ class PostViewController: UIViewController {
         postTableView.register(UINib(nibName: "PostTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         setupViews()
         getData()
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "iconMenu"),
+                                                           style: .plain,
+                                                           target: self,
+                                                           action: #selector(onShowLeftMenu(_:)))
 
         // Do any additional setup after loading the view.
     }
@@ -27,9 +33,14 @@ class PostViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: function and init
+    @objc func onShowLeftMenu(_ sender: MainNavigationController) {
+        guard let sideMenu = SideMenuManager.default.menuLeftNavigationController else { return }
+        present(sideMenu, animated: true, completion: nil)
+    }
     func getData() {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        services.getDataResults() { (result) in
+        services.getDataResults("2") { (result) in
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
             switch result {
             case .success(let posts):
@@ -42,7 +53,7 @@ class PostViewController: UIViewController {
         }
     }
     func setupViews() {
-        navigationItem.title = "Search"
+        navigationItem.title = "Test API"
         postTableView.tableFooterView = UIView(frame: .zero)
         reloadData()
     }

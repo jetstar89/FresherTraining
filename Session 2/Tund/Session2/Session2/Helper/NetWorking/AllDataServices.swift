@@ -10,8 +10,8 @@ import Foundation
 import Alamofire
 
 class AllDataServices: APIServiceObject {
-        func getDataResults(completion:@escaping (Result<[Posts]>) -> Void) {
-            let request = APIRequestProvider.shareInstance.getDataResult()
+    func getDataResults(_ id: String, completion:@escaping (Result<[Posts]>) -> Void) {
+            let request = APIRequestProvider.shareInstance.getDataResult(id)
             serviceAgent.startRequest(request) { (json, error) in
                 if let error = error {
                     completion(Result.failure(error))

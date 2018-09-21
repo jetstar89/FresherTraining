@@ -101,7 +101,8 @@ extension Profile3ViewController: UITableViewDelegate {
             let vacationController = VacationViewController(nibName: "VacationViewController", bundle: nil)
             navigationController?.pushViewController(vacationController, animated: true)
         case 2:
-            break
+            let imagePickerController = ImagePickerViewController(nibName: "ImagePickerViewController", bundle: nil)
+            navigationController?.pushViewController(imagePickerController, animated: true)
         case 3:
             let personController = PersonViewController(nibName: "PersonViewController", bundle: nil)
             navigationController?.pushViewController(personController, animated: true)

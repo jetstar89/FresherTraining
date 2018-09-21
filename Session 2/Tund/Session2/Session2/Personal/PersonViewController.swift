@@ -10,6 +10,7 @@ import UIKit
 import RealmSwift
 import Kingfisher
 import HAActionSheet
+import SideMenu
 
 class PersonViewController: UIViewController {
     let dataSheet = ["Gửi Email",
@@ -40,6 +41,11 @@ class PersonViewController: UIViewController {
                                                             style: .plain,
                                                             target: self,
                                                             action: #selector(addStaff))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "iconMenu"),
+                                                           style: .plain,
+                                                           target: self,
+                                                           action: #selector(onShowLeftMenu(_:)))
+
         //register TableView
         personTableView.register(UINib(nibName: "PersonTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         // getData
@@ -57,6 +63,10 @@ class PersonViewController: UIViewController {
         view.isUserInteractionEnabled = true
         view.addGestureRecognizer(onTapViewGestureRecognizer)
         searchTextField.delegate = self
+    }
+    @objc func onShowLeftMenu(_ sender: MainNavigationController) {
+        guard let sideMenu = SideMenuManager.default.menuLeftNavigationController else { return }
+        present(sideMenu, animated: true, completion: nil)
     }
     @objc func addStaff() {
         let firstStaff = Staff()
